@@ -1,0 +1,9 @@
+.containerBurger {
+  display: flex;
+  justify-content: center;
+}
+.containerBurger .burgerLoader {
+  height: 35rem;
+}
+
+/*# sourceMappingURL=estilos.css.map */
