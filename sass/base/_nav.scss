@@ -1,0 +1,56 @@
+.boiler{
+    display: block;
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: tomato;
+        color: white;
+        position: relative;
+        z-index: 3;
+    
+        h1{
+            font-size: 1.1rem;
+            margin: 0;
+        }
+    
+        .menu_toggle{
+    
+        }
+    
+        nav{
+            position: fixed;
+            top: 3.3rem;
+            left: 0;
+            bottom: 0;
+            background-color: #333;
+            padding: 2rem;
+            min-width: 300px;
+            z-index: 2;
+            transform: translate(-100%,0);
+        
+            ul{
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+        
+                li{
+                    margin-bottom: 1rem;
+                    transform: translate(-100%,0);
+                    opacity: 0;
+        
+                    .item_nav{
+                        color: inherit;
+                        background-color: #333;
+                        text-decoration: none;
+        
+                        &:hover{
+                            color: inherit;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
