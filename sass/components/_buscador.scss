@@ -1,0 +1,9 @@
+.contenedorBuscador{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    .buscador{
+        width: 600px;
+    }
+    margin-bottom: 40px;
+}

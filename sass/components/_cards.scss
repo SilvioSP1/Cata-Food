@@ -11,7 +11,7 @@
       width: 190px;
       height: 150px;
       transition: all .5s;
-     box-shadow: 0px 7px 15px 1px;
+      box-shadow: 0px 7px 15px 1px;
       text-align: center;
       overflow: hidden;
       margin-bottom: 50px;
@@ -84,6 +84,9 @@
   
     }
   
+  }
+  p{
+    text-align: center;
   }
   
 }
