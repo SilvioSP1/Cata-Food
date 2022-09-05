@@ -37,6 +37,21 @@
   z-index: 2;
   transform: translate(-100%, 0);
 }
+.boiler .nav nav .contenedorIcono {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boiler .nav nav .contenedorIcono .cataIcono {
+  height: 9rem;
+  position: absolute;
+  bottom: 0;
+  transition: all 0.2s;
+}
+.boiler .nav nav .contenedorIcono .cataIcono:hover {
+  background-color: orange;
+  border-radius: 100%;
+}
 .boiler .nav nav ul {
   margin: 0;
   padding: 0;
