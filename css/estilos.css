@@ -43,13 +43,15 @@
   align-items: center;
 }
 .boiler .nav nav .contenedorIcono .cataIcono {
-  height: 9rem;
+  height: 8rem;
   position: absolute;
   bottom: 0;
-  transition: all 0.2s;
+  bottom: 2rem;
+  transition: all 0.5s;
+  color: white;
 }
 .boiler .nav nav .contenedorIcono .cataIcono:hover {
-  background-color: orange;
+  background-color: white;
   border-radius: 100%;
 }
 .boiler .nav nav ul {

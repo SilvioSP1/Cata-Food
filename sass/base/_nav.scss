@@ -44,14 +44,16 @@
     
                 .cataIcono{
     
-                    height: 9rem;
+                    height: 8rem;
                     position: absolute;
                     bottom: 0;
-                    transition: all .2s;
+                    bottom: 2rem;
+                    transition: all .5s;
+                    color: white;
     
                     &:hover{
     
-                        background-color: orange;
+                        background-color: white;
                         border-radius: 100%;
     
                     }
