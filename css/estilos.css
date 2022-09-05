@@ -53,6 +53,7 @@
 .boiler .nav nav .contenedorIcono .cataIcono:hover {
   background-color: white;
   border-radius: 100%;
+  transform: scale(0.9);
 }
 .boiler .nav nav ul {
   margin: 0;
