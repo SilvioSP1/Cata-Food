@@ -32,11 +32,11 @@
       .title {
         font-size: 1.1em;
         letter-spacing: .1em;
-        font-weight: 500;
         text-transform: uppercase;
         padding: 4px 0 14px 0;
         transition: all .5s;
         color: #edededc5;
+        font-weight: bolder;
       }
 
 
@@ -44,17 +44,19 @@
         display: flex;
         justify-content: center;
 
-        .imgBurger{
+        .imgBurger {
 
           height: 100px;
 
         }
-        .imgPizza{
+
+        .imgPizza {
 
           height: 100px;
 
         }
-        .imgPapas{
+
+        .imgPapas {
 
           height: 100px;
 
@@ -70,23 +72,12 @@
       color: #212121;
       margin: 0 22px;
 
-      .btn-link:hover {
-        border-bottom: 1px solid #1d8122;
-      }
-
-      a {
-        color: #1d8122;
-        cursor: pointer;
-        transition: all .5s;
-        font-size: .8rem;
-        font-weight: 500;
-        text-transform: uppercase;
-      }
 
       p {
         transition: all .5s;
         font-size: 1em;
         margin-bottom: 8px;
+        font-weight: bolder;
       }
 
     }

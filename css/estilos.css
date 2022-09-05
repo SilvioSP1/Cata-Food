@@ -139,11 +139,11 @@ body {
 .contenedorCards .card .header .title {
   font-size: 1.1em;
   letter-spacing: 0.1em;
-  font-weight: 500;
   text-transform: uppercase;
   padding: 4px 0 14px 0;
   transition: all 0.5s;
   color: rgba(237, 237, 237, 0.7725490196);
+  font-weight: bolder;
 }
 .contenedorCards .card .header .img-box {
   display: flex;
@@ -164,21 +164,11 @@ body {
   color: #212121;
   margin: 0 22px;
 }
-.contenedorCards .card .content .btn-link:hover {
-  border-bottom: 1px solid #1d8122;
-}
-.contenedorCards .card .content a {
-  color: #1d8122;
-  cursor: pointer;
-  transition: all 0.5s;
-  font-size: 0.8rem;
-  font-weight: 500;
-  text-transform: uppercase;
-}
 .contenedorCards .card .content p {
   transition: all 0.5s;
   font-size: 1em;
   margin-bottom: 8px;
+  font-weight: bolder;
 }
 
 /*# sourceMappingURL=estilos.css.map */
