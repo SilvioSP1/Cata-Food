@@ -1,93 +1,90 @@
-.contenedorCards {
+.fondoCards{
 
-  display: flex;
-  justify-content: center;
-  gap: 30px;
+  .contenedorCards {
 
-  .card {
-    width: 190px;
-    height: 150px;
-    transition: all .5s;
-    box-shadow: 15px 15px 30px rgba(25, 25, 25, 0.11),
-      -15px -15px 30px rgba(60, 60, 60, 0.082);
-    text-align: center;
-    overflow: hidden;
-    margin-bottom: 50px;
-
-
-    &:hover {
-      height: 254px;
-      background: linear-gradient(360deg, #edededc5 60%, hsla(0, 0%, 13%, 1) 70%);
-    }
-
-    .header {
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: #212121;
-      margin-bottom: 16px;
-
-      .title {
-        font-size: 1.1em;
-        text-align: center;
-        text-transform: uppercase;
-        transition: all .5s;
-        color: #edededc5;
-        font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    
+  
+    .card {
+      width: 190px;
+      height: 150px;
+      transition: all .5s;
+      box-shadow: 15px 15px 30px rgba(25, 25, 25, 0.11),
+        -15px -15px 30px rgba(60, 60, 60, 0.082);
+      text-align: center;
+      overflow: hidden;
+      margin-bottom: 50px;
+  
+  
+      &:hover {
+        height: 254px;
+        background: linear-gradient(360deg, #edededc5 60%, hsla(0, 0%, 13%, 1) 70%);
       }
-
-
-      .img-box {
+  
+      .header {
+        padding: 20px;
         display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
-
-        .imgBurger{
-
-          height: 100px;
-
+        background: #212121;
+        margin-bottom: 16px;
+  
+        .title {
+          font-size: 1.1em;
+          text-align: center;
+          text-transform: uppercase;
+          transition: all .5s;
+          color: #edededc5;
+          font-weight: bolder;
         }
-        .imgPizza{
-
-          height: 100px;
-
+  
+  
+        .img-box {
+          display: flex;
+          justify-content: center;
+  
+          .imgBurger{
+  
+            height: 100px;
+  
+          }
+          .imgPizza{
+  
+            height: 100px;
+  
+          }
+          .imgPapas{
+  
+            height: 100px;
+  
+          }
+  
         }
-        .imgPapas{
-
-          height: 100px;
-
-        }
-
+  
       }
-
-    }
-
-    .content {
-      display: block;
-      text-align: justify;
-      color: #212121;
-      margin: 0 22px;
-
-
-      p {
-        transition: all .5s;
-        font-size: 1em;
-        margin-bottom: 8px;
-        font-weight: bolder;
-        text-align: center;
+  
+      .content {
+        display: block;
+        text-align: justify;
+        color: #212121;
+        margin: 0 22px;
+  
+  
+        p {
+          transition: all .5s;
+          font-size: 1em;
+          margin-bottom: 8px;
+          font-weight: bolder;
+          text-align: center;
+        }
+  
       }
-
+  
     }
-
+  
   }
-
-
-
-
-
-
-
-
-
+  
 }

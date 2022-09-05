@@ -7,6 +7,7 @@
 
 body {
   font-family: "Nunito", sans-serif;
+  background-color: #F49E4C;
 }
 
 .containerBurger {
@@ -109,12 +110,12 @@ body {
   margin-top: 50px;
 }
 
-.contenedorCards {
+.fondoCards .contenedorCards {
   display: flex;
   justify-content: center;
   gap: 30px;
 }
-.contenedorCards .card {
+.fondoCards .contenedorCards .card {
   width: 190px;
   height: 150px;
   transition: all 0.5s;
@@ -123,11 +124,11 @@ body {
   overflow: hidden;
   margin-bottom: 50px;
 }
-.contenedorCards .card:hover {
+.fondoCards .contenedorCards .card:hover {
   height: 254px;
   background: linear-gradient(360deg, rgba(237, 237, 237, 0.7725490196) 60%, hsl(0deg, 0%, 13%) 70%);
 }
-.contenedorCards .card .header {
+.fondoCards .contenedorCards .card .header {
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -136,7 +137,7 @@ body {
   background: #212121;
   margin-bottom: 16px;
 }
-.contenedorCards .card .header .title {
+.fondoCards .contenedorCards .card .header .title {
   font-size: 1.1em;
   text-align: center;
   text-transform: uppercase;
@@ -144,26 +145,26 @@ body {
   color: rgba(237, 237, 237, 0.7725490196);
   font-weight: bolder;
 }
-.contenedorCards .card .header .img-box {
+.fondoCards .contenedorCards .card .header .img-box {
   display: flex;
   justify-content: center;
 }
-.contenedorCards .card .header .img-box .imgBurger {
+.fondoCards .contenedorCards .card .header .img-box .imgBurger {
   height: 100px;
 }
-.contenedorCards .card .header .img-box .imgPizza {
+.fondoCards .contenedorCards .card .header .img-box .imgPizza {
   height: 100px;
 }
-.contenedorCards .card .header .img-box .imgPapas {
+.fondoCards .contenedorCards .card .header .img-box .imgPapas {
   height: 100px;
 }
-.contenedorCards .card .content {
+.fondoCards .contenedorCards .card .content {
   display: block;
   text-align: justify;
   color: #212121;
   margin: 0 22px;
 }
-.contenedorCards .card .content p {
+.fondoCards .contenedorCards .card .content p {
   transition: all 0.5s;
   font-size: 1em;
   margin-bottom: 8px;
