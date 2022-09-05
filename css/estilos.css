@@ -138,9 +138,8 @@ body {
 }
 .contenedorCards .card .header .title {
   font-size: 1.1em;
-  letter-spacing: 0.1em;
+  text-align: center;
   text-transform: uppercase;
-  padding: 4px 0 14px 0;
   transition: all 0.5s;
   color: rgba(237, 237, 237, 0.7725490196);
   font-weight: bolder;
@@ -169,6 +168,7 @@ body {
   font-size: 1em;
   margin-bottom: 8px;
   font-weight: bolder;
+  text-align: center;
 }
 
 /*# sourceMappingURL=estilos.css.map */
