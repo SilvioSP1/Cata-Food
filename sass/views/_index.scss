@@ -5,4 +5,29 @@
     font-weight: bolder;
   
 }
-  
+
+//Top mejores restaurantes
+
+.mejoresTexto{
+
+    text-align: center;
+    margin-top: 50px;
+
+}
+
+.containerTop{
+
+    margin-bottom: 60px;
+    
+    .container__cardsTop{
+
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+
+    }
+
+}
+
+   

@@ -112,12 +112,27 @@ body {
   font-weight: bolder;
 }
 
-.fondoCards .contenedorCards {
+.mejoresTexto {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.containerTop {
+  margin-bottom: 60px;
+}
+.containerTop .container__cardsTop {
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   gap: 30px;
 }
-.fondoCards .contenedorCards .card {
+
+.containerSection .contenedorCards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.containerSection .contenedorCards .card {
   width: 190px;
   height: 150px;
   transition: all 0.5s;
@@ -126,11 +141,11 @@ body {
   overflow: hidden;
   margin-bottom: 50px;
 }
-.fondoCards .contenedorCards .card:hover {
+.containerSection .contenedorCards .card:hover {
   height: 254px;
   background: linear-gradient(360deg, rgba(237, 237, 237, 0.7725490196) 60%, hsl(0deg, 0%, 13%) 70%);
 }
-.fondoCards .contenedorCards .card .header {
+.containerSection .contenedorCards .card .header {
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -139,7 +154,7 @@ body {
   background: #212121;
   margin-bottom: 16px;
 }
-.fondoCards .contenedorCards .card .header .title {
+.containerSection .contenedorCards .card .header .title {
   font-size: 1.1em;
   text-align: center;
   text-transform: uppercase;
@@ -147,33 +162,33 @@ body {
   color: rgba(237, 237, 237, 0.7725490196);
   font-weight: bolder;
 }
-.fondoCards .contenedorCards .card .header .img-box {
+.containerSection .contenedorCards .card .header .img-box {
   display: flex;
   justify-content: center;
 }
-.fondoCards .contenedorCards .card .header .img-box .imgBurger {
+.containerSection .contenedorCards .card .header .img-box .imgBurger {
   height: 100px;
 }
-.fondoCards .contenedorCards .card .header .img-box .imgPizza {
+.containerSection .contenedorCards .card .header .img-box .imgPizza {
   height: 100px;
 }
-.fondoCards .contenedorCards .card .header .img-box .imgPapas {
+.containerSection .contenedorCards .card .header .img-box .imgPapas {
   height: 100px;
 }
-.fondoCards .contenedorCards .card .content {
+.containerSection .contenedorCards .card .content {
   display: block;
   text-align: justify;
   color: #212121;
   margin: 0 22px;
 }
-.fondoCards .contenedorCards .card .content p {
+.containerSection .contenedorCards .card .content p {
   transition: all 0.5s;
   font-size: 1em;
   margin-bottom: 8px;
   font-weight: bolder;
   text-align: center;
 }
-.fondoCards p {
+.containerSection p {
   text-align: center;
 }
 
@@ -215,6 +230,77 @@ body {
     justify-content: center;
     align-items: center;
   }
+}
+.card1--top {
+  width: 190px;
+  height: 254px;
+  background: rgb(46, 44, 44);
+  transition: all 300ms;
+  border-radius: 10%;
+}
+.card1--top h1 {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+.card1--top .imgTop {
+  height: 160px;
+}
+.card1--top .stars {
+  display: flex;
+  justify-content: center;
+  color: yellow;
+}
+.card1--top:hover {
+  transform: scale(1.1);
+}
+
+.card2--top {
+  width: 190px;
+  height: 254px;
+  background: rgb(46, 44, 44);
+  transition: all 300ms;
+  border-radius: 10%;
+}
+.card2--top h1 {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+.card2--top .imgTop {
+  height: 160px;
+}
+.card2--top .stars {
+  display: flex;
+  justify-content: center;
+  color: yellow;
+}
+.card2--top:hover {
+  transform: scale(1.1);
+}
+
+.card3--top {
+  width: 190px;
+  height: 254px;
+  background: rgb(46, 44, 44);
+  transition: all 300ms;
+  border-radius: 10%;
+}
+.card3--top h1 {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+.card3--top .imgTop {
+  height: 160px;
+}
+.card3--top .stars {
+  display: flex;
+  justify-content: center;
+  color: yellow;
+}
+.card3--top:hover {
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=estilos.css.map */
