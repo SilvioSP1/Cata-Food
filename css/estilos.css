@@ -120,6 +120,9 @@ body {
 .containerTop {
   margin-bottom: 60px;
 }
+.containerTop .mejoresTexto h1 {
+  font-weight: bolder;
+}
 .containerTop .container__cardsTop {
   margin-top: 50px;
   display: flex;
