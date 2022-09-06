@@ -21,6 +21,7 @@ body {
 
 .boiler {
   display: block;
+  position: relative;
 }
 .boiler .nav {
   display: flex;
@@ -29,8 +30,8 @@ body {
   padding: 1rem 2rem;
   background-color: tomato;
   color: white;
-  position: relative;
   z-index: 3;
+  position: sticky;
 }
 .boiler .nav h1 {
   font-size: 1.1rem;
