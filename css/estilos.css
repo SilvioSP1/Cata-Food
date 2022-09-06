@@ -213,6 +213,12 @@ body {
 .contenedorBuscador .buscador {
   width: 600px;
 }
+.contenedorBuscador .botonBusc {
+  background-color: #1a1e21;
+}
+.contenedorBuscador .botonBuschover {
+  background-color: black;
+}
 
 @media (max-width: 753px) {
   .containerMedias {
