@@ -186,4 +186,34 @@ body {
   width: 600px;
 }
 
+@media (max-width: 753px) {
+  .containerMedias {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .containerMedias .buscador {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 753px) {
+  .containerMedias .buscador {
+    width: 390px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 429px) {
+  .containerMedias .buscador {
+    width: 250px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 669px) {
+  .contenedorCards {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 /*# sourceMappingURL=estilos.css.map */
