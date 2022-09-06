@@ -11,6 +11,10 @@ body {
   overflow-x: hidden;
 }
 
+.logoCata {
+  height: 30px;
+}
+
 .containerBurger {
   display: flex;
   justify-content: center;
