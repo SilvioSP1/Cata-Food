@@ -1,13 +1,13 @@
 //Medias queries para el input de buscar y el boton de buscar
-@media(max-width:753px){
+@media(max-width:753px) {
 
-    .containerMedias{
+    .containerMedias {
 
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
-        .buscador{
+        .buscador {
 
             width: 390px;
             margin-bottom: 20px;
@@ -19,11 +19,11 @@
 }
 
 
-@media(max-width:429px){
+@media(max-width:429px) {
 
-    .containerMedias{
+    .containerMedias {
 
-        .buscador{
+        .buscador {
 
             width: 250px;
             margin-bottom: 20px;
@@ -37,9 +37,9 @@
 
 //Medias queries para las cards  "burger,papas y pizzas"
 
-@media(max-width:669px){
+@media(max-width:669px) {
 
-    .contenedorCards{
+    .contenedorCards {
 
         flex-direction: column;
         justify-content: center;
@@ -51,9 +51,9 @@
 
 //Medias queries cards "top de los mejores restaurantes
 
-@media (max-width: 669px){
+@media (max-width: 669px) {
 
-    .container__cardsTop{
+    .container__cardsTop {
 
         flex-direction: column;
         justify-content: center;
@@ -62,3 +62,95 @@
     }
 
 }
+
+@media(max-width:1220px) {
+
+    .container__cardsN {
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+}
+
+@media(min-width:280px) and (max-width:508px) {
+
+    .containerTP {
+
+
+
+        .tituloNosotros {
+
+            text-align: center;
+
+        }
+
+        p {
+
+            width: 20rem;
+
+        }
+
+        
+
+    }
+
+    .cardNosotros {
+
+
+        .profile, .profile2 {
+            
+            max-width: 220px;
+
+
+        }
+
+        .containerSocial{
+
+            .social-icons{
+    
+                right: 20%;
+        
+            }
+    
+        }
+    }
+
+    
+}
+
+@media(min-width:508px) and (max-width:750px) {
+
+    .containerTP {
+
+
+        p {
+
+            width: 28rem;
+
+        }
+
+        
+
+    }
+
+}   
+
+@media(min-width:704px) and (max-width:1000px) {
+
+    .containerTP {
+
+
+        p {
+
+            width: 42rem;
+
+        }
+
+        
+
+    }
+
+} 
