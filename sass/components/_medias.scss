@@ -9,20 +9,6 @@
 
         .buscador{
 
-            margin-bottom: 20px;
-
-        }
-
-    }
-
-}
-
-@media(max-width:753px){
-
-    .containerMedias{
-
-        .buscador{
-
             width: 390px;
             margin-bottom: 20px;
 
@@ -31,6 +17,7 @@
     }
 
 }
+
 
 @media(max-width:429px){
 
@@ -48,11 +35,25 @@
 }
 
 
-//Medias queries para las cards 
+//Medias queries para las cards  "burger,papas y pizzas"
 
 @media(max-width:669px){
 
     .contenedorCards{
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+}
+
+//Medias queries cards "top de los mejores restaurantes
+
+@media (max-width: 669px){
+
+    .container__cardsTop{
 
         flex-direction: column;
         justify-content: center;
