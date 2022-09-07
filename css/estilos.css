@@ -419,6 +419,11 @@ body {
 .container__cardsN .cardNosotros .profile .overlay:hover, .container__cardsN .cardNosotros .profile2 .overlay:hover {
   opacity: 1;
 }
+.container__cardsN .cardNosotros .profile2 {
+  background-image: url("/img/juanInalambrico.jpg");
+  background-size: cover;
+  background-position: center;
+}
 .container__cardsN .cardNosotros .containerSocial .social-icons {
   display: flex;
   list-style: none;
