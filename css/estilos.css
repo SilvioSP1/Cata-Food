@@ -375,6 +375,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-left: 10px;
 }
 .container__cardsN .containerTP .tituloNosotros {
   font-weight: bolder;
