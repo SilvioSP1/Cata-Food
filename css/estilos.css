@@ -20,12 +20,20 @@ body {
   font-size: 12px;
 }
 
-.containerBurger {
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  background: #fff;
   display: flex;
+  align-items: center;
   justify-content: center;
+  height: 100%;
+  width: 100%;
 }
-.containerBurger .burgerLoader {
-  height: 35rem;
+.loader-container .fade-out {
+  top: -120%;
 }
 
 .boiler {
