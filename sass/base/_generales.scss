@@ -1,4 +1,4 @@
-*{
+* {
 
     margin: 0;
     padding: 0;
@@ -6,45 +6,25 @@
 
 }
 
-body{
+body {
     font-family: 'Nunito', sans-serif;
     background-color: #fb8819;
     overflow-x: hidden;
 }
 
-.logoCata{
+.logoCata {
 
     height: 30px;
 
 }
 
-.carritoCompras{
+.carritoCompras {
 
-    span{
+    span {
         margin: 0 5px;
         font-size: 12px;
     }
-    
-}
-
-
-.loader-container{
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10000;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-
-    .fade-out{
-
-        top: -120%;
-
-    }
 
 }
+
+
