@@ -12,123 +12,138 @@
         background-color: white;
         background-size: cover;
         background-position: center;
-        width: 30rem;
+        width: 25rem;
         border-radius: 20px;
         height: 450px;
         color: white;
         box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, .5);
-        
 
-        .mover{
+
+        .mover {
 
             .containerLetras {
 
                 margin-top: 4rem;
                 display: flex;
                 justify-content: center;
-                
-    
+
+
                 h2 {
-    
+
                     font-weight: bolder;
                     color: black;
-    
-    
+
                 }
-    
-    
+
+               
+
+
             }
-    
+
+
             .formulario {
-    
+
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
                 align-items: center;
                 margin-top: 40px;
                 gap: 25px;
-    
+
                 input {
-    
+
+                    border: none;
                     width: 230px;
-                    transition: all .4s;
+                    border-bottom: 1px solid black;
 
-                    &:hover{
+                    &:focus {
 
-                        border: 2px solid black;
-                        border-radius: 15px;
-
+                        outline: none;
 
                     }
-    
-    
-    
+
+
+
                 }
-    
-                a {
-    
-                    text-decoration: none;
+
+
+                .textoRegister {
+
                     color: black;
-    
+
+                    a {
+
+                        text-decoration: none;
+                        transition: all .2s;
+                        font-weight: bolder;
+
+                        &:hover {
+
+                            color: orange;
+
+                        }
+
+                    }
+
                 }
-    
+
                 button {
-    
+
                     display: inline-block;
                     background-color: black;
                     color: #FFFFFF;
                     text-align: center;
                     font-size: 17px;
-                    padding: 14px;
+                    padding: 12px;
                     width: 140px;
                     transition: all 0.5s;
                     cursor: pointer;
                     border-radius: 20px;
-    
-    
-    
+
+
+
                     span {
                         cursor: pointer;
                         display: inline-block;
                         position: relative;
                         transition: 0.5s;
-    
+
                         &::after {
-    
+
                             content: '»';
                             position: absolute;
                             opacity: 0;
                             top: 0;
                             right: -15px;
                             transition: 0.5s;
-    
+
                         }
                     }
-    
+
                     &:hover span {
-    
+
                         padding-right: 15px;
-    
+
                         &::after {
-    
+
                             opacity: 1;
                             right: 0;
-    
+
                         }
-    
+
                     }
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
                 }
-    
+
             }
 
         }
-        
+
 
     }
 

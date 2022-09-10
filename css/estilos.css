@@ -452,7 +452,7 @@ body {
   background-color: white;
   background-size: cover;
   background-position: center;
-  width: 30rem;
+  width: 25rem;
   border-radius: 20px;
   height: 450px;
   color: white;
@@ -476,16 +476,23 @@ body {
   gap: 25px;
 }
 .containerIR .containerForm .mover .formulario input {
+  border: none;
   width: 230px;
-  transition: all 0.4s;
+  border-bottom: 1px solid black;
 }
-.containerIR .containerForm .mover .formulario input:hover {
-  border: 2px solid black;
-  border-radius: 15px;
+.containerIR .containerForm .mover .formulario input:focus {
+  outline: none;
 }
-.containerIR .containerForm .mover .formulario a {
-  text-decoration: none;
+.containerIR .containerForm .mover .formulario .textoRegister {
   color: black;
+}
+.containerIR .containerForm .mover .formulario .textoRegister a {
+  text-decoration: none;
+  transition: all 0.2s;
+  font-weight: bolder;
+}
+.containerIR .containerForm .mover .formulario .textoRegister a:hover {
+  color: orange;
 }
 .containerIR .containerForm .mover .formulario button {
   display: inline-block;
@@ -493,7 +500,7 @@ body {
   color: #FFFFFF;
   text-align: center;
   font-size: 17px;
-  padding: 14px;
+  padding: 12px;
   width: 140px;
   transition: all 0.5s;
   cursor: pointer;
