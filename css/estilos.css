@@ -456,16 +456,22 @@ body {
   border-radius: 20px;
   height: 450px;
   color: white;
-  box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 4px 12px 20px 5px rgba(0, 0, 0, 0.5);
 }
 .containerIR .containerForm .mover .containerLetras {
   margin-top: 4rem;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 .containerIR .containerForm .mover .containerLetras h2 {
   font-weight: bolder;
   color: black;
+}
+.containerIR .containerForm .mover .containerLetras .imagenUsuario {
+  position: absolute;
+  bottom: 4rem;
+  height: 13vh;
 }
 .containerIR .containerForm .mover .formulario {
   display: flex;
