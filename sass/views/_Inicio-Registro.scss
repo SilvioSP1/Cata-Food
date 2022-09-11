@@ -1,12 +1,12 @@
-.containerIR {
+.containerIR1 {
 
-    margin-top: 6.2rem;
-    margin-bottom: 20rem;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    
 
-    .containerForm {
+    .containerForm1 {
 
         background-repeat: no-repeat;
         background-color: white;
@@ -14,7 +14,7 @@
         background-position: center;
         width: 25rem;
         border-radius: 20px;
-        height: 450px;
+        height: 350px;
         color: white;
         box-shadow: 4px 12px 20px 5px rgba(0, 0, 0, .5);
 
@@ -39,7 +39,7 @@
                 .imagenUsuario{
 
                     position: absolute;
-                    bottom: 4rem;
+                    bottom: 3rem;
                     height: 13vh;
 
                 }
@@ -56,8 +56,163 @@
                 justify-content: center;
                 flex-direction: column;
                 align-items: center;
-                margin-top: 40px;
-                gap: 25px;
+                margin-top: 20px;
+                gap: 16px;
+
+                input {
+
+                    border: none;
+                    width: 230px;
+                    border-bottom: 1px solid black;
+
+                    &:focus {
+
+                        outline: none;
+
+                    }
+
+
+
+                }
+
+
+                .textoRegister {
+
+                    color: black;
+
+                    a {
+
+                        text-decoration: none;
+                        transition: all .2s;
+                        font-weight: bolder;
+
+                        &:hover {
+
+                            color: orange;
+
+                        }
+
+                    }
+
+                }
+
+                button {
+
+                    display: inline-block;
+                    background-color: black;
+                    color: #FFFFFF;
+                    text-align: center;
+                    font-size: 17px;
+                    padding: 12px;
+                    width: 140px;
+                    transition: all 0.5s;
+                    cursor: pointer;
+                    border-radius: 20px;
+
+
+
+                    span {
+                        cursor: pointer;
+                        display: inline-block;
+                        position: relative;
+                        transition: 0.5s;
+
+                        &::after {
+
+                            content: '»';
+                            position: absolute;
+                            opacity: 0;
+                            top: 0;
+                            right: -15px;
+                            transition: 0.5s;
+
+                        }
+                    }
+
+                    &:hover span {
+
+                        padding-right: 15px;
+
+                        &::after {
+
+                            opacity: 1;
+                            right: 0;
+
+                        }
+
+                    }
+
+
+                }
+
+            }
+
+        }
+
+
+    }
+
+}
+
+.containerIR2 {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    .containerForm2 {
+
+        background-repeat: no-repeat;
+        background-color: white;
+        background-size: cover;
+        background-position: center;
+        width: 25rem;
+        border-radius: 20px;
+        height: 570px;
+        color: white;
+        box-shadow: 4px 12px 20px 5px rgba(0, 0, 0, .5);
+
+
+        .mover {
+
+            .containerLetras {
+
+                margin-top: 4rem;
+                display: flex;
+                justify-content: center;
+                position: relative;
+
+
+                h2 {
+
+                    font-weight: bolder;
+                    color: black;
+
+                }
+
+                .imagenUsuario{
+
+                    position: absolute;
+                    bottom: 3rem;
+                    height: 13vh;
+
+                }
+
+               
+
+
+            }
+
+
+            .formulario {
+
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 20px;
+                gap: 16px;
 
                 input {
 
