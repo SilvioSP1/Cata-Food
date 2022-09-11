@@ -529,6 +529,10 @@ body {
   right: -15px;
   transition: 0.5s;
 }
+.containerIR1 .containerForm1 .mover .formulario button span a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
 .containerIR1 .containerForm1 .mover .formulario button:hover span {
   padding-right: 15px;
 }
@@ -621,6 +625,10 @@ body {
   top: 0;
   right: -15px;
   transition: 0.5s;
+}
+.containerIR2 .containerForm2 .mover .formulario button span a {
+  color: #FFFFFF;
+  text-decoration: none;
 }
 .containerIR2 .containerForm2 .mover .formulario button:hover span {
   padding-right: 15px;
