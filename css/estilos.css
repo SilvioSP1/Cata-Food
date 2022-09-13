@@ -509,7 +509,7 @@ body {
   color: #FFFFFF;
   text-align: center;
   font-size: 17px;
-  padding: 13px;
+  padding: 10px;
   width: 120px;
   transition: all 0.5s;
   cursor: pointer;
@@ -537,6 +537,43 @@ body {
   padding-right: 15px;
 }
 .containerIR1 .containerForm1 .mover .formulario button:hover span::after {
+  opacity: 1;
+  right: 0;
+}
+.containerIR1 .containerForm1 .mover .formulario .boton {
+  display: inline-block;
+  background-color: black;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 17px;
+  padding: 12px;
+  width: 120px;
+  transition: all 0.5s;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.containerIR1 .containerForm1 .mover .formulario .boton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.containerIR1 .containerForm1 .mover .formulario .boton span::after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+}
+.containerIR1 .containerForm1 .mover .formulario .boton span a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.containerIR1 .containerForm1 .mover .formulario .boton:hover span {
+  padding-right: 15px;
+}
+.containerIR1 .containerForm1 .mover .formulario .boton:hover span::after {
   opacity: 1;
   right: 0;
 }
