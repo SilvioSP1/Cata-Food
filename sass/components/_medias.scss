@@ -159,3 +159,64 @@
 
 //medias login
 
+@media(max-width:526px) {
+
+    .containerIR1 {
+
+        .containerForm1{
+            width: 80%;
+        }
+        
+
+        
+
+    }
+
+}
+
+@media(max-width:400px) {
+
+    .containerIR1 {
+
+        .containerForm1{
+            width: 90%;
+
+            .mover{
+
+                .containerLetras{
+
+                    h2{
+                        font-size: 20px;
+                    }
+                }
+
+                .formulario{
+                    input{
+                        width: 90%;
+                    }
+
+                    span{
+                        
+                        font-size: 15px;
+                    }
+
+                    div{
+
+                        button{
+                            width: 100px;
+                        }
+                        .boton{
+                            width: 100px;
+                        }
+                    }
+                }
+            }
+        }
+        
+
+        
+
+    }
+
+}   
+
