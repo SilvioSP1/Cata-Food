@@ -855,6 +855,31 @@ body {
   .containerIR1 .containerForm1 {
     width: 80%;
   }
+  .containerIR2 .containerForm2 {
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .containerIR3 .containerForm3 {
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .containerIR3 .containerForm3 .mover .formulario input {
+    width: 90%;
+  }
+  .containerIR3 .containerForm3 .mover .formulario span {
+    font-size: 15px;
+  }
+  .containerIR3 .containerForm3 .mover .formulario div {
+    width: 90%;
+  }
+  .containerIR3 .containerForm3 .mover .formulario div .genero {
+    width: 100%;
+  }
+  .containerIR3 .containerForm3 .mover .formulario iframe {
+    width: 90%;
+  }
 }
 @media (max-width: 400px) {
   .containerIR1 .containerForm1 {
@@ -873,6 +898,48 @@ body {
     width: 100px;
   }
   .containerIR1 .containerForm1 .mover .formulario div .boton {
+    width: 100px;
+  }
+  .containerIR2 .containerForm2 {
+    width: 90%;
+  }
+  .containerIR2 .containerForm2 .mover .containerLetras h2 {
+    font-size: 20px;
+  }
+  .containerIR2 .containerForm2 .mover .formulario input {
+    width: 90%;
+  }
+  .containerIR2 .containerForm2 .mover .formulario span {
+    font-size: 15px;
+  }
+  .containerIR2 .containerForm2 .mover .formulario div button {
+    width: 100px;
+  }
+  .containerIR2 .containerForm2 .mover .formulario div .boton {
+    width: 100px;
+  }
+  .containerIR3 .containerForm3 {
+    width: 90%;
+  }
+  .containerIR3 .containerForm3 .mover .containerLetras h2 {
+    font-size: 20px;
+  }
+  .containerIR3 .containerForm3 .mover .formulario input {
+    width: 90%;
+  }
+  .containerIR3 .containerForm3 .mover .formulario span {
+    font-size: 15px;
+  }
+  .containerIR3 .containerForm3 .mover .formulario div {
+    width: 90%;
+  }
+  .containerIR3 .containerForm3 .mover .formulario div .genero {
+    width: 100%;
+  }
+  .containerIR3 .containerForm3 .mover .formulario div button {
+    width: 100px;
+  }
+  .containerIR3 .containerForm3 .mover .formulario div .boton {
     width: 100px;
   }
 }

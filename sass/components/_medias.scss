@@ -167,8 +167,53 @@
             width: 80%;
         }
         
+    }
 
-        
+    .containerIR2 {
+
+        .containerForm2{
+            width: 80%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+    }
+
+
+    .containerIR3 {
+
+        .containerForm3{
+            width: 80%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+            .mover{
+
+                .formulario{
+                    input{
+                        width: 90%;
+                    }
+
+                    span{
+                        
+                        font-size: 15px;
+                    }
+                    
+                    div{
+                        width: 90%;
+                        .genero{
+                            width: 100%;
+                        }
+                    }
+
+                    iframe{
+                        width: 90%;
+                    }
+
+                    
+                }
+            }
+        }
 
     }
 
@@ -212,11 +257,96 @@
                 }
             }
         }
-        
-
-        
 
     }
+
+    .containerIR2 {
+
+        .containerForm2{
+            width: 90%;
+
+            .mover{
+
+                .containerLetras{
+
+                    h2{
+                        font-size: 20px;
+                    }
+                }
+
+                .formulario{
+                    input{
+                        width: 90%;
+                    }
+
+                    span{
+                        
+                        font-size: 15px;
+                    }
+
+                    div{
+
+                        button{
+                            width: 100px;
+                        }
+                        .boton{
+                            width: 100px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .containerIR3 {
+
+        .containerForm3{
+            width: 90%;
+
+            .mover{
+
+                .containerLetras{
+
+                    h2{
+                        font-size: 20px;
+                    }
+                }
+
+                .formulario{
+                    input{
+                        width: 90%;
+                    }
+
+                    span{
+                        
+                        font-size: 15px;
+                    }
+                    
+                    div{
+                        width: 90%;
+                        .genero{
+                            width: 100%;
+                        }
+                    }
+
+                    div{
+
+                        button{
+                            width: 100px;
+                        }
+                        .boton{
+                            width: 100px;
+                        }
+                    }
+
+                    
+                }
+            }
+        }
+
+    }
+
 
 }   
 
