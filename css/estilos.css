@@ -793,6 +793,44 @@ body {
   font-weight: 500;
 }
 
+.conteiner_restaurantes {
+  display: flex;
+}
+.conteiner_restaurantes .conteinerCardResta {
+  width: 380px;
+  height: 180px;
+  margin: 10px 10px 50px;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  background-color: #fff;
+  box-shadow: 0 3px 13px 1px rgba(0, 0, 0, 0.09);
+}
+.conteiner_restaurantes .conteinerCardResta .imagenRestaurante {
+  height: 94%;
+  width: auto;
+  margin: 0px 0px 0px 5px;
+}
+.conteiner_restaurantes .conteinerCardResta .contenedorTexto {
+  /* text-align: center; */
+  padding: 12px;
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+}
+.conteiner_restaurantes .conteinerCardResta .contenedorTexto .nombreRestaurante {
+  font-size: 1.1rem;
+}
+.conteiner_restaurantes .conteinerCardResta .contenedorTexto .ubiRestaurante {
+  font-size: 0.9rem;
+  margin-top: 15px;
+  padding-bottom: 30px;
+}
+.conteiner_restaurantes .conteinerCardResta .contenedorTexto .puntuacionRestaurante {
+  font-size: 0.99rem;
+  text-align: justify;
+}
+
 @media (max-width: 753px) {
   .containerMedias {
     flex-direction: column;
