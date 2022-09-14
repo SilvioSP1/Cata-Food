@@ -444,7 +444,7 @@ body {
 .containerIR1 .containerForm1 .mover .formulario button {
   display: inline-block;
   background-color: black;
-  color: #FFFFFF;
+  color: white;
   text-align: center;
   font-size: 17px;
   padding: 10px;
@@ -481,7 +481,7 @@ body {
 .containerIR1 .containerForm1 .mover .formulario .boton {
   display: inline-block;
   background-color: black;
-  color: #FFFFFF;
+  color: white;
   text-align: center;
   font-size: 17px;
   padding: 12px;
@@ -512,140 +512,6 @@ body {
   padding-right: 15px;
 }
 .containerIR1 .containerForm1 .mover .formulario .boton:hover span::after {
-  opacity: 1;
-  right: 0;
-}
-
-.containerIR2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-}
-.containerIR2 .containerForm2 {
-  background-repeat: no-repeat;
-  background-color: white;
-  background-size: cover;
-  background-position: center;
-  width: 25rem;
-  border-radius: 20px;
-  height: 570px;
-  color: white;
-  box-shadow: 4px 12px 20px 5px rgba(0, 0, 0, 0.5);
-}
-.containerIR2 .containerForm2 .mover .containerLetras {
-  margin-top: 4rem;
-  display: flex;
-  justify-content: center;
-  position: relative;
-}
-.containerIR2 .containerForm2 .mover .containerLetras h2 {
-  font-weight: bolder;
-  color: black;
-}
-.containerIR2 .containerForm2 .mover .containerLetras .imagenUsuario {
-  position: absolute;
-  bottom: 3rem;
-  height: 13vh;
-}
-.containerIR2 .containerForm2 .mover .formulario {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-  gap: 16px;
-}
-.containerIR2 .containerForm2 .mover .formulario input {
-  border: none;
-  width: 230px;
-  border-bottom: 1px solid black;
-}
-.containerIR2 .containerForm2 .mover .formulario input:focus {
-  outline: none;
-}
-.containerIR2 .containerForm2 .mover .formulario .textoRegister {
-  color: black;
-}
-.containerIR2 .containerForm2 .mover .formulario .textoRegister a {
-  text-decoration: none;
-  transition: all 0.2s;
-  font-weight: bolder;
-}
-.containerIR2 .containerForm2 .mover .formulario .textoRegister a:hover {
-  color: orange;
-}
-.containerIR2 .containerForm2 .mover .formulario button {
-  display: inline-block;
-  background-color: black;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 17px;
-  padding: 10px;
-  width: 120px;
-  transition: all 0.5s;
-  cursor: pointer;
-  border-radius: 20px;
-}
-.containerIR2 .containerForm2 .mover .formulario button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-.containerIR2 .containerForm2 .mover .formulario button span::after {
-  content: "»";
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -15px;
-  transition: 0.5s;
-}
-.containerIR2 .containerForm2 .mover .formulario button span a {
-  color: #FFFFFF;
-  text-decoration: none;
-}
-.containerIR2 .containerForm2 .mover .formulario button:hover span {
-  padding-right: 15px;
-}
-.containerIR2 .containerForm2 .mover .formulario button:hover span::after {
-  opacity: 1;
-  right: 0;
-}
-.containerIR2 .containerForm2 .mover .formulario .boton {
-  display: inline-block;
-  background-color: black;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 17px;
-  padding: 12px;
-  width: 120px;
-  transition: all 0.5s;
-  cursor: pointer;
-  border-radius: 20px;
-}
-.containerIR2 .containerForm2 .mover .formulario .boton span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-.containerIR2 .containerForm2 .mover .formulario .boton span::after {
-  content: "»";
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -15px;
-  transition: 0.5s;
-}
-.containerIR2 .containerForm2 .mover .formulario .boton span a {
-  color: #FFFFFF;
-  text-decoration: none;
-}
-.containerIR2 .containerForm2 .mover .formulario .boton:hover span {
-  padding-right: 15px;
-}
-.containerIR2 .containerForm2 .mover .formulario .boton:hover span::after {
   opacity: 1;
   right: 0;
 }
@@ -787,6 +653,144 @@ body {
 .containerIR3 .containerForm3 .mover .formulario .boton:hover span::after {
   opacity: 1;
   right: 0;
+}
+
+.containerIR2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.containerIR2 .containerForm2 {
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  width: 25rem;
+  border-radius: 20px;
+  height: 570px;
+  color: white;
+  box-shadow: 4px 12px 20px 5px rgba(0, 0, 0, 0.5);
+}
+.containerIR2 .containerForm2 .mover .containerLetras {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.containerIR2 .containerForm2 .mover .containerLetras h2 {
+  font-weight: bolder;
+  color: black;
+}
+.containerIR2 .containerForm2 .mover .containerLetras .imagenUsuario {
+  position: absolute;
+  bottom: 3rem;
+  height: 13vh;
+}
+.containerIR2 .containerForm2 .mover .formulario {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  gap: 16px;
+}
+.containerIR2 .containerForm2 .mover .formulario input {
+  border: none;
+  width: 230px;
+  border-bottom: 1px solid black;
+}
+.containerIR2 .containerForm2 .mover .formulario input:focus {
+  outline: none;
+}
+.containerIR2 .containerForm2 .mover .formulario .textoRegister {
+  color: black;
+}
+.containerIR2 .containerForm2 .mover .formulario .textoRegister a {
+  text-decoration: none;
+  transition: all 0.2s;
+  font-weight: bolder;
+}
+.containerIR2 .containerForm2 .mover .formulario .textoRegister a:hover {
+  color: orange;
+}
+.containerIR2 .containerForm2 .mover .formulario button {
+  display: inline-block;
+  background-color: black;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 17px;
+  padding: 10px;
+  width: 120px;
+  transition: all 0.5s;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.containerIR2 .containerForm2 .mover .formulario button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.containerIR2 .containerForm2 .mover .formulario button span::after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+}
+.containerIR2 .containerForm2 .mover .formulario button span a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.containerIR2 .containerForm2 .mover .formulario button:hover span {
+  padding-right: 15px;
+}
+.containerIR2 .containerForm2 .mover .formulario button:hover span::after {
+  opacity: 1;
+  right: 0;
+}
+.containerIR2 .containerForm2 .mover .formulario .boton {
+  display: inline-block;
+  background-color: black;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 17px;
+  padding: 12px;
+  width: 120px;
+  transition: all 0.5s;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.containerIR2 .containerForm2 .mover .formulario .boton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.containerIR2 .containerForm2 .mover .formulario .boton span::after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+}
+.containerIR2 .containerForm2 .mover .formulario .boton span a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.containerIR2 .containerForm2 .mover .formulario .boton:hover span {
+  padding-right: 15px;
+}
+.containerIR2 .containerForm2 .mover .formulario .boton:hover span::after {
+  opacity: 1;
+  right: 0;
+}
+
+.formulario input {
+  font-weight: 500;
 }
 
 @media (max-width: 753px) {

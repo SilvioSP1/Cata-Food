@@ -1,0 +1,18 @@
+//map para los input de inicio de sesion, registrar y registrar tu local
+
+$weight:(
+
+    font-weight:500,
+
+);
+
+
+.formulario{
+
+    input{
+
+        font-weight: map-get($weight , font-weight );
+
+    }
+
+}
