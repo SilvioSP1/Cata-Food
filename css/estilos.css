@@ -583,7 +583,7 @@ body {
 .containerIR3 .containerForm3 .mover .formulario button {
   display: inline-block;
   background-color: black;
-  color: #FFFFFF;
+  color: white;
   text-align: center;
   font-size: 17px;
   padding: 10px;
@@ -620,7 +620,7 @@ body {
 .containerIR3 .containerForm3 .mover .formulario .boton {
   display: inline-block;
   background-color: black;
-  color: #FFFFFF;
+  color: white;
   text-align: center;
   font-size: 17px;
   padding: 12px;
@@ -717,7 +717,7 @@ body {
 .containerIR2 .containerForm2 .mover .formulario button {
   display: inline-block;
   background-color: black;
-  color: #FFFFFF;
+  color: white;
   text-align: center;
   font-size: 17px;
   padding: 10px;
@@ -754,7 +754,7 @@ body {
 .containerIR2 .containerForm2 .mover .formulario .boton {
   display: inline-block;
   background-color: black;
-  color: #FFFFFF;
+  color: white;
   text-align: center;
   font-size: 17px;
   padding: 12px;
