@@ -799,7 +799,7 @@ body {
 .conteiner_restaurantes .conteinerCardResta {
   width: 380px;
   height: 180px;
-  margin: 10px 10px 50px;
+  margin: 10px 10px 50px 70px;
   display: flex;
   align-items: center;
   /* justify-content: center; */
