@@ -14,3 +14,23 @@
     }
     margin-bottom: 40px;
 }
+
+.contenedorBuscadorRes{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    .containerMedias{
+        width: 80%;
+        .buscador{
+            width: 90%;
+        }
+        .botonBusc{
+            background-color: #1a1e21;
+    
+            &hover{
+                background-color: black;
+            }
+        }
+    }
+    margin-bottom: 40px;
+}

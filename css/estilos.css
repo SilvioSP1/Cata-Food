@@ -217,6 +217,25 @@ body {
   background-color: black;
 }
 
+.contenedorBuscadorRes {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+.contenedorBuscadorRes .containerMedias {
+  width: 80%;
+}
+.contenedorBuscadorRes .containerMedias .buscador {
+  width: 90%;
+}
+.contenedorBuscadorRes .containerMedias .botonBusc {
+  background-color: #1a1e21;
+}
+.contenedorBuscadorRes .containerMedias .botonBuschover {
+  background-color: black;
+}
+
 .card1--top {
   width: 190px;
   height: 254px;
@@ -796,39 +815,79 @@ body {
 .conteiner_restaurantes {
   display: flex;
 }
-.conteiner_restaurantes .conteinerCardResta {
-  width: 380px;
+.conteiner_restaurantes .containerColum {
+  margin-top: 5px;
+}
+.conteiner_restaurantes .containerColum .contenedorResTipo {
+  display: flex;
+  margin-top: 35px;
+}
+.conteiner_restaurantes .containerColum .contenedorResTipo .tiposRes {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1;
+}
+.conteiner_restaurantes .containerColum .contenedorResTipo .tiposRes .tipo {
+  flex: 1 1;
+  text-align: center;
+}
+.conteiner_restaurantes .containerColum .contenedorResTipo .tiposRes .tipo img {
+  width: 85px;
+}
+.conteiner_restaurantes .containerColum .conteinerCardResta {
+  width: 80%;
   height: 180px;
-  margin: 10px 10px 50px 70px;
+  margin: auto;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
   /* justify-content: center; */
   background-color: #fff;
-  box-shadow: 0 3px 13px 1px rgba(0, 0, 0, 0.09);
+  box-shadow: 0 3px 13px 1px rgba(0, 0, 0, 0.5215686275);
 }
-.conteiner_restaurantes .conteinerCardResta .imagenRestaurante {
+.conteiner_restaurantes .containerColum .conteinerCardResta .imagenRestaurante {
   height: 94%;
   width: auto;
   margin: 0px 0px 0px 5px;
 }
-.conteiner_restaurantes .conteinerCardResta .contenedorTexto {
+.conteiner_restaurantes .containerColum .conteinerCardResta .contenedorTexto {
   /* text-align: center; */
   padding: 12px;
   font-family: Lato, sans-serif;
   font-weight: 400;
   line-height: 1.4;
 }
-.conteiner_restaurantes .conteinerCardResta .contenedorTexto .nombreRestaurante {
+.conteiner_restaurantes .containerColum .conteinerCardResta .contenedorTexto .nombreRestaurante {
   font-size: 1.1rem;
 }
-.conteiner_restaurantes .conteinerCardResta .contenedorTexto .ubiRestaurante {
+.conteiner_restaurantes .containerColum .conteinerCardResta .contenedorTexto .ubiRestaurante {
   font-size: 0.9rem;
   margin-top: 15px;
   padding-bottom: 30px;
 }
-.conteiner_restaurantes .conteinerCardResta .contenedorTexto .puntuacionRestaurante {
+.conteiner_restaurantes .containerColum .conteinerCardResta .contenedorTexto .puntuacionRestaurante {
   font-size: 0.99rem;
   text-align: justify;
+}
+.conteiner_restaurantes .containerColum .contenedorProductos {
+  width: 80%;
+  height: 250px;
+  margin: auto;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 0 3px 13px 1px rgba(0, 0, 0, 0.5215686275);
+}
+.conteiner_restaurantes .containerColum .contenedorProductos .titulo {
+  height: auto;
+}
+.conteiner_restaurantes .containerColum .contenedorProductos .titulo p {
+  margin-bottom: 5px;
+  text-align: center;
+}
+.conteiner_restaurantes .containerColum .contenedorProductos .lista {
+  margin: 10px;
 }
 
 @media (max-width: 753px) {

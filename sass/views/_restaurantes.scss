@@ -1,43 +1,90 @@
 .conteiner_restaurantes{
     display: flex;
-    .conteinerCardResta{
-        width: 380px;
-        height: 180px;
-        margin: 10px 10px 50px 70px;
-        display: flex;
-        align-items: center;
-        /* justify-content: center; */
-        background-color: #fff;
-        box-shadow: 0 3px 13px 1px rgb(0 0 0 / 9%);
-    
-        .imagenRestaurante{
-            height: 94%;
-            width: auto;
-            margin: 0px 0px 0px 5px;
-        }
-    
-        .contenedorTexto{
-            /* text-align: center; */
-            padding: 12px;
-            font-family: Lato,sans-serif;
-            font-weight: 400;
-            line-height: 1.4;
-    
-            .nombreRestaurante{
-                font-size: 1.1rem;
-            }
-    
-            .ubiRestaurante{
-                font-size: 0.9rem;
-                margin-top: 15px;
-                padding-bottom: 30px;
-            }
-    
-            .puntuacionRestaurante{
-                font-size: 0.99rem;
-                text-align: justify;
+
+    .containerColum{
+        margin-top: 5px;
+        .contenedorResTipo{
+            display: flex;
+            margin-top: 35px;
+            .tiposRes{
+                display: flex;
+                flex-wrap: wrap;
+                flex: 1 1;
+                .tipo{
+                    flex: 1 1;
+                    text-align: center;
+                    
+                    img{
+                        width: 85px;
+                    }
+                }
             }
         }
-    
+
+        .conteinerCardResta{
+            width: 80%;
+            height: 180px;
+            margin: auto;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            /* justify-content: center; */
+            background-color: #fff;
+            box-shadow: 0 3px 13px 1px /* rgb(0 0 0 / 9%) */ #00000085;
+        
+            .imagenRestaurante{
+                height: 94%;
+                width: auto;
+                margin: 0px 0px 0px 5px;
+            }
+        
+            .contenedorTexto{
+                /* text-align: center; */
+                padding: 12px;
+                font-family: Lato,sans-serif;
+                font-weight: 400;
+                line-height: 1.4;
+        
+                .nombreRestaurante{
+                    font-size: 1.1rem;
+                }
+        
+                .ubiRestaurante{
+                    font-size: 0.9rem;
+                    margin-top: 15px;
+                    padding-bottom: 30px;
+                }
+        
+                .puntuacionRestaurante{
+                    font-size: 0.99rem;
+                    text-align: justify;
+                }
+            }
+        
+        }
+
+        .contenedorProductos{
+            width: 80%;
+            height: 250px;
+            margin: auto;
+            margin-bottom: 20px;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            box-shadow: 0 3px 13px 1px /* rgb(0 0 0 / 9%) */ #00000085;
+            
+            .titulo{
+                height: auto;
+                p{
+                    margin-bottom: 5px;
+                    text-align: center;
+                }
+            }
+
+            .lista{
+                margin: 10px;
+            }
+        }
     }
+
 }
