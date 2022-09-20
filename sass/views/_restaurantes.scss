@@ -2,20 +2,22 @@
     display: flex;
 
     .containerColum{
-        margin-top: 5px;
+        margin-top: 55px;
         .contenedorResTipo{
-            display: flex;
-            margin-top: 35px;
+            
             .tiposRes{
                 display: flex;
                 flex-wrap: wrap;
+                gap: 24.5px;
                 flex: 1 1;
                 .tipo{
                     flex: 1 1;
                     text-align: center;
+                    font-weight: bolder;
                     
                     img{
-                        width: 85px;
+                        width: 78px;
+
                     }
                 }
             }
@@ -34,13 +36,13 @@
             flex-wrap: nowrap;
         
             .imagenRestaurante{
-                height: 94%;
-                width: 170px;
-                object-fit: cover;
-                border: 3px solid #ff9daa;
+                height: 85%;
+                width: 150px;
+                object-fit: contain;
+                border: 0.6px solid #1E1E24;
                 margin: 0px 0px 0px 5px;
             }
-            
+
         
             .contenedorTexto{
                 /* text-align: center; */
