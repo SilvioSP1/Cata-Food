@@ -71,8 +71,8 @@
         }
 
         .contenedorProductos{
-            width: 80%;
-            height: 250px;
+            width: 65%;
+            height: 220px;
             margin: auto;
             margin-bottom: 20px;
             align-items: center;
@@ -80,16 +80,24 @@
             background-color: #fff;
             box-shadow: 0 3px 13px 1px /* rgb(0 0 0 / 9%) */ #00000085;
             
-            .titulo{
-                height: auto;
-                p{
-                    margin-bottom: 5px;
-                    text-align: center;
+            .containerCategorias{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                .titulo{
+                    height: auto;
+                    font-weight: bolder;
+                    p{
+                        margin-bottom: 5px;
+                        text-align: center;
+                    }
                 }
-            }
-
-            .lista{
-                margin: 10px;
+    
+                .lista{
+                    margin: 0px;
+                    margin-top: 4px;
+                }
             }
         }
     }

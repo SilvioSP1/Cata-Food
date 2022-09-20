@@ -871,8 +871,8 @@ body {
   text-align: justify;
 }
 .conteiner_restaurantes .containerColum .contenedorProductos {
-  width: 80%;
-  height: 250px;
+  width: 65%;
+  height: 220px;
   margin: auto;
   margin-bottom: 20px;
   align-items: center;
@@ -880,15 +880,23 @@ body {
   background-color: #fff;
   box-shadow: 0 3px 13px 1px rgba(0, 0, 0, 0.5215686275);
 }
-.conteiner_restaurantes .containerColum .contenedorProductos .titulo {
-  height: auto;
+.conteiner_restaurantes .containerColum .contenedorProductos .containerCategorias {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.conteiner_restaurantes .containerColum .contenedorProductos .titulo p {
+.conteiner_restaurantes .containerColum .contenedorProductos .containerCategorias .titulo {
+  height: auto;
+  font-weight: bolder;
+}
+.conteiner_restaurantes .containerColum .contenedorProductos .containerCategorias .titulo p {
   margin-bottom: 5px;
   text-align: center;
 }
-.conteiner_restaurantes .containerColum .contenedorProductos .lista {
-  margin: 10px;
+.conteiner_restaurantes .containerColum .contenedorProductos .containerCategorias .lista {
+  margin: 0px;
+  margin-top: 4px;
 }
 
 @media (max-width: 753px) {
