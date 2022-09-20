@@ -35,7 +35,9 @@
         
             .imagenRestaurante{
                 height: 94%;
-                width: auto;
+                width: 170px;
+                object-fit: cover;
+                border: 3px solid #ff9daa;
                 margin: 0px 0px 0px 5px;
             }
             
