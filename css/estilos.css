@@ -821,7 +821,7 @@ body {
 .conteiner_restaurantes .containerColum .contenedorResTipo .tiposRes {
   display: flex;
   flex-wrap: wrap;
-  gap: 24.5px;
+  gap: 8px;
   flex: 1 1;
 }
 .conteiner_restaurantes .containerColum .contenedorResTipo .tiposRes .tipo {
@@ -871,7 +871,7 @@ body {
   text-align: justify;
 }
 .conteiner_restaurantes .containerColum .contenedorProductos {
-  width: 65%;
+  width: 80%;
   min-height: 220px;
   margin: auto;
   margin-bottom: 20px;

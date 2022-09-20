@@ -8,7 +8,7 @@
             .tiposRes{
                 display: flex;
                 flex-wrap: wrap;
-                gap: 24.5px;
+                gap: 8px;
                 flex: 1 1;
                 .tipo{
                     flex: 1 1;
@@ -71,7 +71,7 @@
         }
 
         .contenedorProductos{
-            width: 65%;
+            width: 80%;
             min-height: 220px;
             margin: auto;
             margin-bottom: 20px;
