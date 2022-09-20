@@ -856,7 +856,7 @@ body {
   padding: 12px;
   font-family: Lato, sans-serif;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1;
 }
 .conteiner_restaurantes .containerColum .conteinerCardResta .contenedorTexto .nombreRestaurante {
   font-size: 1.1rem;
@@ -872,7 +872,7 @@ body {
 }
 .conteiner_restaurantes .containerColum .contenedorProductos {
   width: 65%;
-  height: 220px;
+  min-height: 220px;
   margin: auto;
   margin-bottom: 20px;
   align-items: center;
