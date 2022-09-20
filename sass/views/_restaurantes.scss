@@ -23,7 +23,7 @@
 
         .conteinerCardResta{
             width: 80%;
-            height: 180px;
+            height: 165px;
             margin: auto;
             margin-bottom: 20px;
             display: flex;
@@ -31,6 +31,7 @@
             /* justify-content: center; */
             background-color: #fff;
             box-shadow: 0 3px 13px 1px /* rgb(0 0 0 / 9%) */ #00000085;
+            flex-wrap: nowrap;
         
             .imagenRestaurante{
                 height: 94%;
@@ -58,6 +59,7 @@
                 .puntuacionRestaurante{
                     font-size: 0.99rem;
                     text-align: justify;
+                    
                 }
             }
         
