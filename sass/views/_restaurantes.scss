@@ -81,10 +81,7 @@
             box-shadow: 0 3px 13px 1px /* rgb(0 0 0 / 9%) */ #00000085;
             
             .containerCategorias{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
+                
                 .titulo{
                     height: auto;
                     font-weight: bolder;
@@ -97,6 +94,16 @@
                 .lista{
                     margin: 0px;
                     margin-top: 4px;
+
+                    h6{
+                        font-weight: bolder;
+                    }
+
+                    .imgProductos{
+                        height: 35px;
+                        margin-left: 10px;
+                        margin-right: 10px;
+                    }
                 }
             }
         }

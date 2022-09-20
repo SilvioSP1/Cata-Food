@@ -880,12 +880,6 @@ body {
   background-color: #fff;
   box-shadow: 0 3px 13px 1px rgba(0, 0, 0, 0.5215686275);
 }
-.conteiner_restaurantes .containerColum .contenedorProductos .containerCategorias {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
 .conteiner_restaurantes .containerColum .contenedorProductos .containerCategorias .titulo {
   height: auto;
   font-weight: bolder;
@@ -897,6 +891,14 @@ body {
 .conteiner_restaurantes .containerColum .contenedorProductos .containerCategorias .lista {
   margin: 0px;
   margin-top: 4px;
+}
+.conteiner_restaurantes .containerColum .contenedorProductos .containerCategorias .lista h6 {
+  font-weight: bolder;
+}
+.conteiner_restaurantes .containerColum .contenedorProductos .containerCategorias .lista .imgProductos {
+  height: 35px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 @media (max-width: 753px) {
