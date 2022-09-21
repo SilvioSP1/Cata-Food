@@ -337,7 +337,7 @@ body {
   position: relative;
   width: 270px;
   height: 350px;
-  background: url("/img/Exequielfoto.jpeg");
+  background: url("/img/sobre-nosotros/Exequielfoto.jpeg");
   background-size: cover;
   background-position: center;
   cursor: pointer;
@@ -367,7 +367,7 @@ body {
   opacity: 1;
 }
 .container__cardsN .cardNosotros .profile2 {
-  background-image: url("/img/silvioFoto.jpg");
+  background-image: url("/img/sobre-nosotros/silvioFoto.jpg");
   background-size: cover;
   background-position: center;
 }
