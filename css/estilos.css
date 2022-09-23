@@ -1093,7 +1093,7 @@ body {
 }
 @media (max-width: 754px) {
   .containerMedias {
-    flex-direction: unset;
+    flex-direction: row;
   }
   .containerMedias .buscador {
     margin-bottom: 0;
