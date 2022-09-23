@@ -95,32 +95,33 @@
 
         }
 
-        
+
 
     }
 
     .cardNosotros {
 
 
-        .profile, .profile2 {
-            
+        .profile,
+        .profile2 {
+
             max-width: 220px;
 
 
         }
 
-        .containerSocial{
+        .containerSocial {
 
-            .social-icons{
-    
+            .social-icons {
+
                 right: 20%;
-        
+
             }
-    
+
         }
     }
 
-    
+
 }
 
 @media(min-width:508px) and (max-width:750px) {
@@ -134,11 +135,11 @@
 
         }
 
-        
+
 
     }
 
-}   
+}
 
 @media(min-width:704px) and (max-width:1000px) {
 
@@ -151,11 +152,11 @@
 
         }
 
-        
+
 
     }
 
-} 
+}
 
 //medias login
 
@@ -163,15 +164,15 @@
 
     .containerIR1 {
 
-        .containerForm1{
+        .containerForm1 {
             width: 80%;
         }
-        
+
     }
 
     .containerIR2 {
 
-        .containerForm2{
+        .containerForm2 {
             width: 80%;
             margin-top: 20px;
             margin-bottom: 20px;
@@ -182,35 +183,36 @@
 
     .containerIR3 {
 
-        .containerForm3{
+        .containerForm3 {
             width: 80%;
             margin-top: 20px;
             margin-bottom: 20px;
 
-            .mover{
+            .mover {
 
-                .formulario{
-                    input{
+                .formulario {
+                    input {
                         width: 90%;
                     }
 
-                    span{
-                        
+                    span {
+
                         font-size: 15px;
                     }
-                    
-                    div{
+
+                    div {
                         width: 90%;
-                        .genero{
+
+                        .genero {
                             width: 100%;
                         }
                     }
 
-                    iframe{
+                    iframe {
                         width: 90%;
                     }
 
-                    
+
                 }
             }
         }
@@ -223,34 +225,35 @@
 
     .containerIR1 {
 
-        .containerForm1{
+        .containerForm1 {
             width: 90%;
 
-            .mover{
+            .mover {
 
-                .containerLetras{
+                .containerLetras {
 
-                    h2{
+                    h2 {
                         font-size: 20px;
                     }
                 }
 
-                .formulario{
-                    input{
+                .formulario {
+                    input {
                         width: 90%;
                     }
 
-                    span{
-                        
+                    span {
+
                         font-size: 15px;
                     }
 
-                    div{
+                    div {
 
-                        button{
+                        button {
                             width: 100px;
                         }
-                        .boton{
+
+                        .boton {
                             width: 100px;
                         }
                     }
@@ -262,34 +265,35 @@
 
     .containerIR2 {
 
-        .containerForm2{
+        .containerForm2 {
             width: 90%;
 
-            .mover{
+            .mover {
 
-                .containerLetras{
+                .containerLetras {
 
-                    h2{
+                    h2 {
                         font-size: 20px;
                     }
                 }
 
-                .formulario{
-                    input{
+                .formulario {
+                    input {
                         width: 90%;
                     }
 
-                    span{
-                        
+                    span {
+
                         font-size: 15px;
                     }
 
-                    div{
+                    div {
 
-                        button{
+                        button {
                             width: 100px;
                         }
-                        .boton{
+
+                        .boton {
                             width: 100px;
                         }
                     }
@@ -301,46 +305,48 @@
 
     .containerIR3 {
 
-        .containerForm3{
+        .containerForm3 {
             width: 90%;
 
-            .mover{
+            .mover {
 
-                .containerLetras{
+                .containerLetras {
 
-                    h2{
+                    h2 {
                         font-size: 20px;
                     }
                 }
 
-                .formulario{
-                    input{
+                .formulario {
+                    input {
                         width: 90%;
                     }
 
-                    span{
-                        
+                    span {
+
                         font-size: 15px;
                     }
-                    
-                    div{
+
+                    div {
                         width: 90%;
-                        .genero{
+
+                        .genero {
                             width: 100%;
                         }
                     }
 
-                    div{
+                    div {
 
-                        button{
+                        button {
                             width: 100px;
                         }
-                        .boton{
+
+                        .boton {
                             width: 100px;
                         }
                     }
 
-                    
+
                 }
             }
         }
@@ -348,5 +354,164 @@
     }
 
 
-}   
+}
+
+//Medias seccion restaurantes
+
+@media(max-width:856px) {
+
+    .containerColum {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .tipo {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+    }
+
+}
+
+@media(max-width:814px) {
+
+    .conteiner_restaurantes {
+
+        .containerColum {
+
+            .conteinerCardResta {
+
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                height: 450px;
+
+                .contenedorTexto {
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+
+                }
+            }
+
+            .tipo {
+
+                flex-direction: column;
+
+            }
+
+
+
+        }
+
+
+
+
+    }
+
+
+
+
+}
+
+@media(max-width:766px) {
+
+    .contenedorMediaCat {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 400px;
+
+
+        .containerCat_Flex {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 400px;
+
+
+        }
+
+    }
+
+}
+
+@media(min-width:280px) and (max-width:416px) {
+
+
+    .contenedorBuscadorRes{
+
+       .containerMedias{
+        .buscador{
+
+            width: 180px;
+
+        }
+       }
+
+    }
+
+    
+    .conteiner_restaurantes {
+
+        .containerColum {
+
+            .flexCard1{
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .flexCard2{
+
+                    .conteinerCardResta {
+    
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        width: 250px;
+        
+                        .contenedorTexto {
+        
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+        
+                        }
+                    }
+    
+                }
+
+            }
+
+
+
+
+        }
+
+
+
+
+    }
+
+
+
+
+}
+
+
+
+
 

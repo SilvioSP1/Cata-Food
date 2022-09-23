@@ -964,7 +964,8 @@ body {
   .containerTP p {
     width: 20rem;
   }
-  .cardNosotros .profile, .cardNosotros .profile2 {
+  .cardNosotros .profile,
+.cardNosotros .profile2 {
     max-width: 220px;
   }
   .cardNosotros .containerSocial .social-icons {
@@ -1071,6 +1072,73 @@ body {
   }
   .containerIR3 .containerForm3 .mover .formulario div .boton {
     width: 100px;
+  }
+}
+@media (max-width: 856px) {
+  .containerColum {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .tipo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
+@media (max-width: 814px) {
+  .conteiner_restaurantes .containerColum .conteinerCardResta {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 450px;
+  }
+  .conteiner_restaurantes .containerColum .conteinerCardResta .contenedorTexto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .conteiner_restaurantes .containerColum .tipo {
+    flex-direction: column;
+  }
+}
+@media (max-width: 766px) {
+  .contenedorMediaCat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+  }
+  .contenedorMediaCat .containerCat_Flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+  }
+}
+@media (min-width: 280px) and (max-width: 416px) {
+  .contenedorBuscadorRes .containerMedias .buscador {
+    width: 180px;
+  }
+  .conteiner_restaurantes .containerColum .flexCard1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .conteiner_restaurantes .containerColum .flexCard1 .flexCard2 .conteinerCardResta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+  }
+  .conteiner_restaurantes .containerColum .flexCard1 .flexCard2 .conteinerCardResta .contenedorTexto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 }
 
