@@ -886,6 +886,7 @@ body {
 .conteiner_restaurantes .containerColum .contenedorProductos {
   width: 85%;
   min-height: 220px;
+  padding-bottom: 10px;
   margin: auto;
   margin-bottom: 20px;
   align-items: center;
@@ -895,12 +896,12 @@ body {
   background-color: #1a1e21;
   color: whitesmoke;
 }
-.conteiner_restaurantes .containerColum .contenedorProductos .containerCategorias .titulo {
+.conteiner_restaurantes .containerColum .contenedorProductos .titulo {
   height: auto;
   font-weight: bolder;
   font-size: 18px;
 }
-.conteiner_restaurantes .containerColum .contenedorProductos .containerCategorias .titulo p {
+.conteiner_restaurantes .containerColum .contenedorProductos .titulo p {
   margin-bottom: 5px;
   text-align: center;
 }
@@ -1096,6 +1097,33 @@ body {
   }
   .containerMedias .buscador {
     margin-bottom: 0;
+  }
+}
+@media (max-width: 540px) {
+  .conteiner_restaurantes .containerColum .conteinerCardResta {
+    height: 145px;
+  }
+  .conteiner_restaurantes .containerColum .conteinerCardResta .contenedorTexto .nombreRestaurante {
+    font-size: 1rem;
+  }
+  .conteiner_restaurantes .containerColum .conteinerCardResta .contenedorTexto .ubiRestaurante {
+    font-size: 0.8rem;
+    padding-bottom: 16px;
+  }
+  .conteiner_restaurantes .containerColum .conteinerCardResta .contenedorTexto h6 {
+    font-size: 0.9rem;
+  }
+  .conteiner_restaurantes .containerColum .contenedorProductos {
+    width: 80%;
+  }
+  .conteiner_restaurantes .containerColum .contenedorProductos .titulo {
+    margin-bottom: 20px;
+  }
+  .conteiner_restaurantes .containerColum .contenedorProductos .containerCategorias {
+    display: flex;
+  }
+  .conteiner_restaurantes .containerColum .contenedorProductos .containerCategorias .lista {
+    text-align: center;
   }
 }
 /* @media(max-width:814px) {

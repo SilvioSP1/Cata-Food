@@ -397,7 +397,49 @@
 }
 
 @media(max-width:540px) {
+    .conteiner_restaurantes{
     
+        .containerColum{
+
+            .conteinerCardResta{
+                height: 145px;
+
+                .contenedorTexto{
+
+                    .nombreRestaurante{
+                        font-size: 1rem;
+                    }
+
+                    .ubiRestaurante{
+                        font-size: 0.8rem;
+                        padding-bottom: 16px;
+                    }
+                    
+                    h6{
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+
+            .contenedorProductos{
+                width: 80%;
+
+                .titulo{
+                    margin-bottom: 20px;
+                }
+                .containerCategorias{
+                    display: flex;
+                    .lista{
+                        text-align: center;
+                        h6{
+                            
+                        }
+                    }
+                }
+            }
+        }
+
+    }
 }
 /* @media(max-width:814px) {
 
@@ -531,7 +573,3 @@
 
 }
  */
-
-
-
-

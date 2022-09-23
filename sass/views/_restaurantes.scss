@@ -85,6 +85,7 @@
         .contenedorProductos{
             width: 85%;
             min-height: 220px;
+            padding-bottom: 10px;
             margin: auto;
             margin-bottom: 20px;
             align-items: center;
@@ -94,17 +95,17 @@
             background-color: #1a1e21;
             color: whitesmoke;
             
+            .titulo{
+                height: auto;
+                font-weight: bolder;
+                font-size: 18px;
+                p{
+                    margin-bottom: 5px;
+                    text-align: center;
+                }
+            }
             .containerCategorias{
                 
-                .titulo{
-                    height: auto;
-                    font-weight: bolder;
-                    font-size: 18px;
-                    p{
-                        margin-bottom: 5px;
-                        text-align: center;
-                    }
-                }
     
                 .lista{
                     margin: 0px;
