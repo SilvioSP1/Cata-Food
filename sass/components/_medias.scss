@@ -369,6 +369,13 @@
 
     }
 
+    .containerColum{
+        
+        .columnas{
+            width: 100%;
+        }
+    }
+
     .tipo {
 
         display: flex;
@@ -379,7 +386,20 @@
 
 }
 
-@media(max-width:814px) {
+@media(max-width:754px) {
+    .containerMedias{
+        flex-direction: unset;
+
+        .buscador{
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media(max-width:540px) {
+    
+}
+/* @media(max-width:814px) {
 
     .conteiner_restaurantes {
 
@@ -510,7 +530,7 @@
 
 
 }
-
+ */
 
 
 
