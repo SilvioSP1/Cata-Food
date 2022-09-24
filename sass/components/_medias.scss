@@ -358,7 +358,7 @@
 
 //Medias seccion restaurantes
 
-@media(max-width:856px) {
+@media(max-width:970px) {
 
     .containerColum {
 
@@ -367,13 +367,25 @@
         justify-content: center;
         align-items: center;
 
-    }
-
-    .containerColum{
-        
         .columnas{
             width: 100%;
         }
+
+        .contenedorProductos{
+        
+            .containerCategorias{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 4px;
+                flex: 1 1 1;
+
+                .lista{
+                }
+            }
+        }
+
     }
 
     .tipo {
