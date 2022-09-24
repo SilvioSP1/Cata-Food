@@ -856,6 +856,7 @@ body {
   flex-wrap: nowrap;
   background-color: #1a1e21;
   color: whitesmoke;
+  text-decoration: none;
 }
 .conteiner_restaurantes .containerColum .conteinerCardResta .imagenRestaurante {
   height: 85%;
