@@ -367,13 +367,13 @@
         justify-content: center;
         align-items: center;
 
-        .columnas{
+        .columnas {
             width: 100%;
         }
 
-        .contenedorProductos{
-        
-            .containerCategorias{
+        .contenedorProductos {
+
+            .containerCategorias {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -381,8 +381,6 @@
                 gap: 4px;
                 flex: 1 1 1;
 
-                .lista{
-                }
             }
         }
 
@@ -399,196 +397,65 @@
 }
 
 @media(max-width:754px) {
-    .containerMedias{
+    .containerMedias {
         flex-direction: row;
 
-        .buscador{
+        .buscador {
             margin-bottom: 0;
         }
     }
 }
 
 @media(max-width:540px) {
-    .conteiner_restaurantes{
-    
-        .containerColum{
-
-            .conteinerCardResta{
-                height: 145px;
-
-                .contenedorTexto{
-
-                    .nombreRestaurante{
-                        font-size: 1rem;
-                    }
-
-                    .ubiRestaurante{
-                        font-size: 0.8rem;
-                        padding-bottom: 16px;
-                    }
-                    
-                    h6{
-                        font-size: 0.9rem;
-                    }
-                }
-            }
-
-            .contenedorProductos{
-                width: 80%;
-
-                .titulo{
-                    margin-bottom: 20px;
-                }
-                .containerCategorias{
-                    display: flex;
-                    .lista{
-                        text-align: center;
-                        h6{
-                            
-                        }
-                    }
-                }
-            }
-        }
-
-    }
-}
-/* @media(max-width:814px) {
-
     .conteiner_restaurantes {
 
         .containerColum {
 
             .conteinerCardResta {
-
-                justify-content: center;
-                flex-direction: column;
-                align-items: center;
-                height: 450px;
+                height: 145px;
 
                 .contenedorTexto {
 
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-direction: column;
-
-                }
-            }
-
-            .tipo {
-
-                flex-direction: column;
-
-            }
-
-
-
-        }
-
-
-
-
-    }
-
-
-
-
-}
-
-@media(max-width:766px) {
-
-    .contenedorMediaCat {
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 400px;
-
-
-        .containerCat_Flex {
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 400px;
-
-
-        }
-
-    }
-
-}
-
-@media(min-width:280px) and (max-width:416px) {
-
-
-    .contenedorBuscadorRes{
-
-       .containerMedias{
-        .buscador{
-
-            width: 180px;
-
-        }
-       }
-
-    }
-
-    
-    .conteiner_restaurantes {
-
-        .containerColum {
-
-            .flexCard1{
-
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                .flexCard2{
-
-                    .conteinerCardResta {
-    
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        flex-direction: column;
-                        width: 250px;
-        
-                        .contenedorTexto {
-        
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            flex-direction: column;
-        
-                        }
+                    .nombreRestaurante {
+                        font-size: 1rem;
                     }
-    
-                }
 
+                    .ubiRestaurante {
+                        font-size: 0.8rem;
+                        padding-bottom: 16px;
+                    }
+
+                    h6 {
+                        font-size: 0.9rem;
+                    }
+                }
             }
 
+            .contenedorProductos {
+                width: 80%;
 
+                .titulo {
+                    margin-bottom: 20px;
+                }
 
+                .containerCategorias {
+                    display: flex;
 
+                    .lista {
+                        text-align: center;
+
+                    }
+                }
+            }
         }
 
-
-
-
     }
-
-
-
-
 }
- */
 
- //Seccion Restaurante
 
- @media(max-width: 1135px){
+//Seccion Restaurante
+
+@media(max-width: 1135px) {
     .containerColum {
 
         display: flex;
@@ -596,10 +463,10 @@
         justify-content: center;
         align-items: center;
 
-        .columnas{
+        .columnas {
             width: 100%;
-            
+
         }
 
     }
- }
+}
