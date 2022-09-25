@@ -358,6 +358,96 @@
 
 //Medias seccion restaurantes
 
+@media(min-width:280px) and (max-width:392px) {
+
+    .conteiner_restaurantes {
+
+        .contenedorBuscadorRes {
+
+            margin-top: 30px;
+
+        }
+
+        .containerColum {
+
+
+            .container__CardRest {
+
+                .conteinerCardResta {
+
+                    height: 290px;
+                    width: 245px;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .imagenRestaurante {
+
+                        height: 110px;
+
+                    }
+
+
+                    .contenedorTexto {
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+
+
+                        i {
+
+                            font-size: 11px;
+
+                        }
+
+                    }
+
+
+                }
+
+            }
+
+        }
+
+
+
+    }
+
+    .columnas {
+
+        .flexCategorias{
+
+            .contenedorProductos {
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+    
+                .titulo {
+                    margin-top: 14px;
+                }
+    
+    
+                .containerCategorias {
+    
+                    width: 50px;
+    
+                }
+    
+    
+    
+    
+            }
+
+        }
+
+    }
+}
+
 @media(max-width:970px) {
 
     .containerColum {
