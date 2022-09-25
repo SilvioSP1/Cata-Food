@@ -585,3 +585,21 @@
 
 }
  */
+
+ //Seccion Restaurante
+
+ @media(max-width: 1135px){
+    .containerColum {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .columnas{
+            width: 100%;
+            
+        }
+
+    }
+ }

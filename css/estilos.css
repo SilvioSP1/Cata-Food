@@ -969,6 +969,15 @@ body {
 .conteiner_restaurantes .container-fluid .containerColum .columnas .conteimerLocal .continerTextoBusca .contenedorBuscadorRes .containerMedias {
   height: 45px;
 }
+.conteiner_restaurantes .container-fluid .containerColum .columnas .conteinerProductos {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1;
+}
+.conteiner_restaurantes .container-fluid .containerColum .columnas .conteinerProductos .producto {
+  width: 45%;
+}
+
 @media (max-width: 753px) {
   .containerMedias {
     flex-direction: column;
@@ -1315,5 +1324,16 @@ body {
 
 }
  */
+@media (max-width: 1135px) {
+  .containerColum {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .containerColum .columnas {
+    width: 100%;
+  }
+}
 
 /*# sourceMappingURL=estilos.css.map */
