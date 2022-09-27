@@ -63,6 +63,12 @@
 
                     .producto{
                         width: 45%;
+
+                        .contenedorTexto{
+                            .ingredientes{
+                                padding-bottom: 0;
+                            }
+                        }
                     }
                 }
             }

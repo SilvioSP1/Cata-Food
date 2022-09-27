@@ -977,6 +977,9 @@ body {
 .conteiner_restaurantes .container-fluid .containerColum .columnas .conteinerProductos .producto {
   width: 45%;
 }
+.conteiner_restaurantes .container-fluid .containerColum .columnas .conteinerProductos .producto .contenedorTexto .ingredientes {
+  padding-bottom: 0;
+}
 
 @media (max-width: 753px) {
   .containerMedias {
