@@ -1297,17 +1297,16 @@ body {
 }
 @media (max-width: 376px) {
   .conteiner_restaurantes .container-fluid .containerColum .columnas .conteinerProductos .producto {
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 230px;
+    height: 125px;
   }
   .conteiner_restaurantes .container-fluid .containerColum .columnas .conteinerProductos .producto img {
     object-fit: cover;
   }
   .conteiner_restaurantes .container-fluid .containerColum .columnas .conteinerProductos .producto .contenedorTexto .nombreRestaurante {
-    font-size: 10px;
+    font-size: 12px;
   }
   .conteiner_restaurantes .container-fluid .containerColum .columnas .conteinerProductos .producto .contenedorTexto .ubiRestaurante {
     font-size: 10px;
