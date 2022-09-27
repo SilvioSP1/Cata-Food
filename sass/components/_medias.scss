@@ -558,3 +558,36 @@
 
     }
 }
+
+/* Restaurante Vista */
+
+@media(max-width: 830px){
+
+    .conteiner_restaurantes{
+        
+        .containerColum{
+    
+            .producto{
+                height: 145px;
+                /* .imagenRestaurante{
+                    height: 55%;
+                } */
+                .contenedorTexto{
+                    .nombreProducto {
+                        font-size: 1rem;
+                    }
+                    .ingredientes {
+                        font-size: 0.8rem;
+                    }
+                    h6{
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+    } 
+}
+
+@media(max-width: 740px){
+    
+}

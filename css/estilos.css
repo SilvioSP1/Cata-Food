@@ -1243,5 +1243,23 @@ body {
     width: 100%;
   }
 }
+/* Restaurante Vista */
+@media (max-width: 830px) {
+  .conteiner_restaurantes .containerColum .producto {
+    height: 145px;
+    /* .imagenRestaurante{
+        height: 55%;
+    } */
+  }
+  .conteiner_restaurantes .containerColum .producto .contenedorTexto .nombreProducto {
+    font-size: 1rem;
+  }
+  .conteiner_restaurantes .containerColum .producto .contenedorTexto .ingredientes {
+    font-size: 0.8rem;
+  }
+  .conteiner_restaurantes .containerColum .producto .contenedorTexto h6 {
+    font-size: 0.9rem;
+  }
+}
 
 /*# sourceMappingURL=estilos.css.map */
