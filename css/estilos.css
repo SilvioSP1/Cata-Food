@@ -1261,5 +1261,57 @@ body {
     font-size: 0.9rem;
   }
 }
+@media (max-width: 740px) {
+  .conteiner_restaurantes .container-fluid .containerColum .columnas .conteinerProductos .producto {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .conteiner_restaurantes .container-fluid .containerColum .columnas .conteinerProductos .producto img {
+    height: 100px;
+    object-fit: contain;
+  }
+  .conteiner_restaurantes .container-fluid .containerColum .columnas .conteinerProductos .producto .contenedorTexto .nombreRestaurante {
+    font-size: 10px;
+  }
+  .conteiner_restaurantes .container-fluid .containerColum .columnas .conteinerProductos .producto .contenedorTexto .ubiRestaurante {
+    font-size: 10px;
+  }
+}
+@media (max-width: 605px) {
+  .conteiner_restaurantes .container-fluid .containerColum .columnas .conteinerProductos .producto {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .conteiner_restaurantes .container-fluid .containerColum .columnas .conteinerProductos .producto img {
+    object-fit: cover;
+  }
+  .conteiner_restaurantes .container-fluid .containerColum .columnas .conteinerProductos .producto .contenedorTexto .nombreRestaurante {
+    font-size: 10px;
+  }
+  .conteiner_restaurantes .container-fluid .containerColum .columnas .conteinerProductos .producto .contenedorTexto .ubiRestaurante {
+    font-size: 10px;
+  }
+}
+@media (max-width: 376px) {
+  .conteiner_restaurantes .container-fluid .containerColum .columnas .conteinerProductos .producto {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 230px;
+  }
+  .conteiner_restaurantes .container-fluid .containerColum .columnas .conteinerProductos .producto img {
+    object-fit: cover;
+  }
+  .conteiner_restaurantes .container-fluid .containerColum .columnas .conteinerProductos .producto .contenedorTexto .nombreRestaurante {
+    font-size: 10px;
+  }
+  .conteiner_restaurantes .container-fluid .containerColum .columnas .conteinerProductos .producto .contenedorTexto .ubiRestaurante {
+    font-size: 10px;
+  }
+}
 
 /*# sourceMappingURL=estilos.css.map */
