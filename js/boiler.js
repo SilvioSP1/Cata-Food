@@ -3,6 +3,7 @@
 /*
     Variables
 */
+const body = document.querySelector("body");
 
 const toggle = document.querySelector(".menu_toggle");
 const nav = document.querySelector("nav");
@@ -117,3 +118,11 @@ toggle.addEventListener("click", () => {
       });
   }
 });
+
+body.addEventListener("click", () => {
+    if (toggle_opened) {
+        animation_Toggle_Close();
+        //sin una promesa
+        toggle_opened = false;
+    }
+  });
