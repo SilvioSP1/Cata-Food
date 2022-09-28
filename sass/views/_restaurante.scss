@@ -1,78 +1,77 @@
 .conteiner_restaurantes{
-    .container-fluid{
-        .containerColum{
-            margin-top: 5px;
-            .columnas{
-                .conteimerLocal{
-                    width: 100%;
-                    height: 265px;
-                    margin: auto;
-                    margin-bottom: 20px;
-                    display: flex;
-                    align-items: center;
-                    /* justify-content: center; */
-                    /* background-color: #fff; */
-                    box-shadow: 0 3px 13px 1px /* rgb(0 0 0 / 9%) */ #00000085;
-                    flex-wrap: nowrap;
-                    background-color: #1a1e21;
-                    color: whitesmoke;
 
-                    .conteinerLocalImagen{
-                        height: 100%;
-                        width: 30%;
-                        display: flex;
-                        .imagenRestaurante{
-                            height: auto;
-                            width: 100%;
-                            object-fit: contain;
-                        }
-                    }
-                    .continerTextoBusca{
-                        width: 70%;
-                        height: 100%;
-                        .contenedorTexto{
-                            text-align: center;
-                            justify-content: center;
-                            align-items: center;
-                            display: flex;
-                            height: 50%;
-                            div{
-                                p{
-                                    font-size: 20px;
-                                }
-                            }
-                        }
+    .containerColum{
+        margin-top: 5px;
+        .columnas{
+            .conteimerLocal{
+                width: 100%;
+                height: 265px;
+                margin: auto;
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+                /* justify-content: center; */
+                /* background-color: #fff; */
+                box-shadow: 0 3px 13px 1px /* rgb(0 0 0 / 9%) */ #00000085;
+                flex-wrap: nowrap;
+                background-color: #1a1e21;
+                color: whitesmoke;
     
-                        .contenedorBuscadorRes{
-                            align-items: center;
-                            margin-bottom: 0;
-                            .containerMedias{
-                                height: 45px;
-                                .buscador{
-    
-                                }
-                            }
-                        }
+                .conteinerLocalImagen{
+                    height: 100%;
+                    width: 30%;
+                    display: flex;
+                    .imagenRestaurante{
+                        height: auto;
+                        width: 100%;
+                        object-fit: contain;
                     }
                 }
-
-                .conteinerProductos{
-                    display: flex;
-                    flex-wrap: wrap;
-                    flex: 1 1;
-
-                    .producto{
-                        width: 45%;
-
-                        .contenedorTexto{
-                            .ingredientes{
-                                padding-bottom: 0;
+                .continerTextoBusca{
+                    width: 70%;
+                    height: 100%;
+                    .contenedorTexto{
+                        text-align: center;
+                        justify-content: center;
+                        align-items: center;
+                        display: flex;
+                        height: 50%;
+                        div{
+                            p{
+                                font-size: 20px;
+                            }
+                        }
+                    }
+    
+                    .contenedorBuscadorRes{
+                        align-items: center;
+                        margin-bottom: 0;
+                        .containerMedias{
+                            height: 45px;
+                            .buscador{
+    
                             }
                         }
                     }
                 }
             }
-
+    
+            .conteinerProductos{
+                display: flex;
+                flex-wrap: wrap;
+                flex: 1 1;
+    
+                .producto{
+                    width: 45%;
+    
+                    .contenedorTexto{
+                        .ingredientes{
+                            padding-bottom: 0;
+                        }
+                    }
+                }
+            }
         }
+    
     }
 }
