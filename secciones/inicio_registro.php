@@ -30,58 +30,42 @@
 
       <!-- CONTEINER -->
 
-      <section class="containerIR2">
+      <section class="containerIR1">
 
-
-            <div class="containerForm2">
+            <div class="containerForm1">
                 
 
                 <div class="mover">
                     <div class="containerLetras">
                         <img src="../img/login-registro/login.png" alt="" class="imagenUsuario">
-                        <h2>Registrar Usuario</h2>
+                        <h2>Iniciar Sesion</h2>
                         
                     </div>
                     
     
                     <form class="formulario">
-                        <input type="text" placeholder="  Nombre " required>
-                        <span class="input-border"></span>
-                        <input type="text" placeholder="  Apellido " required>
-                        <span class="input-border"></span>
                         <input type="email" placeholder="  Email " required>
                         <span class="input-border"></span>
-                        <input type="tel" placeholder="  Telefono " required>
-                        <span class="input-border"></span>
                         <input type="text" placeholder=" Contraseña " required>
-                        <span class="input-border"></span>
-                        <input type="text" placeholder=" Repetir contraseña " required>
-                        <span class="textoRegister">¿Ya tienes cuenta? <a href="inicio_registro.html">Iniciar Sesion</a></span>
+                        <span class="textoRegister">¿No tienes cuenta aún? <a href="registro_inicio.php">Registrarse</a></span>
                         <div>
-                            <button >
-                              <span>Ingresar</span>
-                            </button>
-                            <a href="../index.html" class="boton">
-                              <span>Volver</span>
-                            </a>
-                          </div>
+                          <button >
+                            <span>Ingresar</span>
+                          </button>
+                          <a href="../index.php" class="boton">
+                            <span>Volver</span>
+                          </a>
+                        </div>
                     </form>
                 </div>
 
-                
-
-
-            </div>
-        
-
+            </div>        
 
       </section>
 
       <!-- CONTEINER -->
 
     </div>
-
-
 
   </main>
 

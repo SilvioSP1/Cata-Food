@@ -136,12 +136,12 @@ body {
   gap: 30px;
 }
 
-.containerSection .contenedorCards {
+.contenedorCards {
   display: flex;
   justify-content: center;
   gap: 30px;
 }
-.containerSection .contenedorCards .card {
+.contenedorCards .card {
   width: 190px;
   height: 150px;
   transition: all 0.5s;
@@ -150,11 +150,11 @@ body {
   overflow: hidden;
   margin-bottom: 50px;
 }
-.containerSection .contenedorCards .card:hover {
+.contenedorCards .card:hover {
   height: 254px;
   background: linear-gradient(360deg, rgba(237, 237, 237, 0.7725490196) 60%, hsl(0deg, 0%, 13%) 70%);
 }
-.containerSection .contenedorCards .card .header {
+.contenedorCards .card .header {
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -163,7 +163,7 @@ body {
   background: #212121;
   margin-bottom: 16px;
 }
-.containerSection .contenedorCards .card .header .title {
+.contenedorCards .card .header .title {
   font-size: 1.1em;
   text-align: center;
   text-transform: uppercase;
@@ -171,33 +171,34 @@ body {
   color: rgba(237, 237, 237, 0.7725490196);
   font-weight: bolder;
 }
-.containerSection .contenedorCards .card .header .img-box {
+.contenedorCards .card .header .img-box {
   display: flex;
   justify-content: center;
 }
-.containerSection .contenedorCards .card .header .img-box .imgBurger {
+.contenedorCards .card .header .img-box .imgBurger {
   height: 100px;
 }
-.containerSection .contenedorCards .card .header .img-box .imgPizza {
+.contenedorCards .card .header .img-box .imgPizza {
   height: 100px;
 }
-.containerSection .contenedorCards .card .header .img-box .imgPapas {
+.contenedorCards .card .header .img-box .imgPapas {
   height: 100px;
 }
-.containerSection .contenedorCards .card .content {
+.contenedorCards .card .content {
   display: block;
   text-align: justify;
   color: #212121;
   margin: 0 22px;
 }
-.containerSection .contenedorCards .card .content p {
+.contenedorCards .card .content p {
   transition: all 0.5s;
   font-size: 1em;
   margin-bottom: 8px;
   font-weight: bolder;
   text-align: center;
 }
-.containerSection p {
+
+p {
   text-align: center;
 }
 
@@ -338,7 +339,7 @@ body {
   position: relative;
   width: 270px;
   height: 350px;
-  background: url("/img/sobre-nosotros/Exequielfoto.jpeg");
+  background: url("../img/sobre-nosotros/Exequielfoto.jpeg");
   background-size: cover;
   background-position: center;
   cursor: pointer;
@@ -368,7 +369,7 @@ body {
   opacity: 1;
 }
 .container__cardsN .cardNosotros .profile2 {
-  background-image: url("/img/sobre-nosotros/silvioFoto.jpg");
+  background-image: url("../img/sobre-nosotros/silvioFoto.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -874,6 +875,7 @@ body {
 }
 .conteiner_restaurantes .containerColum .conteinerCardResta .contenedorTexto .nombreRestaurante {
   font-size: 1.1rem;
+  text-align: initial;
 }
 .conteiner_restaurantes .containerColum .conteinerCardResta .contenedorTexto .ubiRestaurante {
   font-size: 0.9rem;
@@ -979,6 +981,7 @@ body {
 }
 .conteiner_restaurantes .containerColum .columnas .conteinerProductos .producto .contenedorTexto .ingredientes {
   padding-bottom: 0;
+  text-align: initial;
 }
 
 @media (max-width: 753px) {
@@ -994,7 +997,7 @@ body {
 }
 @media (max-width: 429px) {
   .containerMedias .buscador {
-    width: 250px;
+    width: 80%;
     margin-bottom: 20px;
   }
 }

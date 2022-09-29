@@ -1,61 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cata Food</title>
-    <!-- CSS only Bootstrapr-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="../css/estilos.css">
-
-    <!-- animation css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
-    <link rel="icon" href="../img/index/logo_redondo.png">
-
-
-</head>
-
-<body class="boiler">
-
-    <main>
-
-
-        <div id="app">
-
-            <!-- NAV -->
-            <header class="nav sticky-top">
-                <a href="../index.html"><img src="../img/index/logo_small.png" alt="" class="logoCata"></a>
-                <div class="menu_toggle">
-                    <span class="fa fa-list"></span>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="restaurantes.html" class="item_nav"><i class="fa-solid fa-bowl-food"></i>
-                                Restaurantes</a></li>
-                        <li><a href="sobre_nosotros.html" class="item_nav"><i class="fa-solid fa-people-arrows"></i>
-                                Sobre Nosotros</a></li>
-                        <li><a href="registrar_negocio.html" class="item_nav"><i class="fa-solid fa-shop"></i>
-                                Iniciar/Registra tu negocio</a></li>
-                        <li><a href="inicio_registro.html" class="item_nav"><i
-                                    class="fa-solid fa-arrow-right-to-bracket"></i> Inicio/Registro</a></li>
-                        <li><a href="#" class="item_nav carritoCompras"><i class="fa-solid fa-cart-shopping"></i>
-                                Carrito <span>0</span></a></li>
-                    </ul>
-
-                </nav>
-            </header>
-            <!-- NAV -->
-
-            <!-- CONTEINER -->
-
-            <section>
-
+<?php include("../template/header.php"); ?>
                 <div class="conteiner_restaurantes">
 
                     <div class="container-fluid">
@@ -136,7 +79,7 @@
                             </div>
                             <div class="col-9 columnas">
                                 <div class="conteinerProductos">
-                                    <a class="conteinerCardResta producto" href="restaurante.html">
+                                    <a class="conteinerCardResta producto" href="restaurante.php">
                                         <img class="imagenRestaurante" src="../img/restaurantes/productos/pizzaMuzzarella.webp"
                                             alt="">
                                         <div class="contenedorTexto">
@@ -152,7 +95,7 @@
                                             </div>
                                         </div>
                                     </a>
-                                    <a class="conteinerCardResta producto" href="restaurante.html">
+                                    <a class="conteinerCardResta producto" href="restaurante.php">
                                         <img class="imagenRestaurante" src="../img/restaurantes/productos/pizzaMuzzarella.webp"
                                             alt="">
                                         <div class="contenedorTexto">
@@ -168,7 +111,7 @@
                                             </div>
                                         </div>
                                     </a>
-                                    <a class="conteinerCardResta producto" href="restaurante.html">
+                                    <a class="conteinerCardResta producto" href="restaurante.php">
                                         <img class="imagenRestaurante" src="../img/restaurantes/productos/pizzaMuzzarella.webp"
                                             alt="">
                                         <div class="contenedorTexto">
@@ -184,7 +127,7 @@
                                             </div>
                                         </div>
                                     </a>
-                                    <a class="conteinerCardResta producto" href="restaurante.html">
+                                    <a class="conteinerCardResta producto" href="restaurante.php">
                                         <img class="imagenRestaurante" src="../img/restaurantes/productos/pizzaMuzzarella.webp"
                                             alt="">
                                         <div class="contenedorTexto">
@@ -207,82 +150,4 @@
 
                 </div>
 
-            </section>
-
-            <!-- CONTEINER -->
-
-            <!-- FOOTER -->
-
-            <div class="row featurette">
-                <footer class="bg-dark text-center text-white">
-                    <!-- Grid container -->
-                    <div class="container p-4">
-                        <!-- Section: Social media -->
-                        <section class="mb-4">
-                            <!-- Facebook -->
-                            <a class="btn btn-outline-light btn-circle btn-floating m-1" href="#!" role="button"><i
-                                    class="fa-brands fa-facebook"></i>
-                            </a>
-
-                            <!-- Twitter -->
-                            <a class="btn btn-outline-light btn-circle btn-floating m-1" href="#!" role="button"><i
-                                    class="fa-brands fa-twitter"></i>
-                            </a>
-
-                            <!-- Google -->
-                            <a class="btn btn-outline-light btn-circle btn-floating m-1" href="#!" role="button"><i
-                                    class="fa-brands fa-google"></i>
-                            </a>
-
-                            <!-- Instagram -->
-                            <a class="btn btn-outline-light btn-circle btn-floating m-1" href="#!" role="button"><i
-                                    class="fa-brands fa-instagram"></i>
-                            </a>
-
-                        </section>
-
-                        <section class="mb-4">
-                            <p>
-                                Cata Food el mejor sitio que puedes encontrar para conocer nuevos locales gastronomicos
-                                de la
-                                Ciudad de San Fernando del Valle de Catamarca. <br>
-                                Ven a ver todos los locales que tenemos
-                            </p>
-                        </section>
-
-                    </div>
-
-                    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-                        Copyright © 2022 Cata Food, Todos los derechos reservados.
-                    </div>
-
-                </footer>
-            </div>
-
-        </div>
-
-        <!-- FOOTER -->
-
-    </main>
-
-
-    <!-- scripts funcionalidad -->
-
-    <script src="../js/boiler.js"></script>
-
-
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
-    </script>
-
-    <!-- Font awesome -->
-    <script src="https://kit.fontawesome.com/0dcf698896.js" crossorigin="anonymous"></script>
-
-    <!-- Anime.js -->
-    <script src="../node_modules/animejs/lib/anime.js"></script>
-
-</body>
-
-
-</html>
+<?php include("../template/footer.php"); ?>

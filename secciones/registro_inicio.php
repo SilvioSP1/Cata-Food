@@ -30,56 +30,39 @@
 
       <!-- CONTEINER -->
 
-      <section class="containerIR3">
+      <section class="containerIR2">
 
 
-            <div class="containerForm3">
+            <div class="containerForm2">
                 
 
                 <div class="mover">
                     <div class="containerLetras">
-                        <img src="../img/registro-local/shops.png" alt="" class="imagenUsuario">
-                        <h2>Registrar Local</h2>
+                        <img src="../img/login-registro/login.png" alt="" class="imagenUsuario">
+                        <h2>Registrar Usuario</h2>
                         
                     </div>
                     
     
                     <form class="formulario">
-                        <input type="text" placeholder="  Nombre Local" required>
-                        <span class="input-border"></span>
-                        <div>
-                            <label for="" style="color:black ;">Tipo</label>
-                            <select name="genero" class="genero">
-    
-                                <option>Food Track</option>
-    
-                                <option>Restaurante</option>
-                          
-                                <option>Cafeteria</option>
-                          
-                              </select>
-                        </div>
-                        <span class="input-border"></span>
-                        <input type="number" placeholder="  Cantidad de locales " required>
-                        <span class="input-border"></span>
                         <input type="text" placeholder="  Nombre " required>
                         <span class="input-border"></span>
                         <input type="text" placeholder="  Apellido " required>
                         <span class="input-border"></span>
-                        <input type="tel" placeholder="  Telefono " required>
-                        <span class="input-border"></span>
                         <input type="email" placeholder="  Email " required>
                         <span class="input-border"></span>
-                        <input type="text" placeholder="  Ubicacion " required>
+                        <input type="tel" placeholder="  Telefono " required>
                         <span class="input-border"></span>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14028.680037786562!2d-65.78584189930419!3d-28.474426279842024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1663026039589!5m2!1ses-419!2sar" width="350" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        <input type="text" placeholder=" Referencia de ubicacion " required>
+                        <input type="text" placeholder=" Contraseña " required>
+                        <span class="input-border"></span>
+                        <input type="text" placeholder=" Repetir contraseña " required>
+                        <span class="textoRegister">¿Ya tienes cuenta? <a href="inicio_registro.php">Iniciar Sesion</a></span>
                         <div>
                             <button >
                               <span>Ingresar</span>
                             </button>
-                            <a href="../index.html" class="boton">
-                                <span>Volver</span>
+                            <a href="../index.php" class="boton">
+                              <span>Volver</span>
                             </a>
                           </div>
                     </form>
