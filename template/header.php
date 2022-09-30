@@ -15,12 +15,12 @@
   integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="../../Cata-Food/css/estilos.css">
+  <link rel="stylesheet" href="../../CATA-FODD/css/estilos.css">
 
   <!-- animation css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-  <link rel="icon" href="../../Cata-Food/img/index/logo_redondo.png">
+  <link rel="icon" href="../../CATA-FODD/img/index/logo_redondo.png">
 
 
 </head>
@@ -36,16 +36,16 @@
 
       <!-- NAV -->
       <header class="nav sticky-top">
-        <a href="../../Cata-Food/index.php"><img src="../../Cata-Food/img/index/logo_small.png" alt="" class="logoCata"></a>
+        <a href="../../CATA-FODD/index.php"><img src="../../CATA-FODD/img/index/logo_small.png" alt="" class="logoCata"></a>
         <div class="menu_toggle">
           <span class="fa fa-list"></span>
         </div>
         <nav>
           <ul>
-            <li><a href="../../Cata-Food/secciones/restaurantes.php" class="item_nav"><i class="fa-solid fa-bowl-food"></i> Restaurantes</a></li>
-            <li><a href="../../Cata-Food/secciones/sobre_nosotros.php" class="item_nav"><i class="fa-solid fa-people-arrows"></i> Sobre Nosotros</a></li>
-            <li><a href="../../Cata-Food/secciones/registrar_negocio.php" class="item_nav"><i class="fa-solid fa-shop"></i> Iniciar/Registra tu negocio</a></li>
-            <li><a href="../../Cata-Food/secciones/inicio_registro.php" class="item_nav"><i class="fa-solid fa-arrow-right-to-bracket"></i> Inicio/Registro</a></li>
+            <li><a href="../../CATA-FODD/secciones/restaurantes.php" class="item_nav"><i class="fa-solid fa-bowl-food"></i> Restaurantes</a></li>
+            <li><a href="../../CATA-FODD/secciones/sobre_nosotros.php" class="item_nav"><i class="fa-solid fa-people-arrows"></i> Sobre Nosotros</a></li>
+            <li><a href="../../CATA-FODD/secciones/registrar_negocio.php" class="item_nav"><i class="fa-solid fa-shop"></i> Iniciar/Registra tu negocio</a></li>
+            <li><a href="../../CATA-FODD/secciones/inicio_registro.php" class="item_nav"><i class="fa-solid fa-arrow-right-to-bracket"></i> Inicio/Registro</a></li>
             <li><a href="#" class="item_nav carritoCompras"><i class="fa-solid fa-cart-shopping"></i> Carrito <span>0</span></a></li>
           </ul>
           <!-- <div class="contenedorIcono">
