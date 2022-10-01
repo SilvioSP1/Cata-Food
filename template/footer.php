@@ -70,8 +70,8 @@
 
 <!-- scripts funcionalidad -->
 
-<script src="../../CATA-FODD/js/boiler.js"></script>
-<script src="../../CATA-FODD/js/loader.js"></script>
+<script src="../../Cata-Food/js/boiler.js"></script>
+<script src="../../Cata-Food/js/loader.js"></script>
 
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
@@ -82,7 +82,7 @@ integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4
 <script src="https://kit.fontawesome.com/0dcf698896.js" crossorigin="anonymous"></script>
 
 <!-- Anime.js -->
-<script src="../../CATA-FODD/node_modules/animejs/lib/anime.min.js"></script>
+<script src="../../Cata-Food/node_modules/animejs/lib/anime.min.js"></script>
 
 </body>
 
