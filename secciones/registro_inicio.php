@@ -1,3 +1,56 @@
+<?php 
+session_start();
+
+    if ($_POST) 
+    {
+
+      include("../admin/config/db.php");
+
+      $txtNombre = ($_POST['txtNombre']);
+      $txtApellido = ($_POST['txtApellido']);
+      $txtEmail = ($_POST['txtEmail']);
+      $txtTelefono = ($_POST['txtTelefono']);
+      $txtContrasena = ($_POST['txtContrasena']);
+
+
+      $sentenciaSQL = $conexion->prepare("INSERT INTO usuario (Usu_Nombre,Usu_Apellido,Usu_Contrasena,Usu_Email,Usu_Telefono,Usu_RolId,Usu_Status) VALUES (:Usu_Nombre,:Usu_Apellido,:Usu_Contrasena,:Usu_Email,:Usu_Telefono,1,1);");
+      $sentenciaSQL->bindParam(':Usu_Nombre',$txtNombre);
+      $sentenciaSQL->bindParam(':Usu_Apellido',$txtApellido);
+      $sentenciaSQL->bindParam(':Usu_Email',$txtEmail);
+      $sentenciaSQL->bindParam(':Usu_Telefono',$txtEmail);
+      $sentenciaSQL->bindParam(':Usu_Contrasena',$txtContrasena);
+      $sentenciaSQL->execute();
+
+      $sentenciaSQL = $conexion->prepare("SELECT * FROM usuario WHERE Usu_Email=:Usu_Email AND Usu_Contrasena=:Usu_Contrasena");
+      $sentenciaSQL->bindParam(':Usu_Email',$txtEmail,PDO::PARAM_STR);
+      $sentenciaSQL->bindParam(':Usu_Contrasena',$txtContrasena,PDO::PARAM_STR);
+      $sentenciaSQL->execute();
+      $usuarios = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
+
+      if ($usuarios['idRol'] == 2) 
+      {
+        session_start();
+        $_SESSION['usuario'] = $usuarios;
+        $_SESSION['nombreUsuario']=$usuarios['Usu_Nombre, Usu_Apellido'];
+        $_SESSION['idUsuario']=$usuarios['Usu_Id'];
+        $_SESSION['idRol']= $usuarios['Usu_RolId'];
+        header("Location:inicio.php");
+      }
+      else
+      {
+        session_start();
+        $_SESSION['usuario'] = $usuarios;
+        $_SESSION['nombre']=$usuarios['Usu_Nombre'];
+        $_SESSION['apellido']=$usuarios['Usu_Apellido'];
+        $_SESSION['idUsuario']=$usuarios['Usu_Id'];
+        $_SESSION['idRol']= $usuarios['Usu_RolId'];
+        header("Location:../index.php");
+        
+      }
+
+    } 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,22 +96,27 @@
                         
                     </div>
                     
+                    <?php if(isset($mensaje)){ ?>
+                        <div class="alert alert-danger" role="alert">
+                          <strong><?php echo $mensaje; ?></strong>
+                        </div>
+                      <?php } ?>
     
-                    <form class="formulario">
-                        <input type="text" placeholder="  Nombre " required>
+                    <form method="POST" class="formulario">
+                        <input type="text" placeholder="  Nombre " required name="txtNombre" id="txtNombre">
                         <span class="input-border"></span>
-                        <input type="text" placeholder="  Apellido " required>
+                        <input type="text" placeholder="  Apellido " required name="txtApellido" id="txtApellido">
                         <span class="input-border"></span>
-                        <input type="email" placeholder="  Email " required>
+                        <input type="email" placeholder="  Email " required name="txtEmail" id="txtEmail">
                         <span class="input-border"></span>
-                        <input type="tel" placeholder="  Telefono " required>
+                        <input type="tel" placeholder="  Telefono " required name="txtTelefono" id="txtTelefono">
                         <span class="input-border"></span>
-                        <input type="text" placeholder=" Contraseña " required>
+                        <input type="password" placeholder=" Contraseña " required name="txtContrasena" id="txtContrasena">
                         <span class="input-border"></span>
-                        <input type="text" placeholder=" Repetir contraseña " required>
+                        <input type="password" placeholder=" Repetir contraseña " required name="txtContrasenaRepe" id="txtContrasenaRepe">
                         <span class="textoRegister">¿Ya tienes cuenta? <a href="inicio_registro.php">Iniciar Sesion</a></span>
                         <div>
-                            <button >
+                            <button type="submit">
                               <span>Ingresar</span>
                             </button>
                             <a href="../index.php" class="boton">
