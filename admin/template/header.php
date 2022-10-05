@@ -1,5 +1,6 @@
 <?php
 session_start();
+error_reporting(0);
 
 if (!isset($_SESSION['usuario'])) {
   $_SESSION['usuario'] = "Sin Loguearse";
@@ -43,10 +44,10 @@ if ($_SESSION['usuario']!=="Sin Loguearse") {
                         <a class="nav-link active" href="<?php echo $url;?>/admin/inicio.php">Home</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="<?php echo $url;?>/admin/seccion/productos.php">Productos</a>
+                      <a class="nav-link" href="<?php echo $url;?>/admin/secciones/productos.php">Productos</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="<?php echo $url;?>/admin/seccion/usuarios.php">Usuarios</a>
+                      <a class="nav-link" href="<?php echo $url;?>/admin/secciones/usuarios.php">Usuarios</a>
                     </li>
                     <li class="nav-item dropdown">
                         <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -70,8 +71,8 @@ if ($_SESSION['usuario']!=="Sin Loguearse") {
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <li><a class="dropdown-item" href="#"><?php echo $nombreUsuario; ?></a></li>
-                            <li><a class="dropdown-item" href="./seccion/cerrar.php">Cerrar Sesion</a></li>
-                            <?php if($_SESSION['idRol'] == 1){ ?>
+                            <li><a class="dropdown-item" href="./secciones/cerrar.php">Cerrar Sesion</a></li>
+                            <?php if($_SESSION['idRol'] == 3){ ?>
                               <li><a class="dropdown-item" href="<?php echo $url; ?>">Ver sitio</a></li>                                       
                             <?php } ?>
                         </ul>

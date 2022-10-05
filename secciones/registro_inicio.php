@@ -1,6 +1,6 @@
 <?php 
 session_start();
-
+error_reporting(0);
     if ($_POST) 
     {
 
@@ -11,42 +11,70 @@ session_start();
       $txtEmail = ($_POST['txtEmail']);
       $txtTelefono = ($_POST['txtTelefono']);
       $txtContrasena = ($_POST['txtContrasena']);
+      $txtContrasenaRepe = ($_POST['txtContrasenaRepe']);
+      
+      $prueba = $conexion->prepare("SELECT COUNT(Usu_Email) AS cantidad FROM usuario WHERE Usu_Email=?");
+      $prueba->execute([$txtEmail]);
+      $prueba = $prueba->fetch(PDO::FETCH_ASSOC);
 
+      if($prueba['cantidad'] > 0) {
+        ?>
+        <script>
+          alert("¡Vaya!, este mail ya tiene una cuenta 💔");
+        </script>
+        <?php
+      }else{
 
-      $sentenciaSQL = $conexion->prepare("INSERT INTO usuario (Usu_Nombre,Usu_Apellido,Usu_Contrasena,Usu_Email,Usu_Telefono,Usu_RolId,Usu_Status) VALUES (:Usu_Nombre,:Usu_Apellido,:Usu_Contrasena,:Usu_Email,:Usu_Telefono,1,1);");
-      $sentenciaSQL->bindParam(':Usu_Nombre',$txtNombre);
-      $sentenciaSQL->bindParam(':Usu_Apellido',$txtApellido);
-      $sentenciaSQL->bindParam(':Usu_Email',$txtEmail);
-      $sentenciaSQL->bindParam(':Usu_Telefono',$txtEmail);
-      $sentenciaSQL->bindParam(':Usu_Contrasena',$txtContrasena);
-      $sentenciaSQL->execute();
+        if ($txtContrasena !== $txtContrasenaRepe) {
+          echo "<script>alert('Las contraseñas no coinciden');</script>";
+        }
+        if ($txtContrasena < 8 && $txtContrasenaRepe < 8) {
+          echo "<script>alert('Las contraseñas son demasiadas cortas, minimo son 8 caracteres');</script>";
+        }
+        else{
 
-      $sentenciaSQL = $conexion->prepare("SELECT * FROM usuario WHERE Usu_Email=:Usu_Email AND Usu_Contrasena=:Usu_Contrasena");
-      $sentenciaSQL->bindParam(':Usu_Email',$txtEmail,PDO::PARAM_STR);
-      $sentenciaSQL->bindParam(':Usu_Contrasena',$txtContrasena,PDO::PARAM_STR);
-      $sentenciaSQL->execute();
-      $usuarios = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
-
-      if ($usuarios['idRol'] == 2) 
-      {
-        session_start();
-        $_SESSION['usuario'] = $usuarios;
-        $_SESSION['nombreUsuario']=$usuarios['Usu_Nombre, Usu_Apellido'];
-        $_SESSION['idUsuario']=$usuarios['Usu_Id'];
-        $_SESSION['idRol']= $usuarios['Usu_RolId'];
-        header("Location:inicio.php");
-      }
-      else
-      {
-        session_start();
-        $_SESSION['usuario'] = $usuarios;
-        $_SESSION['nombre']=$usuarios['Usu_Nombre'];
-        $_SESSION['apellido']=$usuarios['Usu_Apellido'];
-        $_SESSION['idUsuario']=$usuarios['Usu_Id'];
-        $_SESSION['idRol']= $usuarios['Usu_RolId'];
-        header("Location:../index.php");
+          $sentenciaSQL = $conexion->prepare("INSERT INTO usuario (Usu_Nombre,Usu_Apellido,Usu_Contrasena,Usu_Email,Usu_Telefono,Usu_RolId,Usu_Status) VALUES (:Usu_Nombre,:Usu_Apellido,:Usu_Contrasena,:Usu_Email,:Usu_Telefono,1,1);");
+          $sentenciaSQL->bindParam(':Usu_Nombre',$txtNombre);
+          $sentenciaSQL->bindParam(':Usu_Apellido',$txtApellido);
+          $sentenciaSQL->bindParam(':Usu_Email',$txtEmail);
+          $sentenciaSQL->bindParam(':Usu_Telefono',$txtTelefono);
+          $sentenciaSQL->bindParam(':Usu_Contrasena',$txtContrasena);
+          $sentenciaSQL->execute();
+  
+          $sentenciaSQL = $conexion->prepare("SELECT * FROM usuario WHERE Usu_Email=:Usu_Email AND Usu_Contrasena=:Usu_Contrasena");
+          $sentenciaSQL->bindParam(':Usu_Email',$txtEmail,PDO::PARAM_STR);
+          $sentenciaSQL->bindParam(':Usu_Contrasena',$txtContrasena,PDO::PARAM_STR);
+          $sentenciaSQL->execute();
+          $usuarios = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
+  
+          if ($usuarios['Usu_RolId'] == 3) 
+          {
+            session_start();
+            $_SESSION['usuario'] = $usuarios;
+            $_SESSION['nombreUsuario']=$usuarios['Usu_Nombre'] + " " + $usuarios['Usu_Apellido'];
+            $_SESSION['nombre']=$usuarios['Usu_Nombre'];
+            $_SESSION['apellido']=$usuarios['Usu_Apellido'];
+            $_SESSION['idUsuario']=$usuarios['Usu_Id'];
+            $_SESSION['idRol']= $usuarios['Usu_RolId'];
+            header("Location:../admin/index.php");
+          }
+          else
+          {
+            session_start();
+            $_SESSION['usuario'] = $usuarios;
+            $_SESSION['nombreUsuario']=$usuarios['Usu_Nombre'] + " " + $usuarios['Usu_Apellido'];
+            $_SESSION['nombre']=$usuarios['Usu_Nombre'];
+            $_SESSION['apellido']=$usuarios['Usu_Apellido'];
+            $_SESSION['idUsuario']=$usuarios['Usu_Id'];
+            $_SESSION['idRol']= $usuarios['Usu_RolId'];
+            header("Location:../index.php");
+            
+          }
+        }
         
+
       }
+
 
     } 
 ?>

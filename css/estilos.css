@@ -840,6 +840,7 @@ p {
   justify-content: center;
   align-items: center;
   margin: 0px auto;
+  box-shadow: 0 3px 13px 1px rgba(0, 0, 0, 0.5215686275);
 }
 .conteiner_restaurantes .containerColum .contenedorResTipo .tiposRes .tipo .circulo img {
   width: 55px;
@@ -858,6 +859,8 @@ p {
   background-color: #1a1e21;
   color: whitesmoke;
   text-decoration: none;
+  border-radius: 20px;
+  border: #fff solid 1px;
 }
 .conteiner_restaurantes .containerColum .conteinerCardResta .imagenRestaurante {
   height: 85%;
@@ -898,6 +901,7 @@ p {
   box-shadow: 0 3px 13px 1px rgba(0, 0, 0, 0.5215686275);
   background-color: #1a1e21;
   color: whitesmoke;
+  border-radius: 20px;
 }
 .conteiner_restaurantes .containerColum .contenedorProductos .titulo {
   height: auto;
@@ -939,6 +943,8 @@ p {
   flex-wrap: nowrap;
   background-color: #1a1e21;
   color: whitesmoke;
+  border-radius: 20px;
+  border: #fff solid 1px;
 }
 .conteiner_restaurantes .containerColum .columnas .conteimerLocal .conteinerLocalImagen {
   height: 100%;

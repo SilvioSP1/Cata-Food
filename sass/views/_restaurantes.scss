@@ -24,6 +24,8 @@
                         justify-content: center;
                         align-items: center;
                         margin:0px auto;
+                        box-shadow: 0 3px 13px 1px /* rgb(0 0 0 / 9%) */ #00000085;
+                        
                         img{
                             width: 55px;
     
@@ -47,6 +49,8 @@
             background-color: #1a1e21;
             color: whitesmoke;
             text-decoration: none;
+            border-radius: 20px;
+            border: #fff solid 1px;
         
             .imagenRestaurante{
                 height: 85%;
@@ -96,6 +100,7 @@
             box-shadow: 0 3px 13px 1px /* rgb(0 0 0 / 9%) */ #00000085;
             background-color: #1a1e21;
             color: whitesmoke;
+            border-radius: 20px;
             
             .titulo{
                 height: auto;

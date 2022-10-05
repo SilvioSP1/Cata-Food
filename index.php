@@ -15,19 +15,19 @@
 <div class="contenedorCards">
 
     <div class="card">
-    <div class="header">
-        <div class="img-box">
-        <img src="./img/index/friesCards.png" alt="" class="imgPapas">
+        <div class="header">
+            <div class="img-box">
+            <img src="./img/index/friesCards.png" alt="" class="imgPapas">
+            </div>
+            <h1 class="title">Papas</h1>
         </div>
-        <h1 class="title">Papas</h1>
-    </div>
 
-    <div class="content">
-        <p>
-        Las mejores papas
-        </p>
+        <div class="content">
+            <p>
+            Las mejores papas
+            </p>
 
-    </div>
+        </div>
 
     </div>
 

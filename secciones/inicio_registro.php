@@ -1,3 +1,54 @@
+<?php
+session_start();
+error_reporting(0);
+    if ($_POST) 
+    {
+
+      include("../admin/config/db.php");
+
+      $txtEmail = ($_POST['txtEmail']);
+      $txtContrasena = ($_POST['txtContrasena']);
+      
+      $sentenciaSQL = $conexion->prepare("SELECT * FROM usuario WHERE Usu_Email=:Usu_Email AND Usu_Contrasena=:Usu_Contrasena");
+      $sentenciaSQL->bindParam(':Usu_Email',$txtEmail,PDO::PARAM_STR);
+      $sentenciaSQL->bindParam(':Usu_Contrasena',$txtContrasena,PDO::PARAM_STR);
+      $sentenciaSQL->execute();
+      $usuarios = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
+
+      if ($usuarios['Usu_Email'] == $txtEmail && $usuarios['Usu_Contrasena'] == $txtContrasena) {
+        if ($usuarios['Usu_RolId'] == 3) 
+        {
+          session_start();
+          $_SESSION['usuario'] = $usuarios;
+          $_SESSION['nombreUsuario']=$usuarios['Usu_Nombre']." ".$usuarios['Usu_Apellido'];
+          $_SESSION['nombre']=$usuarios['Usu_Nombre'];
+          $_SESSION['apellido']=$usuarios['Usu_Apellido'];
+          $_SESSION['idUsuario']=$usuarios['Usu_Id'];
+          $_SESSION['idRol']= $usuarios['Usu_RolId'];
+          header("Location:../admin/index.php");
+        }
+        else
+        {
+          session_start();
+          $_SESSION['usuario'] = $usuarios;
+          $_SESSION['nombreUsuario']=$usuarios['Usu_Nombre'] + " " + $usuarios['Usu_Apellido'];
+          $_SESSION['nombre']=$usuarios['Usu_Nombre'];
+          $_SESSION['apellido']=$usuarios['Usu_Apellido'];
+          $_SESSION['idUsuario']=$usuarios['Usu_Id'];
+          $_SESSION['idRol']= $usuarios['Usu_RolId'];
+          header("Location:../index.php");
+          
+        }
+      }
+      else
+      {
+        echo "<script>alert('Usuario o contraseña incorrectos');</script>";
+      }
+
+
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,13 +94,13 @@
                     </div>
                     
     
-                    <form class="formulario">
-                        <input type="email" placeholder="  Email " required>
+                    <form method="POST" class="formulario">
+                        <input type="email" placeholder="  Email " required name="txtEmail" id="txtEmail">
                         <span class="input-border"></span>
-                        <input type="text" placeholder=" Contraseña " required>
+                        <input type="password" placeholder=" Contraseña " required name="txtContrasena" id="txtContrasena">
                         <span class="textoRegister">¿No tienes cuenta aún? <a href="registro_inicio.php">Registrarse</a></span>
                         <div>
-                          <button >
+                          <button type="submit">
                             <span>Ingresar</span>
                           </button>
                           <a href="../index.php" class="boton">

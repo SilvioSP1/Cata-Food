@@ -1,5 +1,17 @@
 <?php
-
+error_reporting(0);
+session_start();
+if (!isset($_SESSION['usuario'])) {
+    $_SESSION['usuario'] = "Sin Loguearse";
+    $_SESSION['nombreUsuario']="Sin login";
+    header("Location:index.php");
+}
+else{
+  if ($_SESSION['usuario']!=="Sin Loguearse") {
+    $nombreUsuario = $_SESSION["nombreUsuario"];
+  }
+}
+include("../../Cata-food/admin/config/config.php");
 ?>
 
 <!DOCTYPE html>
@@ -15,10 +27,10 @@
   integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="../../Cata-Food/css/estilos.css">
+  <link rel="stylesheet" href="../../Cata-Food/css/estilos.css?v=<?php echo time(); ?>">
 
   <!-- animation css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css?v=<?php echo time(); ?>" />
 
   <link rel="icon" href="../../Cata-Food/img/index/logo_redondo.png">
 
@@ -44,9 +56,17 @@
           <ul>
             <li><a href="../../Cata-Food/secciones/restaurantes.php" class="item_nav"><i class="fa-solid fa-bowl-food"></i> Restaurantes</a></li>
             <li><a href="../../Cata-Food/secciones/sobre_nosotros.php" class="item_nav"><i class="fa-solid fa-people-arrows"></i> Sobre Nosotros</a></li>
-            <li><a href="../../Cata-Food/secciones/registrar_negocio.php" class="item_nav"><i class="fa-solid fa-shop"></i> Iniciar/Registra tu negocio</a></li>
-            <li><a href="../../Cata-Food/secciones/inicio_registro.php" class="item_nav"><i class="fa-solid fa-arrow-right-to-bracket"></i> Inicio/Registro</a></li>
-            <li><a href="#" class="item_nav carritoCompras"><i class="fa-solid fa-cart-shopping"></i> Carrito <span>0</span></a></li>
+            <?php if($_SESSION['usuario'] != "Sin Loguearse"){ ?>
+              <li><a href="../../Cata-Food/secciones/inicio_registro.php" class="item_nav"><i class="fa-solid fa-arrow-right-to-bracket"></i> Perfil</a></li>
+              <li><a href="../../Cata-Food/admin/secciones/cerrar.php" class="item_nav"><i class="fa-solid fa-arrow-right-to-bracket"></i> Cerarr</a></li>
+              <?php if($_SESSION['idRol'] == 3){ ?>
+                <li><a href="../../Cata-Food/admin/index.php" class="item_nav"><i class="fa-solid fa-unlock"></i> Modo Admin</a></li>                                       
+                <?php } ?>
+                <li><a href="#" class="item_nav carritoCompras"><i class="fa-solid fa-cart-shopping"></i> Carrito <span>0</span></a></li>
+                <li><a href="../../Cata-Food/secciones/registrar_negocio.php" class="item_nav"><i class="fa-solid fa-shop"></i> Iniciar/Registra tu negocio</a></li>
+            <?php }else{?>
+                  <li><a href="../../Cata-Food/secciones/inicio_registro.php" class="item_nav"><i class="fa-solid fa-arrow-right-to-bracket"></i> Inicio/Registro</a></li>
+            <?php } ?>
           </ul>
           <!-- <div class="contenedorIcono">
             <img src="./img/Cata_Food__1.png" alt="" class="cataIcono">
