@@ -41,7 +41,10 @@ if ($_SESSION['usuario']!=="Sin Loguearse") {
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="<?php echo $url;?>/admin/inicio.php">Home</a>
+                        <a class="nav-link active" href="<?php echo $url;?>/admin/index.php">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="<?php echo $url;?>/admin/secciones/locales.php">Locales</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="<?php echo $url;?>/admin/secciones/productos.php">Productos</a>

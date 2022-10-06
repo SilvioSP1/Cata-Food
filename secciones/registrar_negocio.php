@@ -1,3 +1,6 @@
+<?php
+if(isset($_POST["paises"])){$paises=$_POST["paises"];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,7 +52,9 @@
                         <span class="input-border"></span>
                         <div>
                             <label for="" style="color:black ;">Tipo</label>
-                            <select name="genero" class="genero">
+                            <select name="genero" class="genero" onchange="this.form.submit()">
+
+                                <option selected disabled>-- Select one --</option>
     
                                 <option>Food Track</option>
     

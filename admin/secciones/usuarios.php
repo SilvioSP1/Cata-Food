@@ -68,6 +68,14 @@ switch ($accion) {
         header("Location:usuarios.php");
         break;
     
+    case "Habilitar":
+        $sentenciaSQL = $conexion->prepare("UPDATE local SET Usu_Status = 1 WHERE Usu_Id = :Usu_Id");
+        $sentenciaSQL->bindParam(':Usu_Id',$txtID);
+        $sentenciaSQL->execute();
+        /* echo "Presionado boton Borrar"; */
+        header("Location:usuarios.php");
+        break;
+    
     default:
         # code...
         break;
@@ -200,7 +208,11 @@ $sentenciaSQL->execute(); */
                         <form action="" method="POST">
                             <input type="hidden" name="txtID" id="txtID" value="<?php echo $usuario['Usu_Id']; ?>">
                             <input type="submit" name="accion" value="Seleccionar" class="btn btn-primary">
-                            <input type="submit" name="accion" value="Desabilitar" class="btn btn-danger">
+                            <?php if ($usuario['Usu_Status'] == 1) { ?>
+                                <input type="submit" name="accion" value="Desabilitar" class="btn btn-danger">
+                            <?php }else{ ?>
+                                <input type="submit" name="accion" value="Habilitar" class="btn btn-success">
+                            <?php } ?>
                         </form>
 
                     </td>

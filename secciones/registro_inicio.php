@@ -28,7 +28,8 @@ error_reporting(0);
         if ($txtContrasena !== $txtContrasenaRepe) {
           echo "<script>alert('Las contraseñas no coinciden');</script>";
         }
-        if ($txtContrasena < 8 && $txtContrasenaRepe < 8) {
+
+        if ((strlen($txtContrasena) < 8) && (strlen($txtContrasenaRepe) < 8)) {
           echo "<script>alert('Las contraseñas son demasiadas cortas, minimo son 8 caracteres');</script>";
         }
         else{
@@ -51,7 +52,7 @@ error_reporting(0);
           {
             session_start();
             $_SESSION['usuario'] = $usuarios;
-            $_SESSION['nombreUsuario']=$usuarios['Usu_Nombre'] + " " + $usuarios['Usu_Apellido'];
+            $_SESSION['nombreUsuario']=$usuarios['Usu_Nombre']." ".$usuarios['Usu_Apellido'];
             $_SESSION['nombre']=$usuarios['Usu_Nombre'];
             $_SESSION['apellido']=$usuarios['Usu_Apellido'];
             $_SESSION['idUsuario']=$usuarios['Usu_Id'];
@@ -62,7 +63,7 @@ error_reporting(0);
           {
             session_start();
             $_SESSION['usuario'] = $usuarios;
-            $_SESSION['nombreUsuario']=$usuarios['Usu_Nombre'] + " " + $usuarios['Usu_Apellido'];
+            $_SESSION['nombreUsuario']=$usuarios['Usu_Nombre']." ".$usuarios['Usu_Apellido'];
             $_SESSION['nombre']=$usuarios['Usu_Nombre'];
             $_SESSION['apellido']=$usuarios['Usu_Apellido'];
             $_SESSION['idUsuario']=$usuarios['Usu_Id'];
