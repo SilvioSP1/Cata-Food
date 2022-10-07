@@ -102,6 +102,7 @@ $localDelProducto = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                                                 <i class="fa-solid fa-star"></i>
                                             </div>
                                         </div>
+                                        <input type="hidden" name="Prod_Id" id="Prod_Id" value="<?php echo openssl_encrypt($producto['Prod_Id'],cod,key); ?>">
                                     </a>
                                     <?php } ?>
                                     <a class="conteinerCardResta producto" href="restaurante.php">

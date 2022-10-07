@@ -89,7 +89,7 @@ $sentenciaSQL->execute(); */
 
 ?>
 
-<div class="col-md-4">
+<div class="col-md-12">
     <div class="card">
         <div class="card-header">
             Datos de usuario
@@ -155,7 +155,7 @@ $sentenciaSQL->execute(); */
 
 
 </div>
-<div class="col-md-8">
+<div class="col-md-12">
     <table class="table table-bordered">
         <thead>
             <tr>
