@@ -1,0 +1,43 @@
+.sectionCarrito {
+
+
+    margin-bottom: 15rem;
+
+
+}
+
+.container-flex {
+
+    background-color: white;
+    border-radius: 10px;
+    padding: 2.4em;
+
+    .contenedorCarrito {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .botonCarrito1{
+
+            order: 3;
+            font-weight: 600;
+        }
+
+        .botonCarrito2{
+
+            order: 3;
+            font-weight: 600;
+        }
+
+        .botonCarrito3{
+
+            order: 2;
+            font-weight: 600;
+
+        }
+
+
+    }
+
+}

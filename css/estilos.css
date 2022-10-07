@@ -990,6 +990,33 @@ p {
   text-align: initial;
 }
 
+.sectionCarrito {
+  margin-bottom: 15rem;
+}
+
+.container-flex {
+  background-color: white;
+  border-radius: 10px;
+  padding: 2.4em;
+}
+.container-flex .contenedorCarrito {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container-flex .contenedorCarrito .botonCarrito1 {
+  order: 3;
+  font-weight: 600;
+}
+.container-flex .contenedorCarrito .botonCarrito2 {
+  order: 3;
+  font-weight: 600;
+}
+.container-flex .contenedorCarrito .botonCarrito3 {
+  order: 2;
+  font-weight: 600;
+}
+
 @media (max-width: 753px) {
   .containerMedias {
     flex-direction: column;
