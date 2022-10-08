@@ -993,6 +993,12 @@ p {
 .sectionCarrito {
   margin-bottom: 15rem;
 }
+.sectionCarrito .iconoMas {
+  color: black;
+}
+.sectionCarrito .iconoMenos {
+  color: black;
+}
 
 .container-flex {
   background-color: white;
