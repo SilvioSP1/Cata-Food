@@ -4,7 +4,7 @@
     display: flex !important; 
     opacity: 0;
     pointer-events: none; //esta propiedad es para seleccionar cualquier evento de la página
-    transition: opacity .6s .9s;
+    transition: opacity .4s .6s;
     --transform: translateY(-100vh);
     --transition: transform .6s;
 
@@ -65,7 +65,7 @@
 .modal--show {
     opacity: 1;
     pointer-events: unset;
-    transition: opacity .6s;
+    transition: opacity .4s;
     --transform: translateY(0);
     --transition: transform .6s .6s;
 }
