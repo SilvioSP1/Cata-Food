@@ -3,7 +3,7 @@
     background-color: #111111bd;
     display: flex !important; 
     opacity: 0;
-    pointer-events: none;
+    pointer-events: none; //esta propiedad es para seleccionar cualquier evento de la página
     transition: opacity .6s .9s;
     --transform: translateY(-100vh);
     --transition: transform .6s;
