@@ -1,7 +1,7 @@
 .modal {
     position: fixed;
     background-color: #111111bd;
-    display: flex;
+    display: flex !important; 
     opacity: 0;
     pointer-events: none;
     transition: opacity .6s .9s;
