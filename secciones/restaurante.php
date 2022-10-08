@@ -105,7 +105,7 @@ $localDelProducto = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                                         <input type="hidden" name="Prod_Id" id="Prod_Id" value="<?php echo openssl_encrypt($producto['Prod_Id'],cod,key); ?>">
                                     </a>
                                     <?php } ?>
-                                    <a class="conteinerCardResta producto" href="restaurante.php">
+                                    <a class="conteinerCardResta producto botonModal" href="#">
                                         <img class="imagenRestaurante" src="../img/restaurantes/productos/pizzaMuzzarella.webp"
                                             alt="">
                                         <div class="contenedorTexto">
@@ -125,6 +125,19 @@ $localDelProducto = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                             </div>
                         </div>
                     </div>
+
+                    <section class="modal ">
+                        <div class="modal__container">
+                            <img src="../../Cata-Food/img/restaurantes/productos/pizzaMuzzarella.webp" class="modal__img">
+                            <h2 class="modal__title">Pizza Muzzarella</h2>
+                            <p class="modal__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Deleniti nobis nisi quibusdam doloremque expedita quae ipsam accusamus quisquam quas,
+                                culpa tempora. Veniam consectetur deleniti maxime.</p>
+                                <a href="../../Cata-Food/secciones/carrito.php" class="botonAgregar btn btn-warning">Agregar al carrito</a>
+                                <a href="#" class="modal__close btn btn-warning">Cerrar</a>
+                                
+                        </div>
+                    </section>
 
                 </div>
 
