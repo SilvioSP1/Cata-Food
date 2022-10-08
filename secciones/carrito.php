@@ -127,7 +127,7 @@ else{
               <div class="col-md-2 col-lg-2 col-xl-2">
                 <img
                   src="../../Cata-Food/img/carrito/cheeseburger.png"
-                  class="img-fluid rounded-3" alt="Cotton T-shirt">
+                  class="img-fluid rounded-3" alt="">
               </div>
               <div class="col-md-3 col-lg-3 col-xl-3">
                 <p class="lead fw-normal mb-2">Cheese Burger</p>
@@ -139,7 +139,7 @@ else{
                   <i class="fas fa-minus iconoMenos"></i>
                 </button>
 
-                <input id="form1" min="0" name="quantity" value="2" type="number"
+                <input id="form1" min="0" name="quantity" value="1" type="number"
                   class="form-control form-control-sm" />
 
                 <button class="btn btn-link px-2"
@@ -151,7 +151,7 @@ else{
                 <h5 class="mb-0">$500.00</h5>
               </div>
               <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                <a href="#!" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
+                <a href="#!" class="text-black"><i class="fas fa-trash fa-lg"></i></a>
               </div>
             </div>
           </div>
@@ -163,7 +163,7 @@ else{
               <div class="col-md-2 col-lg-2 col-xl-2">
                 <img
                   src="../../Cata-Food/img/carrito/betosAmericano.png"
-                  class="img-fluid rounded-3" alt="Cotton T-shirt">
+                  class="img-fluid rounded-3" alt="">
               </div>
               <div class="col-md-3 col-lg-3 col-xl-3">
                 <p class="lead fw-normal mb-2">Betos Americano</p>
@@ -175,7 +175,7 @@ else{
                   <i class="fas fa-minus iconoMenos"></i>
                 </button>
 
-                <input id="form1" min="0" name="quantity" value="2" type="number"
+                <input id="form1" min="0" name="quantity" value="1" type="number"
                   class="form-control form-control-sm" />
 
                 <button class="btn btn-link px-2"
@@ -187,7 +187,7 @@ else{
                 <h5 class="mb-0">$500.00</h5>
               </div>
               <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                <a href="#!" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
+                <a href="#!" class="text-black"><i class="fas fa-trash fa-lg"></i></a>
               </div>
             </div>
           </div>
@@ -199,7 +199,7 @@ else{
               <div class="col-md-2 col-lg-2 col-xl-2">
                 <img
                   src="../../Cata-Food/img/carrito/medialunas-calentitas.jpg"
-                  class="img-fluid rounded-3" alt="Cotton T-shirt">
+                  class="img-fluid rounded-3" alt="">
               </div>
               <div class="col-md-3 col-lg-3 col-xl-3">
                 <p class="lead fw-normal mb-2">Medialunas</p>
@@ -211,7 +211,7 @@ else{
                   <i class="fas fa-minus iconoMenos"></i>
                 </button>
 
-                <input id="form1" min="0" name="quantity" value="2" type="number"
+                <input id="form1" min="0" name="quantity" value="1" type="number"
                   class="form-control form-control-sm" />
 
                 <button class="btn btn-link px-2"
@@ -223,7 +223,7 @@ else{
                 <h5 class="mb-0">$500.00</h5>
               </div>
               <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                <a href="#!" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
+                <a href="#!" class="text-black"><i class="fas fa-trash fa-lg"></i></a>
               </div>
             </div>
           </div>
@@ -235,7 +235,7 @@ else{
               <div class="col-md-2 col-lg-2 col-xl-2">
                 <img
                   src="../../Cata-Food/img/carrito/alfajoresHavana.png"
-                  class="img-fluid rounded-3" alt="Cotton T-shirt">
+                  class="img-fluid rounded-3" alt="">
               </div>
               <div class="col-md-3 col-lg-3 col-xl-3">
                 <p class="lead fw-normal mb-2">Alfajores Dulce de Leche</p>
@@ -247,7 +247,7 @@ else{
                   <i class="fas fa-minus iconoMenos"></i>
                 </button>
 
-                <input id="form1" min="0" name="quantity" value="2" type="number"
+                <input id="form1" min="0" name="quantity" value="1" type="number"
                   class="form-control form-control-sm" />
 
                 <button class="btn btn-link px-2"
@@ -259,7 +259,7 @@ else{
                 <h5 class="mb-0">$500.00</h5>
               </div>
               <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                <a href="#!" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
+                <a href="#!" class="text-black"><i class="fas fa-trash fa-lg"></i></a>
               </div>
             </div>
           </div>
