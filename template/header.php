@@ -58,7 +58,7 @@ include("../../Cata-food/admin/config/config.php");
             <li><a href="../../Cata-Food/secciones/restaurantes.php" class="item_nav"><i class="fa-solid fa-bowl-food"></i> Restaurantes</a></li>
             <li><a href="../../Cata-Food/secciones/sobre_nosotros.php" class="item_nav"><i class="fa-solid fa-people-arrows"></i> Sobre Nosotros</a></li>
             <?php if($_SESSION['usuario'] != "Sin Loguearse"){ ?>
-              <li><a href="../../Cata-Food/secciones/inicio_registro.php" class="item_nav"><i class="fa-solid fa-arrow-right-to-bracket"></i> Perfil</a></li>
+              <li><a href="../../Cata-Food/secciones/perfil.php" class="item_nav"><i class="fa-solid fa-arrow-right-to-bracket"></i> Perfil</a></li>
               <li><a href="../../Cata-Food/admin/secciones/cerrar.php" class="item_nav"><i class="fa-solid fa-arrow-right-to-bracket"></i> Cerarr</a></li>
               <?php if($_SESSION['idRol'] == 3){ ?>
                 <li><a href="../../Cata-Food/admin/index.php" class="item_nav"><i class="fa-solid fa-unlock"></i> Modo Admin</a></li>                                       

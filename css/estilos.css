@@ -1438,4 +1438,13 @@ p {
   --transition: transform .6s .6s;
 }
 
+.backgroundProfile {
+  background-color: #fb8819;
+}
+.backgroundProfile .profilePicture {
+  border-radius: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
 /*# sourceMappingURL=estilos.css.map */
