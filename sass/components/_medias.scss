@@ -566,24 +566,35 @@
     .conteiner_restaurantes{
         
         .containerColum{
-    
-            .producto{
-                height: 145px;
-                /* .imagenRestaurante{
-                    height: 55%;
-                } */
-                .contenedorTexto{
-                    .nombreProducto {
-                        font-size: 1rem;
-                    }
-                    .ingredientes {
-                        font-size: 0.8rem;
-                    }
-                    h6{
-                        font-size: 0.9rem;
+
+            .columnas{
+
+                .conteinerProductos{
+
+                    .producto{
+                        height: 145px;
+                        /* .imagenRestaurante{
+                            height: 55%;
+                        } */
+                        .cardProducto{
+                            height: 143px;
+                            .contenedorTexto{
+                                text-align: start;
+                                .nombreProducto {
+                                    font-size: 1rem;
+                                }
+                                .ingredientes {
+                                    font-size: 0.8rem;
+                                }
+                                h6{
+                                    font-size: 0.9rem;
+                                }
+                            }
+                        }
                     }
                 }
             }
+    
         }
     } 
 }
@@ -603,29 +614,36 @@
                         flex-direction: row;
                         justify-content: center;
                         align-items: center;
-    
-                        img{
-    
-                            height: 100px;
-                            object-fit: contain;
-    
-    
+
+                        .cardProducto{
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            img{
+        
+                                height: 90%;
+                                object-fit: contain;
+        
+        
+                            }
+        
+                            .contenedorTexto{
+                                text-align: start;
+        
+                                .nombreRestaurante{
+        
+                                font-size: 10px;
+        
+                                }
+        
+                                .ubiRestaurante{
+        
+                                font-size: 10px;
+        
+                                }
+                            }
                         }
     
-                        .contenedorTexto{
-    
-                            .nombreRestaurante{
-    
-                            font-size: 10px;
-    
-                            }
-    
-                            .ubiRestaurante{
-    
-                            font-size: 10px;
-    
-                            }
-                        }
 
                     }
     
@@ -650,33 +668,38 @@
     
                     .producto{
     
-                        flex-direction: row;
-                        justify-content: center;
-                        align-items: center;
-                        width: 100%;
-    
-                        img{
-    
-                            
-                            object-fit: cover;
-    
-    
+                        
+                        width: 80%;
+
+                        .cardProducto{
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            width: 100%;
+                            img{
+        
+                                
+                                object-fit: cover;
+        
+        
+                            }
+        
+                            .contenedorTexto{
+        
+                                .nombreRestaurante{
+        
+                                font-size: 10px;
+        
+                                }
+        
+                                .ubiRestaurante{
+        
+                                font-size: 10px;
+        
+                                }
+                            }
                         }
     
-                        .contenedorTexto{
-    
-                            .nombreRestaurante{
-    
-                            font-size: 10px;
-    
-                            }
-    
-                            .ubiRestaurante{
-    
-                            font-size: 10px;
-    
-                            }
-                        }
     
                     }
     
