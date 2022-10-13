@@ -985,22 +985,7 @@ p {
 .conteiner_restaurantes .containerColum .columnas .conteinerProductos .producto {
   width: 45%;
 }
-.conteiner_restaurantes .containerColum .columnas .conteinerProductos .producto .cardProducto {
-  width: 100%;
-  height: 165px;
-  margin: auto;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  /* justify-content: center; */
-  /* background-color: #fff; */
-  flex-wrap: nowrap;
-  background-color: #1a1e21;
-  color: whitesmoke;
-  text-decoration: none;
-  border-radius: 20px;
-}
-.conteiner_restaurantes .containerColum .columnas .conteinerProductos .producto .cardProducto .contenedorTexto .ingredientes {
+.conteiner_restaurantes .containerColum .columnas .conteinerProductos .producto .contenedorTexto .ingredientes {
   padding-bottom: 0;
   text-align: initial;
 }
@@ -1302,25 +1287,19 @@ p {
 }
 /* Restaurante Vista */
 @media (max-width: 830px) {
-  .conteiner_restaurantes .containerColum .columnas .conteinerProductos .producto {
+  .conteiner_restaurantes .containerColum .producto {
     height: 145px;
     /* .imagenRestaurante{
         height: 55%;
     } */
   }
-  .conteiner_restaurantes .containerColum .columnas .conteinerProductos .producto .cardProducto {
-    height: 143px;
-  }
-  .conteiner_restaurantes .containerColum .columnas .conteinerProductos .producto .cardProducto .contenedorTexto {
-    text-align: start;
-  }
-  .conteiner_restaurantes .containerColum .columnas .conteinerProductos .producto .cardProducto .contenedorTexto .nombreProducto {
+  .conteiner_restaurantes .containerColum .producto .contenedorTexto .nombreProducto {
     font-size: 1rem;
   }
-  .conteiner_restaurantes .containerColum .columnas .conteinerProductos .producto .cardProducto .contenedorTexto .ingredientes {
+  .conteiner_restaurantes .containerColum .producto .contenedorTexto .ingredientes {
     font-size: 0.8rem;
   }
-  .conteiner_restaurantes .containerColum .columnas .conteinerProductos .producto .cardProducto .contenedorTexto h6 {
+  .conteiner_restaurantes .containerColum .producto .contenedorTexto h6 {
     font-size: 0.9rem;
   }
 }
@@ -1330,42 +1309,31 @@ p {
     justify-content: center;
     align-items: center;
   }
-  .conteiner_restaurantes .containerColum .columnas .conteinerProductos .producto .cardProducto {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  .conteiner_restaurantes .containerColum .columnas .conteinerProductos .producto .cardProducto img {
-    height: 90%;
+  .conteiner_restaurantes .containerColum .columnas .conteinerProductos .producto img {
+    height: 100px;
     object-fit: contain;
   }
-  .conteiner_restaurantes .containerColum .columnas .conteinerProductos .producto .cardProducto .contenedorTexto {
-    text-align: start;
-  }
-  .conteiner_restaurantes .containerColum .columnas .conteinerProductos .producto .cardProducto .contenedorTexto .nombreRestaurante {
+  .conteiner_restaurantes .containerColum .columnas .conteinerProductos .producto .contenedorTexto .nombreRestaurante {
     font-size: 10px;
   }
-  .conteiner_restaurantes .containerColum .columnas .conteinerProductos .producto .cardProducto .contenedorTexto .ubiRestaurante {
+  .conteiner_restaurantes .containerColum .columnas .conteinerProductos .producto .contenedorTexto .ubiRestaurante {
     font-size: 10px;
   }
 }
 @media (max-width: 605px) {
   .conteiner_restaurantes .containerColum .columnas .conteinerProductos .producto {
-    width: 80%;
-  }
-  .conteiner_restaurantes .containerColum .columnas .conteinerProductos .producto .cardProducto {
     flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
   }
-  .conteiner_restaurantes .containerColum .columnas .conteinerProductos .producto .cardProducto img {
+  .conteiner_restaurantes .containerColum .columnas .conteinerProductos .producto img {
     object-fit: cover;
   }
-  .conteiner_restaurantes .containerColum .columnas .conteinerProductos .producto .cardProducto .contenedorTexto .nombreRestaurante {
+  .conteiner_restaurantes .containerColum .columnas .conteinerProductos .producto .contenedorTexto .nombreRestaurante {
     font-size: 10px;
   }
-  .conteiner_restaurantes .containerColum .columnas .conteinerProductos .producto .cardProducto .contenedorTexto .ubiRestaurante {
+  .conteiner_restaurantes .containerColum .columnas .conteinerProductos .producto .contenedorTexto .ubiRestaurante {
     font-size: 10px;
   }
 }

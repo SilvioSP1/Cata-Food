@@ -63,27 +63,13 @@
                 flex-wrap: wrap;
                 flex: 1 1;
     
-                .producto{                
+                .producto{
                     width: 45%;
-                    .cardProducto{
-                        width: 100%;
-                        height: 165px;
-                        margin: auto;
-                        margin-bottom: 20px;
-                        display: flex;
-                        align-items: center;
-                        /* justify-content: center; */
-                        /* background-color: #fff; */
-                        flex-wrap: nowrap;
-                        background-color: #1a1e21;
-                        color: whitesmoke;
-                        text-decoration: none;
-                        border-radius: 20px;
-                        .contenedorTexto{
-                            .ingredientes{
-                                padding-bottom: 0;
-                                text-align: initial;
-                            }
+    
+                    .contenedorTexto{
+                        .ingredientes{
+                            padding-bottom: 0;
+                            text-align: initial;
                         }
                     }
                 }
