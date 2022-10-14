@@ -1,19 +1,31 @@
 <?php include("../template/header.php"); ?>
 <?php 
 include("../admin/config/db.php");
-error_reporting(0);
+include("carrito.php");
+
 
 if (is_numeric(openssl_decrypt($_POST["Local_Id"],cod,key))) {
     $Local_Id = openssl_decrypt($_POST["Local_Id"],cod,key);
+}else{
+    $Local_Id = openssl_decrypt($_POST["Local_Id"],cod,key)
 }
 
-$sentenciaSQL = $conexion->prepare("SELECT Prod_Id,Prod_Nombre,Prod_Descripcion,Prod_Imagen,Prod_Precio,Prod_ABC,Prod_Status,Prod_LocalId,Prod_Tipo,TP_Tipo,TP_Imagen FROM producto
+$sentenciaSQL = $conexion->prepare("SELECT Prod_Id,Prod_Nombre,Prod_Descripcion,Prod_Imagen,Prod_Precio,Prod_ABC,Prod_Status,Prod_LocalId,Prod_Tipo,Local_Nombre,TP_Tipo,TP_Imagen FROM producto
 JOIN local ON Local_Id = :Local_Id
 JOIN tipo_producto ON TP_Tipo = Prod_Tipo
+WHERE Prod_LocalId = :Local_Id
 ORDER BY Prod_Nombre ASC");
 $sentenciaSQL->bindParam(':Local_Id',$Local_Id);
 $sentenciaSQL->execute();
 $listaProductos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
+
+$sentenciaSQL = $conexion->prepare("SELECT * from producto
+JOIN local on Local_Id = :Local_Id
+JOIN tipo_producto on TP_Tipo = Prod_Tipo
+GROUP by Prod_Tipo");
+$sentenciaSQL->bindParam(':Local_Id',$Local_Id);
+$sentenciaSQL->execute();
+$listaTipoProductos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
 $sentenciaSQL = $conexion->prepare("SELECT * FROM local WHERE Local_Id=:Local_Id");
 $sentenciaSQL->bindParam(':Local_Id',$Local_Id);
@@ -22,13 +34,7 @@ $localDelProducto = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
 
 ?>
-<?php if ($mensaje !="") {?>
-<div class="alert alert-success">
-        <?php
-            echo $mensaje;
-        ?>
-</div>
-<?php } ?>
+
                 <div class="conteiner_restaurantes">
 
                     <div class="container-fluid">
@@ -64,13 +70,13 @@ $localDelProducto = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                             <div class="col-3 columnas">
                                 <div class="contenedorResTipo">
                                     <div class="tiposRes">
-                                        <?php foreach($listaProductos as $tipoProductos) { ?>
+                                        <?php foreach($listaTipoProductos as $tipoProductos) { ?>
                                         <div aria-label="" class="tipo">
                                             <div class="circulo">
                                                 <img src="../img/restaurantes/categorias/<?php echo $tipoProductos['TP_Imagen']; ?>"
                                                     aria-hidden="true" class="">
                                             </div>
-                                            <div aria-hidden="true" class="sc-tl2hnw-0 hNbawF"><?php echo $tipoProductos['TP_Imagen']; ?></div>
+                                            <div aria-hidden="true" class="sc-tl2hnw-0 hNbawF"><?php echo $tipoProductos['TP_Tipo']; ?></div>
                                         </div>
                                         <?php } ?>
                                         <div aria-label="" class="tipo">
@@ -87,25 +93,55 @@ $localDelProducto = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                             <div class="col-9 columnas">
                                 <div class="conteinerProductos">
                                     <?php foreach($listaProductos as $producto) { ?>
-                                    <a class="conteinerCardResta producto" href="restaurante.php">
-                                        <img class="imagenRestaurante" src="../img/restaurantes/productos/<?php echo $producto['Prod_Imagen']; ?>"
-                                            alt="">
-                                        <div class="contenedorTexto">
-                                            <p class="nombreProducto nombreRestaurante"><strong><?php echo $producto['Prod_Nombre']; ?></strong></p>
-                                            <p class="ingredientes ubiRestaurante"><?php echo $producto['Prod_Descripcion']; ?></p>
-                                            <h6>$<?php echo $producto['Prod_Precio']; ?></h6>
-                                            <div>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
+                                    <form class="container__CardProd" action="" method="POST" id="formulario" >
+                                    <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($localDelProducto['Local_Id'],cod,key); ?>">
+                                    <input type="hidden" name="Prod_Id" id="Prod_Id" value="<?php echo $producto['Prod_Id']; ?>">
+                                        <button class="conteinerCardResta producto botonModal" type="button" >
+                                            <img class="imagenRestaurante" src="../img/restaurantes/productos/<?php echo $producto['Prod_Imagen']; ?>"
+                                                alt="">
+                                            <div class="contenedorTexto">
+                                                <p class="nombreRestaurante nombreProducto"><strong><?php echo $producto['Prod_Nombre']; ?></strong></p>
+                                                <p class="ubiRestaurante ingredientes"><?php echo $producto['Prod_Descripcion']; ?></p>
+                                                <h6>$<?php echo $producto['Prod_Precio']; ?></h6>
                                             </div>
-                                        </div>
+                                        </button>
                                         <input type="hidden" name="Prod_Id" id="Prod_Id" value="<?php echo openssl_encrypt($producto['Prod_Id'],cod,key); ?>">
-                                    </a>
+                                        <input type="hidden" name="Prod_Nombre" id="Prod_Nombre" value="<?php echo openssl_encrypt($producto['Prod_Nombre'],cod,key); ?>">
+                                        <input type="hidden" name="Prod_Descripcion" id="Prod_Descripcion" value="<?php echo openssl_encrypt($producto['Prod_Descripcion'],cod,key); ?>">
+                                        <input type="hidden" name="Prod_Imagen" id="Prod_Imagen" value="<?php echo openssl_encrypt($producto['Prod_Imagen'],cod,key); ?>">
+                                        <input type="hidden" name="Prod_Precio" id="Prod_Precio" value="<?php echo openssl_encrypt($producto['Prod_Precio'],cod,key); ?>">
+                                        <input type="hidden" name="Prod_ABC" id="Prod_ABC" value="<?php echo openssl_encrypt($producto['Prod_ABC'],cod,key); ?>">
+                                        <input type="hidden" name="Prod_Status" id="Prod_Status" value="<?php echo openssl_encrypt($producto['Prod_Status'],cod,key); ?>">
+                                        <input type="hidden" name="Local_Nombre" id="Local_Nombre" value="<?php echo openssl_encrypt($producto['Local_Nombre'],cod,key); ?>">
+                                        <input type="hidden" name="Prod_Tipo" id="Prod_Tipo" value="<?php echo openssl_encrypt($producto['Prod_Tipo'],cod,key); ?>">
+                                        <input type="hidden" name="cantidad" id="cantidad" value="<?php echo openssl_encrypt(1,cod,key); ?>">
+                                        <button class="botonAgregar btn btn-warning" name="btnAccion" value="Agregar" type="submit" id="submit">
+                                            Agregar a carrito 
+                                        </button>
+                                    </form>
+                                    <div type="hidden" id="resultado">
+                                    </div>
+
+                                    <!-- <section class="modal ">
+                                        <div class="modal__container">
+                                            <img src="../img/restaurantes/productos/<?php echo $producto['Prod_Imagen']; ?>" class="modal__img">
+                                            <h2 class="modal__title"><?php echo $producto['Prod_Nombre']; ?></h2>
+                                            <h2 class="modal__subtitle"><?php echo $producto['Prod_Precio']; ?></h2>
+                                            <p class="modal__paragraph"><?php echo $producto['Prod_Descripcion']; ?></p>
+                                            <form class="form_modal" action="" method="post">
+                                                <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($localDelProducto['Local_Id'],cod,key); ?>">
+                                                <input type="hidden" name="Prod_Id" id="Prod_Id" value="<?php echo openssl_encrypt($producto['Prod_Id'],cod,key); ?>">
+                                                <input type="hidden" name="Prod_Nombre" id="Prod_Nombre" value="<?php echo openssl_encrypt($producto['Prod_Nombre'],cod,key); ?>">
+                                                <button class="botonAgregar btn btn-warning" name="btnAccion" value="Agregar" type="submit">
+                                                    Agregar a carrito 
+                                                </button>
+                                                <a href="#" class="modal__close btn btn-warning">Cerrar</a>
+                                            </form>
+                                                
+                                        </div>
+                                    </section> -->
                                     <?php } ?>
-                                    <a class="conteinerCardResta producto botonModal" href="#">
+                                    <!-- <a class="conteinerCardResta producto botonModal" href="#">
                                         <img class="imagenRestaurante" src="../img/restaurantes/productos/pizzaMuzzarella.webp"
                                             alt="">
                                         <div class="contenedorTexto">
@@ -120,25 +156,13 @@ $localDelProducto = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                                                 <i class="fa-solid fa-star"></i>
                                             </div>
                                         </div>
-                                    </a>
+                                    </a> -->
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <section class="modal ">
-                        <div class="modal__container">
-                            <img src="../../Cata-Food/img/restaurantes/productos/pizzaMuzzarella.webp" class="modal__img">
-                            <h2 class="modal__title">Pizza Muzzarella</h2>
-                            <p class="modal__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Deleniti nobis nisi quibusdam doloremque expedita quae ipsam accusamus quisquam quas,
-                                culpa tempora. Veniam consectetur deleniti maxime.</p>
-                                <a href="../../Cata-Food/secciones/carrito.php" class="botonAgregar btn btn-warning">Agregar al carrito</a>
-                                <a href="#" class="modal__close btn btn-warning">Cerrar</a>
-                                
-                        </div>
-                    </section>
-
+                    
                 </div>
 
 <?php include("../template/footer.php"); ?>

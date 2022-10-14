@@ -63,7 +63,7 @@ include("../../Cata-food/admin/config/config.php");
               <?php if($_SESSION['idRol'] == 3){ ?>
                 <li><a href="../../Cata-Food/admin/index.php" class="item_nav"><i class="fa-solid fa-unlock"></i> Modo Admin</a></li>                                       
                 <?php } ?>
-                <li><a href="../../Cata-Food/secciones/carrito.php" class="item_nav carritoCompras"><i class="fa-solid fa-cart-shopping"></i> Carrito <span>0</span></a></li>
+                <li><a href="../../Cata-Food/secciones/carrito_vista.php" class="item_nav carritoCompras"><i class="fa-solid fa-cart-shopping"></i> Carrito <span>0</span></a></li>
                 <li><a href="../../Cata-Food/secciones/registrar_negocio.php" class="item_nav"><i class="fa-solid fa-shop"></i> Iniciar/Registra tu negocio</a></li>
             <?php }else{?>
                   <li><a href="../../Cata-Food/secciones/inicio_registro.php" class="item_nav"><i class="fa-solid fa-arrow-right-to-bracket"></i> Inicio/Registro</a></li>

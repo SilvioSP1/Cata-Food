@@ -17,3 +17,26 @@ closeModal.addEventListener('click', (e)=>{
     modal.classList.remove('modal--show'); //en vez de agregar la clase modal show, que me la quite 
 
 });
+
+const modal_title = document.querySelector(".modal__title");
+
+function pasarId() {
+    const id = document.getElementById("Prod_Id");
+
+}
+
+/* openModal.addEventListener('show.bs.modal', function (event) {
+    // Button that triggered the modal
+    var button = event.relatedTarget
+    // Extract info from data-bs-* attributes
+    var recipient = button.getAttribute('data-bs-whatever')
+    // If necessary, you could initiate an AJAX request here
+    // and then do the updating in a callback.
+    //
+    // Update the modal's content.
+    var modalTitle = exampleModal.querySelector('.modal-title')
+    var modalBodyInput = exampleModal.querySelector('.modal-body input')
+  
+    modalTitle.textContent = 'New message to ' + recipient
+    modalBodyInput.value = recipient
+  }) */

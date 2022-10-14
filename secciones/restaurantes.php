@@ -62,7 +62,8 @@ $listaTipoProductos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                                     </div>
                                     <?php foreach($listaLocales as $local) { ?>
                                     <form class="container__CardRest" action="restaurante.php" method="POST">
-                                        <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($local['Local_Id'],cod,key); ?>">
+                                        <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($GLOBALS['Local'] = $local['Local_Id'],cod,key); ?>">
+
                                         <button class="conteinerCardResta" name="btnAccion" type="submit">
                                             <img class="imagenRestaurante" src="../img/restaurantes/locales/<?php echo $local['Local_Imagen']; ?>"
                                                 alt="">

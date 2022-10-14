@@ -614,16 +614,19 @@
     
                         .contenedorTexto{
     
-                            .nombreRestaurante{
+                            .nombreProducto{
     
-                            font-size: 10px;
+                            font-size: 0.9rem;
     
                             }
     
-                            .ubiRestaurante{
+                            .ingredientes{
     
-                            font-size: 10px;
+                            font-size: 0.7rem;
     
+                            }
+                            h6{
+                                font-size: 0.8rem;
                             }
                         }
 
@@ -638,7 +641,7 @@
 
 }
 
-@media(max-width:605px){
+@media(max-width:620px){
 
     .conteiner_restaurantes{
 
@@ -647,38 +650,45 @@
             .columnas{
     
                 .conteinerProductos{
-    
-                    .producto{
-    
-                        flex-direction: row;
-                        justify-content: center;
-                        align-items: center;
+
+                    .container__CardProd{
                         width: 100%;
-    
-                        img{
-    
-                            
-                            object-fit: cover;
-    
-    
-                        }
-    
-                        .contenedorTexto{
-    
-                            .nombreRestaurante{
-    
-                            font-size: 10px;
-    
+                        .producto{
+        
+                            flex-direction: row;
+                            justify-content: start;
+                            align-items: center;
+        
+                            img{
+        
+                                height: 90%;
+                                object-fit: cover;
+        
+        
                             }
-    
-                            .ubiRestaurante{
-    
-                            font-size: 10px;
-    
+        
+                            .contenedorTexto{
+        
+                                .nombreProducto{
+        
+                                font-size: 1rem;
+        
+                                }
+        
+                                .ingredientes{
+        
+                                font-size: 0.8rem;
+        
+                                }
+                                
+                                h6{
+                                    font-size: 0.9rem;
+                                }
                             }
+        
                         }
-    
                     }
+    
     
                 }
     
@@ -750,7 +760,8 @@
             
                         img{
             
-                            object-fit: cover;
+                            width: 35%;
+                            object-fit: contain;
             
             
                         }
