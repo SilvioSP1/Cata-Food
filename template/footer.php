@@ -72,12 +72,13 @@
 
 <script src="../../Cata-Food/js/boiler.js"></script>
 <script src="../../Cata-Food/js/loader.js"></script>
-<script src="../../Cata-Food/js/modal.js"></script>
+<script src="../../Cata-Food/js/modal.js?v=<?php echo time(); ?>"></script>
 
 <!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
-</script>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" 
+crossorigin="anonymous"></script>
 
 <!-- Font awesome -->
 <script src="https://kit.fontawesome.com/0dcf698896.js" crossorigin="anonymous"></script>

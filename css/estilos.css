@@ -1469,5 +1469,8 @@ p {
   height: 150px;
   object-fit: cover;
 }
+.backgroundProfile .datos {
+  margin-top: 5%;
+}
 
 /*# sourceMappingURL=estilos.css.map */

@@ -7,7 +7,7 @@
       <div class="col">
         <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
           <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item active" aria-current="page">Perfil Usuario</li>
+            <li class="breadcrumb-item active" aria-current="page">Perfil Local</li>
           </ol>
         </nav>
       </div>
@@ -38,11 +38,11 @@
             } ?></p>
             <p class="text-muted mb-4">San Fernando del Valle de Catamarca</p>
             <div class="d-flex justify-content-center mb-2">
-              <button type="button" class="btn btn-outline-primary ms-1 botonModal">Modificar</button>
+              <button type="button" class="btn btn-outline-primary ms-1">Message</button>
             </div>
           </div>
         </div>
-        <!-- <div class="card mb-4 mb-lg-0">
+        <div class="card mb-4 mb-lg-0">
           <div class="card-body p-0">
             <ul class="list-group list-group-flush rounded-3">
               <li class="list-group-item d-flex justify-content-between align-items-center p-3">
@@ -63,10 +63,10 @@
               </li>
             </ul>
           </div>
-        </div> -->
+        </div>
       </div>
       <div class="col-lg-8">
-        <div class="card mb-4 datos">
+        <div class="card mb-4">
           <div class="card-body">
             <div class="row">
               <div class="col-sm-3">
@@ -114,7 +114,7 @@
             </div>
           </div>
         </div>
-        <!-- <div class="row">
+        <div class="row">
           <div class="col-md-6">
             <div class="card mb-4 mb-md-0">
               <div class="card-body">
@@ -181,26 +181,11 @@
               </div>
             </div>
           </div>
-        </div> -->
+        </div>
       </div>
     </div>
   </div>
 </section>
-<section class="modal ">
-      <div class="modal__container">
-          <img src="../img/restaurantes/productos/" class="modal__img">
-          <h2 class="modal__title">ssss</h2>
-          <h2 class="modal__subtitle"></h2>
-          <p class="modal__paragraph"></p>
-          <form class="form_modal" action="" method="post">
-              <button class="botonAgregar btn btn-warning" name="btnAccion" value="Agregar" type="submit">
-                  Agregar a carrito 
-              </button>
-              <a href="#" class="modal__close btn btn-warning">Cerrar</a>
-          </form>
-              
-      </div>
-  </section>
 
 
 

@@ -2,13 +2,17 @@
 <?php 
 include("../admin/config/db.php");
 include("carrito.php");
+error_reporting(0);
 
-
-if (is_numeric(openssl_decrypt($_POST["Local_Id"],cod,key))) {
-    $Local_Id = openssl_decrypt($_POST["Local_Id"],cod,key);
-}else{
-    $Local_Id = openssl_decrypt($_POST["Local_Id"],cod,key)
+if (!empty($_POST["Local_Id"])) {
+    
+    if (is_numeric(openssl_decrypt($_POST["Local_Id"],cod,key))) {
+        $Local_Id = openssl_decrypt($_POST["Local_Id"],cod,key);
+        $_SESSION['local'] = openssl_decrypt($_POST["Local_Id"],cod,key);
+    }
+    $Local_Id = $_SESSION['local'];
 }
+
 
 $sentenciaSQL = $conexion->prepare("SELECT Prod_Id,Prod_Nombre,Prod_Descripcion,Prod_Imagen,Prod_Precio,Prod_ABC,Prod_Status,Prod_LocalId,Prod_Tipo,Local_Nombre,TP_Tipo,TP_Imagen FROM producto
 JOIN local ON Local_Id = :Local_Id
@@ -96,7 +100,7 @@ $localDelProducto = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                                     <form class="container__CardProd" action="" method="POST" id="formulario" >
                                     <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($localDelProducto['Local_Id'],cod,key); ?>">
                                     <input type="hidden" name="Prod_Id" id="Prod_Id" value="<?php echo $producto['Prod_Id']; ?>">
-                                        <button class="conteinerCardResta producto botonModal" type="button" >
+                                        <button class="conteinerCardResta producto botonModal" type="button" data-bs-whatever="<?php echo $producto['Prod_Id']; ?>">
                                             <img class="imagenRestaurante" src="../img/restaurantes/productos/<?php echo $producto['Prod_Imagen']; ?>"
                                                 alt="">
                                             <div class="contenedorTexto">
@@ -115,54 +119,32 @@ $localDelProducto = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                                         <input type="hidden" name="Local_Nombre" id="Local_Nombre" value="<?php echo openssl_encrypt($producto['Local_Nombre'],cod,key); ?>">
                                         <input type="hidden" name="Prod_Tipo" id="Prod_Tipo" value="<?php echo openssl_encrypt($producto['Prod_Tipo'],cod,key); ?>">
                                         <input type="hidden" name="cantidad" id="cantidad" value="<?php echo openssl_encrypt(1,cod,key); ?>">
-                                        <button class="botonAgregar btn btn-warning" name="btnAccion" value="Agregar" type="submit" id="submit">
-                                            Agregar a carrito 
-                                        </button>
                                     </form>
-                                    <div type="hidden" id="resultado">
-                                    </div>
-
-                                    <!-- <section class="modal ">
-                                        <div class="modal__container">
-                                            <img src="../img/restaurantes/productos/<?php echo $producto['Prod_Imagen']; ?>" class="modal__img">
-                                            <h2 class="modal__title"><?php echo $producto['Prod_Nombre']; ?></h2>
-                                            <h2 class="modal__subtitle"><?php echo $producto['Prod_Precio']; ?></h2>
-                                            <p class="modal__paragraph"><?php echo $producto['Prod_Descripcion']; ?></p>
-                                            <form class="form_modal" action="" method="post">
-                                                <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($localDelProducto['Local_Id'],cod,key); ?>">
-                                                <input type="hidden" name="Prod_Id" id="Prod_Id" value="<?php echo openssl_encrypt($producto['Prod_Id'],cod,key); ?>">
-                                                <input type="hidden" name="Prod_Nombre" id="Prod_Nombre" value="<?php echo openssl_encrypt($producto['Prod_Nombre'],cod,key); ?>">
-                                                <button class="botonAgregar btn btn-warning" name="btnAccion" value="Agregar" type="submit">
-                                                    Agregar a carrito 
-                                                </button>
-                                                <a href="#" class="modal__close btn btn-warning">Cerrar</a>
-                                            </form>
-                                                
-                                        </div>
-                                    </section> -->
                                     <?php } ?>
-                                    <!-- <a class="conteinerCardResta producto botonModal" href="#">
-                                        <img class="imagenRestaurante" src="../img/restaurantes/productos/pizzaMuzzarella.webp"
-                                            alt="">
-                                        <div class="contenedorTexto">
-                                            <p class="nombreProducto nombreRestaurante"><strong>Pizza Muzzarella</strong></p>
-                                            <p class="ingredientes ubiRestaurante">Muzzarella y salsa de tomate y nose que mas poner pero puede tener mas ingredientes</p>
-                                            <h6>$930</h6>
-                                            <div>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                                <i class="fa-solid fa-star"></i>
-                                            </div>
-                                        </div>
-                                    </a> -->
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    
+                    <section class="modal ">
+                        <div class="modal__container">
+                            <img src="../img/restaurantes/productos/<?php echo $producto['Prod_Imagen']; ?>" class="modal__img">
+                            <h2 class="modal__title"><?php echo $producto['Prod_Nombre']; ?></h2>
+                            <h2 class="modal__subtitle"><?php echo $producto['Prod_Precio']; ?></h2>
+                            <p class="modal__paragraph"><?php echo $producto['Prod_Descripcion']; ?></p>
+                            <form class="form_modal" action="" method="post">
+                                <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($localDelProducto['Local_Id'],cod,key); ?>">
+                                <input type="hidden" name="Prod_Id" id="Prod_Id" value="<?php echo openssl_encrypt($producto['Prod_Id'],cod,key); ?>">
+                                <input type="hidden" name="Prod_Nombre" id="Prod_Nombre" value="<?php echo openssl_encrypt($producto['Prod_Nombre'],cod,key); ?>">
+                                <button class="botonAgregar btn btn-warning" name="btnAccion" value="Agregar" type="submit">
+                                    Agregar a carrito 
+                                </button>
+                                <a href="#" class="modal__close btn btn-warning">Cerrar</a>
+                            </form>
+                                
+                        </div>
+                    </section>
+
                 </div>
 
 <?php include("../template/footer.php"); ?>
