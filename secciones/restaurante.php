@@ -97,7 +97,7 @@ $localDelProducto = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                             <div class="col-9 columnas">
                                 <div class="conteinerProductos">
                                     <?php foreach($listaProductos as $producto) { ?>
-                                    <form class="container__CardProd" action="" method="POST" id="formulario" >
+                                    <form class="container__CardProd" action="" method="POST" id="" >
                                         <button class="conteinerCardResta producto botonModal" type="button" id="<?php echo $producto['Prod_Id']; ?>" onClick="reply_click(this.id)">
                                             <img class="imagenRestaurante" src="../img/restaurantes/productos/<?php echo $producto['Prod_Imagen']; ?>"
                                                 alt="">
@@ -108,36 +108,35 @@ $localDelProducto = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                                             </div>
                                         </button>
                                     </form>
+                                    <section class="modal" id="">
+                                        <div class="modal__container">
+                                            <img src="../img/restaurantes/productos/<?php echo $producto['Prod_Imagen']; ?>" class="modal__img">
+                                            <h2 class="modal__title"><?php echo $producto['Prod_Nombre']; ?></h2>
+                                            <h2 class="modal__subtitle"><?php echo $producto['Prod_Precio']; ?></h2>
+                                            <p class="modal__paragraph"><?php echo $producto['Prod_Descripcion']; ?></p>
+                                            <form class="form_modal" action="" method="post">
+                                                <?php  ?>
+                                                <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($localDelProducto['Local_Id'],cod,key); ?>">
+                                                <input type="hidden" name="Local_Nombre" id="Local_Nombre" value="<?php echo openssl_encrypt($localNombre,cod,key); ?>">
+                                                <input type="hidden" name="Prod_Id" id="Prod_Id" value="<?php echo openssl_encrypt($producto['Prod_Id'],cod,key); ?>">
+                                                <input type="hidden" name="Prod_Nombre" id="Prod_Nombre" value="<?php echo openssl_encrypt($producto['Prod_Nombre'],cod,key); ?>">
+                                                <input type="hidden" name="Prod_Imagen" id="Prod_Imagen" value="<?php echo openssl_encrypt($producto['Prod_Imagen'],cod,key); ?>">
+                                                <input type="hidden" name="Prod_Precio" id="Prod_Precio" value="<?php echo openssl_encrypt($producto['Prod_Precio'],cod,key); ?>">
+                                                <input type="hidden" name="cantidad" id="cantidad" value="<?php echo openssl_encrypt(1,cod,key); ?>">
+                                                <button class="botonAgregar btn btn-warning" name="btnAccion" value="Agregar" type="submit">
+                                                    Agregar a carrito 
+                                                </button>
+                                                <a href="#" class="modal__close btn btn-warning">Cerrar</a>
+                                            </form>
+                                                
+                                        </div>
+                                    </section>
                                     <?php } ?>
                                 </div>
                                 <input type="hidden" name="id" id="id" value="">
                             </div>
                         </div>
                     </div>
-
-                    <section class="modal ">
-                        <div class="modal__container">
-                            <img src="../img/restaurantes/productos/<?php echo $producto['Prod_Imagen']; ?>" class="modal__img">
-                            <h2 class="modal__title"><?php echo $producto['Prod_Nombre']; ?></h2>
-                            <h2 class="modal__subtitle"><?php echo $producto['Prod_Precio']; ?></h2>
-                            <p class="modal__paragraph"><?php echo $producto['Prod_Descripcion']; ?></p>
-                            <form class="form_modal" action="" method="post">
-                                <?php  ?>
-                                <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($localDelProducto['Local_Id'],cod,key); ?>">
-                                <input type="hidden" name="Local_Nombre" id="Local_Nombre" value="<?php echo openssl_encrypt($localNombre,cod,key); ?>">
-                                <input type="hidden" name="Prod_Id" id="Prod_Id" value="<?php echo openssl_encrypt($producto['Prod_Id'],cod,key); ?>">
-                                <input type="hidden" name="Prod_Nombre" id="Prod_Nombre" value="<?php echo openssl_encrypt($producto['Prod_Nombre'],cod,key); ?>">
-                                <input type="hidden" name="Prod_Imagen" id="Prod_Imagen" value="<?php echo openssl_encrypt($producto['Prod_Imagen'],cod,key); ?>">
-                                <input type="hidden" name="Prod_Precio" id="Prod_Precio" value="<?php echo openssl_encrypt($producto['Prod_Precio'],cod,key); ?>">
-                                <input type="hidden" name="cantidad" id="cantidad" value="<?php echo openssl_encrypt(1,cod,key); ?>">
-                                <button class="botonAgregar btn btn-warning" name="btnAccion" value="Agregar" type="submit">
-                                    Agregar a carrito 
-                                </button>
-                                <a href="#" class="modal__close btn btn-warning">Cerrar</a>
-                            </form>
-                                
-                        </div>
-                    </section>
 
                 </div>
 
