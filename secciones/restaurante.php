@@ -115,6 +115,7 @@ $localDelProducto = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                         </div>
                     </div>
 
+
                     <section class="modal ">
                         <div class="modal__container">
                             <img src="../img/restaurantes/productos/<?php echo $producto['Prod_Imagen']; ?>" class="modal__img">
