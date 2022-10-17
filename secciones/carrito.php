@@ -67,6 +67,7 @@ if ([$_SESSION['usuario'] != "Sin Loguearse"])
                 if (!isset($_SESSION['carritoCompra'])) {
                     $productoArr = array( 
                         'id'=>$Prod_Id,
+                        'imagen'=>$Prod_Imagen,
                         'nombre'=>$Prod_Nombre,
                         'precio'=>$Prod_Precio,
                         'cantidad'=>$cantidad,
@@ -85,6 +86,7 @@ if ([$_SESSION['usuario'] != "Sin Loguearse"])
                         $numeroProductos = count($_SESSION['carritoCompra']);
                         $productoArr = array( 
                             'id'=>$Prod_Id,
+                            'imagen'=>$Prod_Imagen,
                             'nombre'=>$Prod_Nombre,
                             'precio'=>$Prod_Precio,
                             'cantidad'=>$cantidad,

@@ -12,8 +12,15 @@ for (i = 0; i < tama; i++) {
     
         e.preventDefault(); //prevenimos el comportamiento por defecto
         modal.classList.add('modal--show'); //modal entrara a sus clases y agregara la clase modal--show
-    
+        
     });
+    function reply_click(clicked_id)
+    {
+        const id = clicked_id;
+        document.getElementById("id").value = id;
+        /* document.getElementsByName("id").value = id; */
+        alert(clicked_id);
+    }
 }
 
 //Cada vez que hagamos click en close modal hara lo siguiente:
@@ -23,4 +30,5 @@ closeModal.addEventListener('click', (e)=>{
     modal.classList.remove('modal--show'); //en vez de agregar la clase modal show, que me la quite 
 
 });
+
 
