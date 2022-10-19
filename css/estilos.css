@@ -1472,5 +1472,14 @@ p {
 .backgroundProfile .datos {
   margin-top: 5%;
 }
+.backgroundProfile .contanedorImagen {
+  position: relative;
+}
+.backgroundProfile .contanedorImagen .imagen-editar {
+  height: 25px;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
 
 /*# sourceMappingURL=estilos.css.map */

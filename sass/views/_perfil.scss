@@ -14,4 +14,19 @@
         margin-top: 5%;
     }
 
+   .contanedorImagen {
+
+       position: relative;
+
+       .imagen-editar {
+
+           height: 25px;
+           position: absolute;
+           right: 0;
+           cursor: pointer;
+
+       }
+
+   }
+
 }

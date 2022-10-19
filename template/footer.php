@@ -86,10 +86,6 @@ crossorigin="anonymous"></script>
 <!-- Anime.js -->
 <script src="../../Cata-Food/node_modules/animejs/lib/anime.min.js"></script>
 
-<!-- Ajax -->
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-
 </body>
 
 
