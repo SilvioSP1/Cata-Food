@@ -36,11 +36,6 @@ integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WT
   <!-- icono cata food -->
   <link rel="icon" href="../../Cata-Food/img/index/logo_redondo.png">
 
-  <!-- Ajax -->
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-
-
 </head>
 
 

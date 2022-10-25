@@ -928,74 +928,8 @@ p {
   margin-right: 10px;
 }
 
-.container__CardProd {
-  width: 50%;
-}
-
-.conteiner_restaurantes .containerColum {
-  margin-top: 5px;
-}
-.conteiner_restaurantes .containerColum .columnas .conteimerLocal {
-  width: 100%;
-  height: 265px;
-  margin: auto;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  /* justify-content: center; */
-  /* background-color: #fff; */
-  box-shadow: 0 3px 13px 1px rgba(0, 0, 0, 0.5215686275);
-  flex-wrap: nowrap;
-  background-color: #1a1e21;
-  color: whitesmoke;
-  border-radius: 20px;
-  border: #fff solid 1px;
-}
-.conteiner_restaurantes .containerColum .columnas .conteimerLocal .conteinerLocalImagen {
-  height: 100%;
-  width: 30%;
-  display: flex;
-}
-.conteiner_restaurantes .containerColum .columnas .conteimerLocal .conteinerLocalImagen .imagenRestaurante {
-  height: auto;
-  width: 100%;
-  object-fit: contain;
-}
-.conteiner_restaurantes .containerColum .columnas .conteimerLocal .continerTextoBusca {
-  width: 70%;
-  height: 100%;
-}
-.conteiner_restaurantes .containerColum .columnas .conteimerLocal .continerTextoBusca .contenedorTexto {
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  height: 50%;
-}
-.conteiner_restaurantes .containerColum .columnas .conteimerLocal .continerTextoBusca .contenedorTexto div p {
-  font-size: 20px;
-}
-.conteiner_restaurantes .containerColum .columnas .conteimerLocal .continerTextoBusca .contenedorBuscadorRes {
-  align-items: center;
-  margin-bottom: 0;
-}
-.conteiner_restaurantes .containerColum .columnas .conteimerLocal .continerTextoBusca .contenedorBuscadorRes .containerMedias {
-  height: 45px;
-}
-.conteiner_restaurantes .containerColum .columnas .conteinerProductos {
-  display: flex;
-  flex-wrap: wrap;
-  flex: 1 1;
-}
-.conteiner_restaurantes .containerColum .columnas .conteinerProductos .producto {
-  width: 80%;
-}
-.conteiner_restaurantes .containerColum .columnas .conteinerProductos .producto .contenedorTexto {
-  text-align: start;
-}
-.conteiner_restaurantes .containerColum .columnas .conteinerProductos .producto .contenedorTexto .ingredientes {
-  padding-bottom: 0;
-  text-align: initial;
+.container {
+  background-color: #fb8819;
 }
 
 .sectionCarrito {
