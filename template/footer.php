@@ -72,7 +72,6 @@
 
 <script src="../../Cata-Food/js/boiler.js"></script>
 <script src="../../Cata-Food/js/loader.js"></script>
-<script src="../../Cata-Food/js/modal.js?v=<?php echo time(); ?>"></script>
 
 <!-- JavaScript Bundle with Popper -->
 <!-- JavaScript Bundle with Popper -->

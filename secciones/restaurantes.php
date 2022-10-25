@@ -39,13 +39,6 @@ $listaTipoProductos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                                             <div aria-hidden="true" class="sc-tl2hnw-0 hNbawF"><?php echo $tipoLocal['TL_Tipo']; ?></div>
                                         </div>
                                         <?php } ?>
-                                        <div aria-label="" class="tipo">
-                                            <div class="circulo">
-                                                <img src="../img/restaurantes/categorias/hamburguesa.png"
-                                                    aria-hidden="true" class="">
-                                            </div>
-                                            <div aria-hidden="true" class="sc-tl2hnw-0 hNbawF">Lomitos</div>
-                                        </div>
                                         
                                     </div>
                                 </div>
@@ -81,24 +74,7 @@ $listaTipoProductos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                                         </button>
                                     </form>
                                     <?php } ?>
-                                    <div class="container__CardRest">
-                                        <a class="conteinerCardResta" href="">
-                                            <img class="imagenRestaurante" src="../img/restaurantes/locales/medialunascalentitas.png"
-                                                alt="">
-                                            <div class="contenedorTexto">
-                                                <p class="nombreRestaurante"><strong>Betos Lomos</strong></p>
-                                                <p class="ubiRestaurante">Republica Rivadavia</p>
-                                                <h6>Clasificación</h6>
-                                                <div>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
+                                    
                                 </div>
                             </div>
 
@@ -115,11 +91,6 @@ $listaTipoProductos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                                                             class="imgProductos"><?php echo $tipoProducto['TP_Tipo']; ?></h6>
                                                 </div>
                                             <?php } ?>
-                                            <div class="lista">
-                                                <h6><img src="../img/restaurantes/categorias/hamburguesa.png"  alt=""
-                                                        class="imgProductos">Hamburguesas</h6>
-                                            </div>
-                                            
                                         </div>
                                         
                                     </div>
