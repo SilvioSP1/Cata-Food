@@ -1007,6 +1007,10 @@ p {
 .sectionCarrito .iconoMenos {
   color: black;
 }
+.sectionCarrito .icon {
+  background-color: white;
+  border: white;
+}
 
 .container-flex {
   background-color: white;
