@@ -1011,6 +1011,9 @@ p {
   background-color: white;
   border: white;
 }
+.sectionCarrito .conta {
+  display: flex;
+}
 
 .container-flex {
   background-color: white;

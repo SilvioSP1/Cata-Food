@@ -30,7 +30,7 @@ foreach($listaProductos as $producto) {
     <input type="hidden" name="Prod_Imagen" id="Prod_Imagen" value="<?php echo openssl_encrypt($producto['Prod_Imagen'],cod,key); ?>">
     <input type="hidden" name="Prod_Precio" id="Prod_Precio" value="<?php echo openssl_encrypt($producto['Prod_Precio'],cod,key); ?>">
     <input type="hidden" name="cantidad" id="cantidad" value="<?php echo openssl_encrypt(1,cod,key); ?>">
-    <button type="button" class="btn btn-primary">Save changes</button>
+    <input type="number" class="form-control-sm conta" name="conta" id="conta" placeholder="Cantidad de compra">
     <button class="botonAgregar btn btn-warning" name="btnAccion" value="Agregar" type="submit">
         Agregar a carrito 
     </button>

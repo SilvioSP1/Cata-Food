@@ -33,7 +33,7 @@ include("carrito.php");
                   <i class="fas fa-minus iconoMenos"></i>
                 </button>
 
-                <input id="form1" min="0" name="quantity" value="1" type="number"
+                <input id="form1" min="0" name="quantity" value="<?php echo $producto['cantidad'] ?>" type="number"
                   class="form-control form-control-sm" />
 
                 <button class="btn btn-link px-2"

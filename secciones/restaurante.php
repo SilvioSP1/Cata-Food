@@ -39,6 +39,13 @@ $localDelProducto = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
 
 ?>
+<?php if ($mensaje !="") {?>
+<div class="alert alert-success">
+        <?php
+            echo $mensaje;
+        ?>
+</div>
+<?php } ?>
 
                 <div class="conteiner_restaurantes">
 

@@ -79,7 +79,7 @@ if ([$_SESSION['usuario'] != "Sin Loguearse"])
                 }
                 else{
                     $idProductos = array_column($_SESSION['carritoCompra'],"id");
-                    if (in_array($id,$idProductos)) {
+                    if (in_array($Prod_Id,$idProductos)) {
                         $mensaje= "Ya esta agreagdo este producto";
                     }
                     else{
