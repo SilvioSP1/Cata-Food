@@ -28,6 +28,7 @@ error_reporting(0);
           $_SESSION['telefono']=$usuarios['Usu_Telefono'];
           $_SESSION['idUsuario']=$usuarios['Usu_Id'];
           $_SESSION['idRol']= $usuarios['Usu_RolId'];
+          $_SESSION['imagen']= $usuarios['Usu_Imagen'];
           header("Location:../admin/index.php");
         }
         else
@@ -42,6 +43,7 @@ error_reporting(0);
           $_SESSION['telefono']=$usuarios['Usu_Telefono'];
           $_SESSION['idUsuario']=$usuarios['Usu_Id'];
           $_SESSION['idRol']= $usuarios['Usu_RolId'];
+          $_SESSION['imagen']= $usuarios['Usu_Imagen'];
           header("Location:../index.php");
           
         }

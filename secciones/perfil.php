@@ -20,7 +20,7 @@
             <div class="contanedorImagen">
 
               <img src="../../Cata-Food/img/perfil/editar.png" alt="" class="imagen-editar">
-              <img src="../../Cata-Food/img/perfil/profile-user3.jpg" alt="avatar" style="width: 150px;" class="profilePicture">
+              <img src="../../Cata-Food/img/perfil/<?php echo $_SESSION['imagen'] ?>" alt="avatar" style="width: 150px;" class="profilePicture">
 
             </div>
             <h5 class="my-3"><?php echo $_SESSION['nombreUsuario'];?></h5>

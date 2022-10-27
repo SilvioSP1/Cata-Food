@@ -12,6 +12,7 @@ error_reporting(0);
       $txtTelefono = ($_POST['txtTelefono']);
       $txtContrasena = ($_POST['txtContrasena']);
       $txtContrasenaRepe = ($_POST['txtContrasenaRepe']);
+      $txtImagen = 'user_icon.png';
       
       $prueba = $conexion->prepare("SELECT COUNT(Usu_Email) AS cantidad FROM usuario WHERE Usu_Email=?");
       $prueba->execute([$txtEmail]);
@@ -34,12 +35,13 @@ error_reporting(0);
         }
         else{
 
-          $sentenciaSQL = $conexion->prepare("INSERT INTO usuario (Usu_Nombre,Usu_Apellido,Usu_Contrasena,Usu_Email,Usu_Telefono,Usu_RolId,Usu_Status) VALUES (:Usu_Nombre,:Usu_Apellido,:Usu_Contrasena,:Usu_Email,:Usu_Telefono,1,1);");
+          $sentenciaSQL = $conexion->prepare("INSERT INTO usuario (Usu_Nombre,Usu_Apellido,Usu_Contrasena,Usu_Email,Usu_Telefono,Usu_RolId,Usu_Status,Usu_Imagen) VALUES (:Usu_Nombre,:Usu_Apellido,:Usu_Contrasena,:Usu_Email,:Usu_Telefono,1,1,:Usu_Imagen);");
           $sentenciaSQL->bindParam(':Usu_Nombre',$txtNombre);
           $sentenciaSQL->bindParam(':Usu_Apellido',$txtApellido);
           $sentenciaSQL->bindParam(':Usu_Email',$txtEmail);
           $sentenciaSQL->bindParam(':Usu_Telefono',$txtTelefono);
           $sentenciaSQL->bindParam(':Usu_Contrasena',$txtContrasena);
+          $sentenciaSQL->bindParam(':Usu_Imagen',$txtImagen);
           $sentenciaSQL->execute();
   
           $sentenciaSQL = $conexion->prepare("SELECT * FROM usuario WHERE Usu_Email=:Usu_Email AND Usu_Contrasena=:Usu_Contrasena");
@@ -60,6 +62,7 @@ error_reporting(0);
             $_SESSION['telefono']=$usuarios['Usu_Telefono'];
             $_SESSION['idUsuario']=$usuarios['Usu_Id'];
             $_SESSION['idRol']= $usuarios['Usu_RolId'];
+            $_SESSION['imagen']= $usuarios['Usu_Imagen'];
             header("Location:../admin/index.php");
           }
           else
@@ -74,6 +77,7 @@ error_reporting(0);
             $_SESSION['telefono']=$usuarios['Usu_Telefono'];
             $_SESSION['idUsuario']=$usuarios['Usu_Id'];
             $_SESSION['idRol']= $usuarios['Usu_RolId'];
+            $_SESSION['imagen']= $usuarios['Usu_Imagen'];
             header("Location:../index.php");
             
           }
