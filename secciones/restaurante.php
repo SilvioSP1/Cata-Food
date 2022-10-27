@@ -11,6 +11,8 @@ if (!empty($_POST["Local_Id"])) {
         $_SESSION['local'] = openssl_decrypt($_POST["Local_Id"],cod,key);
     }
     $Local_Id = $_SESSION['local'];
+}else{
+    $Local_Id = $_SESSION['local'];
 }
 
 $sentenciaSQL = $conexion->prepare("SELECT Prod_Id,Prod_Nombre,Prod_Descripcion,Prod_Imagen,Prod_Precio,Prod_ABC,Prod_Status,Prod_LocalId,Prod_Tipo,Local_Nombre,TP_Tipo,TP_Imagen FROM producto
@@ -54,6 +56,7 @@ $localDelProducto = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                                             <div>
                                                 <?php $localNombre = $local['Local_Nombre'];?>
                                                 <p class="nombreRestaurante"><strong><?php echo $local['Local_Nombre']; ?></strong></p>
+                                                <?php $_SESSION['localNombre'] = $local['Local_Nombre'] ?>
                                                 <p class="ubiRestaurante"><?php echo $local['Local_Ubicacion']; ?></p>
                                             </div>
                                         </div>
@@ -91,7 +94,7 @@ $localDelProducto = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                                 <div class="conteinerProductos">
                                     <?php foreach($listaProductos as $producto) { ?>
                                     <form class="container__CardProd" action="" method="POST" id="" >
-                                        <button class="userinfo conteinerCardResta producto botonModal" type="button" data-id="<?php echo $producto['Prod_Id']; ?>" onClick="reply_click(this.id)">
+                                        <button class="userinfo conteinerCardResta producto botonModal" type="button" data-id="<?php echo $producto['Prod_Id']; ?>" onClick="reply_click(this.id)" data-value="<?php echo $_SESSION['localNombre']?>">
                                             <img class="imagenRestaurante" src="../img/restaurantes/productos/<?php echo $producto['Prod_Imagen']; ?>"
                                                 alt="">
                                             <div class="contenedorTexto">
@@ -101,29 +104,6 @@ $localDelProducto = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                                             </div>
                                         </button>
                                     </form>
-                                    <section class="modal" id="">
-                                        <div class="modal__container">
-                                            <img src="../img/restaurantes/productos/<?php echo $producto['Prod_Imagen']; ?>" class="modal__img">
-                                            <h2 class="modal__title"><?php echo $producto['Prod_Nombre']; ?></h2>
-                                            <h2 class="modal__subtitle"><?php echo $producto['Prod_Precio']; ?></h2>
-                                            <p class="modal__paragraph"><?php echo $producto['Prod_Descripcion']; ?></p>
-                                            <form class="form_modal" action="" method="post">
-                                                <?php  ?>
-                                                <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($localDelProducto['Local_Id'],cod,key); ?>">
-                                                <input type="hidden" name="Local_Nombre" id="Local_Nombre" value="<?php echo openssl_encrypt($localNombre,cod,key); ?>">
-                                                <input type="hidden" name="Prod_Id" id="Prod_Id" value="<?php echo openssl_encrypt($producto['Prod_Id'],cod,key); ?>">
-                                                <input type="hidden" name="Prod_Nombre" id="Prod_Nombre" value="<?php echo openssl_encrypt($producto['Prod_Nombre'],cod,key); ?>">
-                                                <input type="hidden" name="Prod_Imagen" id="Prod_Imagen" value="<?php echo openssl_encrypt($producto['Prod_Imagen'],cod,key); ?>">
-                                                <input type="hidden" name="Prod_Precio" id="Prod_Precio" value="<?php echo openssl_encrypt($producto['Prod_Precio'],cod,key); ?>">
-                                                <input type="hidden" name="cantidad" id="cantidad" value="<?php echo openssl_encrypt(1,cod,key); ?>">
-                                                <button class="botonAgregar btn btn-warning" name="btnAccion" value="Agregar" type="submit">
-                                                    Agregar a carrito 
-                                                </button>
-                                                <a href="#" class="modal__close btn btn-warning">Cerrar</a>
-                                            </form>
-                                                
-                                        </div>
-                                    </section>
                                     <?php } ?>
                                 </div>
                                 <input type="hidden" name="id" id="id" value="">
@@ -137,11 +117,13 @@ $localDelProducto = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                         $(document).ready(function () {
                             $('.userinfo').click(function () {
                                 var userid = $(this).data('id');
+                                var localNomb = $(this).data('value');
                                 $.ajax({
                                     url: '../admin/config/ajaxfile.php',
                                     type: 'post',
                                     data: {
-                                        userid: userid
+                                        userid: userid,
+                                        localNomb: localNomb
                                     },
                                     success: function (response) {
                                         $('.modal-body').html(response);
@@ -171,11 +153,7 @@ $localDelProducto = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                                 </div>
                                 <div class="modal-body">
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                    <a href="./carrito_vista.php"><button type="button" class="btn btn-secondary"
-                                            data-dismiss="modal">Agregar al carrito</button></a>
-                                </div>
+                               
                             </div>
                         </div>
                     </div>
