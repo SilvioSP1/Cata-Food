@@ -40,14 +40,24 @@ $localDelProducto = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 <?php if ($mensaje !="") {?>
+    <?php if ($mensaje == "Producto agreagdo") {?>
     <script>
+      Swal.fire({
+          icon: "success",
+          title: "Agregado",
+          text: "<?php echo $mensaje?>",
+          });
+          //echo $mensaje; //
+    </script>
+    <?php }else{?>
+        <script>
       Swal.fire({
           icon: "error",
           title: "Oops...",
           text: "<?php echo $mensaje?>",
           });
-          //echo $mensaje; //
-    </script>
+        </script>
+    <?php } ?>
 <?php } ?>
 
                 <div class="conteiner_restaurantes">
