@@ -1,0 +1,68 @@
+.padreTR{
+    
+    .flexTR{
+        
+
+        .tableTR{
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .containerTR{
+    
+                display: flex;
+                flex-direction: column;
+        
+                .contenedorImagen{
+
+                    display: flex;
+                    justify-content: center;
+
+                    .imageProducto{
+        
+                        width: 80%;
+            
+                    }
+
+                }
+        
+                .descripcionProductos{
+        
+                    margin-top: 5rem;
+        
+                }
+            
+            }
+    
+        }
+    
+       
+
+    }
+
+    
+
+}
+
+.modal-footer{
+
+    display: flex;
+    justify-content: center;
+    
+    .flexBotones{
+
+        display: flex;
+        gap: 10rem;
+        
+
+        #conta{
+
+            width: 8rem;
+            border-radius: 6px;
+
+        }
+
+    }
+
+}
