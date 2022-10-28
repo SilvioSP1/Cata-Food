@@ -1,3 +1,4 @@
+<?php include("../template/alert.php"); ?>
 <?php 
 session_start();
 error_reporting(0);
@@ -19,11 +20,13 @@ error_reporting(0);
       $prueba = $prueba->fetch(PDO::FETCH_ASSOC);
 
       if($prueba['cantidad'] > 0) {
-        ?>
-        <script>
-          alert("¡Vaya!, este mail ya tiene una cuenta 💔");
-        </script>
-        <?php
+         echo '<script>
+         Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "¡Vaya!, este mail ya tiene una cuenta 💔",
+          });
+         </script>';
       }else{
 
         if ($txtContrasena !== $txtContrasenaRepe) {

@@ -40,11 +40,14 @@ $localDelProducto = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 <?php if ($mensaje !="") {?>
-<div class="alert alert-success">
-        <?php
-            echo $mensaje;
-        ?>
-</div>
+    <script>
+      Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "<?php echo $mensaje?>",
+          });
+          //echo $mensaje; //
+    </script>
 <?php } ?>
 
                 <div class="conteiner_restaurantes">
