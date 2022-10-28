@@ -72,6 +72,7 @@
 
 <script src="../../Cata-Food/js/boiler.js"></script>
 <script src="../../Cata-Food/js/loader.js"></script>
+<script src="../../Cata-Food/js/toast.js"></script>
 
 <!-- JavaScript Bundle with Popper -->
 <!-- JavaScript Bundle with Popper -->
@@ -84,6 +85,8 @@ crossorigin="anonymous"></script>
 
 <!-- Anime.js -->
 <script src="../../Cata-Food/node_modules/animejs/lib/anime.min.js"></script>
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 

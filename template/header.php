@@ -40,6 +40,9 @@ include("../../Cata-food/admin/config/config.php");
   <!-- icono cata food -->
   <link rel="icon" href="../../Cata-Food/img/index/logo_redondo.png">
 
+  <!-- script sweet alert -->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 
 
