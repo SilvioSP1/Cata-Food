@@ -75,12 +75,12 @@ if ([$_SESSION['usuario'] != "Sin Loguearse"])
                         'local'=>$Local_Nombre
                     );
                     $_SESSION['carritoCompra'][0] = $productoArr;
-                    $mensaje= "Producto agreagdo";
+                    $mensaje= "Producto agregado";
                 }
                 else{
                     $idProductos = array_column($_SESSION['carritoCompra'],"id");
                     if (in_array($Prod_Id,$idProductos)) {
-                        $mensaje= "Ya esta agreagdo este producto";
+                        $mensaje= "Ya esta agregado este producto";
                     }
                     else{
                         $numeroProductos = count($_SESSION['carritoCompra']);

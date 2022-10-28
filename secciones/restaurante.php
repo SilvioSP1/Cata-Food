@@ -40,11 +40,11 @@ $localDelProducto = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 <?php if ($mensaje !="") {?>
-    <?php if ($mensaje == "Producto agreagdo") {?>
+    <?php if ($mensaje == "Producto agregado") {?>
     <script>
       Swal.fire({
           icon: "success",
-          title: "Agregado",
+          title: "Se agrego correctamente",
           text: "<?php echo $mensaje?>",
           });
           //echo $mensaje; //
@@ -53,7 +53,7 @@ $localDelProducto = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
         <script>
       Swal.fire({
           icon: "error",
-          title: "Oops...",
+          title: "No se agrego correctamente",
           text: "<?php echo $mensaje?>",
           });
         </script>
