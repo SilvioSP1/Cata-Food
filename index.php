@@ -138,7 +138,7 @@
 
     </div>
 
-    <div class="chat-bar-collapsible">
+    <div class="chat-bar-collapsible animate__animated animate__backInRight">
         <button id="chat-button" type="button" class="collapsible">¿Necesitas ayuda?
             <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
         </button>
