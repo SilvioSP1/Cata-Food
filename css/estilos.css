@@ -1403,39 +1403,6 @@ p {
     font-size: 10px;
   }
 }
-.padreTR .flexTR .tableTR {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.padreTR .flexTR .tableTR .containerTR {
-  display: flex;
-  flex-direction: column;
-}
-.padreTR .flexTR .tableTR .containerTR .contenedorImagen {
-  display: flex;
-  justify-content: center;
-}
-.padreTR .flexTR .tableTR .containerTR .contenedorImagen .imageProducto {
-  width: 80%;
-}
-.padreTR .flexTR .tableTR .containerTR .descripcionProductos {
-  margin-top: 5rem;
-}
-
-.modal-footer {
-  display: flex;
-  justify-content: center;
-}
-.modal-footer .flexBotones {
-  display: flex;
-  gap: 10rem;
-}
-.modal-footer .flexBotones #conta {
-  width: 8rem;
-  border-radius: 6px;
-}
-
 .backgroundProfile {
   background-color: #fb8819;
 }

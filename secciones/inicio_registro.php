@@ -1,4 +1,3 @@
-<?php include("../template/header.php"); ?>
 <?php
 session_start();
 error_reporting(0);
@@ -51,21 +50,12 @@ error_reporting(0);
       }
       else
       {
-        
-        echo '<script>
-        Swal.fire({
-         icon: "error",
-         title: "Oops...",
-         text: "¡El usuario o la contraseña son incorrectos!",
-         });
-        </script>';
-        
+        echo "<script>alert('Usuario o contraseña incorrectos');</script>";
       }
 
 
     }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -86,9 +76,6 @@ error_reporting(0);
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
   <link rel="icon" href="../img/index/logo_redondo.png">
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 
 </head>
@@ -148,7 +135,6 @@ error_reporting(0);
   <script src="../js/loader.js"></script>
 
   <!-- JavaScript Bundle with Popper -->
-  <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
   </script>
@@ -158,9 +144,8 @@ error_reporting(0);
 
   <!-- Anime.js -->
   <script src="../node_modules/animejs/lib/anime.min.js"></script>
-  
-
 
 </body>
+
 
 </html>
