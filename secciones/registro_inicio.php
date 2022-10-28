@@ -50,37 +50,51 @@ error_reporting(0);
           $sentenciaSQL->execute();
           $usuarios = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
   
-          if ($usuarios['Usu_RolId'] == 3) 
-          {
-            session_start();
-            $_SESSION['usuario'] = $usuarios;
-            $_SESSION['nombreUsuario']=$usuarios['Usu_Nombre']." ".$usuarios['Usu_Apellido'];
-            $_SESSION['nombre']=$usuarios['Usu_Nombre'];
-            $_SESSION['apellido']=$usuarios['Usu_Apellido'];
-            $_SESSION['email']=$usuarios['Usu_Email'];
-            $_SESSION['contraseña']=$usuarios['Usu_Contrasena'];
-            $_SESSION['telefono']=$usuarios['Usu_Telefono'];
-            $_SESSION['idUsuario']=$usuarios['Usu_Id'];
-            $_SESSION['idRol']= $usuarios['Usu_RolId'];
-            $_SESSION['imagen']= $usuarios['Usu_Imagen'];
-            header("Location:../admin/index.php");
-          }
-          else
-          {
-            session_start();
-            $_SESSION['usuario'] = $usuarios;
-            $_SESSION['nombreUsuario']=$usuarios['Usu_Nombre']." ".$usuarios['Usu_Apellido'];
-            $_SESSION['nombre']=$usuarios['Usu_Nombre'];
-            $_SESSION['apellido']=$usuarios['Usu_Apellido'];
-            $_SESSION['email']=$usuarios['Usu_Email'];
-            $_SESSION['contraseña']=$usuarios['Usu_Contrasena'];
-            $_SESSION['telefono']=$usuarios['Usu_Telefono'];
-            $_SESSION['idUsuario']=$usuarios['Usu_Id'];
-            $_SESSION['idRol']= $usuarios['Usu_RolId'];
-            $_SESSION['imagen']= $usuarios['Usu_Imagen'];
-            header("Location:../index.php");
-            
-          }
+          if ($usuarios['Usu_RolId'] == 1) 
+        {
+          session_start();
+          $_SESSION['usuario'] = $usuarios;
+          $_SESSION['nombreUsuario']=$usuarios['Usu_Nombre']." ".$usuarios['Usu_Apellido'];
+          $_SESSION['nombre']=$usuarios['Usu_Nombre'];
+          $_SESSION['apellido']=$usuarios['Usu_Apellido'];
+          $_SESSION['email']=$usuarios['Usu_Email'];
+          $_SESSION['contraseña']=$usuarios['Usu_Contrasena'];
+          $_SESSION['telefono']=$usuarios['Usu_Telefono'];
+          $_SESSION['idUsuario']=$usuarios['Usu_Id'];
+          $_SESSION['idRol']= $usuarios['Usu_RolId'];
+          $_SESSION['imagen']= $usuarios['Usu_Imagen'];
+          header("Location:../index.php");
+        }
+        if ($usuarios['Usu_RolId'] == 2) 
+        {
+          session_start();
+          $_SESSION['usuario'] = $usuarios;
+          $_SESSION['nombreUsuario']=$usuarios['Usu_Nombre']." ".$usuarios['Usu_Apellido'];
+          $_SESSION['nombre']=$usuarios['Usu_Nombre'];
+          $_SESSION['apellido']=$usuarios['Usu_Apellido'];
+          $_SESSION['email']=$usuarios['Usu_Email'];
+          $_SESSION['contraseña']=$usuarios['Usu_Contrasena'];
+          $_SESSION['telefono']=$usuarios['Usu_Telefono'];
+          $_SESSION['idUsuario']=$usuarios['Usu_Id'];
+          $_SESSION['idRol']= $usuarios['Usu_RolId'];
+          $_SESSION['imagen']= $usuarios['Usu_Imagen'];
+          header("Location:../index.php");
+        }
+        if ($usuarios['Usu_RolId'] == 3) 
+        {
+          session_start();
+          $_SESSION['usuario'] = $usuarios;
+          $_SESSION['nombreUsuario']=$usuarios['Usu_Nombre']." ".$usuarios['Usu_Apellido'];
+          $_SESSION['nombre']=$usuarios['Usu_Nombre'];
+          $_SESSION['apellido']=$usuarios['Usu_Apellido'];
+          $_SESSION['email']=$usuarios['Usu_Email'];
+          $_SESSION['contraseña']=$usuarios['Usu_Contrasena'];
+          $_SESSION['telefono']=$usuarios['Usu_Telefono'];
+          $_SESSION['idUsuario']=$usuarios['Usu_Id'];
+          $_SESSION['idRol']= $usuarios['Usu_RolId'];
+          $_SESSION['imagen']= $usuarios['Usu_Imagen'];
+          header("Location:../admin/index.php");
+        }
         }
         
 
