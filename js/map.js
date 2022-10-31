@@ -10,18 +10,18 @@ function initMap() {
     map = new google.maps.Map(mapDiv, { 
 
         center: argCoords, 
-        zoom: 5,
+        zoom: 5
 
     });
 
     marker = new google.maps.Marker({ //declaramos el marcador
 
         position: argCoords,
-        map: map,
+        map: map
 
     });
 
-    initAutocomplete()
+    initAutocomplete();
 
 
     function initAutocomplete(){

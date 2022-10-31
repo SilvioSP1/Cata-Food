@@ -114,7 +114,7 @@ if(isset($_POST["paises"])){$paises=$_POST["paises"];}
 
   <script src="../js/boiler.js"></script>
   <script src="../js/loader.js"></script>
-  <script src="/js/map.js"></script>
+  <script src="../js/map.js"></script>
 
   <!-- Cargar la API de maps javascript -->
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB55y13evt4FRyWHg_8Wn71KVYdj9aQHPo&libraries=places&callback=initMap"></script>
