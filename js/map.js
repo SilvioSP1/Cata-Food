@@ -10,7 +10,7 @@ function initMap() {
     map = new google.maps.Map(mapDiv, { 
 
         center: argCoords, 
-        zoom: 5
+        zoom: 15
 
     });
 

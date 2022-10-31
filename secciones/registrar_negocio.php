@@ -14,7 +14,7 @@ if(isset($_POST["paises"])){$paises=$_POST["paises"];}
   integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="../css/estilos.css">
+  <link rel="stylesheet" href="../css/estilos.css?v=<?php echo time(); ?>">
 
   <!-- animation css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
