@@ -1,5 +1,5 @@
 <?php
-if(isset($_POST["paises"])){$paises=$_POST["paises"];
+if(isset($_POST["paises"])){$paises=$_POST["paises"];}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -75,9 +75,11 @@ if(isset($_POST["paises"])){$paises=$_POST["paises"];
                         <span class="input-border"></span>
                         <input type="email" placeholder="  Email " required>
                         <span class="input-border"></span>
-                        <input type="text" placeholder="  Ubicacion " required>
+
+                        <input id="place_input" type="text" placeholder="  Ubicacion  ">
                         <span class="input-border"></span>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14028.680037786562!2d-65.78584189930419!3d-28.474426279842024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1663026039589!5m2!1ses-419!2sar" width="350" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div id="map"></div>
+
                         <input type="text" placeholder=" Referencia de ubicacion " required>
                         <div>
                             <button >
@@ -112,6 +114,10 @@ if(isset($_POST["paises"])){$paises=$_POST["paises"];
 
   <script src="../js/boiler.js"></script>
   <script src="../js/loader.js"></script>
+  <script src="/js/map.js"></script>
+
+  <!-- Cargar la API de maps javascript -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB55y13evt4FRyWHg_8Wn71KVYdj9aQHPo&libraries=places&callback=initMap"></script>
 
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"

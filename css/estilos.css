@@ -1628,5 +1628,9 @@ p {
     border-radius: 0px;
   }
 }
+#map {
+  height: 200px;
+  width: 200px;
+}
 
 /*# sourceMappingURL=estilos.css.map */
