@@ -1403,6 +1403,15 @@ p {
     font-size: 10px;
   }
 }
+@media (min-width: 280px) and (max-width: 528px) {
+  .mediaBotones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+  }
+}
+
 .padreTR .flexTR .tableTR {
   display: flex;
   justify-content: center;

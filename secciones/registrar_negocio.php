@@ -81,14 +81,18 @@ if(isset($_POST["paises"])){$paises=$_POST["paises"];}
                         <div id="map"></div>
 
                         <input type="text" placeholder=" Referencia de ubicacion " required>
-                        <div>
-                            <button >
+                        <div class="mediaBotones">
+
+                        <div class="mediaBotones">
+                            <button>
                               <span>Ingresar</span>
                             </button>
                             <a href="../index.php" class="boton">
                                 <span>Volver</span>
                             </a>
                           </div>
+
+                        </div>
                     </form>
                 </div>
 

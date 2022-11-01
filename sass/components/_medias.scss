@@ -791,4 +791,31 @@
 
 }
 
+
+//Media querie botones registro/local desde 280px
+
+@mixin botonesMedia($ancho,$ancho2){
+
+    @media (min-width: #{$ancho}) and (max-width: #{$ancho2}){
+
+        @content;
+
+    }
+
+}
+
+
+.mediaBotones{
+
+    @include botonesMedia(280px,528px){
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .75rem;
+
+    }
+
+}
+
     
