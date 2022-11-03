@@ -19,24 +19,8 @@
           <div class="card-body text-center">
             <img src="../../Cata-Food/img/perfil/profile-user3.jpg" alt="avatar" style="width: 150px;" class="profilePicture">
             <h5 class="my-3"><?php echo $_SESSION['nombreUsuario'];?></h5>
-            <p class="text-muted mb-1"><?php switch ($_SESSION['idRol']) {
-              case 1:
-                echo 'Usuario';
-                break;
-              
-              case 2:
-                echo 'Vendedor - Dueño de Local';
-                break;
-
-              case 3:
-                echo 'Administrador';
-                break;
-              
-              default:
-                echo 'Sin Usuario';
-                break;
-            } ?></p>
-            <p class="text-muted mb-4">San Fernando del Valle de Catamarca</p>
+            <p class="text-muted mb-1">Vendedor</p>
+            <p class="text-muted mb-4"><?php $_SESSION['ubicacion'] ?></p>
             <div class="d-flex justify-content-center mb-2">
               <button type="button" class="btn btn-outline-primary ms-1">Message</button>
             </div>

@@ -30,11 +30,23 @@ error_reporting(0);
       }else{
 
         if ($txtContrasena !== $txtContrasenaRepe) {
-          echo "<script>alert('Las contraseñas no coinciden');</script>";
+          echo '<script>
+         Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "¡Vaya!, Las contraseñas no coinciden 💔",
+          });
+         </script>';
         }
 
         if ((strlen($txtContrasena) < 8) && (strlen($txtContrasenaRepe) < 8)) {
-          echo "<script>alert('Las contraseñas son demasiadas cortas, minimo son 8 caracteres');</script>";
+          echo '<script>
+         Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "¡Vaya!, Las contraseñas son demasiado cortas, minimo 8 caracteres 💔",
+          });
+         </script>';
         }
         else{
 
