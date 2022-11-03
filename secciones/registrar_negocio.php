@@ -28,12 +28,16 @@ $localesTipos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
       $prueba->execute([$txtNombre]);
       $prueba = $prueba->fetch(PDO::FETCH_ASSOC);
 
-      if($prueba['cantidad'] > 0) {
+      $prueba = $conexion->prepare("SELECT COUNT(Local_Email) AS cantidad FROM local WHERE Local_Email=?");
+      $prueba->execute([$txtEmail]);
+      $prueba2 = $prueba2->fetch(PDO::FETCH_ASSOC);
+
+      if(($prueba['cantidad'] > 0) && ($prueba2['cantidad'] > 0)) {
          echo '<script>
          Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: "¡Vaya!, este nombre de local ya tiene una cuenta 💔",
+          text: "¡Vaya!, este nombre de local o email ya tiene una cuenta 💔",
           });
          </script>';
       }else{
