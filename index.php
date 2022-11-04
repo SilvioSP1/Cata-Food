@@ -23,11 +23,12 @@
         </div>
 
         <div class="content">
-            <p>
-                Las mejores papas
-            </p>
-
+            
         </div>
+        <p>
+            Las mejores papas
+        </p>
+
 
     </div>
 
@@ -40,12 +41,11 @@
         </div>
 
         <div class="content">
-            <p>
-                Las mejores burgers
-            </p>
-
-
+            
         </div>
+        <p>
+            Las mejores burgers
+        </p>
 
     </div>
 
@@ -58,13 +58,11 @@
         </div>
 
         <div class="content">
-            <p>
-                Las mejores pizzas
-            </p>
-
 
         </div>
-
+        <p>
+            Las mejores pizzas
+        </p>
     </div>
 
 
