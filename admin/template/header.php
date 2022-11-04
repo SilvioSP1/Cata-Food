@@ -74,7 +74,7 @@ if ($_SESSION['usuario']!=="Sin Loguearse") {
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <li><a class="dropdown-item" href="#"><?php echo $nombreUsuario; ?></a></li>
-                            <li><a class="dropdown-item" href="./secciones/cerrar.php">Cerrar Sesion</a></li>
+                            <li><a class="dropdown-item" href="../../Cata-Food/admin/secciones/cerrar.php">Cerrar Sesion</a></li>
                             <?php if($_SESSION['idRol'] == 3){ ?>
                               <li><a class="dropdown-item" href="<?php echo $url; ?>">Ver sitio</a></li>                                       
                             <?php } ?>

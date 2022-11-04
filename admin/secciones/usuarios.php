@@ -10,14 +10,25 @@ $txtContrasena=(isset($_POST['txtContrasena'])) ? $_POST['txtContrasena'] : "";
 $txtTelefono=(isset($_POST['txtTelefono'])) ? $_POST['txtTelefono'] : "";
 $txtIdRol=(isset($_POST['txtIdRol'])) ? $_POST['txtIdRol'] : "";
 $txtStatus=(isset($_POST['txtStatus'])) ? $_POST['txtStatus'] : "";
+$txtImagen=(isset($_FILES['txtImagen']['name'])) ? $_FILES['txtImagen']['name'] : "";
 $accion=(isset($_POST['accion'])) ? $_POST['accion'] : "";
 
 include("../config/db.php");
 
 switch ($accion) {
     case "Agregar":
-        $sentenciaSQL = $conexion->prepare("INSERT INTO usuario (Usu_Nombre,Usu_Apellido,Usu_Contrasena,Usu_Email,Usu_Telefono,Usu_RolId,Usu_Status) VALUES (:Usu_Nombre,:Usu_Apellido,:Usu_Contrasena,:Usu_Email,:Usu_Telefono,:Usu_RolId,:Usu_Status);");
+        $sentenciaSQL = $conexion->prepare("INSERT INTO usuario (Usu_Nombre,Usu_Apellido,Usu_Contrasena,Usu_Email,Usu_Telefono,Usu_RolId,Usu_Status,Usu_Imagen) VALUES (:Usu_Nombre,:Usu_Apellido,:Usu_Contrasena,:Usu_Email,:Usu_Telefono,:Usu_RolId,:Usu_Status,:Usu_Imagen);");
           $sentenciaSQL->bindParam(':Usu_Nombre',$txtNombre);
+
+          $fecha= new DateTime();
+          $nombreArchivo=($txtImagen!="")?$fecha->getTimestamp()."_".$_FILES["txtImagen"]["name"]:"imagen.jpg"; 
+          
+          $tmpImagen=$_FILES["txtImagen"]["tmp_name"];
+          if ($tmpImagen!="") {
+              move_uploaded_file($tmpImagen,"../../img/perfil/".$nombreArchivo);
+          }
+
+          $sentenciaSQL->bindParam(':Usu_Imagen',$nombreArchivo);
           $sentenciaSQL->bindParam(':Usu_Apellido',$txtApellido);
           $sentenciaSQL->bindParam(':Usu_Email',$txtEmail);
           $sentenciaSQL->bindParam(':Usu_Telefono',$txtTelefono);
@@ -39,11 +50,44 @@ switch ($accion) {
           $sentenciaSQL->bindParam(':Usu_Status',$txtStatus);
           $sentenciaSQL->bindParam(':Usu_Id',$txtID);
           $sentenciaSQL->execute();
+
+          if ($txtImagen!="") {
+            $fecha= new DateTime();
+            $nombreArchivo=($txtImagen!="")?$fecha->getTimestamp()."_".$_FILES["txtImagen"]["name"]:"imagen.jpg"; 
+
+            $tmpImagen=$_FILES["txtImagen"]["tmp_name"];
+            move_uploaded_file($tmpImagen,"../../img/perfil/".$nombreArchivo);
+
+            $sentenciaSQL = $conexion->prepare("SELECT Usu_Imagen FROM usuario WHERE Usu_Id=:Usu_Id");
+            $sentenciaSQL->bindParam(':Usu_Id',$txtID);
+            $sentenciaSQL->execute();
+            $usuarios = $sentenciaSQL->fetch(PDO::FETCH_LAZY);
+    
+            if (isset($usuarios["imagen"]) && ($usuarios)["imagen"]!="imagen.jpg") {
+                if (file_exists("../../img/perfil/".$usuarios["imagen"])) {
+                    unlink("../../img/perfil/".$usuarios["imagen"]);
+                }
+            }
+
+            $sentenciaSQL = $conexion->prepare("UPDATE local SET Usu_Imagen=:Usu_Imagen WHERE Usu_Id=:Usu_Id");
+            $sentenciaSQL->bindParam(':Usu_Imagen',$nombreArchivo);
+            $sentenciaSQL->bindParam(':Usu_Id',$txtID);
+            $sentenciaSQL->execute();
+        }
         header("Location:usuarios.php");
         /* echo "Presionado boton Modificar"; */
         break;
     case "Cancelar":
         header("Location:usuarios.php");
+        $txtID="";
+        $txtNombre="";
+        $txtApellido="";
+        $txtEmail="";
+        $txtContrasena="";
+        $txtTelefono="";
+        $txtIdRol="";
+        $txtStatus="";
+        $txtImagen="";
         break;
     case "Seleccionar":
         $sentenciaSQL = $conexion->prepare("SELECT * FROM usuario WHERE Usu_Id = :Usu_Id");
@@ -58,6 +102,7 @@ switch ($accion) {
         $txtTelefono=$usuario['Usu_Telefono'];
         $txtIdRol=$usuario['Usu_RolId'];
         $txtStatus=$usuario['Usu_Status'];
+        $txtImagen=$usuario['Usu_Imagen'];
         /* echo "Presionado boton Seleccionar"; */
         break;
     case "Desabilitar":
@@ -101,6 +146,22 @@ $sentenciaSQL->execute(); */
                 <div class="form-group">
                   <label for="txtID" class="form-label">Id:</label>
                   <input type="text" required readonly class="form-control" value="<?php echo $txtID; ?>" name="txtID" id="txtID" placeholder="Id">
+                </div>
+
+                <div class="form-group">
+                  <label for="txtNombre" class="form-label">Imagen:</label>
+                  <?php echo $txtImagen; ?>
+                  <br>
+                  <?php
+                    if ($txtImagen!="") {
+                    ?>
+                    
+                    <img class="img-thumbnail rounded" src="../../img/perfil/<?php echo $txtImagen; ?>"width="100" alt="">
+
+                    <?php 
+                    } 
+                    ?>
+                  <input type="file" class="form-control" name="txtImagen" id="txtImagen" placeholder="Imagen">
                 </div>
         
                 <div class="form-group">
@@ -160,6 +221,7 @@ $sentenciaSQL->execute(); */
         <thead>
             <tr>
                 <th>Id</th>
+                <th>Imagen</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Email</th>
@@ -175,6 +237,9 @@ $sentenciaSQL->execute(); */
                 <?php if($_SESSION['idUsuario'] == $usuario['Usu_Id'] ){?>
                 <tr>
                     <td><?php echo $usuario['Usu_Id']; ?></td>
+                    <td>
+                        <img src="../../img/perfil/<?php echo $usuario['Usu_Imagen']; ?>" width="100" alt="" srcset="">
+                    </td>
                     <td><?php echo $usuario['Usu_Nombre']; ?></td>
                     <td><?php echo $usuario['Usu_Apellido']; ?></td>
                     <td><?php echo $usuario['Usu_Email']; ?></td>
@@ -196,6 +261,9 @@ $sentenciaSQL->execute(); */
                 <?php }else { ?>
                     <tr>
                     <td><?php echo $usuario['Usu_Id']; ?></td>
+                    <td>
+                        <img src="../../img/perfil/<?php echo $usuario['Usu_Imagen']; ?>" width="100" alt="" srcset="">
+                    </td>
                     <td><?php echo $usuario['Usu_Nombre']; ?></td>
                     <td><?php echo $usuario['Usu_Apellido']; ?></td>
                     <td><?php echo $usuario['Usu_Email']; ?></td>

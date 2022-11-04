@@ -15,6 +15,10 @@ $accion=(isset($_POST['accion'])) ? $_POST['accion'] : "";
 
 include("../config/db.php");
 
+$sentenciaSQL = $conexion->prepare("SELECT * FROM tipo_producto");
+$sentenciaSQL->execute();
+$productosTipos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
+
 switch ($accion) {
     case "Agregar":
         $sentenciaSQL = $conexion->prepare("INSERT INTO producto (Prod_Nombre , Prod_Descripcion , Prod_Imagen , Prod_Precio , Prod_ABC , Prod_Status , Prod_LocalId , Prod_Tipo) VALUES (:Prod_Nombre,:Prod_Descripcion,:Prod_Imagen,:Prod_Precio,:Prod_ABC,:Prod_Status,:Prod_LocalId,:Prod_Tipo);");
@@ -56,14 +60,14 @@ switch ($accion) {
             $nombreArchivo=($txtImagen!="")?$fecha->getTimestamp()."_".$_FILES["txtImagen"]["name"]:"imagen.jpg"; 
 
             $tmpImagen=$_FILES["txtImagen"]["tmp_name"];
-            move_uploaded_file($tmpImagen,"../../img/restaurantes/productos".$nombreArchivo);
+            move_uploaded_file($tmpImagen,"../../img/restaurantes/productos/".$nombreArchivo);
 
             $sentenciaSQL = $conexion->prepare("SELECT Prod_Imagen FROM producto WHERE Prod_Id=:Prod_Id");
             $sentenciaSQL->bindParam(':Prod_Id',$txtID);
             $sentenciaSQL->execute();
             $producto = $sentenciaSQL->fetch(PDO::FETCH_LAZY);
     
-            if (isset($Producto["imagen"]) && ($producto)["imagen"]!="imagen.jpg") {
+            if (isset($producto["imagen"]) && ($producto)["imagen"]!="imagen.jpg") {
                 if (file_exists("../../img/restaurantes/productos".$producto["imagen"])) {
                     unlink("../../img/restaurantes/productos".$producto["imagen"]);
                 }
@@ -79,6 +83,15 @@ switch ($accion) {
         break;
     case "Cancelar":
         header("Location:productos.php");
+        $txtID="";
+        $txtNombre="";
+        $txtDescripcion="";
+        $txtImagen="";
+        $txtPrecio="";
+        $txtABC="";
+        $txtStatus="";
+        $txtLocalId="";
+        $txtTipo="";
         break;
     case "Seleccionar":
         $sentenciaSQL = $conexion->prepare("SELECT * FROM producto WHERE Prod_Id = :Prod_Id");
@@ -181,6 +194,25 @@ $sentenciaSQL->execute(); */
                 </div>
 
                 <div class="form-group">
+                  <label for="txtNombre" class="form-label">Tipo:</label>
+                  <div>
+                      <select name="txtTipo" class="txtTipo" id="txtTipo" >
+    
+                        <?php if(empty($txtTipo)) {?>
+                            <option selected disabled>Seleccione uno</option>
+                        <?php }else { ?>
+                            <option selected disabled><?php echo $txtTipo; ?></option>
+                        <?php } ?>
+      
+                        <?php foreach($productosTipos as $tipo){ ?>
+                        <option><?php echo $tipo["TP_Tipo"] ?></option>
+
+                        <?php } ?>
+                    
+                        </select>
+                  </div>
+
+                <div class="form-group">
                   <label for="txtLocalId" class="form-label">Local Id:</label>
                   <input type="number" required class="form-control" value="<?php echo $txtLocalId; ?>" name="txtLocalId" id="txtLocalId" placeholder="Local Id">
                 </div>
@@ -223,7 +255,7 @@ $sentenciaSQL->execute(); */
                 <td><?php echo $productos['Prod_Id']; ?></td>
                 <td><?php echo $productos['Prod_Nombre']; ?></td>
                 <td>
-                    <img src="../../img/restaurantes/productos<?php echo $producto['Prod_Imagen']; ?>" width="100" alt="" srcset="">
+                    <img src="../../img/restaurantes/productos/<?php echo $producto['Prod_Imagen']; ?>" width="100" alt="" srcset="">
                 </td>
                 <td><?php echo $productos['Prod_Decripcion']; ?></td>
                 <td><?php echo $productos['Prod_Precio']; ?></td>

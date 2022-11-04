@@ -25,7 +25,7 @@ $sentenciaSQL->execute();
 $listaProductos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
 $sentenciaSQL = $conexion->prepare("SELECT * from producto
-JOIN local on Local_Id = :Local_Id
+JOIN local on Prod_LocalId = :Local_Id
 JOIN tipo_producto on TP_Tipo = Prod_Tipo
 GROUP by Prod_Tipo");
 $sentenciaSQL->bindParam(':Local_Id',$Local_Id);

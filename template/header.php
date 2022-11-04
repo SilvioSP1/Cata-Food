@@ -78,7 +78,7 @@ include("../../Cata-food/admin/config/config.php");
                 <?php } ?>
                 <?php }else{?>
                   <li><a href="../../Cata-Food/secciones/inicio_registro.php" class="item_nav"><i class="fa-solid fa-arrow-right-to-bracket"></i> Inicio/Registro</a></li>
-                  <li><a href="../../Cata-Food/secciones/registrar_negocio.php" class="item_nav"><i class="fa-solid fa-shop"></i> Iniciar/Registra tu negocio</a></li>
+                  <li><a href="../../Cata-Food/secciones/inicio_negocio.php" class="item_nav"><i class="fa-solid fa-shop"></i> Iniciar/Registra tu negocio</a></li>
             <?php } ?>
           </ul>
           <!-- <div class="contenedorIcono">

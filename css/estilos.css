@@ -882,9 +882,10 @@ p {
   text-align: initial;
 }
 .conteiner_restaurantes .containerColum .conteinerCardResta .contenedorTexto .ubiRestaurante {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   margin-top: 15px;
-  padding-bottom: 30px;
+  padding-bottom: 5px;
+  text-align: inherit;
 }
 .conteiner_restaurantes .containerColum .conteinerCardResta .contenedorTexto .puntuacionRestaurante {
   font-size: 0.99rem;
