@@ -189,7 +189,7 @@ switch ($accion) {
 
                   <?php }?>
                   
-                <input type="file" class="form-control" name="txtImagen" id="txtImagen" placeholder="Imagen">
+                <input type="file" class="form-control" name="txtImagen" id="txtImagen" placeholder="Imagen" accept="image/*">
               </div>
       
               <div class="form-group">
