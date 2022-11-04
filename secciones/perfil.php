@@ -98,7 +98,6 @@ switch ($accion) {
                 echo 'Sin Usuario';
                 break;
             } ?></p>
-            <p class="text-muted mb-4">San Fernando del Valle de Catamarca</p>
             <div class="d-flex justify-content-center mb-2">
               <button type="button" class="btn btn-outline-primary ms-1 botonModal" data-bs-toggle="modal" data-bs-target="#exampleModal">Modificar</button>
             </div>
@@ -163,15 +162,6 @@ switch ($accion) {
               </div>
               <div class="col-sm-9">
                 <p class="text-muted mb-0"><?php echo $_SESSION['telefono'];?></p>
-              </div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-sm-3">
-                <p class="mb-0">Dirección</p>
-              </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0">San Fernando del Valle de Catamarca</p>
               </div>
             </div>
           </div>
