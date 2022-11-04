@@ -15,6 +15,13 @@ $sentenciaSQL = $conexion->prepare("SELECT * FROM tipo_producto");
 $sentenciaSQL->execute();
 $listaTipoProductos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
+if ($_POST) {
+    $sentenciaSQL = $conexion->prepare("SELECT * FROM local WHERE Local_Tipo = :Local_Tipo");
+    $sentenciaSQL->bindParam(':Local_Tipo',$_POST['TL_Tipo']);
+    $sentenciaSQL->execute();
+    $listaLocalesPorTipo = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
+}
+
 ?>
 <?php if ($mensaje !="") {?>
 <div class="alert alert-success">
@@ -32,11 +39,16 @@ $listaTipoProductos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                                     <div class="tiposRes">
                                     <?php foreach($listaTipoLocales as $tipoLocal) { ?>
                                         <div aria-label="" class="tipo">
-                                            <div class="circulo">
-                                                <img src="../img/restaurantes/categorias/<?php echo $tipoLocal['TL_Imagen']; ?>"
-                                                    aria-hidden="true" class="">
-                                            </div>
-                                            <div aria-hidden="true" class="sc-tl2hnw-0 hNbawF"><?php echo $tipoLocal['TL_Tipo']; ?></div>
+                                        <form class="tipo" action="restaurantes.php" method="POST">
+                                        <input type="hidden" name="TL_Tipo" id="TL_Tipo" value="<?php echo $tipoLocal['TL_Tipo']; ?>">
+                                            <button name="btnAccion" type="submit" class="buttonTipo">
+                                                <div class="circulo">
+                                                    <img src="../img/restaurantes/categorias/<?php echo $tipoLocal['TL_Imagen']; ?>"
+                                                        aria-hidden="true" class="">
+                                                </div>
+                                                <div aria-hidden="true" class="sc-tl2hnw-0 hNbawF"><?php echo $tipoLocal['TL_Tipo']; ?></div>
+                                            </button>
+                                        </form>
                                         </div>
                                         <?php } ?>
                                         
@@ -53,28 +65,51 @@ $listaTipoProductos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                                             type="submit">Buscar</button>
                                         </form>
                                     </div>
-                                    <?php foreach($listaLocales as $local) { ?>
-                                    <form class="container__CardRest" action="restaurante.php" method="POST">
-                                        <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($local['Local_Id'],cod,key); ?>">
-                                        <button class="conteinerCardResta" name="btnAccion" type="submit">
-                                            <img class="imagenRestaurante" src="../img/restaurantes/locales/<?php echo $local['Local_Imagen']; ?>"
-                                                alt="">
-                                            <div class="contenedorTexto">
-                                                <p class="nombreRestaurante"><strong><?php echo $local['Local_Nombre']; ?></strong></p>
-                                                <p class="ubiRestaurante"><?php echo $local['Local_Ubicacion']; ?></p>
-                                                <h6>Clasificación</h6>
-                                                <div>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
+                                    <?php if (!empty($listaLocalesPorTipo)) {?>
+                                        <?php foreach($listaLocalesPorTipo as $local) { ?>
+                                        <form class="container__CardRest" action="restaurante.php" method="POST">
+                                            <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($local['Local_Id'],cod,key); ?>">
+                                            <button class="conteinerCardResta" name="btnAccion" type="submit">
+                                                <img class="imagenRestaurante" src="../img/restaurantes/locales/<?php echo $local['Local_Imagen']; ?>"
+                                                    alt="">
+                                                <div class="contenedorTexto">
+                                                    <p class="nombreRestaurante"><strong><?php echo $local['Local_Nombre']; ?></strong></p>
+                                                    <p class="ubiRestaurante"><?php echo $local['Local_Ubicacion']; ?></p>
+                                                    <h6>Clasificación</h6>
+                                                    <div>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </button>
-                                    </form>
+                                            </button>
+                                        </form>
+                                        <?php } ?>
+                                    <?php }else{ ?>
+                                        <?php foreach($listaLocales as $local) { ?>
+                                        <form class="container__CardRest" action="restaurante.php" method="POST">
+                                            <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($local['Local_Id'],cod,key); ?>">
+                                            <button class="conteinerCardResta" name="btnAccion" type="submit">
+                                                <img class="imagenRestaurante" src="../img/restaurantes/locales/<?php echo $local['Local_Imagen']; ?>"
+                                                    alt="">
+                                                <div class="contenedorTexto">
+                                                    <p class="nombreRestaurante"><strong><?php echo $local['Local_Nombre']; ?></strong></p>
+                                                    <p class="ubiRestaurante"><?php echo $local['Local_Ubicacion']; ?></p>
+                                                    <h6>Clasificación</h6>
+                                                    <div>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </form>
+                                        <?php } ?>
                                     <?php } ?>
-                                    
                                 </div>
                             </div>
 

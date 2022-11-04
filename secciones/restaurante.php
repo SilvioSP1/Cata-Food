@@ -37,6 +37,15 @@ $sentenciaSQL->bindParam(':Local_Id',$Local_Id);
 $sentenciaSQL->execute();
 $localDelProducto = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
+if (!empty($_POST["TP_Tipo"])) {
+    $sentenciaSQL = $conexion->prepare("SELECT * from producto
+    JOIN local on Prod_LocalId = :Local_Id WHERE Prod_Tipo = :Prod_Tipo GROUP BY Prod_Nombre");
+    $sentenciaSQL->bindParam(':Local_Id',$Local_Id);
+    $sentenciaSQL->bindParam(':Prod_Tipo',$_POST['TP_Tipo']);
+    $sentenciaSQL->execute();
+    $listaProductosPorTipo = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
+}
+
 
 ?>
 <?php if ($mensaje !="") {?>
@@ -98,12 +107,25 @@ $localDelProducto = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                                 <div class="contenedorResTipo">
                                     <div class="tiposRes">
                                         <?php foreach($listaTipoProductos as $tipoProductos) { ?>
-                                        <div aria-label="" class="tipo">
+                                        <!-- <div aria-label="" class="tipo">
                                             <div class="circulo">
                                                 <img src="../img/restaurantes/categorias/<?php echo $tipoProductos['TP_Imagen']; ?>"
                                                     aria-hidden="true" class="">
                                             </div>
                                             <div aria-hidden="true" class="sc-tl2hnw-0 hNbawF"><?php echo $tipoProductos['TP_Tipo']; ?></div>
+                                        </div> -->
+
+                                        <div aria-label="" class="tipo">
+                                        <form class="tipo" action="restaurante.php" method="POST">
+                                        <input type="hidden" name="TP_Tipo" id="TP_Tipo" value="<?php echo $tipoProductos['TP_Tipo']; ?>">
+                                            <button name="btnAccion" type="submit" class="buttonTipo">
+                                                <div class="circulo">
+                                                    <img src="../img/restaurantes/categorias/<?php echo $tipoProductos['TP_Imagen']; ?>"
+                                                        aria-hidden="true" class="">
+                                                </div>
+                                                <div aria-hidden="true" class="sc-tl2hnw-0 hNbawF"><?php echo $tipoProductos['TP_Tipo']; ?></div>
+                                            </button>
+                                        </form>
                                         </div>
                                         <?php } ?>
                         
@@ -112,18 +134,34 @@ $localDelProducto = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                             </div>
                             <div class="col-9 columnas">
                                 <div class="conteinerProductos">
-                                    <?php foreach($listaProductos as $producto) { ?>
-                                    <form class="container__CardProd" action="" method="POST" id="" >
-                                        <button class="userinfo conteinerCardResta producto botonModal" type="button" data-id="<?php echo $producto['Prod_Id']; ?>" onClick="reply_click(this.id)" data-value="<?php echo $_SESSION['localNombre']?>">
-                                            <img class="imagenRestaurante" src="../img/restaurantes/productos/<?php echo $producto['Prod_Imagen']; ?>"
-                                                alt="">
-                                            <div class="contenedorTexto">
-                                                <p class="nombreRestaurante nombreProducto"><strong><?php echo $producto['Prod_Nombre']; ?></strong></p>
-                                                <p class="ubiRestaurante ingredientes"><?php echo $producto['Prod_Descripcion']; ?></p>
-                                                <h6>$<?php echo $producto['Prod_Precio']; ?></h6>
-                                            </div>
-                                        </button>
-                                    </form>
+                                    <?php if(!empty($listaProductosPorTipo)){ ?>
+                                        <?php foreach($listaProductosPorTipo as $producto) { ?>
+                                            <form class="container__CardProd" action="" method="POST" id="" >
+                                                <button class="userinfo conteinerCardResta producto botonModal" type="button" data-id="<?php echo $producto['Prod_Id']; ?>" onClick="reply_click(this.id)" data-value="<?php echo $_SESSION['localNombre']?>">
+                                                    <img class="imagenRestaurante" src="../img/restaurantes/productos/<?php echo $producto['Prod_Imagen']; ?>"
+                                                        alt="">
+                                                    <div class="contenedorTexto">
+                                                        <p class="nombreRestaurante nombreProducto"><strong><?php echo $producto['Prod_Nombre']; ?></strong></p>
+                                                        <p class="ubiRestaurante ingredientes"><?php echo $producto['Prod_Descripcion']; ?></p>
+                                                        <h6>$<?php echo $producto['Prod_Precio']; ?></h6>
+                                                    </div>
+                                                </button>
+                                            </form>
+                                        <?php } ?>
+                                    <?php }else { ?>
+                                        <?php foreach($listaProductos as $producto) { ?>
+                                            <form class="container__CardProd" action="" method="POST" id="" >
+                                                <button class="userinfo conteinerCardResta producto botonModal" type="button" data-id="<?php echo $producto['Prod_Id']; ?>" onClick="reply_click(this.id)" data-value="<?php echo $_SESSION['localNombre']?>">
+                                                    <img class="imagenRestaurante" src="../img/restaurantes/productos/<?php echo $producto['Prod_Imagen']; ?>"
+                                                        alt="">
+                                                    <div class="contenedorTexto">
+                                                        <p class="nombreRestaurante nombreProducto"><strong><?php echo $producto['Prod_Nombre']; ?></strong></p>
+                                                        <p class="ubiRestaurante ingredientes"><?php echo $producto['Prod_Descripcion']; ?></p>
+                                                        <h6>$<?php echo $producto['Prod_Precio']; ?></h6>
+                                                    </div>
+                                                </button>
+                                            </form>
+                                        <?php } ?>
                                     <?php } ?>
                                 </div>
                                 <input type="hidden" name="id" id="id" value="">
