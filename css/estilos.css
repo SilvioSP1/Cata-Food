@@ -1647,4 +1647,15 @@ p {
   }
 }
 
+@media (min-width: 280px) and (max-width: 420px) {
+  #map {
+    width: 220px;
+  }
+}
+@media (min-width: 420px) and (max-width: 480px) {
+  #map {
+    width: 300px;
+  }
+}
+
 /*# sourceMappingURL=estilos.css.map */

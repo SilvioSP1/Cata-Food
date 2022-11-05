@@ -818,4 +818,23 @@
 
 }
 
+//medias queries para mapa
+
+#map{
+
+   
+    @media (min-width: 280px) and (max-width: #{$breakpoint}){
+
+        width: 220px;
+
+    }
+
+    @media(min-width: 420px) and (max-width: 480px){
+
+        width: 300px;
+
+    }
+
+}
+
     
