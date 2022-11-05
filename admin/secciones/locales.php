@@ -23,7 +23,7 @@ $localesTipos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
 switch ($accion) {
     case "Agregar":
-        $sentenciaSQL = $conexion->prepare("INSERT INTO local (Local_Nombre,Local_Imagen,Local_Status,Local_Telefono,Local_Ubicacion,Local_Dueno,Local_Tipo,Local_UbiRefe,Local_Contrasena,:Local_Email) VALUES (:Local_Nombre,:Local_Imagen,:Local_Status,:Local_Telefono,:Local_Ubicacion,:Local_Dueno,:Local_Tipo,:Local_UbiRef,:Local_Contrasena,:Local_Email);");
+        $sentenciaSQL = $conexion->prepare("INSERT INTO local (Local_Nombre,Local_Imagen,Local_Status,Local_Telefono,Local_Ubicacion,Local_Dueno,Local_Tipo,Local_UbiRefe,Local_Contrasena,Local_Email) VALUES (:Local_Nombre,:Local_Imagen,:Local_Status,:Local_Telefono,:Local_Ubicacion,:Local_Dueno,:Local_Tipo,:Local_UbiRefe,:Local_Contrasena,:Local_Email);");
           $sentenciaSQL->bindParam(':Local_Nombre',$txtNombre);
 
           $fecha= new DateTime();
@@ -48,7 +48,7 @@ switch ($accion) {
         header("Location:locales.php");
         break;
     case "Modificar":
-        $sentenciaSQL = $conexion->prepare("UPDATE local SET Local_Nombre = :Local_Nombre,Local_Status = :Local_Status, Local_Telefono= :Local_Telefono, Local_Ubicacion = :Local_Ubicacion, Local_Dueño = :Local_Dueño, Local_Tipo = :Local_Tipo, Local_UbiRefe = :Local_UbiRefe, Local_Contrasena = :Local_Contrasena, Local_Email = :Local_Email WHERE Local_Id = :Local_Id");
+        $sentenciaSQL = $conexion->prepare("UPDATE local SET Local_Nombre = :Local_Nombre,Local_Status = :Local_Status, Local_Telefono= :Local_Telefono, Local_Ubicacion = :Local_Ubicacion, Local_Dueno = :Local_Dueno, Local_Tipo = :Local_Tipo, Local_UbiRefe = :Local_UbiRefe, Local_Contrasena = :Local_Contrasena, Local_Email = :Local_Email WHERE Local_Id = :Local_Id");
           $sentenciaSQL->bindParam(':Local_Nombre',$txtNombre);
           $sentenciaSQL->bindParam(':Local_Status',$txtStatus);
           $sentenciaSQL->bindParam(':Local_Telefono',$txtTelefono);
@@ -68,14 +68,14 @@ switch ($accion) {
             $tmpImagen=$_FILES["txtImagen"]["tmp_name"];
             move_uploaded_file($tmpImagen,"../../img/restaurantes/locales/".$nombreArchivo);
 
-            $sentenciaSQL = $conexion->prepare("SELECT Local_Imagen FROM locales WHERE Local_Id=:Local_Id");
+            $sentenciaSQL = $conexion->prepare("SELECT Local_Imagen FROM local WHERE Local_Id=:Local_Id");
             $sentenciaSQL->bindParam(':Local_Id',$txtID);
             $sentenciaSQL->execute();
             $local = $sentenciaSQL->fetch(PDO::FETCH_LAZY);
     
-            if (isset($local["imagen"]) && ($local)["imagen"]!="imagen.jpg") {
-                if (file_exists("../../img/restaurantes/locales/".$local["imagen"])) {
-                    unlink("../../img/restaurantes/locales/".$local["imagen"]);
+            if (isset($local["Local_Imagen"]) && ($local)["Local_Imagen"]!="imagen.jpg") {
+                if (file_exists("../../img/restaurantes/locales/".$local["Local_Imagen"])) {
+                    unlink("../../img/restaurantes/locales/".$local["Local_Imagen"]);
                 }
             }
 
@@ -85,6 +85,17 @@ switch ($accion) {
             $sentenciaSQL->execute();
           }
         header("Location:locales.php");
+        $txtID="";
+        $txtNombre="";
+        $txtImagen="";
+        $txtStatus="";
+        $txtTelefono="";
+        $txtUbicacion="";
+        $txtDueño="";
+        $txtTipo="";
+        $txtUbiRef="";
+        $txtContrasena="";
+        $txtEmail="";
         /* echo "Presionado boton Modificar"; */
         break;
     case "Cancelar":
@@ -204,6 +215,11 @@ $sentenciaSQL->execute(); */
                 </div>
 
                 <div class="form-group">
+                  <label for="txtEmail" class="form-label">Email:</label>
+                  <input type="email" required class="form-control" value="<?php echo $txtEmail; ?>" name="txtEmail" id="txtEmail" placeholder="Email">
+                </div>
+
+                <div class="form-group">
                   <label for="txtContrasena" class="form-label">Contraseña:</label>
                   <input type="password" required class="form-control" value="<?php echo $txtContrasena; ?>" name="txtContrasena" id="txtContrasena" placeholder="Contraseña">
                 </div>
@@ -216,7 +232,7 @@ $sentenciaSQL->execute(); */
                         <?php if(empty($txtTipo)) {?>
                             <option selected disabled>Seleccione uno</option>
                         <?php }else { ?>
-                            <option selected disabled><?php echo $txtTipo; ?></option>
+                            <option selected><?php echo $txtTipo; ?></option>
                         <?php } ?>
       
                         <?php foreach($localesTipos as $tipo){ ?>

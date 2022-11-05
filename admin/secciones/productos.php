@@ -30,7 +30,7 @@ switch ($accion) {
           
           $tmpImagen=$_FILES["txtImagen"]["tmp_name"];
           if ($tmpImagen!="") {
-              move_uploaded_file($tmpImagen,"../../img/restaurantes/productos".$nombreArchivo);
+              move_uploaded_file($tmpImagen,"../../img/restaurantes/productos/".$nombreArchivo);
           }
             
           $sentenciaSQL->bindParam(':Prod_Imagen',$nombreArchivo);
@@ -67,9 +67,9 @@ switch ($accion) {
             $sentenciaSQL->execute();
             $producto = $sentenciaSQL->fetch(PDO::FETCH_LAZY);
     
-            if (isset($producto["imagen"]) && ($producto)["imagen"]!="imagen.jpg") {
-                if (file_exists("../../img/restaurantes/productos".$producto["imagen"])) {
-                    unlink("../../img/restaurantes/productos".$producto["imagen"]);
+            if (isset($producto["Prod_Imagen"]) && ($producto)["Prod_Imagen"]!="imagen.jpg") {
+                if (file_exists("../../img/restaurantes/productos/".$producto["Prod_Imagen"])) {
+                    unlink("../../img/restaurantes/productos/".$producto["Prod_Imagen"]);
                 }
             }
 
@@ -79,6 +79,15 @@ switch ($accion) {
             $sentenciaSQL->execute();
         }
         header("Location:productos.php");
+        $txtID="";
+        $txtNombre="";
+        $txtDescripcion="";
+        $txtImagen="";
+        $txtPrecio="";
+        $txtABC="";
+        $txtStatus="";
+        $txtLocalId="";
+        $txtTipo="";
         /* echo "Presionado boton Modificar"; */
         break;
     case "Cancelar":
@@ -160,7 +169,7 @@ $sentenciaSQL->execute(); */
                     if ($txtImagen!="") {
                     ?>
                     
-                    <img class="img-thumbnail rounded" src="../../img/restaurantes/productos<?php echo $txtImagen; ?>"width="100" alt="">
+                    <img class="img-thumbnail rounded" src="../../img/restaurantes/productos/<?php echo $txtImagen; ?>"width="100" alt="">
 
                     <?php 
                     } 
@@ -201,7 +210,7 @@ $sentenciaSQL->execute(); */
                         <?php if(empty($txtTipo)) {?>
                             <option selected disabled>Seleccione uno</option>
                         <?php }else { ?>
-                            <option selected disabled><?php echo $txtTipo; ?></option>
+                            <option selected><?php echo $txtTipo; ?></option>
                         <?php } ?>
       
                         <?php foreach($productosTipos as $tipo){ ?>
@@ -245,6 +254,7 @@ $sentenciaSQL->execute(); */
                 <th>Precio</th>
                 <th>ABC</th>
                 <th>Status</th>
+                <th>Local id</th>
                 <th>Tipo</th>
                 <th>Acciones</th>
             </tr>
@@ -253,16 +263,16 @@ $sentenciaSQL->execute(); */
         <?php foreach ($listaProductos as $productos) { ?>
             <tr>
                 <td><?php echo $productos['Prod_Id']; ?></td>
-                <td><?php echo $productos['Prod_Nombre']; ?></td>
                 <td>
-                    <img src="../../img/restaurantes/productos/<?php echo $producto['Prod_Imagen']; ?>" width="100" alt="" srcset="">
+                    <img src="../../img/restaurantes/productos/<?php echo $productos['Prod_Imagen']; ?>" width="100" alt="" srcset="">
                 </td>
-                <td><?php echo $productos['Prod_Decripcion']; ?></td>
+                <td><?php echo $productos['Prod_Nombre']; ?></td>
+                <td><?php echo $productos['Prod_Descripcion']; ?></td>
                 <td><?php echo $productos['Prod_Precio']; ?></td>
                 <td><?php echo $productos['Prod_ABC']; ?></td>
+                <td><?php echo $productos['Prod_Status']; ?></td>
                 <td><?php echo $productos['Prod_LocalId']; ?></td>
                 <td><?php echo $productos['Prod_Tipo']; ?></td>
-                <td><?php echo $productos['Prod_Status']; ?></td>
                 <td>
 
                     <form action="" method="POST">

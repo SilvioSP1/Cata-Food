@@ -63,9 +63,9 @@ switch ($accion) {
             $sentenciaSQL->execute();
             $usuarios = $sentenciaSQL->fetch(PDO::FETCH_LAZY);
     
-            if (isset($usuarios["imagen"]) && ($usuarios)["imagen"]!="imagen.jpg") {
-                if (file_exists("../../img/perfil/".$usuarios["imagen"])) {
-                    unlink("../../img/perfil/".$usuarios["imagen"]);
+            if (isset($usuarios["Usu_Imagen"]) && ($usuarios)["Usu_Imagen"]!="imagen.jpg") {
+                if (file_exists("../../img/perfil/".$usuarios["Usu_Imagen"])) {
+                    unlink("../../img/perfil/".$usuarios["Usu_Imagen"]);
                 }
             }
 
@@ -75,6 +75,15 @@ switch ($accion) {
             $sentenciaSQL->execute();
         }
         header("Location:usuarios.php");
+        $txtID="";
+        $txtNombre="";
+        $txtApellido="";
+        $txtEmail="";
+        $txtContrasena="";
+        $txtTelefono="";
+        $txtIdRol="";
+        $txtStatus="";
+        $txtImagen="";
         /* echo "Presionado boton Modificar"; */
         break;
     case "Cancelar":

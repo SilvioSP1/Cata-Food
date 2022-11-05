@@ -1,48 +1,51 @@
 <?php include("../template/header.php"); ?>
 <?php include("../admin/config/db.php"); ?>
 <?php 
-include("../admin/config/db.php");
+$txtID=(isset($_POST['txtID'])) ? $_POST['txtID'] : "";
+$txtNombre=(isset($_POST['txtNombre'])) ? $_POST['txtNombre'] : "";
+$txtApellido=(isset($_POST['txtApellido'])) ? $_POST['txtApellido'] : "";
+$txtTelefono=(isset($_POST['txtTelefono'])) ? $_POST['txtTelefono'] : "";
+$txtImagen=(isset($_FILES['txtImagen']['name'])) ? $_FILES['txtImagen']['name'] : "";
+$accion=(isset($_POST['accion'])) ? $_POST['accion'] : "";
+
+
 switch ($accion) {
   case "Modificar":
-      $sentenciaSQL = $conexion->prepare("UPDATE usuario SET Usu_Nombre = :Usu_Nombre,Usu_Apellido = :Usu_Apellido,Usu_Contrasena = :Usu_Contrasena ,Usu_Email = :Usu_Email ,Usu_Telefono = :Usu_Telefono ,Usu_RolId = :Usu_RolId ,Usu_Status = :Usu_Status WHERE Usu_Id = :Usu_Id");
-        $sentenciaSQL->bindParam(':Usu_Nombre',$txtNombre);
-        $sentenciaSQL->bindParam(':Usu_Apellido',$txtApellido);
-        $sentenciaSQL->bindParam(':Usu_Email',$txtEmail);
-        $sentenciaSQL->bindParam(':Usu_Telefono',$txtTelefono);
-        $sentenciaSQL->bindParam(':Usu_Contrasena',$txtContrasena);
-        $sentenciaSQL->bindParam(':Usu_RolId',$txtIdRol);
-        $sentenciaSQL->bindParam(':Usu_Status',$txtStatus);
+      $sentenciaSQL = $conexion->prepare("UPDATE usuario SET Usu_Nombre = :Usu_Nombre,Usu_Apellido = :Usu_Apellido,Usu_Telefono = :Usu_Telefono  WHERE Usu_Id = :Usu_Id");
+      $sentenciaSQL->bindParam(':Usu_Nombre',$txtNombre);
+      $sentenciaSQL->bindParam(':Usu_Apellido',$txtApellido);
+      $sentenciaSQL->bindParam(':Usu_Telefono',$txtTelefono);
+      $sentenciaSQL->bindParam(':Usu_Id',$txtID);
+      $sentenciaSQL->execute();
+
+      if ($txtImagen!="") {
+        $fecha= new DateTime();
+        $nombreArchivo=($txtImagen!="")?$fecha->getTimestamp()."_".$_FILES["txtImagen"]["name"]:"imagen.jpg"; 
+
+        $tmpImagen=$_FILES["txtImagen"]["tmp_name"];
+        move_uploaded_file($tmpImagen,"../../img/perfil/".$nombreArchivo);
+
+        $sentenciaSQL = $conexion->prepare("SELECT Usu_Imagen FROM usuario WHERE Usu_Id=:Usu_Id");
         $sentenciaSQL->bindParam(':Usu_Id',$txtID);
         $sentenciaSQL->execute();
+        $usuarios = $sentenciaSQL->fetch(PDO::FETCH_LAZY);
 
-        if ($txtImagen!="") {
-          $fecha= new DateTime();
-          $nombreArchivo=($txtImagen!="")?$fecha->getTimestamp()."_".$_FILES["txtImagen"]["name"]:"imagen.jpg"; 
+        if (isset($usuarios["Usu_Imagen"]) && ($usuarios)["Usu_Imagen"]!="imagen.jpg") {
+            if (file_exists("../../img/perfil/".$usuarios["Usu_Imagen"])) {
+                unlink("../../img/perfil/".$usuarios["Usu_Imagen"]);
+            }
+        }
 
-          $tmpImagen=$_FILES["txtImagen"]["tmp_name"];
-          move_uploaded_file($tmpImagen,"../../img/perfil/".$nombreArchivo);
-
-          $sentenciaSQL = $conexion->prepare("SELECT Usu_Imagen FROM usuario WHERE Usu_Id=:Usu_Id");
-          $sentenciaSQL->bindParam(':Usu_Id',$txtID);
-          $sentenciaSQL->execute();
-          $usuarios = $sentenciaSQL->fetch(PDO::FETCH_LAZY);
-  
-          if (isset($usuarios["imagen"]) && ($usuarios)["imagen"]!="imagen.jpg") {
-              if (file_exists("../../img/perfil/".$usuarios["imagen"])) {
-                  unlink("../../img/perfil/".$usuarios["imagen"]);
-              }
-          }
-
-          $sentenciaSQL = $conexion->prepare("UPDATE local SET Usu_Imagen=:Usu_Imagen WHERE Usu_Id=:Usu_Id");
-          $sentenciaSQL->bindParam(':Usu_Imagen',$nombreArchivo);
-          $sentenciaSQL->bindParam(':Usu_Id',$txtID);
-          $sentenciaSQL->execute();
-      }
-      header("Location:usuarios.php");
+        $sentenciaSQL = $conexion->prepare("UPDATE usuario SET Usu_Imagen=:Usu_Imagen WHERE Usu_Id=:Usu_Id");
+        $sentenciaSQL->bindParam(':Usu_Imagen',$nombreArchivo);
+        $sentenciaSQL->bindParam(':Usu_Id',$txtID);
+        $sentenciaSQL->execute();
+    }
+      header("Location:perfil.php");
       /* echo "Presionado boton Modificar"; */
       break;
   case "Cancelar":
-      header("Location:usuarios.php");
+      header("Location:perfil.php");
       $txtID="";
       $txtNombre="";
       $txtApellido="";
@@ -172,7 +175,7 @@ switch ($accion) {
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Local</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Perfil</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -185,7 +188,7 @@ switch ($accion) {
                   if ($_SESSION['imagen'] !="") {
                   ?>
                   
-                  <img class="img-thumbnail rounded" src="../img/restaurantes/locales/<?php echo $_SESSION['imagen'] ?>"width="100" alt="">
+                  <img class="img-thumbnail rounded" src="../img/perfil/<?php echo $_SESSION['imagen'] ?>"width="100" alt="">
 
                   <?php }?>
                   

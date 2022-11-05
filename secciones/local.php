@@ -1,7 +1,21 @@
 <?php include("../template/header.php"); ?>
 <?php include("../admin/config/db.php"); ?>
-<?php 
+<?php
+$txtID=(isset($_POST['txtID'])) ? $_POST['txtID'] : "";
+$txtNombre=(isset($_POST['txtNombre'])) ? $_POST['txtNombre'] : "";
+$txtImagen=(isset($_FILES['txtImagen']['name'])) ? $_FILES['txtImagen']['name'] : "";
+$txtStatus=(isset($_POST['txtStatus'])) ? $_POST['txtStatus'] : "";
+$txtTelefono=(isset($_POST['txtTelefono'])) ? $_POST['txtTelefono'] : "";
+$txtUbicacion=(isset($_POST['txtUbicacion'])) ? $_POST['txtUbicacion'] : "";
+$txtDueño=(isset($_POST['txtDueño'])) ? $_POST['txtDueño'] : "";
+$txtTipo=(isset($_POST['txtTipo'])) ? $_POST['txtTipo'] : "";
+$txtUbiRef=(isset($_POST['txtUbiRef'])) ? $_POST['txtUbiRef'] : "";
+$txtContrasena=(isset($_POST['txtContrasena'])) ? $_POST['txtContrasena'] : "";
+$txtEmail=(isset($_POST['txtEmail'])) ? $_POST['txtEmail'] : "";
+$accion=(isset($_POST['accion'])) ? $_POST['accion'] : "";
+
 include("../admin/config/db.php");
+
 $sentenciaSQL = $conexion->prepare("SELECT * FROM tipo_local");
 $sentenciaSQL->execute();
 $localesTipos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
@@ -32,9 +46,9 @@ switch($accion){
         $sentenciaSQL->execute();
         $local = $sentenciaSQL->fetch(PDO::FETCH_LAZY);
 
-        if (isset($Producto["imagen"]) && ($local)["imagen"]!="imagen.jpg") {
-            if (file_exists("../../img/restaurantes/locales/".$local["imagen"])) {
-                unlink("../../img/restaurantes/locales/".$local["imagen"]);
+        if (isset($Producto["Local_Imagen"]) && ($local)["Local_Imagen"]!="imagen.jpg") {
+            if (file_exists("../../img/restaurantes/locales/".$local["Local_Imagen"])) {
+                unlink("../../img/restaurantes/locales/".$local["Local_Imagen"]);
             }
         }
 
