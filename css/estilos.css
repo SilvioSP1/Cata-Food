@@ -1057,10 +1057,10 @@ p {
   justify-content: center;
 }
 .padreTR .flexTR .tableTR .containerTR .contenedorImagen .imageProducto {
-  width: 80%;
+  width: 30%;
 }
 .padreTR .flexTR .tableTR .containerTR .descripcionProductos {
-  margin-top: 5rem;
+  margin-top: 1.5rem;
 }
 
 .modal-footer {

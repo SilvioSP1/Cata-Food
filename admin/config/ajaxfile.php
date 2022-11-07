@@ -14,14 +14,6 @@ foreach($listaProductos as $producto) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
 <body>
 
     <div class="padreTR">
@@ -31,7 +23,7 @@ foreach($listaProductos as $producto) {
             <table class="tableTR">
                 <tr class="containerTR">
                     <td class="contenedorImagen"><img class="imageProducto"
-                            src="https://via.placeholder.com/468x60?text=Visit+Blogging.com+NowC/O https://placeholder.com/">
+                            src="../img/restaurantes/productos/<?php echo $producto['Prod_Imagen']; ?>">
                     <td class="descripcionProductos">
                         <p>Nombre: <?php echo $producto['Prod_Nombre']; ?></p>
                         <p>Descripción: <?php echo $producto['Prod_Descripcion']; ?></p>
