@@ -1,5 +1,11 @@
 <?php include("template/header.php"); ?>
 
+<!-- <div class="loader-container">
+
+    <img src="../../Cata-Food/img/index/burger-unscreen.gif" alt="">
+
+</div> -->
+
 <div>
     <h1 class="titulo__Cata animate__animated animate__flash">Bienvenidos a Cata Food</h1>
     <p>El mejor sitio donde encontrar comida en la ciudad de Catamarca</p>

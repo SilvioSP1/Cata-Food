@@ -5,7 +5,7 @@
 
 <!-- FOOTER -->
 <div class="row featurette">
-  <footer class="bg-dark text-center text-white">
+  <footer style="background-color: #1a1e21" class="text-center text-white">
     <!-- Grid container -->
     <div class="container p-4">
       <!-- Section: Social media -->
@@ -73,6 +73,7 @@
 <script src="../../Cata-Food/js/boiler.js"></script>
 <script src="../../Cata-Food/js/loader.js"></script>
 <script src="../../Cata-Food/js/toast.js"></script>
+
 
 <!-- JavaScript Bundle with Popper -->
 <!-- JavaScript Bundle with Popper -->

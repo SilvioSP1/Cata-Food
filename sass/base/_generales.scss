@@ -34,4 +34,28 @@ body {
 
 }
 
+//Scroll personalizado
+
+body::-webkit-scrollbar{
+
+    width: 8px;
+    background-color: white;
+
+}
+
+body::-webkit-scrollbar-thumb{
+
+    background-color: #1a1e21;
+    border-radius: 5px;
+
+}
+
+body::-webkit-scrollbar-track-piece{
+
+
+    background-color: white;
+
+
+}
+
 
