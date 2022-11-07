@@ -1,10 +1,10 @@
 <?php include("template/header.php"); ?>
 
-<!-- <div class="loader-container">
+<div class="loader-container">
 
     <img src="../../Cata-Food/img/index/burger-unscreen.gif" alt="">
 
-</div> -->
+</div>
 
 <div>
     <h1 class="titulo__Cata animate__animated animate__flash">Bienvenidos a Cata Food</h1>
