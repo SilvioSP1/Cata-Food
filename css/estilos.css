@@ -1298,10 +1298,23 @@ p {
   justify-content: center;
   height: 100%;
   width: 100%;
+  transition: top 0.7s;
 }
 
 .loader-container.fade-out {
   top: -120%;
+}
+
+.animate__animated.animate__backInRight {
+  animation-delay: 2s;
+}
+
+.animate__animated.animate__fadeInDown {
+  animation-delay: 2s;
+}
+
+.animate__animated.animate__bounceIn {
+  animation-delay: 2s;
 }
 
 @media (max-width: 753px) {
