@@ -73,6 +73,7 @@
 <script src="../../Cata-Food/js/boiler.js"></script>
 <script src="../../Cata-Food/js/loader.js?v=<?php echo time(); ?>"></script>
 <script src="../../Cata-Food/js/toast.js"></script>
+<script src="../../Cata-Food/js/mouse.js"></script>
 
 
 <!-- JavaScript Bundle with Popper -->

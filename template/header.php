@@ -43,6 +43,10 @@ include("../../Cata-food/admin/config/config.php");
   <!-- script sweet alert -->
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+  <!-- mouse js -->
+
+  <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1636192990/magicmouse/magic_mouse-1.2.1.cdn.min.js"></script>
+
 </head>
 
 
