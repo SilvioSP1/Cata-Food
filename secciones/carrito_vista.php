@@ -3,6 +3,45 @@ include("../admin/config/db.php");
 include("carrito.php");
 ?>
 
+<?php
+
+
+require ('../extensions/vendor/autoload.php'); 
+
+MercadoPago\SDK::setAccessToken('TEST-5461755461441479-110915-7d4e337baad35a4cd77fa4cede687237-340183645'); 
+
+$preference = new MercadoPago\Preference(); 
+
+$item = new MercadoPago\Item(); 
+
+$item->id = '0001'; 
+
+$item->title = 'Producto Gorra'; 
+
+$item->quantity = '1'; 
+
+$item->unit_price = 150.00; 
+
+$item->currency_id = "ARS"; 
+
+$preference->items = array($item);
+
+$preference->back_urls = array(
+
+  "success" => "http://localhost/Cata-Food/admin/secciones/captura.php",
+  "fail" => "http://localhost/Cata-Food/admin/secciones/fallo.php"
+
+);
+
+$preference->auto_return = "approved"; 
+
+$preference->binary_mode = true; 
+
+$preference->save();
+
+
+?>
+
 
 <section class="h-100 sectionCarrito" >
   <div class="container h-100 py-5">
@@ -171,8 +210,8 @@ include("carrito.php");
 
             <div class="contenedorCarrito">
 
+                <div class="checkout-btn"></div>
                 <button class="btn btn-warning botonCarrito1">Seguir comprando</button>
-                <button class="btn btn-warning botonCarrito2">Finalizar Compra</button>
                 <button class="btn btn-warning botonCarrito3">Total: $<?php echo $total; ?></button>
 
             </div>
@@ -188,6 +227,34 @@ include("carrito.php");
       </div>
     </div>
   </div>
+
+  <script>
+
+    const mp = new MercadoPago('TEST-8d66829a-0271-48f7-aea7-62854459802d', { //public key
+
+      locale: 'es-AR' //idioma local
+
+    })
+
+  mp.checkout({
+      preference: {
+
+        id: '<?php  echo $preference->id ?>' //le pasamos el id de referencia, llamamos a la variable preference
+        //una vez que guardamos las preferencias de mercado pago, nos genera un id y ese lo tenemos que pasar aquí
+
+      },
+
+      render: {
+
+        container: '.checkout-btn', //llamamos al boton para que lo muestre
+        label: 'Pagar', //el texto que va en el boton
+
+      }
+
+    })
+
+    </script>
+
 </section>
 
 

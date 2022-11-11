@@ -47,6 +47,9 @@ include("../../Cata-food/admin/config/config.php");
 
   <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1636192990/magicmouse/magic_mouse-1.2.1.cdn.min.js"></script>
 
+  <!-- MercadoPago SDK -->
+  <script src="https://sdk.mercadopago.com/js/v2"></script>
+
 </head>
 
 
@@ -54,11 +57,11 @@ include("../../Cata-food/admin/config/config.php");
 
   <main>
 
-    <div class="loader-container">
+    <!-- <div class="loader-container">
 
       <img src="../../Cata-Food/img/index/burger-unscreen.gif" alt="">
 
-    </div>
+    </div> -->
 
 
 
