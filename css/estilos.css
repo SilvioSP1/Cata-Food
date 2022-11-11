@@ -430,7 +430,7 @@ p {
   background-position: center;
   width: 25rem;
   border-radius: 20px;
-  height: 22.5rem;
+  height: 24.5rem;
   color: white;
   box-shadow: 4px 12px 20px 5px rgba(0, 0, 0, 0.5);
 }
@@ -458,12 +458,21 @@ p {
   gap: 16px;
 }
 .containerIR1 .containerForm1 .mover .formulario input {
+  margin-top: 20px;
   border: none;
   width: 230px;
   border-bottom: 1px solid black;
 }
 .containerIR1 .containerForm1 .mover .formulario input:focus {
   outline: none;
+}
+.containerIR1 .containerForm1 .mover .formulario .contentForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -30px;
+  gap: 20px;
 }
 .containerIR1 .containerForm1 .mover .formulario .textoRegister {
   color: black;
@@ -549,6 +558,20 @@ p {
 .containerIR1 .containerForm1 .mover .formulario .boton:hover span::after {
   opacity: 1;
   right: 0;
+}
+.containerIR1 .containerForm1 .mover .formulario #toggle {
+  position: relative;
+  transform: translate(100px);
+  bottom: 45px;
+  width: 30px;
+  height: 30px;
+  background: url("../img/login-registro/vision.png");
+  background-size: cover;
+  cursor: pointer;
+}
+.containerIR1 .containerForm1 .mover .formulario #toggle.hide {
+  background: url("../img/login-registro/cerrar-ojo.png");
+  background-size: cover;
 }
 
 .containerIR3 {

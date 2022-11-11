@@ -14,7 +14,7 @@
         background-position: center;
         width: 25rem;
         border-radius: 20px;
-        height: 22.5rem;
+        height: 24.5rem;
         color: white;
         box-shadow: 4px 12px 20px 5px rgba(0, 0, 0, .5);
 
@@ -61,6 +61,7 @@
 
                 input {
 
+                    margin-top: 20px;
                     border: none;
                     width: 230px;
                     border-bottom: 1px solid black;
@@ -75,13 +76,23 @@
 
                 }
 
+                .contentForm{
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: -30px;
+                    gap: 20px;
+
+                }
+
 
                 .textoRegister {
 
                     color: black;
 
                     a {
-
                         text-decoration: none;
                         transition: all .2s;
                         font-weight: bolder;
@@ -200,6 +211,27 @@
 
                     }
                 }
+
+                #toggle{
+
+                    position: relative;
+                    transform: translate(100px);
+                    bottom: 45px;
+                    width: 30px;
+                    height: 30px;
+                    background: url("../img/login-registro/vision.png");
+                    background-size: cover;
+                    cursor: pointer;
+
+                }
+
+                #toggle.hide{
+
+                    background: url("../img/login-registro/cerrar-ojo.png");
+                    background-size: cover;
+                
+                }
+
 
             }
 
