@@ -134,6 +134,11 @@ error_reporting(0);
                         <span class="input-border"></span>
                         <input type="password" placeholder=" Contraseña " required name="txtContrasena" id="txtContrasena" class="password">
                         <div id="toggle" onclick="showHide();"></div>
+
+                        <!-- <div>
+                            <div class="g-recaptcha" data-sitekey="6Lf0yf0iAAAAAHpCvY2k0oEIlLpjGCQpqF4qMKhT"></div>
+                        </div> -->
+
                         <div class="contentForm">
                         <span class="textoRegister">¿No tienes cuenta aún? <a href="registro_inicio.php">Registrarse</a></span>
                         
@@ -179,6 +184,8 @@ error_reporting(0);
 
   <!-- Anime.js -->
   <script src="../node_modules/animejs/lib/anime.min.js"></script>
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   
 
 
