@@ -12,60 +12,12 @@
     </form>
 </div>
 
-<div class="contenedorCards">
+<div class="contenedorCards animate__animated animate__fadeIn">
 
-    <div class="card">
-        <div class="header">
-            <div class="img-box">
-                <img src="./img/index/friesCards.png" alt="" class="imgPapas">
-            </div>
-            <h1 class="title">Papas</h1>
-        </div>
+    
+    <model-viewer src="../../Cata-food/img/index/Hamburger.glb" camera-controls auto-rotate disable-zoom disable-pan ar shadow-intensity="0.5" shadow-softness="0.25"></model-viewer>
 
-        <div class="content">
-            
-        </div>
-        <p>
-            Las mejores papas
-        </p>
-
-
-    </div>
-
-    <div class="card">
-        <div class="header">
-            <div class="img-box">
-                <img src="./img/index/burgerCards.png" alt="" class="imgBurger">
-            </div>
-            <h1 class="title">Burger</h1>
-        </div>
-
-        <div class="content">
-            
-        </div>
-        <p>
-            Las mejores burgers
-        </p>
-
-    </div>
-
-    <div class="card">
-        <div class="header">
-            <div class="img-box">
-                <img src="./img/index/pizzaCards.png" alt="" class="imgPizza">
-            </div>
-            <h1 class="title">Pizzas</h1>
-        </div>
-
-        <div class="content">
-
-        </div>
-        <p>
-            Las mejores pizzas
-        </p>
-    </div>
-
-
+    <model-viewer src="../../Cata-food/img/index/Fries.glb" camera-controls auto-rotate disable-zoom disable-pan ar shadow-intensity="0.5" shadow-softness="0.25"></model-viewer>
 
 </div>
 

@@ -150,6 +150,11 @@ body::-webkit-scrollbar-track-piece {
   gap: 30px;
 }
 
+model-viewer {
+  width: 200px;
+  height: 200px;
+}
+
 .contenedorCards {
   display: flex;
   justify-content: center;
@@ -1344,6 +1349,10 @@ p {
 }
 
 .animate__animated.animate__bounceIn {
+  animation-delay: 2s;
+}
+
+.animate__animated.animate__fadeIn {
   animation-delay: 2s;
 }
 

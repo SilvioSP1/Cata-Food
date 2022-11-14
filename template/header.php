@@ -50,6 +50,8 @@ include("../../Cata-food/admin/config/config.php");
   <!-- MercadoPago SDK -->
   <script src="https://sdk.mercadopago.com/js/v2"></script>
 
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
 </head>
 
 
