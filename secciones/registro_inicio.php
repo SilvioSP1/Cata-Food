@@ -181,6 +181,7 @@ error_reporting(0);
                         <span class="input-border"></span>
                         <input type="password" placeholder=" Contraseña " required name="txtContrasena" id="txtContrasena">
                         <span class="input-border"></span>
+                        <p id="message">La contraseña es <span id="strenght"></span> </p>
                         <input type="password" placeholder=" Repetir contraseña " required name="txtContrasenaRepe" id="txtContrasenaRepe">
                         <span class="textoRegister">¿Ya tienes cuenta? <a href="inicio_registro.php">Iniciar Sesion</a></span>
                         <div>
@@ -216,6 +217,7 @@ error_reporting(0);
 
   <script src="../js/boiler.js"></script>
   <script src="../js/loader.js"></script>
+  <script src="../js/password.js"></script>
 
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"

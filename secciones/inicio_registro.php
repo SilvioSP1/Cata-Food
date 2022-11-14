@@ -16,6 +16,31 @@ error_reporting(0);
       $sentenciaSQL->execute();
       $usuarios = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
 
+
+
+      $ip = $_SERVER['REMOTE_ADDR'];
+
+      $captcha = $_POST['g-recaptcha-response'];
+
+      $secretkey = "6Lf0yf0iAAAAAOcuDfvUE2GGl98HDOqu9zqKyPIT";
+
+      $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretkey&response=$captcha&remoteip=$ip");
+
+      $atributos = json_decode($response, TRUE); 
+
+      if(!$atributos['success']){
+
+        echo '<script>
+        Swal.fire({
+         icon: "error",
+         title: "Oops...",
+         text: "No se verifico el captcha",
+         });
+        </script>';
+
+      }
+
+
       if ($usuarios['Usu_Email'] == $txtEmail && $usuarios['Usu_Contrasena'] == $txtContrasena) {
         if ($usuarios['Usu_RolId'] == 1) 
         {
@@ -135,7 +160,7 @@ error_reporting(0);
                         <input type="password" placeholder=" Contraseña " required name="txtContrasena" id="txtContrasena" class="password">
                         <div id="toggle" onclick="showHide();"></div>
 
-                        <!-- <div>
+                        <!-- <div class="recaptchaFlex">
                             <div class="g-recaptcha" data-sitekey="6Lf0yf0iAAAAAHpCvY2k0oEIlLpjGCQpqF4qMKhT"></div>
                         </div> -->
 

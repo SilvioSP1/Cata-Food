@@ -846,6 +846,13 @@ p {
   opacity: 1;
   right: 0;
 }
+.containerIR2 .containerForm2 .mover .formulario #message {
+  color: black;
+  margin-bottom: -10px;
+  margin-top: -20px;
+  font-size: 15px;
+  display: none;
+}
 
 .formulario input {
   font-weight: 500;
