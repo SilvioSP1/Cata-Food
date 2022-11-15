@@ -1,5 +1,27 @@
 <?php include("template/header.php"); ?>
 
+<div class="cookie-consent-modal">
+
+    <div class="contenido animate__animated animate__slideInUp">
+
+        <div class="contenedorCookie">
+            <h1 class="allowCookies">Política sobre cookies</h1>
+            <img src="../../Cata-Food/img/index/cookie.png" alt="" class="cookie">
+        </div>
+
+        <p>Este sitio web utiliza cookies propias y de terceros, para el correcto funcionamiento y visualización del sitio web <br> Si continuas navegando, consideramos que aceptas su uso</p>
+
+        <div class="btns">
+
+            <button class="botonn cancel">Cancelar</button>
+            <button class="botonn accept">Aceptar</button>
+
+        </div>
+            
+    </div>
+</div>
+
+
 <div>
     <h1 class="titulo__Cata animate__animated animate__fadeInDown">Bienvenidos a Cata Food</h1>
     <p>El mejor sitio donde encontrar comida en la ciudad de Catamarca</p>
