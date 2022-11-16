@@ -92,8 +92,8 @@ crossorigin="anonymous"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="../../Cata-food/js/chat.js"></script>
-<script src="../Cata-food/js/response.js"></script>
+<script src="../../Cata-food/js/chat.js?v=<?php echo time();?>"></script>
+<script src="../Cata-food/js/response.js?v<?php echo time();?>"></script>
 
 </body>
 

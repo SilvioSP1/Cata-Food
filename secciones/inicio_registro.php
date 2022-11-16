@@ -28,20 +28,8 @@ error_reporting(0);
 
       $atributos = json_decode($response, TRUE); 
 
-      if(!$atributos['success']){
 
-        echo '<script>
-        Swal.fire({
-         icon: "error",
-         title: "Oops...",
-         text: "No se verifico el captcha",
-         });
-        </script>';
-
-      }
-
-
-      if ($usuarios['Usu_Email'] == $txtEmail && $usuarios['Usu_Contrasena'] == $txtContrasena) {
+      if ($usuarios['Usu_Email'] == $txtEmail && $usuarios['Usu_Contrasena'] == $txtContrasena && $atributos['success']) {
         if ($usuarios['Usu_RolId'] == 1) 
         {
           session_start();
@@ -88,7 +76,18 @@ error_reporting(0);
           header("Location:../admin/index.php");
         }
       }
-      else
+      else if(!$atributos['success']){
+
+        echo '<script>
+        Swal.fire({
+         icon: "error",
+         title: "Error",
+         text: "No se verifico el captcha",
+         });
+        </script>';
+
+      }
+      else 
       {
         
         echo '<script>
@@ -160,14 +159,14 @@ error_reporting(0);
                         <input type="password" placeholder=" Contraseña " required name="txtContrasena" id="txtContrasena" class="password">
                         <div id="toggle" onclick="showHide();"></div>
 
-                        <!-- <div class="recaptchaFlex">
+                        <div class="recaptchaFlex">
                             <div class="g-recaptcha" data-sitekey="6Lf0yf0iAAAAAHpCvY2k0oEIlLpjGCQpqF4qMKhT"></div>
-                        </div> -->
+                        </div>
 
                         <div class="contentForm">
                         <span class="textoRegister">¿No tienes cuenta aún? <a href="registro_inicio.php">Registrarse</a></span>
                         
-                        <div>
+                        <div class="contenidoModificar">
                         <button type="submit">
                           <span>Ingresar</span>
                         </button>
@@ -209,9 +208,8 @@ error_reporting(0);
 
   <!-- Anime.js -->
   <script src="../node_modules/animejs/lib/anime.min.js"></script>
-
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 
 </body>
