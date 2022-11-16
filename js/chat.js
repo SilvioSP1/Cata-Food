@@ -55,7 +55,7 @@ function getTime() {
 //El mensaje del bot
 function firstBotMessage() {
 
-    let firstMessage = "Hola soy el bot Amadeo, ¿En que puedo ayudarte? Podes escribir las siguientes opciones para chatear conmigo: <br> 1) Quiero comprar <br> 2) ¿Como me registro? 3) ¿Que necesito para registrar un local?"
+    let firstMessage = "Soy el bot Amadeo 🤖 <br> ¿En que te puedo ayudar? Selecciona o escribe alguna de las opciones para responder tus dudas 👇 : <br> <br> 1) Quiero comprar <br> 2) ¿Como me registro? <br> 3) ¿Que necesito para registrar un local?"
     document.getElementById("botStarterMessage").innerHTML = '<p class="botText"><span>' + firstMessage + '</span></p>'
 
     let time = getTime();
@@ -86,7 +86,7 @@ function getResponse() {
 
     if (userText == "") {
 
-        userText = "I love code palace!"
+        userText = ""
 
     }
 
