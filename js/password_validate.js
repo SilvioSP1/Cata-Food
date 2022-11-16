@@ -8,14 +8,4 @@ function checkpassword (){
 
 }
 
-pass1.addEventListener("keyup", () => {
-
-    if(pass2.value.length != 0){
-
-        checkpassword();
-        
-    }
-
-});
-
 pass2.addEventListener("keyup", checkpassword);
