@@ -132,7 +132,7 @@ error_reporting(0);
   integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="../css/estilos.css">
+  <link rel="stylesheet" href="../css/estilos.css?v=<?php echo time();?>">
 
   <!-- animation css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -183,6 +183,7 @@ error_reporting(0);
                         <span class="input-border"></span>
                         <p id="message">La contraseña es <span id="strenght"></span> </p>
                         <input type="password" placeholder=" Repetir contraseña " required name="txtContrasenaRepe" id="txtContrasenaRepe">
+                        <p class="contraseniaMatching"></p>
                         <span class="textoRegister">¿Ya tienes cuenta? <a href="inicio_registro.php">Iniciar Sesion</a></span>
                         <div>
                             <button type="submit">
@@ -218,6 +219,7 @@ error_reporting(0);
   <script src="../js/boiler.js"></script>
   <script src="../js/loader.js"></script>
   <script src="../js/password.js"></script>
+  <script src="../js/password_validate.js"></script>
 
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"

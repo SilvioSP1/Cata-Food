@@ -793,7 +793,7 @@ p {
   background-position: center;
   width: 25rem;
   border-radius: 20px;
-  height: 570px;
+  height: 38rem;
   color: white;
   box-shadow: 4px 12px 20px 5px rgba(0, 0, 0, 0.5);
 }
@@ -829,6 +829,7 @@ p {
   outline: none;
 }
 .containerIR2 .containerForm2 .mover .formulario .textoRegister {
+  margin-top: -1.5rem;
   color: black;
 }
 .containerIR2 .containerForm2 .mover .formulario .textoRegister a {
@@ -919,6 +920,9 @@ p {
   margin-top: -20px;
   font-size: 15px;
   display: none;
+}
+.containerIR2 .containerForm2 .mover .formulario .contraseniaMatching {
+  color: black;
 }
 
 .formulario input {
