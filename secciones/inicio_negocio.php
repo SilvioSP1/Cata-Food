@@ -32,7 +32,18 @@ error_reporting(0);
           $_SESSION['idRol']= 2;
           header("Location:./local.php");
       }
-      else
+      else if(!$atributos['success']){
+
+        echo '<script>
+        Swal.fire({
+         icon: "error",
+         title: "Error",
+         text: "No se verifico el captcha",
+         });
+        </script>';
+
+      }
+      else 
       {
         
         echo '<script>
@@ -102,14 +113,23 @@ error_reporting(0);
                         <input type="email" placeholder="  Email " required name="txtEmail" id="txtEmail">
                         <span class="input-border"></span>
                         <input type="password" placeholder=" Contraseña " required name="txtContrasena" id="txtContrasena">
-                        <span class="textoRegister">¿No tienes cuenta aún? <a href="registrar_negocio.php">Registrarse</a></span>
-                        <div>
-                          <button type="submit">
-                            <span>Ingresar</span>
-                          </button>
-                          <a href="../index.php" class="boton">
-                            <span>Volver</span>
-                          </a>
+                        <div id="toggle" onclick="showHide();"></div>
+
+                        <div class="recaptchaFlex">
+                            <div class="g-recaptcha" data-sitekey="6Lf0yf0iAAAAAHpCvY2k0oEIlLpjGCQpqF4qMKhT"></div>
+                        </div>
+
+                        <div class="contentForm">
+                          <span class="textoRegister">¿No tienes cuenta aún? <a href="registrar_negocio.php">Registrarse</a></span>
+                          
+                          <div class="contenidoModificar">
+                            <button type="submit">
+                              <span>Ingresar</span>
+                            </button>
+                            <a href="../index.php" class="boton">
+                              <span>Volver</span>
+                            </a>
+                          </div>
                         </div>
                     </form>
                 </div>
@@ -127,6 +147,7 @@ error_reporting(0);
 
   <!-- scripts funcionalidad -->
 
+  <script src="../js/show_hide.js"></script>
   <script src="../js/boiler.js"></script>
   <script src="../js/loader.js"></script>
 
@@ -141,6 +162,8 @@ error_reporting(0);
 
   <!-- Anime.js -->
   <script src="../node_modules/animejs/lib/anime.min.js"></script>
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   
 
 
