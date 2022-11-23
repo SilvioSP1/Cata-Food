@@ -1,11 +1,12 @@
 <?php include("../template/header.php"); ?>
 <?php include("../admin/config/db.php"); ?>
 <?php 
-$txtID=(isset($_POST['txtID'])) ? $_POST['txtID'] : "";
-$txtNombre=(isset($_POST['txtNombre'])) ? $_POST['txtNombre'] : "";
-$txtApellido=(isset($_POST['txtApellido'])) ? $_POST['txtApellido'] : "";
-$txtTelefono=(isset($_POST['txtTelefono'])) ? $_POST['txtTelefono'] : "";
-$txtImagen=(isset($_FILES['txtImagen']['name'])) ? $_FILES['txtImagen']['name'] : "";
+
+$txtID=(isset($_POST['txtID'])) ? $_POST['txtID'] : $_SESSION['idUsuario'];
+$txtNombre=(isset($_POST['txtNombre'])) ? $_POST['txtNombre'] : $_SESSION['nombre'];
+$txtApellido=(isset($_POST['txtApellido'])) ? $_POST['txtApellido'] : $_SESSION['apellido'];
+$txtTelefono=(isset($_POST['txtTelefono'])) ? $_POST['txtTelefono'] : $_SESSION['telefono'];
+$txtImagen=(isset($_FILES['txtImagen']['name'])) ? $_FILES['txtImagen']['name'] : $_SESSION['imagen'];
 $accion=(isset($_POST['accion'])) ? $_POST['accion'] : "";
 
 
@@ -23,7 +24,7 @@ switch ($accion) {
         $nombreArchivo=($txtImagen!="")?$fecha->getTimestamp()."_".$_FILES["txtImagen"]["name"]:"imagen.jpg"; 
 
         $tmpImagen=$_FILES["txtImagen"]["tmp_name"];
-        move_uploaded_file($tmpImagen,"../../img/perfil/".$nombreArchivo);
+        move_uploaded_file($tmpImagen,"../img/perfil/".$nombreArchivo);
 
         $sentenciaSQL = $conexion->prepare("SELECT Usu_Imagen FROM usuario WHERE Usu_Id=:Usu_Id");
         $sentenciaSQL->bindParam(':Usu_Id',$txtID);
@@ -31,8 +32,8 @@ switch ($accion) {
         $usuarios = $sentenciaSQL->fetch(PDO::FETCH_LAZY);
 
         if (isset($usuarios["Usu_Imagen"]) && ($usuarios)["Usu_Imagen"]!="imagen.jpg") {
-            if (file_exists("../../img/perfil/".$usuarios["Usu_Imagen"])) {
-                unlink("../../img/perfil/".$usuarios["Usu_Imagen"]);
+            if (file_exists("../img/perfil/".$usuarios["Usu_Imagen"])) {
+                unlink("../img/perfil/".$usuarios["Usu_Imagen"]);
             }
         }
 
@@ -40,7 +41,13 @@ switch ($accion) {
         $sentenciaSQL->bindParam(':Usu_Imagen',$nombreArchivo);
         $sentenciaSQL->bindParam(':Usu_Id',$txtID);
         $sentenciaSQL->execute();
-    }
+        $_SESSION['imagen'] = $nombreArchivo;
+      }
+
+      $_SESSION['nombre'] = $txtNombre;
+      $_SESSION['apellido'] = $txtApellido;
+      $_SESSION['nombreUsuario'] = $txtNombre." ".$txtApellido;
+      $_SESSION['telefono'] = $txtTelefono;
       header("Location:perfil.php");
       /* echo "Presionado boton Modificar"; */
       break;
@@ -80,7 +87,7 @@ switch ($accion) {
             <div class="contanedorImagen">
 
               <img src="../../Cata-Food/img/perfil/editar.png" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="" class="imagen-editar">
-              <img src="../../Cata-Food/img/perfil/<?php echo $_SESSION['imagen'] ?>" alt="avatar" style="width: 150px;" class="profilePicture">
+              <img src="../../Cata-Food/img/perfil/<?php echo $_SESSION['imagen']; ?>" alt="avatar" style="width: 150px;" class="profilePicture">
 
             </div>
             <h5 class="my-3"><?php echo $_SESSION['nombreUsuario'];?></h5>
@@ -182,13 +189,13 @@ switch ($accion) {
           <form method="POST" enctype="multipart/form-data" action="">
               <div class="form-group">
                 <label for="txtNombre" class="form-label">Imagen:</label>
-                <?php echo $_SESSION['imagen']; ?>
+                <?php echo $txtImagen; ?>
                 <br>
                 <?php
-                  if ($_SESSION['imagen'] !="") {
+                  if ($txtImagen !="") {
                   ?>
                   
-                  <img class="img-thumbnail rounded" src="../img/perfil/<?php echo $_SESSION['imagen'] ?>"width="100" alt="">
+                  <img class="img-thumbnail rounded" src="../img/perfil/<?php echo $txtImagen ?>"width="100" alt="">
 
                   <?php }?>
                   
@@ -197,22 +204,22 @@ switch ($accion) {
       
               <div class="form-group">
                 <label for="txtNombre" class="form-label">Nombre:</label>
-                <input type="text" required class="form-control" value="<?php echo $_SESSION['nombre']; ?>" name="txtNombre" id="txtNombre" placeholder="Nombre">
+                <input type="text" required class="form-control" value="<?php echo $txtNombre; ?>" name="txtNombre" id="txtNombre" placeholder="Nombre">
               </div>
 
               <div class="form-group">
                 <label for="txtNombre" class="form-label">Apellido:</label>
-                <input type="text" required class="form-control" value="<?php echo $_SESSION['apellido']; ?>" name="txtApellido" id="txtApellido" placeholder="Nombre">
+                <input type="text" required class="form-control" value="<?php echo $txtApellido; ?>" name="txtApellido" id="txtApellido" placeholder="Nombre">
               </div>
 
               <div class="form-group">
                 <label for="txtNombre" class="form-label">Telefono:</label>
-                <input type="tel" required class="form-control" value="<?php echo $_SESSION['telefono']; ?>" name="txtTelefono" id="txtTelefono" placeholder="Telefono">
+                <input type="tel" required class="form-control" value="<?php echo $txtTelefono; ?>" name="txtTelefono" id="txtTelefono" placeholder="Telefono">
               </div>
 
               <br>
               <div class="btn-group" role="group" aria-label="">
-                  <button type="submit" name="accion" value="Modificar" class="btn btn-primary">Modificar</button>
+                  <button type="submit" name="accion" value="Modificar" class="btn btn-primary userinfo" data-imagen="<?php echo $producto['Prod_Id']; ?>">Modificar</button>
                   <button type="submit" name="accion" value="Cancelar" class="btn btn-secondary">Cancelar</button>
               </div>
         

@@ -1,20 +1,15 @@
 <?php include("../template/header.php"); ?>
 <?php include("../admin/config/db.php"); ?>
 <?php
-$txtID=(isset($_POST['txtID'])) ? $_POST['txtID'] : "";
-$txtNombre=(isset($_POST['txtNombre'])) ? $_POST['txtNombre'] : "";
-$txtImagen=(isset($_FILES['txtImagen']['name'])) ? $_FILES['txtImagen']['name'] : "";
-$txtStatus=(isset($_POST['txtStatus'])) ? $_POST['txtStatus'] : "";
-$txtTelefono=(isset($_POST['txtTelefono'])) ? $_POST['txtTelefono'] : "";
-$txtUbicacion=(isset($_POST['txtUbicacion'])) ? $_POST['txtUbicacion'] : "";
-$txtDueño=(isset($_POST['txtDueño'])) ? $_POST['txtDueño'] : "";
-$txtTipo=(isset($_POST['txtTipo'])) ? $_POST['txtTipo'] : "";
-$txtUbiRef=(isset($_POST['txtUbiRef'])) ? $_POST['txtUbiRef'] : "";
-$txtContrasena=(isset($_POST['txtContrasena'])) ? $_POST['txtContrasena'] : "";
-$txtEmail=(isset($_POST['txtEmail'])) ? $_POST['txtEmail'] : "";
+$txtID=(isset($_POST['txtID'])) ? $_POST['txtID'] : $_SESSION['idUsuario'];
+$txtNombre=(isset($_POST['txtNombre'])) ? $_POST['txtNombre'] : $_SESSION['nombreUsuario'];
+$txtImagen=(isset($_FILES['txtImagen']['name'])) ? $_FILES['txtImagen']['name'] : $_SESSION['imagen'];
+$txtTelefono=(isset($_POST['txtTelefono'])) ? $_POST['txtTelefono'] : $_SESSION['telefono'];
+$txtUbicacion=(isset($_POST['txtUbicacion'])) ? $_POST['txtUbicacion'] : $_SESSION['ubicacion'];
+$txtDueño=(isset($_POST['txtDueño'])) ? $_POST['txtDueño'] : $_SESSION['nombre'];
+$txtTipo=(isset($_POST['txtTipo'])) ? $_POST['txtTipo'] : $_SESSION['tipo'];
+$txtUbiRef=(isset($_POST['txtUbiRef'])) ? $_POST['txtUbiRef'] : $_SESSION['ubicacionRef'];
 $accion=(isset($_POST['accion'])) ? $_POST['accion'] : "";
-
-include("../admin/config/db.php");
 
 $sentenciaSQL = $conexion->prepare("SELECT * FROM tipo_local");
 $sentenciaSQL->execute();
@@ -24,12 +19,12 @@ switch($accion){
 
   case "Modificar":
 
-    $sentenciaSQL = $conexion->prepare("UPDATE local SET Local_Nombre = :Local_Nombre,Local_Status = :Local_Status, Local_Telefono= :Local_Telefono, Local_Ubicacion = :Local_Ubicacion, Local_Dueño = :Local_Dueño, Local_Tipo = :Local_Tipo WHERE Local_Id = :Local_Id");
+    $sentenciaSQL = $conexion->prepare("UPDATE local SET Local_Nombre = :Local_Nombre, Local_Telefono= :Local_Telefono, Local_Ubicacion = :Local_Ubicacion, Local_Dueno = :Local_Dueno, Local_Tipo = :Local_Tipo, Local_UbiRefe = :Local_UbiRefe WHERE Local_Id = :Local_Id");
       $sentenciaSQL->bindParam(':Local_Nombre',$txtNombre);
-      $sentenciaSQL->bindParam(':Local_Status',$txtStatus);
+      $sentenciaSQL->bindParam(':Local_UbiRefe',$txtUbiRef);
       $sentenciaSQL->bindParam(':Local_Telefono',$txtTelefono);
       $sentenciaSQL->bindParam(':Local_Ubicacion',$txtUbicacion);
-      $sentenciaSQL->bindParam(':Local_Dueño',$txtDueño);
+      $sentenciaSQL->bindParam(':Local_Dueno',$txtDueño);
       $sentenciaSQL->bindParam(':Local_Tipo',$txtTipo);
       $sentenciaSQL->bindParam(':Local_Id',$txtID);
       $sentenciaSQL->execute();
@@ -39,16 +34,16 @@ switch($accion){
         $nombreArchivo=($txtImagen!="")?$fecha->getTimestamp()."_".$_FILES["txtImagen"]["name"]:"imagen.jpg"; 
 
         $tmpImagen=$_FILES["txtImagen"]["tmp_name"];
-        move_uploaded_file($tmpImagen,"../../img/restaurantes/locales/".$nombreArchivo);
+        move_uploaded_file($tmpImagen,"../img/restaurantes/locales/".$nombreArchivo);
 
-        $sentenciaSQL = $conexion->prepare("SELECT Local_Imagen FROM locales WHERE Local_Id=:Local_Id");
+        $sentenciaSQL = $conexion->prepare("SELECT Local_Imagen FROM local WHERE Local_Id=:Local_Id");
         $sentenciaSQL->bindParam(':Local_Id',$txtID);
         $sentenciaSQL->execute();
         $local = $sentenciaSQL->fetch(PDO::FETCH_LAZY);
 
-        if (isset($Producto["Local_Imagen"]) && ($local)["Local_Imagen"]!="imagen.jpg") {
-            if (file_exists("../../img/restaurantes/locales/".$local["Local_Imagen"])) {
-                unlink("../../img/restaurantes/locales/".$local["Local_Imagen"]);
+        if (isset($local["Local_Imagen"]) && ($local)["Local_Imagen"]!="imagen.jpg") {
+            if (file_exists("../img/restaurantes/locales/".$local["Local_Imagen"])) {
+                unlink("../img/restaurantes/locales/".$local["Local_Imagen"]);
             }
         }
 
@@ -56,7 +51,15 @@ switch($accion){
         $sentenciaSQL->bindParam(':Local_Imagen',$nombreArchivo);
         $sentenciaSQL->bindParam(':Local_Id',$txtID);
         $sentenciaSQL->execute();
+        $_SESSION['imagen'] = $nombreArchivo;
       }
+      $_SESSION['nombreUsuario'] = $txtNombre;
+      $_SESSION['telefono'] = $txtTelefono;
+      $_SESSION['ubicacion'] =  $txtUbicacion;
+      $_SESSION['ubicacionRef'] = $txtUbiRef;
+      $_SESSION['nombre'] = $txtDueño;
+      $_SESSION['tipo'] = $txtTipo;
+
     header("Location:local.php");
     /* echo "Presionado boton Modificar"; */
     break;
@@ -96,7 +99,7 @@ switch($accion){
             <div class="contanedorImagen">
 
               <img src="../../Cata-Food/img/perfil/editar.png" alt="" class="imagen-editar" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              <img src="../../Cata-Food/img/restaurantes/locales/<?php echo $_SESSION['imagen'] ?>" alt="avatar" style="width: 150px;" class="profilePicture">
+              <img src="../img/restaurantes/locales/<?php echo $_SESSION['imagen'] ?>" alt="avatar" style="width: 150px;" class="profilePicture">
 
             </div>
             <h5 class="my-3"><?php echo $_SESSION['nombre'];?></h5>
@@ -266,7 +269,7 @@ switch($accion){
                   <?php
                     if ($_SESSION['imagen'] !="") {?>
                     
-                    <img class="img-thumbnail rounded" src="../../Cata-Food/img/restaurantes/locales/<?php echo $_SESSION['imagen'] ?>"width="100" alt="">
+                    <img class="img-thumbnail rounded" src="../img/restaurantes/locales/<?php echo $_SESSION['imagen'] ?>"width="100" alt="">
 
                   <?php }?>
                   <input type="file" class="form-control" name="txtImagen" id="txtImagen" placeholder="Imagen">

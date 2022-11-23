@@ -97,7 +97,7 @@ $preference->save();
         <?php $total =$total+($producto['precio']*$producto['cantidad']); ?>
         <?php } ?>
 
-        <div class="card rounded-3 mb-4">
+        <!-- <div class="card rounded-3 mb-4">
           <div class="card-body p-4">
             <div class="row d-flex justify-content-between align-items-center">
               <div class="col-md-2 col-lg-2 col-xl-2">
@@ -202,7 +202,7 @@ $preference->save();
                 <a href="#!" class="text-black"><i class="fas fa-trash fa-lg"></i></a>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
 
         <div class="container-flex">
