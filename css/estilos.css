@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -1424,6 +1425,103 @@ p {
 
 .animate__animated.animate__slideInUp {
   animation-delay: 0.4s;
+}
+
+:root {
+  --brand-name: var(--white);
+  --secondary:#F0B862;
+}
+
+body {
+  color: #484848;
+  font-size: 0.86rem;
+}
+
+.panel {
+  width: 320px;
+}
+
+.main {
+  margin-left: 320px;
+}
+
+.invoice-list {
+  position: absolute;
+  top: 49px;
+  left: 5px;
+}
+.invoice-list .amount {
+  font-size: 1.6em;
+  font-weight: 700;
+  text-align: right;
+}
+
+.container {
+  max-width: 1200px;
+  min-width: 420px;
+}
+
+.table tr th {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+.table tr td {
+  font-size: 0.78rem;
+}
+
+.svg-icon {
+  width: 1.2em;
+  height: 1.2em;
+  padding: 0;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #6A1B9A;
+}
+
+.svg-icon circle {
+  stroke: #6A1B9A;
+  stroke-width: 1;
+}
+
+.footer .footer-app {
+  text-align: center;
+  font-size: 0.78rem;
+  padding: 10px;
+}
+
+.navbar .brand-name {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3em;
+  font-weight: 300;
+  color: var(--brand-name);
+}
+.navbar .nav-item {
+  text-transform: uppercase;
+}
+.navbar .nav-item.active .nav-link {
+  color: var(--secondary);
+}
+.navbar .nav-item.active .nav-link .svg-icon path,
+.navbar .nav-item.active .nav-link .svg-icon polygon,
+.navbar .nav-item.active .nav-link .svg-icon rect {
+  fill: var(--secondary);
+}
+.navbar .nav-item.active .nav-link .svg-icon circle {
+  stroke: var(--secondary);
+}
+.navbar .nav-item .svg-icon {
+  margin-top: -4px;
+}
+.navbar .nav-item .svg-icon path,
+.navbar .nav-item .svg-icon polygon,
+.navbar .nav-item .svg-icon rect {
+  fill: #FFF;
+}
+.navbar .nav-item .svg-icon circle {
+  stroke: #FFF;
 }
 
 @media (max-width: 753px) {
