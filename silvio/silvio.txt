@@ -69,3 +69,274 @@ error_reporting(0);
 
     }
 ?>
+
+
+//vista finalizar compra 
+
+<div class="panel invoice-list">
+    <div class="list-group animate__animated animate__fadeInLeft">
+      <a href="#" class="list-group-item list-group-item-action active">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Nombre de cliente</h5>
+          <small>3 days ago</small>
+        </div>
+        <p class="amount mb-0">3.200€.</p>
+        <div>Concepto de la factura.</div>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Nombre de cliente</h5>
+          <small class="text-muted">3 days ago</small>
+        </div>
+        <p class="amount mb-1">700€</p>
+        <div class="text-muted">Donec id elit non mi porta.</div>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Nombre de cliente</h5>
+          <small class="text-muted">3 days ago</small>
+        </div>
+        <p class="amount mb-1">1200€</p>
+        <div class="text-muted">Donec id elit non mi porta.</div>
+      </a>
+    </div>
+</div>
+
+<div class="main">
+    <div class="container mt-3">
+        <div class="card animate__animated animate__fadeIn">
+            <div class="card-header">
+                Fecha
+                <strong>01/01/2018</strong>
+                <span class="float-right"> <strong>Estado:</strong> Pendiente</span>
+
+            </div>
+            <div class="card-body">
+                <div class="row mb-4">
+                    <div class="col-6 col-md-6">
+                        <h6 class="mb-2">From:</h6>
+                        <div>
+                            <strong>Webz Poland</strong>
+                        </div>
+                        <div>Madalinskiego 8</div>
+                        <div>71-101 Szczecin, Poland</div>
+                        <div>Email: info@webz.com.pl</div>
+                        <div>Phone: +48 444 666 3333</div>
+                    </div>
+
+                    <div class="col-6 col-md-6">
+                        <h6 class="mb-2">To:</h6>
+                        <div>
+                            <strong>Bob Mart</strong>
+                        </div>
+                        <div>Attn: Daniel Marek</div>
+                        <div>43-190 Mikolow, Poland</div>
+                        <div>Email: marek@daniel.com</div>
+                        <div>Phone: +48 123 456 789</div>
+                    </div>
+
+                </div>
+
+                <div class="table-responsive-sm">
+                    <table class="table table-sm table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col" width="2%" class="center">#</th>
+                                <th scope="col" width="20%">Producto/Servicio</th>
+                                <th scope="col" class="d-none d-sm-table-cell" width="50%">Descripción</th>
+
+                                <th scope="col" width="10%" class="text-right">P. Unidad</th>
+                                <th scope="col" width="8%" class="text-right">Num.</th>
+                                <th scope="col" width="10%" class="text-right">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-left">1</td>
+                                <td class="item_name">Origin License</td>
+                                <td class="item_desc d-none d-sm-table-cell">Extended License</td>
+
+                                <td class="text-right">999,00€</td>
+                                <td class="text-right">1</td>
+                                <td class="text-right">999,00€</td>
+                            </tr>
+                            <tr>
+                                <td class="center">2</td>
+                                <td class="item_name">Custom Services</td>
+                                <td class="item_desc d-none d-sm-table-cell">Instalation and Customization (cost per hour)</td>
+
+                                <td class="text-right">150,00€</td>
+                                <td class="text-right">20</td>
+                                <td class="text-right">3.000,00€</td>
+                            </tr>
+                            <tr>
+                                <td class="center">3</td>
+                                <td class="item_name">Hosting</td>
+                                <td class="item_desc d-none d-sm-table-cell">1 year subcription</td>
+
+                                <td class="text-right">499,00€</td>
+                                <td class="text-right">1</td>
+                                <td class="text-right">499,00€</td>
+                            </tr>
+                            <tr>
+                                <td class="center">4</td>
+                                <td class="item_name">Platinum Support</td>
+                                <td class="item_desc d-none d-sm-table-cell">1 year subcription 24/7</td>
+
+                                <td class="text-right">3.999,00€</td>
+                                <td class="text-right">1</td>
+                                <td class="text-right">3.999,00€</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-5">
+                    </div>
+
+                    <div class="col-lg-4 col-sm-5 ml-auto">
+                        <table class="table table-sm table-clear">
+                            <tbody>
+                                <tr>
+                                    <td class="left">
+                                        <strong>Subtotal</strong>
+                                    </td>
+                                    <td class="text-right bg-light">8.497,00€</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">
+                                        <strong>Discount (20%)</strong>
+                                    </td>
+                                    <td class="text-right bg-light">1,699,40€</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">
+                                        <strong>VAT (10%)</strong>
+                                    </td>
+                                    <td class="text-right bg-light">679,76€</td>
+                                </tr>
+                                <tr>
+                                    <td class="left">
+                                        <strong>Total</strong>
+                                    </td>
+                                    <td class="text-right bg-light">
+                                        <strong>7.477,36€</strong>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+:root {
+    --brand-name: var(--white);
+    --secondary:#F0B862;
+}
+
+body {
+  color:#484848;
+  font-size:.86rem;
+}
+
+.panel {
+    width:320px;
+}
+
+.main {
+    margin-left:320px;
+}
+
+.invoice-list {
+    position:absolute;
+    top:49px;
+    left:5px;
+    
+    .amount {
+        font-size:1.6em;
+        font-weight:700;
+        text-align:right;
+    }
+}
+
+.container {
+  max-width:1200px;
+    min-width:420px;
+}
+
+.table {
+  tr th {
+    font-size:.75rem;
+    text-transform:uppercase;
+  }
+  tr td {
+    font-size:.78rem;
+  }
+}
+
+.svg-icon {
+  width: 1.2em;
+  height: 1.2em;
+    padding:0;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #6A1B9A;
+}
+
+.svg-icon circle {
+  stroke: #6A1B9A;
+  stroke-width: 1;
+}
+
+.footer .footer-app {
+    text-align:center;
+    font-size:.78rem;
+    padding:10px;
+}
+
+// APP
+.navbar {
+    .brand-name {
+        font-family: 'Montserrat', sans-serif;
+        font-size:1.3em;
+        font-weight:300;
+        color:var(--brand-name);
+    }
+    .nav-item {
+        text-transform:uppercase;
+        &.active .nav-link {
+            color:var(--secondary);
+            .svg-icon path,
+            .svg-icon polygon,
+            .svg-icon rect {
+              fill: var(--secondary);
+            }
+            .svg-icon circle {
+              stroke: var(--secondary);
+            }
+        }
+        .svg-icon {
+            margin-top:-4px;
+        }
+        .svg-icon path,
+        .svg-icon polygon,
+        .svg-icon rect {
+          fill: #FFF;
+        }
+        .svg-icon circle {
+          stroke: #FFF;
+        }
+    }
+    
+}
