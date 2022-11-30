@@ -3,46 +3,6 @@ include("../admin/config/db.php");
 include("carrito.php");
 ?>
 
-<?php
-
-
-require ('../extensions/vendor/autoload.php'); 
-
-MercadoPago\SDK::setAccessToken('APP_USR-5461755461441479-110915-43fbd085c24709d01764eb3373337efb-340183645'); 
-
-$preference = new MercadoPago\Preference(); 
-
-$item = new MercadoPago\Item(); 
-
-$item->id = '0001'; 
-
-$item->title = 'Producto Gorra'; 
-
-$item->quantity = '1'; 
-
-$item->unit_price = 10.00; 
-
-$item->currency_id = "ARS"; 
-
-$preference->items = array($item);
-
-$preference->back_urls = array(
-
-  "success" => "http://localhost/Cata-Food/admin/secciones/captura.php",
-  "fail" => "http://localhost/Cata-Food/admin/secciones/fallo.php"
-
-);
-
-$preference->auto_return = "approved"; 
-
-$preference->binary_mode = true; 
-
-$preference->save();
-
-
-?>
-
-
 <section class="h-100 sectionCarrito" >
   <div class="container h-100 py-5">
     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -210,8 +170,8 @@ $preference->save();
 
             <div class="contenedorCarrito">
 
-                <div class="checkout-btn"></div>
                 <button class="btn btn-warning botonCarrito1">Seguir comprando</button>
+                <a href="../../Cata-Food/secciones/formulario_pago.php"><button class="btn btn-warning text-bold">Checkout</button></a>
                 <button class="btn btn-warning botonCarrito3">Total: $<?php echo $total; ?></button>
 
             </div>
@@ -219,46 +179,12 @@ $preference->save();
 
         </div>
 
-        
-
-        
-
-
       </div>
     </div>
   </div>
 
-  <script>
-
-    const mp = new MercadoPago('APP_USR-8002e71e-7de8-4801-9db3-7fbf448dbf57', { //public key
-
-      locale: 'es-AR' //idioma local
-
-    })
-
-  mp.checkout({
-      preference: {
-
-        id: '<?php  echo $preference->id ?>' //le pasamos el id de referencia, llamamos a la variable preference
-        //una vez que guardamos las preferencias de mercado pago, nos genera un id y ese lo tenemos que pasar aquí
-
-      },
-
-      render: {
-
-        container: '.checkout-btn', //llamamos al boton para que lo muestre
-        label: 'Pagar', //el texto que va en el boton
-
-      }
-
-    })
-
-    </script>
 
 </section>
-
-
-
 
 
 <?php include("../template/footer.php"); ?>

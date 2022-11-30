@@ -47,9 +47,6 @@ include("../../Cata-food/admin/config/config.php");
 
   <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1636192990/magicmouse/magic_mouse-1.2.1.cdn.min.js"></script>
 
-  <!-- MercadoPago SDK -->
-  <script src="https://sdk.mercadopago.com/js/v2"></script>
-
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
 </head>
