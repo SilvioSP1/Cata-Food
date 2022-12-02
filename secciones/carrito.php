@@ -30,7 +30,7 @@ if ([$_SESSION['usuario'] != "Sin Loguearse"])
                     $mensaje.= "algo pasa con el nombre";
                 }
     
-                if (is_file(openssl_decrypt($_POST['Prod_Imagen'],cod,key))) {
+                if (is_string(openssl_decrypt($_POST['Prod_Imagen'],cod,key))) {
                     $Prod_Imagen = openssl_decrypt($_POST['Prod_Imagen'],cod,key);
                 }else{
                     $mensaje.= "algo pasa con el imagen";

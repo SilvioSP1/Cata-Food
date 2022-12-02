@@ -19,7 +19,7 @@ include("carrito.php");
             <div class="row d-flex justify-content-between align-items-center">
               <div class="col-md-2 col-lg-2 col-xl-2">
                 <img
-                  src="../../Cata-Food/img/carrito/<?php echo $producto['imagen']?>"
+                  src="../img/restaurantes/productos/<?php echo $producto['imagen'];?>"
                   class="img-fluid rounded-3" alt="">
               </div>
               <div class="col-md-3 col-lg-3 col-xl-3">

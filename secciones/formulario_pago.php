@@ -1,7 +1,7 @@
 <?php
 
-
 require ('../extensions/vendor/autoload.php'); 
+session_start();
 
 MercadoPago\SDK::setAccessToken('APP_USR-5461755461441479-110915-43fbd085c24709d01764eb3373337efb-340183645'); 
 
@@ -9,15 +9,18 @@ $preference = new MercadoPago\Preference();
 
 $item = new MercadoPago\Item(); 
 
-$item->id = '0001'; 
+foreach ($_SESSION['carritoCompra'] as $indice => $producto) {
 
-$item->title = 'Producto Gorra'; 
-
-$item->quantity = '1'; 
-
-$item->unit_price = 10.00; 
-
-$item->currency_id = "ARS"; 
+    $item->id = $producto['id']; 
+    
+    $item->title = $producto['nombre']; 
+    
+    $item->quantity = $producto['cantidad']; 
+    
+    $item->unit_price = $producto['precio']; 
+    
+    $item->currency_id = "ARS"; 
+}
 
 $preference->items = array($item);
 
