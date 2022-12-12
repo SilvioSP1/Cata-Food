@@ -1,5 +1,8 @@
 <?php
-    error_reporting(0);
+    session_start();
+ 
+    include("../config/db.php");
+    include("../config/config.php");
     //creamos cada unos de los scripts, nos devuelve lo datos con el metodo get
 
 
@@ -7,12 +10,24 @@
     $status = $_GET['status']; //estado de la transaccion
     $payment_type = $_GET['payment_type']; //nos dice el tipo de metodo de pago: tarjeta, efectivo, tarjeta, etc.
     $order_id = $_GET['merchant_order_id']; //orden de la compra
+    $date = $_GET['money_release_date'];
+    $money = $_GET['transaction_amount'];
 
-/* 
+ 
     echo $payment.'<br>';
     echo $status.'<br>';
     echo $payment_type.'<br>';
-    echo $order_id.'<br>'; */
+    echo $order_id.'<br>'; 
+    echo $date.'<br>'; 
+    echo $money.'<br>'; 
+
+    /*$sentenciaSQL = $conexion->prepare("INSERT INTO pago (Pago_IdTransaccion, Pago_UsuId, Pago_FormaPago, Pago_Fecha, Pago_Total) VALUES (:Pago_IdTransaccion, :Pago_UsuId, :Pago_FormaPago, :Pago_Fecha, :Pago_Total);");
+    $sentenciaSQL->bindParam(':Pago_IdTransaccion',$payment);
+    $sentenciaSQL->bindParam(':Pago_UsuId',$_SESSION['idUsuario']);
+    $sentenciaSQL->bindParam(':Pago_FormaPago',$payment_type);
+    $sentenciaSQL->bindParam(':Pago_Fecha',$date);
+    $sentenciaSQL->bindParam(':Pago_Total',$money);
+    $sentenciaSQL->execute();*/
 
 ?>
 <!DOCTYPE html>

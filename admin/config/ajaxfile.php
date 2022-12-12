@@ -50,7 +50,7 @@ foreach($listaProductos as $producto) {
         <input type="hidden" name="cantidad" id="cantidad" value="<?php echo openssl_encrypt(1,cod,key); ?>">
         <div class="flexBotones">
 
-            <input type="number" class="form-control-sm conta" name="conta" id="conta" placeholder="Unidades">
+            <input type="number" class="form-control-sm conta" name="conta" id="conta" placeholder="Unidades" value="1">
             <button class="botonAgregar btn btn-warning" name="btnAccion" value="Agregar" type="submit" id="agregarr">
                 Agregar a carrito
             </button>

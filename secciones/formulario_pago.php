@@ -17,7 +17,7 @@ foreach ($_SESSION['carritoCompra'] as $indice => $producto) {
     
     $item->quantity = $producto['cantidad']; 
     
-    $item->unit_price = $producto['precio']; 
+    $item->unit_price = 5; 
     
     $item->currency_id = "ARS"; 
 }
@@ -31,11 +31,28 @@ $preference->back_urls = array(
 
 );
 
+$preference->shipments = array(
+    "cost": 1000
+);
+
 $preference->auto_return = "approved"; 
 
 $preference->binary_mode = true; 
 
 $preference->save();
+
+if ($_POST) {
+    $productoArr = array( 
+        'id'=>$Prod_Id,
+        'imagen'=>$Prod_Imagen,
+        'nombre'=>$Prod_Nombre,
+        'precio'=>$Prod_Precio,
+        'cantidad'=>$cantidad,
+        'descripcion'=>$Prod_Descripcion,
+        'local'=>$Local_Nombre
+    );
+    $_SESSION['info'];
+}
 
 
 ?>
@@ -177,15 +194,20 @@ $preference->save();
 
                         <span>Total:</span>
                         <div class="d-flex flex-row align-items-end mb-3">
-                            <h1 class="mb-0 yellow">$549</h1> <span>.99</span>
+                            <?php $aux = 0; ?>
+                            <?php foreach ($_SESSION['carritoCompra'] as $indice => $producto) 
+                            {
+                                $aux = $aux + $producto['precio'];
+                            }?>
+                            <h1 class="mb-0 yellow">$<?php echo $aux; ?></h1>
                         </div>
 
-                        <span>Enjoy all the features and perk after you complete the payment</span>
+                        <span>Lista Productos</span>
 
                         <div class="hightlight">
-
-                            <span>100% Guaranteed support and update for the next 5 years.</span>
-
+                            <?php foreach ($_SESSION['carritoCompra'] as $indice => $producto) {?>
+                            <span><?php echo $producto['nombre'];?></span>
+                            <?php } ?>
 
                         </div>
 
