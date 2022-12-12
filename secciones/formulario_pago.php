@@ -31,10 +31,6 @@ $preference->back_urls = array(
 
 );
 
-$preference->shipments = array(
-    "cost": 1000
-);
-
 $preference->auto_return = "approved"; 
 
 $preference->binary_mode = true; 
@@ -63,7 +59,7 @@ if ($_POST) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/estilos.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../../Cata-Food/css/estilos.css?v=<?php echo time(); ?>">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" 
@@ -104,7 +100,7 @@ if ($_POST) {
                                 <div class="col-md-6">
 
                                     <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
-                                            required="required"> <span>Nombre</span> </div>
+                                            required> <span>Nombre</span> </div>
 
 
                                 </div>
@@ -113,7 +109,7 @@ if ($_POST) {
                                 <div class="col-md-6">
 
                                     <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
-                                            required="required"> <span>Apellido</span> </div>
+                                            required> <span>Apellido</span> </div>
 
 
                                 </div>
@@ -129,7 +125,7 @@ if ($_POST) {
                                 <div class="col-md-6">
 
                                     <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
-                                            required="required"> <span>Telefono</span> </div>
+                                            required> <span>Telefono</span> </div>
 
 
                                 </div>
@@ -138,7 +134,7 @@ if ($_POST) {
                                 <div class="col-md-6">
 
                                     <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
-                                            required="required"> <span>Provincia</span> </div>
+                                            required> <span>Provincia</span> </div>
 
 
                                 </div>
@@ -153,7 +149,7 @@ if ($_POST) {
                                 <div class="col-md-6">
 
                                     <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
-                                            required="required"> <span>Ciudad</span> </div>
+                                            required> <span>Ciudad</span> </div>
 
 
                                 </div>
@@ -162,13 +158,38 @@ if ($_POST) {
                                 <div class="col-md-6">
 
                                     <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
-                                            required="required"> <span>Código Postal</span> </div>
+                                            required> <span>Código Postal</span> </div>
 
 
                                 </div>
 
 
 
+                            </div>
+
+                            <div class="row mt-2">
+
+                                <div class="tabs">
+
+                                    <div class="tab">
+
+                                        <input type="checkbox" id="chck1" class="inputCheckbox">
+                                        <label class="tab-label" for="chck1">Envios</label>
+                                        <div class="tab-content">
+
+                                            <div class="containerRadios">
+                                                <input type="radio" id="check1" name="input">
+                                                <label for="check1" class="envio">Con envio</label>
+                                                <input type="radio" value="check2" name="input">
+                                                <label for="check2">Sin envio</label>
+
+                                            </div>
+                                        
+                                        </div>
+
+                                    </div>
+
+                                </div>
 
                             </div>
 
@@ -199,7 +220,7 @@ if ($_POST) {
                             {
                                 $aux = $aux + $producto['precio'];
                             }?>
-                            <h1 class="mb-0 yellow">$<?php echo $aux; ?></h1>
+                            <h1 class="mb-0 priceColor">$<?php echo $aux; ?></h1>
                         </div>
 
                         <span>Lista Productos</span>

@@ -1496,7 +1496,6 @@ p {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
   margin: 0;
 }
 
@@ -1515,15 +1514,14 @@ input::-webkit-inner-spin-button {
 }
 
 .hightlight {
-  background-color: #5737d9;
   padding: 10px;
   border-radius: 10px;
   margin-top: 15px;
   font-size: 14px;
 }
 
-.yellow {
-  color: #fdcc49;
+.priceColor {
+  color: #1c1c1c;
 }
 
 .decoration {
@@ -1546,6 +1544,67 @@ input::-webkit-inner-spin-button {
 .decoration:hover {
   text-decoration: none;
   color: #fdcc49;
+}
+
+.tabs {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px -2px rgba(0, 0, 0, 0.5);
+}
+.tabs .tab {
+  width: 100%;
+  color: white;
+  overflow: hidden;
+}
+.tabs .tab .tab-label {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  background: #2c3e50;
+  font-weight: bold;
+  cursor: pointer;
+}
+.tabs .tab .tab-label:hover {
+  background: #1a252f;
+}
+.tabs .tab .tab-label::after {
+  content: "➤";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  transition: all 0.35s;
+}
+.tabs .tab .inputCheckbox {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.tabs .tab .inputCheckbox:checked + .tab-label {
+  background: #1a252f;
+}
+.tabs .tab .inputCheckbox:checked + .tab-label::after {
+  transform: rotate(90deg);
+}
+.tabs .tab .inputCheckbox:checked ~ .tab-content {
+  max-height: 100vh;
+  padding: 1em;
+}
+.tabs .tab .tab-content {
+  max-height: 0;
+  padding: 0 1em;
+  color: #2c3e50;
+  background: white;
+  transition: all 0.35s;
+}
+.tabs .tab .tab-content .containerRadios {
+  display: flex;
+  flex-direction: row;
+  gap: 0.45rem;
+  justify-content: center;
+  align-items: center;
+}
+.tabs .tab .tab-content .containerRadios .envio {
+  margin-right: 2rem;
 }
 
 @media (max-width: 753px) {

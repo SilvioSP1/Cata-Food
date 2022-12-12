@@ -78,8 +78,9 @@
            <div class="containerGracias">
                <img src="../../img/carrito/gifBurger.gif" alt="">
                <h1>Gracias por tu compra en Betos!</h1>
-               <p>Tu código de referencia es: <?php echo $payment;?></p>
+               <p>Tu código de referencia es: <?php echo $order_id;?></p>
                <p>Este código te servira para presentarlo en el local o al delivery para poder verificar la compra.</p>
+               <p>Tu total es: </p>
                <a href="../../index.php"><button class="botonInicio">Volver al inicio</button></a>
            </div>
        </div>

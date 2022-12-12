@@ -94,7 +94,7 @@ if ([$_SESSION['usuario'] != "Sin Loguearse"])
                             'local'=>$Local_Nombre
                         );
                         $_SESSION['carritoCompra'][$numeroProductos] = $productoArr;
-                        $mensaje= "Producto agreagdo";
+                        $mensaje= "Producto agregado";
                     }
                 }
                 /* $mensaje= print_r($_SESSION,true); */
