@@ -10,16 +10,16 @@
     $status = $_GET['status']; //estado de la transaccion
     $payment_type = $_GET['payment_type']; //nos dice el tipo de metodo de pago: tarjeta, efectivo, tarjeta, etc.
     $order_id = $_GET['merchant_order_id']; //orden de la compra
-    $date = $_GET['money_release_date'];
-    $money = $_GET['transaction_amount'];
+    /*$date = $_GET['money_release_date'];
+    $money = $_GET['transaction_amount'];*/
 
  
     echo $payment.'<br>';
     echo $status.'<br>';
     echo $payment_type.'<br>';
     echo $order_id.'<br>'; 
-    echo $date.'<br>'; 
-    echo $money.'<br>'; 
+    /*echo $date.'<br>'; 
+    echo $money.'<br>'; */
 
     /*$sentenciaSQL = $conexion->prepare("INSERT INTO pago (Pago_IdTransaccion, Pago_UsuId, Pago_FormaPago, Pago_Fecha, Pago_Total) VALUES (:Pago_IdTransaccion, :Pago_UsuId, :Pago_FormaPago, :Pago_Fecha, :Pago_Total);");
     $sentenciaSQL->bindParam(':Pago_IdTransaccion',$payment);
@@ -28,6 +28,31 @@
     $sentenciaSQL->bindParam(':Pago_Fecha',$date);
     $sentenciaSQL->bindParam(':Pago_Total',$money);
     $sentenciaSQL->execute();*/
+
+    foreach ($_SESSION['carritoCompra'] as $indice => $producto) {
+        $aux = $aux + $producto['precio'];
+    }
+    /*$sentenciaSQL = $conexion->prepare("INSERT INTO venta (Venta_Fecha, Venta_NroFactura, Venta_Neto, Venta_Total, Venta_Status, Venta_UsuId) VALUES (:Venta_Fecha, :Venta_NroFactura, :Venta_Neto, :Venta_Total, :Venta_Status, :Venta_UsuId)");
+    $sentenciaSQL->bindParam(':Venta_Fecha',$date);
+    $sentenciaSQL->bindParam(':Venta_NroFactura',$payment);
+    $sentenciaSQL->bindParam(':Venta_Neto',$aux);
+    $sentenciaSQL->bindParam(':Venta_Total',$aux);
+    $sentenciaSQL->bindParam(':Venta_Status',$status);
+    $sentenciaSQL->bindParam(':Venta_UsuId',$_SESSION['idUsuario']);
+    $sentenciaSQL->execute();
+    $idVenta = $conexion->lastInsertId();*/
+
+    /*foreach ($_SESSION['carritoCompra'] as $indice => $producto) {
+        $sentenciaSQL = $conexion->prepare("INSERT INTO venta_detalle (VD_Cantidad, VD_PrecioUnitario, VD_Costo, VD_VentaId, VD_ProdId) VALUES (:VD_Cantidad, :VD_PrecioUnitario, :VD_Costo, :VD_VentaId, :VD_ProdId)");
+        $sentenciaSQL->bindParam(':VD_Cantidad',$producto['cantidad']);
+        $sentenciaSQL->bindParam(':VD_PrecioUnitario',$_SESSION['precio']);
+        $sentenciaSQL->bindParam(':VD_Costo',$_SESSION['precio']);
+        $sentenciaSQL->bindParam(':VD_VentaId',$idVenta);
+        $sentenciaSQL->bindParam(':VD_ProdId',$_SESSION['id']);
+        $sentenciaSQL->execute();
+    }*/
+
+    $_SESSION['carritoCompra'] = null;
 
 ?>
 <!DOCTYPE html>
