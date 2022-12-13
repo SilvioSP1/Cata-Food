@@ -32,7 +32,7 @@ if ($_POST) {
 <?php } ?>
                 <div class="conteiner_restaurantes">
 
-                    <div class="container-fluid">
+                    <div class="container-fluid" id="containerFiltro">
                         <div class="row justify-content-center g-2 containerColum">
                             <div class="col-3 columnas">
                                 <div class="contenedorResTipo">
@@ -60,7 +60,7 @@ if ($_POST) {
                                     <div class="contenedorBuscadorRes">
                                         <form class="d-flex containerMedias">
                                             <input class="form-control me-1 buscador" type="search"
-                                            placeholder="🔍︎ Buscar " aria-label="Search">
+                                            placeholder="🔍︎ Buscar " aria-label="Search" id="buscador">
                                             <button class="btn btn-outline-dark botonBusc text-white"
                                             type="submit">Buscar</button>
                                         </form>

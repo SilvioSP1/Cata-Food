@@ -1048,6 +1048,10 @@ p {
   margin-right: 10px;
 }
 
+.filtro {
+  display: none;
+}
+
 .container__CardProd {
   width: 50%;
 }
