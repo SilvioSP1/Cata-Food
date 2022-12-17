@@ -1449,6 +1449,9 @@ p {
   align-items: center;
   flex-flow: column nowrap;
 }
+.flexGracias .backgroundGracias .containerGracias .imgCaptura {
+  width: 65%;
+}
 .flexGracias .backgroundGracias .containerGracias .botonInicio {
   border: none;
   outline: none;

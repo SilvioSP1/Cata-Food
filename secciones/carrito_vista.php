@@ -54,7 +54,8 @@ include("carrito.php");
             </div>
           </div>
         </div>
-        <?php $total =$total+($producto['precio']*$producto['cantidad']); ?>
+        <?php $total= $total+($producto['precio']*$producto['cantidad']);
+              $_SESSION['total'] = $total; ?>
         <?php } ?>
 
         <!-- <div class="card rounded-3 mb-4">
@@ -172,7 +173,7 @@ include("carrito.php");
 
                 <button class="btn btn-warning botonCarrito1">Seguir comprando</button>
                 <a href="../../Cata-Food/secciones/formulario_pago.php"><button class="btn btn-warning text-bold">Checkout</button></a>
-                <button class="btn btn-warning botonCarrito3">Total: $<?php echo $total; ?></button>
+                <button class="btn btn-warning botonCarrito3">Total: $<?php echo $_SESSION["total"]; ?></button>
 
             </div>
 
