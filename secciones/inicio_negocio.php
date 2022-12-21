@@ -16,7 +16,18 @@ error_reporting(0);
       $sentenciaSQL->execute();
       $locales = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
 
-      if ($locales['Local_Email'] == $txtEmail && $locales['Local_Contrasena'] == $txtContrasena) {
+      $ip = $_SERVER['REMOTE_ADDR'];
+
+      $captcha = $_POST['g-recaptcha-response'];
+
+      $secretkey = "6Lf0yf0iAAAAAOcuDfvUE2GGl98HDOqu9zqKyPIT";
+
+      $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretkey&response=$captcha&remoteip=$ip");
+
+      $atributos = json_decode($response, TRUE); 
+
+
+      if ($locales['Local_Email'] == $txtEmail && $locales['Local_Contrasena'] == $txtContrasena && $atributos['success']) {
           session_start();
           $_SESSION['usuario'] = $locales;
           $_SESSION['nombreUsuario']=$locales['Local_Nombre'];

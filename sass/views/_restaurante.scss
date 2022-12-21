@@ -63,6 +63,16 @@
                 display: flex;
                 flex-wrap: wrap;
                 flex: 1 1;
+
+                .centra{
+                    justify-content: center;
+                }
+
+                .dis{
+                    position: relative;
+                    top: -80%;
+                    left: 72%;
+                }
     
                 .producto{
                     width: 80%;

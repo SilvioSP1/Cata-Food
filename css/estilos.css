@@ -1111,6 +1111,14 @@ p {
   flex-wrap: wrap;
   flex: 1 1;
 }
+.conteiner_restaurantes .containerColum .columnas .conteinerProductos .centra {
+  justify-content: center;
+}
+.conteiner_restaurantes .containerColum .columnas .conteinerProductos .dis {
+  position: relative;
+  top: -80%;
+  left: 72%;
+}
 .conteiner_restaurantes .containerColum .columnas .conteinerProductos .producto {
   width: 80%;
 }

@@ -54,6 +54,7 @@ switch($accion){
         $_SESSION['imagen'] = $nombreArchivo;
       }
       $_SESSION['nombreUsuario'] = $txtNombre;
+      $_SESSION['idLocal'] = $txtID;
       $_SESSION['telefono'] = $txtTelefono;
       $_SESSION['ubicacion'] =  $txtUbicacion;
       $_SESSION['ubicacionRef'] = $txtUbiRef;
@@ -102,10 +103,14 @@ switch($accion){
               <img src="../img/restaurantes/locales/<?php echo $_SESSION['imagen'] ?>" alt="avatar" style="width: 150px;" class="profilePicture">
 
             </div>
-            <h5 class="my-3"><?php echo $_SESSION['nombre'];?></h5>
+            <h5 class="my-3"><?php echo $_SESSION['nombreUsuario'];?></h5>
             <p class="text-muted mb-1">Vendedor / Local</p>
             <div class="d-flex justify-content-center mb-2">
               <button type="button" class="btn btn-outline-primary ms-1 botonModal" data-bs-toggle="modal" data-bs-target="#exampleModal">Modificar</button>
+              <form action="restaurante.php" method="post">
+                <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($txtID,cod,key); ?>">
+                <button class="btn btn-outline-primary ms-1 botonModal" name="btnAccion" type="submit">Ver Productos</button>
+              </form>
             </div>
           </div>
         </div>

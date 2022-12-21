@@ -19,6 +19,10 @@ $sentenciaSQL = $conexion->prepare("SELECT * FROM tipo_producto");
 $sentenciaSQL->execute();
 $productosTipos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
+$sentenciaSQL = $conexion->prepare("SELECT * FROM local");
+$sentenciaSQL->execute();
+$locales = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
+
 switch ($accion) {
     case "Agregar":
         $sentenciaSQL = $conexion->prepare("INSERT INTO producto (Prod_Nombre , Prod_Descripcion , Prod_Imagen , Prod_Precio , Prod_ABC , Prod_Status , Prod_LocalId , Prod_Tipo) VALUES (:Prod_Nombre,:Prod_Descripcion,:Prod_Imagen,:Prod_Precio,:Prod_ABC,:Prod_Status,:Prod_LocalId,:Prod_Tipo);");
@@ -42,6 +46,15 @@ switch ($accion) {
           $sentenciaSQL->execute();
 
         header("Location:productos.php");
+        $txtID="";
+        $txtNombre="";
+        $txtDescripcion="";
+        $txtImagen="";
+        $txtPrecio="";
+        $txtABC="";
+        $txtStatus="";
+        $txtLocalId="";
+        $txtTipo="";
         break;
     case "Modificar":
         $sentenciaSQL = $conexion->prepare("UPDATE producto SET Prod_Nombre = :Prod_Nombre,Prod_Descripcion = :Prod_Descripcion, Prod_Precio= :Prod_Precio, Prod_ABC = :Prod_ABC, Prod_Status = :Prod_Status, Prod_LocalId = :Prod_LocalId , Prod_Tipo = :Prod_Tipo WHERE Prod_Id = :Prod_Id");
@@ -223,7 +236,23 @@ $sentenciaSQL->execute(); */
 
                 <div class="form-group">
                   <label for="txtLocalId" class="form-label">Local Id:</label>
-                  <input type="number" required class="form-control" value="<?php echo $txtLocalId; ?>" name="txtLocalId" id="txtLocalId" placeholder="Local Id">
+                  <div>
+                      <select name="txtLocalId" class="txtLocalId" id="txtLocalId" >
+    
+                        <?php if(empty($txtLocalId)) {?>
+                            <option selected disabled>Seleccione uno</option>
+                        <?php }else { ?>
+                            <option selected><?php echo $txtLocalId; ?></option>
+                        <?php } ?>
+      
+                        <?php foreach($locales as $local){ ?>
+                        <option><?php echo $local["Local_Id"] ?> - <?php echo $local["Local_Nombre"] ?></option>
+
+                        <?php } ?>
+                    
+                        </select>
+                  </div>
+                  <!-- <input type="number" required class="form-control" value="<?php echo $txtLocalId; ?>" name="txtLocalId" id="txtLocalId" placeholder="Local Id"> -->
                 </div>
 
                 <br>
