@@ -196,10 +196,38 @@ $_SESSION['condicion'] = 1;
                                         <div class="tab-content">
 
                                             <div class="containerRadios">
-                                                <input type="radio" id="check1" name="input">
+
+                                                <!-- <input type="radio" id="check1" name="input">
                                                 <label for="check1" class="envio">Con envio</label>
                                                 <input type="radio" value="check2" name="input">
-                                                <label for="check2">Sin envio</label>
+                                                <label for="check2">Sin envio</label> -->
+
+                                                <input type="radio" name="lang" value="hide" onclick="showHideDiv(1)" checked>
+                                                Con envio
+                                                <input type="radio" name="lang" value="show" onclick="showHideDiv(2)">
+                                                Sin envio
+
+                                                <br><br>
+
+                                                <div id="div">
+
+                                                    <div class="centerEnvio">
+
+                                                        <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
+                                                        required> <span>Calle</span> </div>
+
+                                                        <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
+                                                        required> <span>Altura</span> </div>
+
+                                                        <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
+                                                        required> <span>Piso</span> </div>
+
+                                                    </div>
+
+                                                </div>
+
+
+
 
                                             </div>
                                         
@@ -281,7 +309,9 @@ $_SESSION['condicion'] = 1;
 
             })
 
-            </script>
+        </script>
+
+        <script src="../../Cata-Food/js/showhideRadio.js"></script>
 
     </section>
 
