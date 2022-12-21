@@ -1,7 +1,7 @@
 let suggestions = [
 
-    "php",
-    "diseñador web",
-    "programador",
+    "Betos Lomos",
+    "Havana",
+    "Mostaza",
 
 ];

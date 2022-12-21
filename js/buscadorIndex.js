@@ -1,21 +1,25 @@
+//obtener todos los elementos
+
 const searchWrapper = document.querySelector(".search-input");
-const inputBox = document.querySelector(".inputBuscador");
-const suggBox = document.querySelector(".autocom-box");
-const icon = document.querySelector(".icon");
+const inputBox = searchWrapper.querySelector("input");
+const icon = searchWrapper.querySelector(".icon");
+const suggBox = searchWrapper.querySelector(".autocom-box");
 
-let linkTag = searchWrapper.querySelector(".buscadorList");
-let enlaces;
+let linkTag = searchWrapper.querySelector("a");
+let webLink;
 
-inputBox.onkeyup= (e) => {
+//if cuando el usuario presione cualquier tecla
 
-    let userData = e.target.value;
+inputBox.onkeyup = (e) =>{
+
+    let userData = e.target.value; //data del usuario
     let emptyArray = [];
 
     if(userData){
 
-        icon.onClick = () =>{
+        icon.onclick = () => {
 
-            webLink = "https://www.google.es/search?q=${userData}";
+            webLink = `https://www.google.com/search?q=${userData}`;
             linkTag.setAttribute("href", webLink);
             linkTag.click();
 
@@ -23,70 +27,72 @@ inputBox.onkeyup= (e) => {
 
         emptyArray = suggestions.filter((data) => {
 
-            return data.toLocalLowerCase().startsWith(userData.toLocalLowerCase());
+            //filtrar el valor del array
+            return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
 
         });
 
         emptyArray = emptyArray.map((data) => {
 
-            return data = "<li>${data}</li>";
+            return data = `<li>${data}</li>`;
 
         });
 
-        searchWrapper.classList.add("active");
-        showSuggestions(emptyArray);
+        searchWrapper.classList.add("active"); //mostrar autocompletado
+        showSuggestion(emptyArray);
+
         let allList = suggBox.querySelectorAll("li");
 
-        for(let i=0; i<allList.length;i++){
+        for (let i = 0; i < allList.length; i++) {
+           
+            //añadiendo onclick
 
-            allList[i].setAttribute("onclick", "select(this)")
-
+            allList[i].setAttribute("onclick", "select(this)");
+            
         }
 
     }else{
 
-        searchWrapper.classList.remove("active")
+        searchWrapper.classList.remove("active"); //sacar autocompletado
 
     }
 
-    function select(element){
 
-        let selectData = element.textContent;
+}
 
-        inputBox.value = selectData;
+function select(element){
 
-        icon.onClick = () =>{
+    let selectData = element.textContent;
+    inputBox.value = selectData; //pasamos la lista que selecciono el usuario
 
-            webLink = "https://www.google.es/search?q=${userData}";
-            linkTag.setAttribute("href", webLink);
-            linkTag.click();
+    icon.onclick = ()=>{
 
-        }
+        webLink = `https://www.google.com/search?q=${selectData}`;
+        linkTag.setAttribute("href", webLink);
+        linkTag.click();
+    }
 
-        searchWrapper.classList.remove("active");
+    searchWrapper.classList.remove("active");
 
+}
+
+function showSuggestion(list){
+
+    let listData;
+
+    if(!list.length){
+
+        userValue = inputBox.value;
+        listData = `<li>${userValue}</li>`;
+
+    }else{
+
+
+        listData = list.join('');
         
 
     }
 
-    function showSuggestions(list){
-
-        let listData;
-
-        if(!list.length){
-
-            userValue = inputBox.value;
-
-            listData = "<li>${userValue}</li>"
-
-        }else{
-
-            listData = list.join("");
-
-        }
-
-        suggBox.innerHTML = listData;
-
-    }
+    suggBox.innerHTML = listData;
 
 }

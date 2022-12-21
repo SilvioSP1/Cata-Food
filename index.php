@@ -35,15 +35,15 @@
 </div> -->
 
 <div class="wrapper">
-    <div class="search-input">
-        <a href="" hidden class="buscadorList"></a>
-        <input type="text" placeholder="Buscar..." class="inputBuscador">
+      <div class="search-input">
+        <a href="" target="_blank" hidden></a>
+        <input type="text" placeholder="Buscar...">
         <div class="autocom-box">
-
+          
         </div>
         <div class="icon"><i class="fas fa-search"></i></div>
+      </div>
     </div>
-</div>
 
 <div class="contenedorCards animate__animated animate__fadeIn">
 
