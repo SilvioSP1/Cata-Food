@@ -76,6 +76,8 @@
 <script src="../../Cata-Food/js/mouse.js"></script>
 <script src="../../Cata-Food/js/cookies.js"></script>
 <script src="../../Cata-Food/js/filtrado.js?v=<?php echo time(); ?>"></script>
+<script src="../../Cata-Food/js/suggestions.js?v=<?php echo time(); ?>"></script>
+<script src="../../Cata-Food/js/buscadorIndex.js?v=<?php echo time(); ?>"></script>
 
 
 <!-- JavaScript Bundle with Popper -->

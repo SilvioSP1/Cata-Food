@@ -27,12 +27,23 @@
     <p>El mejor sitio donde encontrar comida en la ciudad de Catamarca</p>
 </div>
 
-<div class="contenedorBuscador">
+<!-- <div class="contenedorBuscador">
     <form class="d-flex containerMedias">
         <input class="form-control me-1 buscador" type="search" placeholder="🔍︎ Buscar" aria-label="Search">
         <button class="btn btn-outline-dark botonBusc text-white" type="submit">Buscar</button>
     </form>
-</div>
+</div> -->
+
+<div class="wrapper">
+      <div class="search-input">
+        <a href="" target="_blank" hidden></a>
+        <input type="text" placeholder="Buscar...">
+        <div class="autocom-box">
+          
+        </div>
+        <div class="icon"><i class="fas fa-search"></i></div>
+      </div>
+    </div>
 
 <div class="contenedorCards animate__animated animate__fadeIn">
 

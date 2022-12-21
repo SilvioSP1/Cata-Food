@@ -101,19 +101,19 @@ input::-webkit-inner-spin-button {
 
 //Checkbox envios
 
-.tabs{
+.tabs {
 
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px -2px rgba(0,0,0,0.5);
+    box-shadow: 0 4px -2px rgba(0, 0, 0, 0.5);
 
-    .tab{
+    .tab {
 
         width: 100%;
         color: white;
         overflow: hidden;
 
-        .tab-label{
+        .tab-label {
 
             display: flex;
             justify-content: space-between;
@@ -122,13 +122,13 @@ input::-webkit-inner-spin-button {
             font-weight: bold;
             cursor: pointer;
 
-            &:hover{
+            &:hover {
 
                 background: #1a252f;
 
             }
 
-            &::after{
+            &::after {
 
                 content: "➤";
                 width: 1em;
@@ -140,25 +140,25 @@ input::-webkit-inner-spin-button {
 
         }
 
-        .inputCheckbox{
+        .inputCheckbox {
 
             position: absolute;
             opacity: 0;
             z-index: -1;
 
-            &:checked + .tab-label{
+            &:checked+.tab-label {
 
                 background: #1a252f;
-                
+
             }
 
-            &:checked + .tab-label::after{
+            &:checked+.tab-label::after {
 
                 transform: rotate(90deg);
 
             }
-        
-            &:checked ~ .tab-content{
+
+            &:checked~.tab-content {
 
                 max-height: 100vh;
                 padding: 1em;
@@ -167,7 +167,7 @@ input::-webkit-inner-spin-button {
 
         }
 
-        .tab-content{
+        .tab-content {
 
             max-height: 0;
             padding: 0 1em;
@@ -175,19 +175,41 @@ input::-webkit-inner-spin-button {
             background: white;
             transition: all 0.35s;
 
-            .containerRadios{
-                
+            .containerRadios {
+
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
+                align-items: center;
                 gap: 0.45rem;
-                justify-content: center;                
+                justify-content: center;
                 align-items: center;
 
-                .envio{
+                .envio {
 
                     margin-right: 2rem;
 
                 }
+
+                #div{
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .centerEnvio{
+
+
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        gap: .75rem;
+
+
+                    }
+
+                }
+
 
             }
 
