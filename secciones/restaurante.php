@@ -239,6 +239,18 @@ switch ($accion) {
                             <div class="col-3 columnas">
                                 <div class="contenedorResTipo">
                                     <div class="tiposRes">
+                                        <div aria-label="" class="tipo">
+                                            <form class="tipo" action="restaurante.php" method="POST">
+                                            <input type="hidden" name="TP_Tipo" id="TP_Tipo" value="">
+                                                <button name="btnAccion" type="submit" class="buttonTipo">
+                                                    <div class="circulo">
+                                                        <img src="../img/restaurantes/categorias/"
+                                                            aria-hidden="true" class="">
+                                                    </div>
+                                                    <div aria-hidden="true" class="sc-tl2hnw-0 hNbawF">Todos</div>
+                                                </button>
+                                            </form>
+                                        </div>
                                         <?php foreach($listaTipoProductos as $tipoProductos) { ?>
                                         <!-- <div aria-label="" class="tipo">
                                             <div class="circulo">

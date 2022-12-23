@@ -37,6 +37,18 @@ if ($_POST) {
                             <div class="col-3 columnas">
                                 <div class="contenedorResTipo">
                                     <div class="tiposRes">
+                                    <div aria-label="" class="tipo">
+                                        <form class="tipo" action="restaurantes.php" method="POST">
+                                        <input type="hidden" name="TL_Tipo" id="TL_Tipo" value="">
+                                            <button name="btnAccion" type="submit" class="buttonTipo">
+                                                <div class="circulo">
+                                                    <img src="../img/restaurantes/categorias/"
+                                                        aria-hidden="true" class="">
+                                                </div>
+                                                <div aria-hidden="true" class="sc-tl2hnw-0 hNbawF">Todos</div>
+                                            </button>
+                                        </form>
+                                    </div>
                                     <?php foreach($listaTipoLocales as $tipoLocal) { ?>
                                         <div aria-label="" class="tipo">
                                         <form class="tipo" action="restaurantes.php" method="POST">
@@ -50,7 +62,7 @@ if ($_POST) {
                                             </button>
                                         </form>
                                         </div>
-                                        <?php } ?>
+                                    <?php } ?>
                                         
                                     </div>
                                 </div>

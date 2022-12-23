@@ -78,7 +78,7 @@ switch($accion){
       case 4: $fech= "Jueves"; break;
       case 5: $fech= "Viernes"; break;
       case 6: $fech= "Sabado"; break;
-  } 
+    } 
     $txtApertura = date("H:i:s",strtotime($txtApertura));
     $txtCierre = date("H:i:s",strtotime($txtCierre));
     $sentenciaSQL = $conexion->prepare("INSERT INTO horario (Horario_Fecha,Horario_Dia,Horario_Apertura,Horario_Cierre,Horario_LocalId) VALUES (:Horario_Fecha,:Horario_Dia,:Horario_Apertura,:Horario_Cierre,:Horario_LocalId)");
@@ -88,6 +88,15 @@ switch($accion){
       $sentenciaSQL->bindParam(':Horario_Cierre',$txtCierre);
       $sentenciaSQL->bindParam(':Horario_LocalId',$txtID);
       $sentenciaSQL->execute();
+
+    foreach ($listaProductos as $listastock) {
+      $stock=(isset($_POST[$listastock['Prod_Nombre']])) ? $_POST[$listastock['Prod_Nombre']] : "";
+      $sentenciaSQL = $conexion->prepare("INSERT INTO stock_producto (Stock_ProdId,Stock_LocalId,Stock_Cantidad) VALUES (:Stock_ProdId,:Stock_LocalId,:Stock_Cantidad)");
+      $sentenciaSQL->bindParam(':Stock_ProdId',$listastock['Prod_Id']);
+      $sentenciaSQL->bindParam(':Stock_LocalId',$txtID);
+      $sentenciaSQL->bindParam(':Stock_Cantidad',$stock);
+      $sentenciaSQL->execute();
+    }
       header("Location:local.php");
     break;
   case "Cancelar":
@@ -112,6 +121,14 @@ $sentenciaSQL->bindParam(':Horario_LocalId',$txtID);
 $sentenciaSQL->bindParam(':Horario_Fecha',$fechaActual);
 $sentenciaSQL->execute();
 $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
+
+$sentenciaSQL = $conexion->prepare("SELECT * FROM producto
+JOIN local ON Local_Id = :Local_Id
+WHERE Prod_LocalId = :Local_Id
+ORDER BY Prod_Nombre ASC");
+$sentenciaSQL->bindParam(':Local_Id',$txtID);
+$sentenciaSQL->execute();
+$listaProductos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <section class="backgroundProfile">
@@ -395,7 +412,15 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                   <input type="text" required class="form-control" value="" name="txtCierre" id="txtCierre" placeholder="Horario: 23:20:30">
                 </div>
                   <!-- <input type="text"  required class="form-control" value="<?php echo $txtTipo; ?>" name="txtTipo" id="txtTipo" placeholder="Tipo Local"> -->
-
+                <br>
+                <h4>Stock</h4>
+                <br>
+                <?php foreach ($listaProductos as $lista) { ?>
+                <div class="form-group">
+                  <label for="txtNombre" class="form-label"><?php echo $lista['Prod_Nombre'] ?></label>
+                  <input type="number" required class="form-control" value="" name="<?php echo $lista['Prod_Nombre'] ?>" id="<?php echo $lista['Prod_Nombre'] ?>" placeholder="Stock para hoy">
+                </div>
+                <?php } ?>
                 <br>
                 <div class="btn-group" role="group" aria-label="">
                     <button type="submit" name="accion" value="Abrir" class="btn btn-primary">Abrir</button>
