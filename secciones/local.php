@@ -9,6 +9,8 @@ $txtUbicacion=(isset($_POST['txtUbicacion'])) ? $_POST['txtUbicacion'] : $_SESSI
 $txtDueño=(isset($_POST['txtDueño'])) ? $_POST['txtDueño'] : $_SESSION['nombre'];
 $txtTipo=(isset($_POST['txtTipo'])) ? $_POST['txtTipo'] : $_SESSION['tipo'];
 $txtUbiRef=(isset($_POST['txtUbiRef'])) ? $_POST['txtUbiRef'] : $_SESSION['ubicacionRef'];
+$txtApertura=(isset($_POST['txtApertura'])) ? $_POST['txtApertura'] : "";
+$txtCierre=(isset($_POST['txtCierre'])) ? $_POST['txtCierre'] : "";
 $accion=(isset($_POST['accion'])) ? $_POST['accion'] : "";
 
 $sentenciaSQL = $conexion->prepare("SELECT * FROM tipo_local");
@@ -64,6 +66,30 @@ switch($accion){
     header("Location:local.php");
     /* echo "Presionado boton Modificar"; */
     break;
+  case "Abrir":
+    $abierto = date("Y-m-d",time());
+    $time = date("Y-m-d",time());
+    $time = strtotime($time);
+    switch (date('w', $time)){
+      case 0: $fech= "Domingo"; break;
+      case 1: $fech= "Lunes"; break;
+      case 2: $fech= "Martes"; break;
+      case 3: $fech= "Miercoles"; break;
+      case 4: $fech= "Jueves"; break;
+      case 5: $fech= "Viernes"; break;
+      case 6: $fech= "Sabado"; break;
+  } 
+    $txtApertura = date("H:i:s",strtotime($txtApertura));
+    $txtCierre = date("H:i:s",strtotime($txtCierre));
+    $sentenciaSQL = $conexion->prepare("INSERT INTO horario (Horario_Fecha,Horario_Dia,Horario_Apertura,Horario_Cierre,Horario_LocalId) VALUES (:Horario_Fecha,:Horario_Dia,:Horario_Apertura,:Horario_Cierre,:Horario_LocalId)");
+      $sentenciaSQL->bindParam(':Horario_Fecha',$abierto);
+      $sentenciaSQL->bindParam(':Horario_Dia',$fech);
+      $sentenciaSQL->bindParam(':Horario_Apertura',$txtApertura);
+      $sentenciaSQL->bindParam(':Horario_Cierre',$txtCierre);
+      $sentenciaSQL->bindParam(':Horario_LocalId',$txtID);
+      $sentenciaSQL->execute();
+      header("Location:local.php");
+    break;
   case "Cancelar":
     header("Location:local.php");
     $txtID="";
@@ -79,6 +105,13 @@ switch($accion){
     $txtEmail="";
     break;
 }
+$fechaActual = date("Y-m-d",time());
+
+$sentenciaSQL = $conexion->prepare("SELECT * FROM horario WHERE Horario_LocalId = :Horario_LocalId AND Horario_Fecha = :Horario_Fecha");
+$sentenciaSQL->bindParam(':Horario_LocalId',$txtID);
+$sentenciaSQL->bindParam(':Horario_Fecha',$fechaActual);
+$sentenciaSQL->execute();
+$localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
 ?>
 
 <section class="backgroundProfile">
@@ -111,6 +144,11 @@ switch($accion){
                 <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($txtID,cod,key); ?>">
                 <button class="btn btn-outline-primary ms-1 botonModal" name="btnAccion" type="submit">Ver Productos</button>
               </form>
+              <?php if ($localAbierto['Horario_LocalId'] == $txtID) { ?>
+              <button disabled class="btn btn-outline-primary ms-1 botonModal" name="btnAccion" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal2">Abrir Local</button>
+              <?php }else{ ?>
+                <button class="btn btn-outline-primary ms-1 botonModal" name="btnAccion" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal2">Abrir Local</button>
+              <?php } ?>
             </div>
           </div>
         </div>
@@ -325,6 +363,42 @@ switch($accion){
                 <br>
                 <div class="btn-group" role="group" aria-label="">
                     <button type="submit" name="accion" value="Modificar" class="btn btn-primary">Modificar</button>
+                    <button type="submit" name="accion" value="Cancelar" class="btn btn-secondary">Cancelar</button>
+                </div>
+        
+          </form>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Local</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form method="POST" enctype="multipart/form-data" action="">
+                <div class="form-group">
+                  <label for="txtNombre" class="form-label">Apertura:</label>
+                  <input type="text" required class="form-control" value="" name="txtApertura" id="txtApertura" placeholder="Horario: 09:20:30">
+                </div>
+
+                <div class="form-group">
+                  <label for="txtNombre" class="form-label">Cierre:</label>
+                  <input type="text" required class="form-control" value="" name="txtCierre" id="txtCierre" placeholder="Horario: 23:20:30">
+                </div>
+                  <!-- <input type="text"  required class="form-control" value="<?php echo $txtTipo; ?>" name="txtTipo" id="txtTipo" placeholder="Tipo Local"> -->
+
+                <br>
+                <div class="btn-group" role="group" aria-label="">
+                    <button type="submit" name="accion" value="Abrir" class="btn btn-primary">Abrir</button>
                     <button type="submit" name="accion" value="Cancelar" class="btn btn-secondary">Cancelar</button>
                 </div>
         

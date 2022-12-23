@@ -67,6 +67,7 @@ if ($_POST) {
                                     </div>
                                     <?php if (!empty($listaLocalesPorTipo)) {?>
                                         <?php foreach($listaLocalesPorTipo as $local) { ?>
+                                        <?php if ($local['Local_Status'] == 1) { ?>
                                         <form class="container__CardRest" action="restaurante.php" method="POST">
                                             <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($local['Local_Id'],cod,key); ?>">
                                             <button class="conteinerCardResta" name="btnAccion" type="submit">
@@ -87,8 +88,10 @@ if ($_POST) {
                                             </button>
                                         </form>
                                         <?php } ?>
+                                        <?php } ?>
                                     <?php }else{ ?>
                                         <?php foreach($listaLocales as $local) { ?>
+                                        <?php if ($local['Local_Status'] == 1) { ?>
                                         <form class="container__CardRest" action="restaurante.php" method="POST">
                                             <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($local['Local_Id'],cod,key); ?>">
                                             <button class="conteinerCardResta" name="btnAccion" type="submit">
@@ -108,6 +111,7 @@ if ($_POST) {
                                                 </div>
                                             </button>
                                         </form>
+                                        <?php } ?>
                                         <?php } ?>
                                     <?php } ?>
                                 </div>
