@@ -22,6 +22,7 @@ $localesTipos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
       $txtUbicacionRef = ($_POST['txtUbicacionRef']);
       $txtContrasena = ($_POST['txtContrasena']);
       $txtContrasenaRep = ($_POST['txtContrasenaRep']);
+      $txtRolId = 2;
       $txtImagen = 'user_icon.png';
       
       $prueba = $conexion->prepare("SELECT COUNT(Local_Nombre) AS cantidad FROM local WHERE Local_Nombre=?");
@@ -63,7 +64,7 @@ $localesTipos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
         }
         else{
 
-          $sentenciaSQL = $conexion->prepare("INSERT INTO local (Local_Nombre,Local_Imagen,Local_Status,Local_Telefono,Local_Ubicacion,Local_Dueno,Local_Tipo,Local_UbiRrefe,Local_Contrasena,Local_Email) VALUES (:Local_Nombre,:Local_Imagen,1,:Local_Telefono,:Local_Ubicacion,:Local_Dueno,:Local_Tipo,:Local_UbiRrefe,:Local_Contrasena,:Local_Email);");
+          $sentenciaSQL = $conexion->prepare("INSERT INTO local (Local_Nombre,Local_Imagen,Local_Status,Local_Telefono,Local_Ubicacion,Local_Dueno,Local_Tipo,Local_UbiRrefe,Local_Contrasena,Local_Email,Local_RolId) VALUES (:Local_Nombre,:Local_Imagen,1,:Local_Telefono,:Local_Ubicacion,:Local_Dueno,:Local_Tipo,:Local_UbiRrefe,:Local_Contrasena,:Local_Email,:Local_RolId);");
           $sentenciaSQL->bindParam(':Local_Nombre',$txtNombre);
           $sentenciaSQL->bindParam(':Local_Imagen',$txtImagen);
           $sentenciaSQL->bindParam(':Local_Telefono',$txtTelefono);
@@ -73,6 +74,7 @@ $localesTipos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
           $sentenciaSQL->bindParam(':Local_UbiRrefe',$txtUbicacionRef);
           $sentenciaSQL->bindParam(':Local_Contrasena',$txtContrasena);
           $sentenciaSQL->bindParam(':Local_Email',$txtEmail);
+          $sentenciaSQL->bindParam(':Local_RolId',$txtRolId);
           $sentenciaSQL->execute();
   
           $sentenciaSQL = $conexion->prepare("SELECT * FROM local WHERE Local_Email=:Local_Email AND Local_Contrasena=:Local_Contrasena");
@@ -93,7 +95,8 @@ $localesTipos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
           $_SESSION['telefono']=$locales['Local_Telefono'];
           $_SESSION['idUsuario']=$locales['Local_Id'];
           $_SESSION['imagen']= $locales['Local_Imagen'];
-          $_SESSION['idRol']= 2;
+          $_SESSION['idRol']= $locales['Local_RolId'];
+          $_SESSION['status']= $locales['Local_Status'];
           header("Location:local.php");
         }
 
