@@ -17,6 +17,14 @@ $sentenciaSQL = $conexion->prepare("SELECT * FROM tipo_local");
 $sentenciaSQL->execute();
 $localesTipos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
+$sentenciaSQL = $conexion->prepare("SELECT * FROM producto
+JOIN local ON Local_Id = :Local_Id
+WHERE Prod_LocalId = :Local_Id
+ORDER BY Prod_Nombre ASC");
+$sentenciaSQL->bindParam(':Local_Id',$txtID);
+$sentenciaSQL->execute();
+$listaProductos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
+
 switch($accion){
 
   case "Modificar":
@@ -88,13 +96,16 @@ switch($accion){
       $sentenciaSQL->bindParam(':Horario_Cierre',$txtCierre);
       $sentenciaSQL->bindParam(':Horario_LocalId',$txtID);
       $sentenciaSQL->execute();
+      $idHorario = $conexion->lastInsertId();
 
     foreach ($listaProductos as $listastock) {
-      $stock=(isset($_POST[$listastock['Prod_Nombre']])) ? $_POST[$listastock['Prod_Nombre']] : "";
-      $sentenciaSQL = $conexion->prepare("INSERT INTO stock_producto (Stock_ProdId,Stock_LocalId,Stock_Cantidad) VALUES (:Stock_ProdId,:Stock_LocalId,:Stock_Cantidad)");
+      $stock=(isset($_POST[$listastock['Prod_Id']])) ? $_POST[$listastock['Prod_Id']] : "";
+      echo $stock;
+      $sentenciaSQL = $conexion->prepare("INSERT INTO stock_producto (Stock_ProdId,Stock_LocalId,Stock_Cantidad,Stock_HorarioId) VALUES (:Stock_ProdId,:Stock_LocalId,:Stock_Cantidad,:Stock_HorarioId)");
       $sentenciaSQL->bindParam(':Stock_ProdId',$listastock['Prod_Id']);
       $sentenciaSQL->bindParam(':Stock_LocalId',$txtID);
       $sentenciaSQL->bindParam(':Stock_Cantidad',$stock);
+      $sentenciaSQL->bindParam(':Stock_HorarioId',$idHorario);
       $sentenciaSQL->execute();
     }
       header("Location:local.php");
@@ -122,13 +133,7 @@ $sentenciaSQL->bindParam(':Horario_Fecha',$fechaActual);
 $sentenciaSQL->execute();
 $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
 
-$sentenciaSQL = $conexion->prepare("SELECT * FROM producto
-JOIN local ON Local_Id = :Local_Id
-WHERE Prod_LocalId = :Local_Id
-ORDER BY Prod_Nombre ASC");
-$sentenciaSQL->bindParam(':Local_Id',$txtID);
-$sentenciaSQL->execute();
-$listaProductos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 <section class="backgroundProfile">
@@ -418,7 +423,7 @@ $listaProductos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                 <?php foreach ($listaProductos as $lista) { ?>
                 <div class="form-group">
                   <label for="txtNombre" class="form-label"><?php echo $lista['Prod_Nombre'] ?></label>
-                  <input type="number" required class="form-control" value="" name="<?php echo $lista['Prod_Nombre'] ?>" id="<?php echo $lista['Prod_Nombre'] ?>" placeholder="Stock para hoy">
+                  <input type="number" required class="form-control" value="" name="<?php echo $lista['Prod_Id'] ?>" id="<?php echo $lista['Prod_Id'] ?>" placeholder="Stock para hoy">
                 </div>
                 <?php } ?>
                 <br>

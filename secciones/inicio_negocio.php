@@ -40,7 +40,8 @@ error_reporting(0);
           $_SESSION['telefono']=$locales['Local_Telefono'];
           $_SESSION['idUsuario']=$locales['Local_Id'];
           $_SESSION['imagen']= $locales['Local_Imagen'];
-          $_SESSION['idRol']= 2;
+          $_SESSION['idRol']= $locales['Local_RolId'];
+          $_SESSION['status']= $locales['Local_Status'];
           header("Location:./local.php");
       }
       else if(!$atributos['success']){

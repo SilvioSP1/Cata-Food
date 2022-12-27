@@ -16,6 +16,12 @@ $sentenciaSQL = $conexion->prepare("SELECT * FROM tipo_producto");
 $sentenciaSQL->execute();
 $tipoProducto = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
+$sentenciaSQL = $conexion->prepare("SELECT * FROM stock_producto WHERE Stock_ProdId = :Stock_ProdId AND Stock_LocalId = :Stock_LocalId");
+$sentenciaSQL->bindParam(':Stock_ProdId',$userid);
+$sentenciaSQL->bindParam(':Stock_LocalId',$_SESSION['idUsuario']);
+$sentenciaSQL->execute();
+$stockProducto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
+
 foreach($listaProductos as $producto) {
 ?>
 <!DOCTYPE html>
@@ -59,10 +65,15 @@ foreach($listaProductos as $producto) {
             <div class="flexBotones">
 
                 <input type="number" class="form-control-sm conta" name="conta" id="conta" placeholder="Unidades" value="1">
+                <?php if ($_SESSION['status'] == 3 && $stockProducto['Stock_Cantidad'] > 0) {?>
                 <button class="botonAgregar btn btn-warning" name="btnAccion" value="Agregar" type="submit" id="agregarr">
                     Agregar a carrito
                 </button>
-
+                <?php } else if ($_SESSION['status'] == 4 || $stockProducto['Stock_Cantidad'] < 0) { ?>
+                <button disabled class="botonAgregar btn btn-warning" name="btnAccion" value="Agregar" type="submit" id="agregarr">
+                    Agregar a carrito
+                </button>
+                <?php } ?>
             </div>
         </form>
     <?php }else{ ?>
