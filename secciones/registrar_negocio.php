@@ -185,6 +185,21 @@ $localesTipos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                         <input id="place_input" type="text" placeholder="  Ubicacion  " name="txtUbicacion" id="txtUbicacion">
                         <span class="input-border"></span>
                         <div id="map"></div>
+
+                        <!-- <div id="map" width="100%" style="height: 280px;"></div> -->   
+                        <input hidden type="text" name="input-address-formated" id="input-address-formated"> 
+                        <input hidden type="text" name="input-address" id="input-address">
+                        <input hidden type="text" name="input-city" id="input-city">
+                        <input hidden type="text" name="input-country" id="input-country">
+                        <input hidden type="text" name="input-postal-code" id="input-postal-code">
+                        <input hidden type="text" name="input-street" id="input-street">
+                        <input hidden type="text" name="input-exterior-number" id="input-exterior-number">
+                        <input hidden type="text" name="latitude" id="latitude">
+                        <input hidden type="text" name="longitude" id="longitude">
+                        
+                        
+                        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+                        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB55y13evt4FRyWHg_8Wn71KVYdj9aQHPo&libraries=places&callback=initMap"></script>
                         
                         <input type="text" placeholder=" Referencia de ubicacion " required name="txtUbicacionRef" id="txtUbicacionRef">
                         <span class="textoRegister">¿Ya tienes un local? <a href="inicio_negocio.php">Iniciar Sesion</a></span>
@@ -228,10 +243,10 @@ $localesTipos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
   <script src="../js/loader.js"></script>
   <script src="../js/map.js?v=<?php echo time(); ?>"></script>
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
 
   <!-- Cargar la API de maps javascript -->
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB55y13evt4FRyWHg_8Wn71KVYdj9aQHPo&libraries=places&callback=initMap"></script>
+  <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB55y13evt4FRyWHg_8Wn71KVYdj9aQHPo&libraries=places&callback=initMap"></script> -->
 
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
