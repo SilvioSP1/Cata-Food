@@ -76,7 +76,7 @@ foreach($listaProductos as $producto) {
                 <?php } ?>
             </div>
         </form>
-    <?php }else{ ?>
+    <?php }else if($_SESSION['idRol'] == 2 || $_SESSION['idRol'] == 3){ ?>
         <form method="POST" enctype="multipart/form-data" action="">
             <input type="hidden" name="txtID" id="txtID" value="<?php echo $producto['Prod_Id']; ?>">
             <div class="form-group">
@@ -133,6 +133,47 @@ foreach($listaProductos as $producto) {
                 <!-- <button type="submit" name="accion" <?php echo ($accion=="Seleccionar")?"disabled":""; ?> value="Agregar" class="btn btn-success">Agregar</button> -->
                 <button type="submit" name="accion2" value="Modificar" class="btn btn-warning">Modificar</button>
                 <button type="submit" name="accion2" value="Cancelar" class="btn btn-danger">Cancelar</button>
+            </div>
+        </form>
+    <?php }else{ ?>
+        <div class="padreTR">
+
+            <div class="flexTR">
+
+                <table class="tableTR">
+                    <tr class="containerTR">
+                        <td class="contenedorImagen"><img class="imageProducto"
+                                src="../img/restaurantes/productos/<?php echo $producto['Prod_Imagen']; ?>">
+                        <td class="descripcionProductos">
+                            <p>Nombre: <?php echo $producto['Prod_Nombre']; ?></p>
+                            <p>Descripción: <?php echo $producto['Prod_Descripcion']; ?></p>
+                            <p>Precio: $<?php echo $producto['Prod_Precio']; ?></p>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+
+        </div>
+
+        <form class="modal-footer" method="post">
+            <input type="hidden" name="Local_Nombre" id="Local_Nombre"
+                value="<?php echo openssl_encrypt($localNomb,cod,key); ?>">
+            <input type="hidden" name="Prod_Id" id="Prod_Id"
+                value="<?php echo openssl_encrypt($producto['Prod_Id'],cod,key); ?>">
+            <input type="hidden" name="Prod_Nombre" id="Prod_Nombre"
+                value="<?php echo openssl_encrypt($producto['Prod_Nombre'],cod,key); ?>">
+            <input type="hidden" name="Prod_Imagen" id="Prod_Imagen"
+                value="<?php echo openssl_encrypt($producto['Prod_Imagen'],cod,key); ?>">
+            <input type="hidden" name="Prod_Precio" id="Prod_Precio"
+                value="<?php echo openssl_encrypt($producto['Prod_Precio'],cod,key); ?>">
+            <input type="hidden" name="cantidad" id="cantidad" value="<?php echo openssl_encrypt(1,cod,key); ?>">
+            <div class="flexBotones">
+
+                <input disabled type="number" class="form-control-sm conta" name="conta" id="conta" placeholder="Unidades" value="1">
+                <button disabled class="botonAgregar btn btn-warning" name="btnAccion" value="Agregar" type="submit" id="agregarr">
+                    Agregar a carrito
+                </button>
             </div>
         </form>
     <?php } ?>
