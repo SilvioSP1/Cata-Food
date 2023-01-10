@@ -58,14 +58,14 @@
 
     <div class="mejoresTexto">
 
-        <h1>Top de los mejores restaurantes</h1>
+        <h1>Ultimas noticias de comida en el pais</h1>
 
     </div>
 
-    <div class="container__cardsTop">
+    <!-- <div class="container__cardsTop">
 
 
-        <div class="card1--top ">
+        <div class="card1--top" data-tilt data-tilt-glare data-tilt-max-glare="0.2">
 
             <img src="./img/index/topMejores.png" alt="" class="imgTop">
             <h1>Zona Norte</h1>
@@ -83,7 +83,7 @@
 
         </div>
 
-        <div class="card2--top ">
+        <div class="card2--top" data-tilt data-tilt-glare data-tilt-max-glare="0.2">
 
             <img src="./img/index/topMejores.png" alt="" class="imgTop">
             <h1>Zona Sur</h1>
@@ -101,7 +101,7 @@
 
         </div>
 
-        <div class="card3--top ">
+        <div class="card3--top" data-tilt data-tilt-glare data-tilt-max-glare="0.2">
 
             <img src="./img/index/topMejores.png" alt="" class="imgTop">
             <h1>Zona Centro</h1>
@@ -119,7 +119,71 @@
 
         </div>
 
+    </div> -->
+
+    <div class="contenedorIndexI">
+    <div class="containerIndex">
+        <div class="cardIndex" data-tilt data-tilt-glare data-tilt-max-glare=".5">
+            <div class="card-headerIndex">
+                <img src="./img/index/mostazaDibu.jpg" alt="dibu" class="imagenCards"/>
+            </div>
+            <div class="card-bodyIndex">
+                <span class="tag tag-teal">Mostaza</span>
+                <h4>
+                El Dibu lo hizo: Tras su campaña, Mostaza invertirá US$20 millones y se espera la llegada a Misiones
+                </h4>
+                <div class="user">
+                    <img src="./img/index/noticiasComunes.ico"
+                        alt="user" class="imagenCards"/>
+                    <div class="user-infoIndex">
+                        <h5>Noticias Comunes</h5>
+                        <small>2h ago</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cardIndex" data-tilt data-tilt-glare data-tilt-max-glare=".5">
+            <div class="card-headerIndex">
+                <img src="./img/index/lomitosFotos.webp"
+                    alt="ballons" class="imagenCards"/>
+            </div>
+            <div class="card-bodyIndex">
+                <span class="tag tag-purple">Popular</span>
+                <h4>
+                    Semana del lomito: en estos locales hay 25 por ciento de descuento este miércoles por toda la semana entera
+                </h4>
+                <div class="user">
+                    <img src="./img/index/redaccionVos.webp"
+                        alt="user" class="imagenCards"/>
+                    <div class="user-infoIndex">
+                        <h5>Redacción Vos</h5>
+                        <small>Yesterday</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cardIndex" data-tilt data-tilt-glare data-tilt-max-glare=".5">
+            <div class="card-headerIndex">
+                <img src="./img/index/alfajoresNoticias.webp" alt="city" class="imagenCards"/>
+            </div>
+            <div class="card-bodyIndex">
+                <span class="tag tag-pink">Alfajores</span>
+                <h4>
+                    De Havanna a Guaymallen: los secretos del negocio que mueve 1000 millones de alfajores por año
+                </h4>
+                <div class="user">
+                    <img src="./img/index/javierLedesma.webp" alt="user" class="imagenCards"/>
+                    <div class="user-infoIndex">
+                        <h5>Javier Ledesma</h5>
+                        <small class="small">1w ago</small>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
 
     <div class="chat-bar-collapsible animate__animated animate__backInRight">
         <button id="chat-button" type="button" class="collapsible">¿Necesitas ayuda?
@@ -164,6 +228,18 @@
         </div>
 
     </div>
+
+    <script type="text/javascript" src="../../Cata-Food/js/vanilla-tilt.js">
+
+        VanillaTilt.init(document.querySelector(".card"), {
+            max: 15,
+            speed: 600,
+            perspective:1000,
+            transition:true,
+            reverse:false,
+        });
+
+    </script>
 
 
 </div>
