@@ -261,18 +261,27 @@ span.posted-at {
 
 //modal
 
-.restCenter{
+.modalRes{
+
+    padding: 2.4rem;
+
+}
+
+.modalText__rest{
 
     text-align: center;
 
 }
 
-.modal{
+.containerFinn{
 
-    width: 100%;
-    height: 100vh;
-    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
 
-    position: absolute;
+    .finnGif{
+
+        width: 10.5rem;
+    
+    }
 
 }

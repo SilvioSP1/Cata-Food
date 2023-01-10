@@ -377,6 +377,23 @@ switch ($accion) {
     </div>
 
 </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content modalRes">
+      <h3 class="modalText__rest">Gracias por visitar <?php echo $localNombre;?></h1>
+      <p>Compras superiores a 800$</p>
+      <p>Se puede pagar con dos tarjetas</p>
+      <p>Tarjetas: Mastercard, Visa y Cabal</p>
+      <div class="containerFinn">
+        <img src="../img/restaurantes/gif/finn.gif" alt="" class="finnGif">
+      </div>
+    </div>
+  </div>
+</div>
+
 <?php if ($_SESSION['idRol'] == 2) { ?>
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
