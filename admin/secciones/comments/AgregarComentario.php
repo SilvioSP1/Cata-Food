@@ -1,5 +1,5 @@
 <?php
-require_once ("../admin/config/db.php");
+require_once ("../../config/db.php");
 $commentId = isset($_POST['comentario_id']) ? $_POST['comentario_id'] : "";
 $comment = isset($_POST['comment']) ? $_POST['comment'] : "";
 $commentSenderName = isset($_POST['name']) ? $_POST['name'] : "";

@@ -1,5 +1,5 @@
 <?php
-require_once ("../admin/config/db.php");
+require_once ("../../config/db.php");
 
 $memberId = 1;
 $commentId = $_POST['comentario_id'];

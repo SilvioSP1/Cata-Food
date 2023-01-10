@@ -1,5 +1,5 @@
 <?php
-require_once ("../admin/config/db.php");
+require_once ("../../config/db.php");
 $memberId = 1;
 $sql = "SELECT comentario.*,megusta_nomegusta.like_unlike FROM comentario LEFT JOIN megusta_nomegusta ON comentario.comentario_id = megusta_nomegusta.comentario_id AND member_id = " . $memberId . " ORDER BY parent_comentario_id asc, comentario_id asc";
 
