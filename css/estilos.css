@@ -1200,6 +1200,9 @@ p {
   width: 50%;
 }
 
+.conteiner_restaurantes {
+  height: 800px;
+}
 .conteiner_restaurantes .containerColum {
   margin-top: 5px;
 }
@@ -1272,6 +1275,273 @@ p {
 .conteiner_restaurantes .containerColum .columnas .conteinerProductos .producto .contenedorTexto .ingredientes {
   padding-bottom: 0;
   text-align: initial;
+}
+
+.wrapperRate {
+  position: relative;
+  width: 650px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15.3rem;
+  --color-yellow: #ffcc48;
+  --color-border: #f4f4f4;
+  --color-primary: #393a5d;
+  --color-secondary: #888999;
+  --color-blue: #537ae1;
+}
+.wrapperRate .fa-star, .wrapperRate .fa-star-half {
+  color: var(--color-yellow);
+}
+.wrapperRate .rating-box {
+  background-color: #fff;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 1rem 2rem 2rem;
+  box-shadow: 0 0 10px #e6e6e6;
+}
+.wrapperRate .rating-header .titleRate {
+  text-align: center;
+  font-size: 18px;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+.wrapperRate .info-review {
+  display: flex;
+  align-items: center;
+  bottom: 1px solid var(--color-border);
+  margin: 0 -2rem;
+  padding: 20px 2rem;
+}
+.wrapperRate .info-review .left {
+  display: flex;
+  flex-grow: 1;
+  margin-right: 10px;
+}
+.wrapperRate .info-review .left img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.wrapperRate .info-review .left .text-container {
+  margin: 0 8px;
+  font-weight: 600;
+  width: 100%;
+}
+.wrapperRate .info-review .left .txt, .wrapperRate .info-review .left .author {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-word;
+}
+.wrapperRate .info-review .left .txt {
+  margin-bottom: 5px;
+  -webkit-line-clamp: 2;
+}
+.wrapperRate .info-review .left .author {
+  color: var(--color-secondary);
+  -webkit-line-clamp: 1;
+}
+.wrapperRate .info-rating {
+  padding: 20px 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapperRate .info-rating .avg {
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 28px;
+  margin-right: 3px;
+}
+.wrapperRate .info-rating .rating-count {
+  margin-top: 5px;
+  text-align: right;
+}
+.wrapperRate .rating-bar .bar-item {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+.wrapperRate .rating-bar .bar-item:not(:last-child) {
+  margin-bottom: 5px;
+}
+.wrapperRate .rating-bar .star i {
+  margin-left: 3px;
+}
+.wrapperRate .rating-bar .star, .wrapperRate .rating-bar .percent {
+  color: var(--color-blue);
+  flex-shrink: 0;
+}
+.wrapperRate .rating-bar .progress {
+  flex-grow: 1;
+  margin: 0 10px;
+  height: 8px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #f5f8ff;
+}
+.wrapperRate .rating-bar .progress-line {
+  height: 100%;
+  width: 0%;
+  transition: all 0.4s ease-in;
+  background-color: var(--color-yellow);
+}
+.wrapperRate .review-box {
+  padding: 30px 0 0;
+}
+.wrapperRate .review-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--color-secondary);
+  margin-bottom: 15px;
+  margin-right: 5px;
+}
+.wrapperRate .review-header .count-review span {
+  margin-right: 5px;
+}
+.wrapperRate .review-header .txt {
+  font-weight: 600;
+  cursor: pointer;
+}
+.wrapperRate .review-content {
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+.wrapperRate .review-content::-webkit-scrollbar {
+  width: 5px;
+}
+.wrapperRate .review-content::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+.wrapperRate .review-content::-webkit-scrollbar-thumb {
+  visibility: hidden;
+  border-radius: 10px;
+  background-color: #ebebeb;
+}
+.wrapperRate .review-content:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+.wrapperRate .review-content .user-review:not(:last-child) {
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 15px;
+}
+.wrapperRate .review-content .user-rating {
+  display: flex;
+  justify-content: space-between;
+}
+.wrapperRate .review-content .stars {
+  font-size: 14px;
+}
+.wrapperRate .review-content .comment-content {
+  padding: 10px 0;
+  color: var(--color-secondary);
+}
+.wrapperRate .review-content time {
+  color: var(--color-secondary);
+}
+.wrapperRate .feedback-user {
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  transform: scale(0.9);
+  opacity: 0;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background-color: #fff;
+  border-radius: 20px;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  backface-visibility: hidden;
+}
+.wrapperRate .feedback-user.show {
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+.wrapperRate .feedback-user .feedback-header, .wrapperRate .feedback-user .feedback-content {
+  padding: 2rem;
+}
+.wrapperRate .feedback-user .feedback-header {
+  color: #fff;
+  background-color: var(--color-blue);
+}
+.wrapperRate .feedback-user .feedback-header .titleRate {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 24px;
+}
+.wrapperRate .feedback-user .feedback-header .txt {
+  line-height: 1.5;
+}
+.wrapperRate .feedback-user .feedback-header .close-btn i {
+  cursor: pointer;
+}
+.wrapperRate .feedback-user .feedback-header .close-btn {
+  text-align: right;
+}
+.wrapperRate .feedback-user .feedback-content .rating {
+  font-weight: 600;
+  color: var(--color-primary);
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+.wrapperRate .feedback-user .feedback-content .stars {
+  font-size: 20px;
+}
+.wrapperRate .feedback-user .feedback-content .form {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+}
+.wrapperRate .feedback-user .feedback-content .form .form-input:nth-child(1) {
+  margin-bottom: 1rem;
+}
+.wrapperRate .feedback-user .feedback-content .form label {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: var(--color-secondary);
+}
+.wrapperRate .feedback-user .feedback-content .form input, .wrapperRate .feedback-user .feedback-content .form textarea {
+  background-color: #f5f9fb;
+  border: none;
+  outline: none;
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px 12px;
+  border: 1px solid transparent;
+}
+.wrapperRate .feedback-user .feedback-content .form input:focus, .wrapperRate .feedback-user .feedback-content .form textarea:focus {
+  border-color: #d3d3d3;
+}
+.wrapperRate .feedback-user .feedback-content .form input::placeholder, .wrapperRate .feedback-user .feedback-content .form textarea::placeholder {
+  color: var(--color-primary);
+}
+.wrapperRate .feedback-user .feedback-content .form textarea {
+  resize: none;
+}
+.wrapperRate .feedback-user .feedback-content .submit {
+  color: #fff;
+  background-color: var(--color-blue);
+  outline: none;
+  border: none;
+  padding: 12px;
+  font-size: 17px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .sectionCarrito {

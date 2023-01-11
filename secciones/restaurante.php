@@ -476,284 +476,240 @@ switch ($accion) {
 
     <?php } ?>
 
-    <div class="row contenedorComentarios">
-        <div class="col-md-6">
-
-        <div class="containerRating__flex">
-
-        <div class="containerRating">
-                    <div class="postRating">
-                        <div class="text">Gracias por valorar!</div>
-                        <div class="edit">EDITAR</div>
+    <div class="wrapperRate">
+        <div class="rating-box">
+            <div class="rating-header">
+                <div class="titleRate">Valoraciones</div>
+                <div class="info-review">
+                    <div class="left">
+                        <img src="../img/restaurantes/locales/betoslomos.png" alt="">
+                        <div class="text-container">
+                            <span class="txt">Betos Lomos</span>
+                            <span class="author">Sarmiento 520</span>
+                        </div>
                     </div>
-                    <div class="star-widget">
-                        <input type="radio" name="rate" id="rate-5" class="inputRating">
-                        <label for="rate-5" class="fas fa-star labelRating"></label>
-                        <input type="radio" name="rate" id="rate-4" class="inputRating">
-                        <label for="rate-4" class="fas fa-star labelRating"></label>
-                        <input type="radio" name="rate" id="rate-3" class="inputRating">
-                        <label for="rate-3" class="fas fa-star labelRating"></label>
-                        <input type="radio" name="rate" id="rate-2" class="inputRating">
-                        <label for="rate-2" class="fas fa-star labelRating"></label>
-                        <input type="radio" name="rate" id="rate-1" class="inputRating">
-                        <label for="rate-1" class="fas fa-star labelRating"></label>
-                        <form action="#" class="formRating">
-                            <header class="headerRating"></header>
-                            <div class="textarea">
-                                <textarea cols="30" placeholder="Describe your experience.."></textarea>
-                            </div>
-                            <div class="btnRating">
-                                <button type="submit" class="btnSubmit">Post</button>
-                            </div>
-                        </form>
-                    </div>
+                    <!-- end left -->
+
+                    <!-- end right -->
+
                 </div>
+
+                <!-- end info review -->
+
+                <div class="info-rating">
+
+                    <div class="star-count">
+
+                        <span class="avg">4.9</span>DE 5
+
+                    </div>
+
+                    <div class="stars">
+                        <div class="avg-stars">
+
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            
+                        </div>
+                        <div class="rating-count">
+                            <div class="count">244</div>
+                            ratings
+                        </div>
+                    </div>
+
+                    <!-- end stars -->
+
+                </div>
+
+                <!-- end info rating -->
+
+                <div class="rating-bar">
+
+                    <div class="bar-item">
+
+                        <div class="star">
+                            5 <i class="fas fa-star"></i>
+                        </div>
+
+                        <div class="progress">
+                            <div class="progress-line" style="width: 67%"></div>
+                        </div>
+
+                        <div class="percent">67%</div>
+
+                    </div>
+
+                    
+
+                    <div class="bar-item">
+
+                        <div class="star">
+                            4 <i class="fas fa-star"></i>
+                        </div>
+    
+                        <div class="progress">
+                            <div class="progress-line" style="width: 13%"></div>
+                        </div>
+
+                        <div class="percent">13%</div>
+    
+                    </div>
+    
+                    
+    
+                    <div class="bar-item">
+    
+                        <div class="star">
+                            3 <i class="fas fa-star"></i>
+                        </div>
+    
+                        <div class="progress">
+                            <div class="progress-line" style="width: 15%"></div>
+                        </div>
+
+                        <div class="percent">15%</div>
+    
+                    </div>
+    
+                    
+    
+                    <div class="bar-item">
+    
+                        <div class="star">
+                            2 <i class="fas fa-star"></i>
+                        </div>
+    
+                        <div class="progress">
+                            <div class="progress-line" style="width: 3%"></div>
+                        </div>
+    
+                        <div class="percent">3%</div>
+
+                    </div>
+    
+                    
+    
+                    <div class="bar-item">
+    
+                        <div class="star">
+                            1 <i class="fas fa-star"></i>
+                        </div>
+    
+                        <div class="progress">
+                            <div class="progress-line" style="width: 2%"></div>
+                        </div>
+
+                        <div class="percent">2%</div>
+    
+                    </div>
+    
+                    
+                    
+                </div>
+
+                <!-- end rating bar -->
+
+            </div>
+
+            <!-- end rating header -->
+
+            <div class="review-box">
+
+                <div class="review-header">
+
+                    <div class="count-review"><span>13</span>Valoraciones</div>
+                    <div class="txt btn-write">Escribe un comentario</div>
+
+                </div>
+
+                <div class="review-content">
+
+                    <div class="user-review">
+    
+                        <!-- end user review -->
+    
+                    </div>
+    
+                </div>
+
+                    <!-- end user review -->
+
+                </div>
+
+            </div>
+
+            <!-- end rating box -->
+
+            <div class="feedback-user show">
+
+                <div class="feedback-header">
+
+                    <div class="close-btn"><i class="fas fa-times"></i></div>
+
+                    <div class="title">Envianos tu comentario</div>
+                    <div class="txt">
+                        Tienes alguna duda? No olvides de dejar tu comentario para que sepamos
+                    </div>
+
+                </div>
+
+                <div class="feedback-content">
+
+
+                    <div class="rating">
+
+                        <div class="title">Como fue tu experiencia</div>
+    
+                        <div class="stars">
+    
+                            <i class="fas fa-star" data-rating="1"></i>
+                            <i class="fas fa-star" data-rating="2"></i>
+                            <i class="fas fa-star" data-rating="3"></i>
+                            <i class="fas fa-star" data-rating="4"></i>
+                            <i class="fas fa-star" data-rating="5"></i>
+    
+                        </div>
+    
+                    </div>
+                    
+                    <!-- end rating -->
+    
+                    <div class="form">
+    
+                        <div class="form-input">
+    
+                            <label for="name">Tu nombre</label>
+                            <input type="text" id="name" placeholder="Ingresa tu nombre">
+    
+                        </div>
+    
+                        <div class="form-input">
+    
+                            <label for="feedback">Tu comentario</label>
+                            <textarea name="" id="feedback" cols="30" rows="8" placeholder="Escribe tu comentario...."></textarea>
+    
+                        </div>
+    
+                    </div>
+    
+                    <!-- end form -->
+    
+                    <button class="submit">Enviar comentario</button>
+
+
+                </div>
+                
+                
+                
+
+            </div>
+
+            <!-- end feedback -->
 
         </div>
-
-            <div class="panel-body">
-
-                <!--Inicio elementos contenedor-->
-
-                <div class="comment-form-container">
-                    <form id="frm-comment">
-                        <div class="input-row">
-                            <input type="hidden" name="comentario_id" id="commentId" placeholder="Name" /> <input
-                                class="input-field" type="text" name="name" id="name" placeholder="Nombres" />
-                        </div>
-                        <div class="input-row">
-                            <textarea class="input-field textComment" type="text" name="comment" id="comment"
-                                placeholder="Agregar comentario">  </textarea>
-                        </div>
-                        <div>
-                            <input type="button" class="btn-submit" id="submitButton" value="Publicar Ahora" />
-                            <div id="comment-message">Comentario ha sido agregado exitosamente!</div>
-                        </div>
-                        <div style="clear:both"></div>
-                    </form>
-                </div>
-
-                <div id="output"></div>
-                <script>
-                    var totalLikes = 0;
-                    var totalUnlikes = 0;
-
-                    function postReply(commentId) {
-                        $('#commentId').val(commentId);
-                        $("#name").focus();
-                    }
-
-                    $("#submitButton").click(function () {
-                        $("#comment-message").css('display', 'none');
-                        var str = $("#frm-comment").serialize();
-
-                        $.ajax({
-                            url: "AgregarComentario.php",
-                            data: str,
-                            type: 'post',
-                            success: function (response) {
-                                var result = eval('(' + response + ')');
-                                if (response) {
-                                    $("#comment-message").css('display', 'inline-block');
-                                    $("#name").val("");
-                                    $("#comment").val("");
-                                    $("#commentId").val("");
-                                    listComment();
-                                } else {
-                                    alert("Failed to add comments !");
-                                    return false;
-                                }
-                            }
-                        });
-                    });
-
-                    $(document).ready(function () {
-                        listComment();
-                    });
-
-                    function listComment() {
-                        $.post("../../admin/comments/ListaDeComentarios.php",
-                            function (data) {
-                                var data = JSON.parse(data);
-
-                                var comments = "";
-                                var replies = "";
-                                var item = "";
-                                var parent = -1;
-                                var results = new Array();
-
-                                var list = $("<ul class='outer-comment'>");
-                                var item = $("<li>").html(comments);
-
-                                for (var i = 0;
-                                    (i < data.length); i++) {
-                                    var commentId = data[i]['comentario_id'];
-                                    parent = data[i]['parent_comentario_id'];
-
-                                    var obj = getLikesUnlikes(commentId);
-
-                                    if (parent == "0") {
-                                        if (data[i]['like_unlike'] >= 1) {
-                                            like_icon =
-                                                "<img src='../../Cata-Food/img/comentarios/MeGusta.png'  id='unlike_" +
-                                                data[i]['comentario_id'] +
-                                                "' class='like-unlike'  onClick='likeOrDislike(" + data[i][
-                                                    'comentario_id'
-                                                ] + ",-1)' />";
-                                            like_icon +=
-                                                "<img style='display:none;' src='../../Cata-Food/img/comentarios/NoMeGusta.png' id='like_" +
-                                                data[i]['comentario_id'] +
-                                                "' class='like-unlike' onClick='likeOrDislike(" + data[i][
-                                                    'comentario_id'
-                                                ] + ",1)' />";
-                                        } else {
-                                            like_icon =
-                                                "<img style='display:none;' src='../../Cata-Food/img/comentarios/MeGusta.png'  id='unlike_" +
-                                                data[i]['comentario_id'] +
-                                                "' class='like-unlike'  onClick='likeOrDislike(" + data[i][
-                                                    'comentario_id'
-                                                ] + ",-1)' />";
-                                            like_icon +=
-                                                "<img src='../../Cata-Food/img/comentarios/NoMeGusta.png' id='like_" +
-                                                data[i]['comentario_id'] +
-                                                "' class='like-unlike' onClick='likeOrDislike(" + data[i][
-                                                    'comentario_id'
-                                                ] + ",1)' />";
-
-                                        }
-
-                                        comments = "\
-                                        <div class='comment-row'>\
-                                            <div class='comment-info'>\
-                                                <span class='commet-row-label'>De</span>\
-                                                <span class='posted-by'>" + data[i]['comment_sender_name'] + "</span>\
-                                                <span class='commet-row-label'>a las </span> \
-                                                <span class='posted-at'>" + data[i]['date'] + "</span>\
-                                            </div>\
-                                            <div class='comment-text'>" + data[i]['comment'] + "</div>\
-                                            <div>\
-                                                <a class='btn-reply' onClick='postReply(" + commentId + ")'>Responder</a>\
-                                            </div>\
-                                            <div class='post-action'>\ " + like_icon + "&nbsp;\
-                                                <span id='likes_" + commentId + "'> " + totalLikes + " Me Gusta </span>\
-                                            </div>\
-                                        </div>";
-
-                                        var item = $("<li>").html(comments);
-                                        list.append(item);
-                                        var reply_list = $('<ul>');
-                                        item.append(reply_list);
-                                        listReplies(commentId, data, reply_list);
-                                    }
-                                }
-                                $("#output").html(list);
-                            });
-                    }
-
-                    function listReplies(commentId, data, list) {
-
-                        for (var i = 0;
-                            (i < data.length); i++) {
-
-                            var obj = getLikesUnlikes(data[i].comentario_id);
-                            if (commentId == data[i].parent_comentario_id) {
-                                if (data[i]['like_unlike'] >= 1) {
-                                    like_icon = "<img src='../../Cata-Food/img/comentarios/MeGusta.png'  id='unlike_" +
-                                        data[i]['comentario_id'] + "' class='like-unlike'  onClick='likeOrDislike(" +
-                                        data[i]['comentario_id'] + ",-1)' />";
-                                    like_icon +=
-                                        "<img style='display:none;' src='../../Cata-Food/img/comentarios/NoMeGusta.png' id='like_" +
-                                        data[i]['comentario_id'] + "' class='like-unlike' onClick='likeOrDislike(" +
-                                        data[i]['comentario_id'] + ",1)' />";
-
-                                } else {
-                                    like_icon =
-                                        "<img style='display:none;' src='../../Cata-Food/img/comentarios/NoMeGusta.png'  id='unlike_" +
-                                        data[i]['comentario_id'] + "' class='like-unlike'  onClick='likeOrDislike(" +
-                                        data[i]['comentario_id'] + ",-1)' />";
-                                    like_icon += "<img src='../../Cata-Food/img/comentarios/NoMeGusta.png' id='like_" +
-                                        data[i]['comentario_id'] + "' class='like-unlike' onClick='likeOrDislike(" +
-                                        data[i]['comentario_id'] + ",1)' />";
-
-                                }
-                                var comments = "\
-                                        <div class='comment-row'>\
-                                            <div class='comment-info'>\
-                                                <span class='commet-row-label'>De </span>\
-                                                <span class='posted-by'>" + data[i]['comment_sender_name'] + "</span>\
-                                                <span class='commet-row-label'>a las </span> \
-                                                <span class='posted-at'>" + data[i]['date'] + "</span>\
-                                            </div>\
-                                            <div class='comment-text'>" + data[i]['comment'] + "</div>\
-                                            <div>\
-                                                <a class='btn-reply' onClick='postReply(" + data[i]['comentario_id'] + ")'>Responder</a>\
-                                            </div>\
-                                            <div class='post-action'> " + like_icon + "&nbsp;\
-                                                <span id='likes_" + data[i]['comentario_id'] + "'> " + totalLikes + " Me Gusta </span>\
-                                            </div>\
-                                        </div>";
-
-                                var item = $("<li>").html(comments);
-                                var reply_list = $('<ul>');
-                                list.append(item);
-                                item.append(reply_list);
-                                listReplies(data[i].comentario_id, data, reply_list);
-                            }
-                        }
-                    }
-
-                    function getLikesUnlikes(commentId) {
-
-                        $.ajax({
-                            type: 'POST',
-                            async: false,
-                            url: 'Envio_MeGusta.php',
-                            data: {
-                                comentario_id: commentId
-                            },
-                            success: function (data) {
-                                totalLikes = data;
-                            }
-
-                        });
-
-                    }
-
-
-                    function likeOrDislike(comentario_id, like_unlike) {
-
-                        $.ajax({
-                            url: 'MeGusta_NoMeGusta.php',
-                            async: false,
-                            type: 'post',
-                            data: {
-                                comentario_id: comentario_id,
-                                like_unlike: like_unlike
-                            },
-                            dataType: 'json',
-                            success: function (data) {
-
-                                $("#likes_" + comentario_id).text(data + " likes");
-
-                                if (like_unlike == 1) {
-                                    $("#like_" + comentario_id).css("display", "none");
-                                    $("#unlike_" + comentario_id).show();
-                                }
-
-                                if (like_unlike == -1) {
-                                    $("#unlike_" + comentario_id).css("display", "none");
-                                    $("#like_" + comentario_id).show();
-                                }
-
-                            },
-                            error: function (data) {
-                                alert("error : " + JSON.stringify(data));
-                            }
-                        });
-                    }
-                </script>
-
-                <!--Fin elementos contenedor-->
-            </div>
+    </div>
 
             <?php include("../template/footer.php"); ?>
