@@ -24,7 +24,7 @@
 
 <div>
     <h1 class="titulo__Cata animate__animated animate__fadeInDown">Bienvenidos a Cata Food</h1>
-    <p>El mejor sitio donde encontrar comida en la ciudad de Catamarca</p>
+    <p>Empieza tus compras en los mejores restaurantes de la provincia.</p>
 </div>
 
 <!-- <div class="contenedorBuscador">
@@ -34,16 +34,19 @@
     </form>
 </div> -->
 
-<div class="wrapper">
-      <div class="search-input">
-        <a href="" target="_blank" hidden></a>
-        <input type="text" placeholder="Buscar...">
-        <div class="autocom-box">
-          
+<div class="buttonFlex">
+    <a href="../../Cata-Food/secciones/restaurantes.php">
+    <button class="cssbuttons-io-button"> Restaurantes
+        <div class="icon">
+            <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                    fill="currentColor"></path>
+            </svg>
         </div>
-        <div class="icon"><i class="fas fa-search"></i></div>
-      </div>
-    </div>
+    </button>
+    </a>
+</div>
 
 <div class="contenedorCards animate__animated animate__fadeIn">
 
