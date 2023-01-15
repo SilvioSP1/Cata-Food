@@ -57,7 +57,7 @@ closeFeedback.addEventListener("click", setDefaultRating);
 
 //submit feedback
 
-submitBtn.addEventListener("click", () => {
+/* submitBtn.addEventListener("click", () => {
 
     if(username.value !== '' && feedback.value !== ''){
 
@@ -138,7 +138,7 @@ submitBtn.addEventListener("click", () => {
 
     }
 
-})
+}) */
 
 function setDefaultRating(){
 
@@ -370,13 +370,22 @@ function calcRating(){
         ratingStars.avgRating = (sumStars / ratingStars.numRatings).toFixed(1);
     }
 
-    document.querySelector('.count-review span').textContent = ratingStars.numRatings;
-    document.querySelector('.rating-count .count').textContent = ratingStars.numRatings;
-    document.querySelector('.star-count .avg').textContent = ratingStars.avgRating;
+    /* document.querySelector('.count-review span').textContent = ratingStars.numRatings; */
+    /* document.querySelector('.rating-count .count').textContent = ratingStars.numRatings; */
+    /* document.querySelector('.star-count .avg').textContent = ratingStars.avgRating; */
     document.querySelector(".avg-stars").innerHTML = setStars(ratingStars.avgRating);
+    $.ajax({
+        method: 'post',
+        url: '../secciones/restaurante.php',
+        data: ratingStars,
+        success: function(response) {
+        console.log(ratingStars);
+        
+        }
+        });
     
 
     console.log(ratingStars);
-    console.log(sumStars);
+    /* console.log(sumStars); */
 
 }

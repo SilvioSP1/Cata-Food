@@ -49,6 +49,14 @@ $sentenciaSQL = $conexion->prepare("SELECT * FROM tipo_producto");
 $sentenciaSQL->execute();
 $tipoProducto = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
+$sentenciaSQL = $conexion->prepare("SELECT * FROM comentario");
+$sentenciaSQL->execute();
+$comentarios = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
+
+$sentenciaSQL = $conexion->prepare("SELECT * FROM usuario");
+$sentenciaSQL->execute();
+$usuarios = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
+
 $txtID=(isset($_POST['txtID'])) ? $_POST['txtID'] : null;
 $txtNombre=(isset($_POST['txtNombre'])) ? $_POST['txtNombre'] : "";
 $txtImagen=(isset($_FILES['txtImagen']['name'])) ? $_FILES['txtImagen']['name'] : null;
@@ -57,6 +65,7 @@ $txtPrecio=(isset($_POST['txtPrecio'])) ? $_POST['txtPrecio'] : null;
 $txtTipo=(isset($_POST['txtTipo'])) ? $_POST['txtTipo'] : null;
 $accion=(isset($_POST['accion2'])) ? $_POST['accion2'] : "";
 
+$feedback=(isset($_POST['feedback'])) ? $_POST['feedback'] : "";
 
 switch ($accion) {
     case "Agregar":
@@ -163,7 +172,7 @@ switch ($accion) {
         $sentenciaSQL->bindParam(':Prod_Id',$txtID);
         $sentenciaSQL->execute();
         /* echo "Presionado boton Borrar"; */
-        header("Location:productos.php");
+        header("Location:restaurante.php");
         break;
 
     case "Habilitar":
@@ -171,7 +180,17 @@ switch ($accion) {
         $sentenciaSQL->bindParam(':Prod_Id',$txtID);
         $sentenciaSQL->execute();
         /* echo "Presionado boton Borrar"; */
-        header("Location:productos.php");
+        header("Location:restaurante.php");
+        break;
+    case "EnviarComentario":
+        $sentenciaSQL = $conexion->prepare("INSERT INTO comentario(Com_UsuId, Com_LocalId, Com_Comentario, Com_Hora) VALUES (:Com_UsuId, :Com_LocalId, :Com_Comentario, :Com_Hora)");
+        $sentenciaSQL->bindParam(':Com_UsuId',$_SESSION['idUsuario']);
+        $sentenciaSQL->bindParam(':Com_LocalId',$Local_Id);
+        $sentenciaSQL->bindParam(':Com_Comentario',$feedback);
+        $time = date("Y-m-d H:i:s",time());
+        $sentenciaSQL->bindParam(':Com_Hora',$time);
+        $sentenciaSQL->execute();
+        header("Location:restaurante.php");
         break;
     
     default:
@@ -484,8 +503,8 @@ switch ($accion) {
                     <div class="left">
                         <img src="../img/restaurantes/locales/betoslomos.png" alt="">
                         <div class="text-container">
-                            <span class="txt">Betos Lomos</span>
-                            <span class="author">Sarmiento 520</span>
+                            <span class="txt"><?php echo $local['Local_Nombre']; ?></span>
+                            <span class="author"><?php echo $local['Local_Ubicacion']; ?></span>
                         </div>
                     </div>
                     <!-- end left -->
@@ -499,8 +518,34 @@ switch ($accion) {
                 <div class="info-rating">
 
                     <div class="star-count">
-
-                        <span class="avg">4.9</span>DE 5
+                        <?php 
+                        $Uno = 0;
+                        $Dos = 0;
+                        $Tres =0;
+                        $Cuatro = 0;
+                        $Cinco = 0;
+                        $Conta = 0;
+                        $Rank = 0; ?>
+                        <?php foreach($puntuaciones as $puntuacion){
+                            if ($puntuacion["Pun_Puntacion"] == 1) {
+                                $Uno++;
+                            }
+                            if ($puntuacion["Pun_Puntacion"] == 2) {
+                                $Dos++;
+                            }
+                            if ($puntuacion["Pun_Puntacion"] == 3) {
+                                $Tres++;
+                            }
+                            if ($puntuacion["Pun_Puntacion"] == 4) {
+                                $Cuatro++;
+                            }
+                            if ($puntuacion["Pun_Puntacion"] == 5) {
+                                $Cinco++;
+                            }
+                            $Conta = $Conta + $puntuacion["Pun_Puntacion"];
+                            $Rank = $Conta/count($comentarios);
+                        } ?>
+                        <span class="avg"><?php echo $Conta/count($comentarios); ?></span>DE 5
 
                     </div>
 
@@ -515,7 +560,7 @@ switch ($accion) {
                             
                         </div>
                         <div class="rating-count">
-                            <div class="count">244</div>
+                            <div class="count"><?php echo $Rank; ?></div>
                             ratings
                         </div>
                     </div>
@@ -620,8 +665,13 @@ switch ($accion) {
 
                 <div class="review-header">
 
-                    <div class="count-review"><span>13</span>Valoraciones</div>
-                    <div class="txt btn-write">Escribe un comentario</div>
+                    <div class="count-review"><span><?php echo count($comentarios); ?></span>Valoraciones</div>
+                    <?php if ($_SESSION['usuario'] == "Sin Loguearse") {
+                        ?>
+                    <div hidden class="txt btn-write">Escribe un comentario</div>
+                    <?php }else{ ?>
+                        <div class="txt btn-write">Escribe un comentario</div>
+                    <?php } ?>
 
                 </div>
 
@@ -630,14 +680,65 @@ switch ($accion) {
                     <div class="user-review">
     
                         <!-- end user review -->
+                        <?php foreach($comentarios as $comentario){?>
+                            <div class="user-review">
+                                <div class="user-rating">
+                                    
+                                <?php foreach($usuarios as $usu){?>
+                                        <?php if($usu['Usu_Id'] == $comentario['Com_UsuId']){ ?>
+                                            <div class="username"><?php echo $usu['Usu_Nombre']." ".$usu['Usu_Apellido'] ?></div>
+                                        <?php } ?>
+                                    <?php } ?>
+        
+                                    <div class="stars">
+        
+                                        ${setStars(userRatingStar)}
+        
+                                    </div>
+        
+                                </div>
+        
+                                
+        
+                                <div class="comment-content">
+        
+                                    <?php echo $comentario['Com_Comentario'] ?>
+        
+                                </div>
+        
+                                <time datetime="${time}" title="${time}"><?php echo $comentario["Com_Hora"]; ?></time>
+                            </div>
+    
+                        <?php }?>
+                        
+                        <!-- <div class="user-rating">
+    
+                            <div class="username">${username.value}</div>
+
+                            <div class="stars">
+
+                                ${setStars(userRatingStar)}
+
+                            </div>
+    
+                        </div>
+    
+                            
+    
+                            <div class="comment-content">
+    
+                                ${feedback.value}
+    
+                            </div>
+    
+                            <time datetime="${time}" title="${time}">Just now</time> -->
+                        
     
                     </div>
     
                 </div>
 
                     <!-- end user review -->
-
-                </div>
 
             </div>
 
@@ -656,7 +757,7 @@ switch ($accion) {
 
                 </div>
 
-                <div class="feedback-content">
+                <form action="" method="post" class="feedback-content">
 
 
                     <div class="rating">
@@ -681,26 +782,26 @@ switch ($accion) {
     
                         <div class="form-input">
     
-                            <label for="name">Tu nombre</label>
-                            <input type="text" id="name" placeholder="Ingresa tu nombre">
+                            <label for="name"><?php echo $_SESSION["nombreUsuario"]; ?></label>
+                            <input disabled type="text" id="name" placeholder="<?php echo $_SESSION['nombreUsuario']; ?>">
     
                         </div>
     
                         <div class="form-input">
     
                             <label for="feedback">Tu comentario</label>
-                            <textarea name="" id="feedback" cols="30" rows="8" placeholder="Escribe tu comentario...."></textarea>
+                            <textarea name="feedback" id="feedback" cols="30" rows="8" placeholder="Escribe tu comentario...."></textarea>
     
                         </div>
     
                     </div>
-    
+                    
                     <!-- end form -->
     
-                    <button class="submit">Enviar comentario</button>
+                    <button type="submit" name="accion2" value="EnviarComentario" class="submit">Enviar comentario</button>
 
 
-                </div>
+                </form>
                 
                 
                 
