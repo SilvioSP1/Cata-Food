@@ -63,7 +63,7 @@ closeFeedback.addEventListener("click", setDefaultRating);
 
         const options ={
 
-            timeZone: 'Asia/Ho_Chi_minh',
+            timeZone: 'Asia/Ho_Chi_Minh',
             hour: 'numeric',
             minute: 'numeric',
             second: 'numeric',
@@ -101,7 +101,7 @@ closeFeedback.addEventListener("click", setDefaultRating);
     
                             </div>
     
-                            <time datetime="${time}" title="${time}">Just now</time>
+                            <time datetime="${time}" title="${time}">Just ahora</time>
     
                         </div>
 
@@ -229,15 +229,15 @@ function time_seconds(time){
 
     let current = new Date().toLocaleDateString('en-US', {
 
-        timeZone : 'Asia/Ho_Chi_minh',
+        timeZone: 'Asia/Ho_Chi_Minh',
 
     });
 
-    let cur_time = Date.parse(current);
+    let cur_time = Date.parse(current); //ms
 
-    let time_ago = Date.parse(time);
+    let time_ago = Date.parse(time); //ms
 
-    let time_elapsed = (cur_time - time_ago) / 1000;
+    let time_elapsed = (cur_time - time_ago) / 1000; //seconds
 
     return time_elapsed;
 
@@ -258,7 +258,7 @@ function time_elapsed_string(time){
 
     if (seconds < 60){
 
-        return 'Just now';
+        return 'Justo ahora';
 
     }else if (minutes < 60){
 
@@ -297,7 +297,7 @@ function time_elapsed_string(time){
 
 function updateTimeAgo(){
 
-    const datetimeEle = document.querySelectorAll('time[datetime]');
+    const datetimeEle = document.querySelectorAll('time [datetime]');
 
     datetimeEle.forEach((time) => {
 
@@ -305,11 +305,11 @@ function updateTimeAgo(){
 
         setTimeAgo(time, datetime)
 
-        const timeSecond = time_seconds(datetime);
+        const timeSeconds = time_seconds(datetime);
 
-        console.log(timeSecond);
+        console.log(timeSeconds);
 
-        let hours = timeSecond / 3600;
+        let hours = timeSeconds / 3600;
 
         if(hours >= 1){
 

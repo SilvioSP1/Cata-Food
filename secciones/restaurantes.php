@@ -73,8 +73,6 @@ if ($_POST) {
                                         <form class="d-flex containerMedias">
                                             <input class="form-control me-1 buscador" type="search"
                                             placeholder="🔍︎ Buscar " aria-label="Search" id="buscador">
-                                            <button class="btn btn-outline-dark botonBusc text-white"
-                                            type="submit">Buscar</button>
                                         </form>
                                     </div>
                                     <?php if (!empty($listaLocalesPorTipo)) {?>

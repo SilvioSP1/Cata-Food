@@ -1257,6 +1257,11 @@ p {
   display: none;
 }
 
+.containerMedias {
+  display: flex;
+  justify-content: center;
+}
+
 .container__CardProd {
   width: 50%;
 }
