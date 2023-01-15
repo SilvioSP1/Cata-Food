@@ -79,8 +79,8 @@
 <script src="../../Cata-Food/js/suggestions.js?v=<?php echo time(); ?>"></script>
 <script src="../../Cata-Food/js/buscadorIndex.js?v=<?php echo time(); ?>"></script>
 <script src="../../Cata-Food/js/rating.js?v=<?php echo time(); ?>"></script>
-<script src="../../Cata-Food/js/modalRestaurante.js?<?php echo time(); ?>"></script>
-<script src="../../Cata-Food/js/rate.js?<?php echo time(); ?>"></script>
+<script src="../../Cata-Food/js/modalRestaurante.js?v=<?php echo time(); ?>"></script>
+<script src="../../Cata-Food/js/rate.js?v=<?php echo time(); ?>"></script>
 
 
 <!-- JavaScript Bundle with Popper -->
