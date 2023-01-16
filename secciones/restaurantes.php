@@ -22,6 +22,21 @@ if ($_POST) {
     $listaLocalesPorTipo = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 }
 
+
+
+$articulo_x_pagina = 3;
+
+//contar locales de nuestra base de datos
+
+$total_locales_bd = Count($listaLocales);
+//echo $total_locales_bd;
+$paginas = $total_locales_bd/3;
+
+$paginas = ceil($paginas);
+
+//echo $paginas;
+
+
 ?>
 <?php if ($mensaje !="") {?>
 <div class="alert alert-success">
@@ -31,6 +46,8 @@ if ($_POST) {
 </div>
 <?php } ?>
                 <div class="conteiner_restaurantes">
+
+                    
 
                     <div class="container-fluid" id="containerFiltro">
                         <div class="row justify-content-center g-2 containerColum">
@@ -75,6 +92,37 @@ if ($_POST) {
                                             placeholder="🔍︎ Buscar " aria-label="Search" id="buscador">
                                         </form>
                                     </div>
+                                    
+                                    <?php 
+                                    
+                                        if(!$_GET){
+
+                                            header('Location: ../../Cata-Food/secciones/restaurantes.php?pagina=1');
+
+                                        }
+
+                                        if($_GET['pagina']>$paginas || $_GET['pagina'] <= 0){
+
+                                            header('Location: ../../Cata-Food/secciones/restaurantes.php?pagina=1');
+                            
+                                        }
+
+                                        $iniciar = ($_GET['pagina']-1)*$articulo_x_pagina;
+
+                                        $sql_articulos = $conexion->prepare("SELECT * FROM local LIMIT :iniciar,:nlocales");
+                                        
+                                        $sql_articulos->bindParam(':iniciar',$iniciar, PDO::PARAM_INT);
+                                        $sql_articulos->bindParam(':nlocales',$articulo_x_pagina, PDO::PARAM_INT);
+
+                                        $sql_articulos->execute();
+
+                                        $resultado_articulos = $sql_articulos->fetchAll(PDO::FETCH_ASSOC);
+
+
+
+
+                                    ?>
+
                                     <?php if (!empty($listaLocalesPorTipo)) {?>
                                         <?php foreach($listaLocalesPorTipo as $local) { ?>
                                         <?php if ($local['Local_Status'] == 1) { ?>
@@ -100,7 +148,7 @@ if ($_POST) {
                                         <?php } ?>
                                         <?php } ?>
                                     <?php }else{ ?>
-                                        <?php foreach($listaLocales as $local) { ?>
+                                        <?php foreach($resultado_articulos as $local) { ?>
                                         <?php if ($local['Local_Status'] == 1) { ?>
                                         <form class="container__CardRest" action="restaurante.php" method="POST">
                                             <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($local['Local_Id'],cod,key); ?>">
@@ -124,6 +172,35 @@ if ($_POST) {
                                         <?php } ?>
                                         <?php } ?>
                                     <?php } ?>
+
+
+                                    <div class="d-flex justify-content-center align-items-center">
+
+                                        <nav
+                                            aria-label="Page navigation example">
+                                            <ul class="pagination">
+
+                                                <li class="page-item <?php echo $_GET['pagina']<=1? 'disabled' : '' ?>">
+                                                <a class="page-link" href="../../Cata-Food/secciones/restaurantes.php?pagina=<?php echo $_GET['pagina']-1 ?> ">Anterior</a>
+                                                </li>
+
+                                                <?php for($i=0;$i<$paginas;$i++): ?>
+
+                                                <li class="page-item <?php echo $_GET['pagina']==$i+1 ? 'active' : '' ?>">
+                                                    <a class="page-link" href="../../Cata-Food/secciones/restaurantes.php?pagina=<?php echo $i+1 ?>"><?php echo $i+1 ?></a>
+                                                </li>
+
+                                                <?php endfor ?>
+
+
+                                                <li class="page-item <?php echo $_GET['pagina']>=$paginas? 'disabled' : '' ?>">
+                                                    <a class="page-link"href="../../Cata-Food/secciones/restaurantes.php?pagina=<?php echo $_GET['pagina']+1 ?> ">Siguiente</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+
+
                                 </div>
                             </div>
 

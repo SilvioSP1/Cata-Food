@@ -35,7 +35,7 @@
 </div> -->
 
 <div class="buttonFlex">
-    <a href="../../Cata-Food/secciones/restaurantes.php">
+    <a href="../../Cata-Food/secciones/restaurantes.php?pagina=1">
     <button class="cssbuttons-io-button"> Restaurantes
         <div class="icon">
             <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
