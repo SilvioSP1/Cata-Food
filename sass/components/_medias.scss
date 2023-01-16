@@ -640,7 +640,11 @@
     }
 
 }
-
+@media(max-width:665px){
+    .wrapperRate{
+        width: 90%;
+    }
+}
 @media(max-width:620px){
 
     .conteiner_restaurantes{

@@ -4,7 +4,7 @@
 
 .conteiner_restaurantes{
 
-    height: 800px;
+    min-height: 800px;
 
     .containerColum{
         margin-top: 5px;
@@ -104,7 +104,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 15.3rem;
+    margin-bottom: 4rem;
 
     --color-yellow: #ffcc48;
     --color-border: #f4f4f4;

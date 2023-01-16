@@ -1136,6 +1136,7 @@ p {
 
 .conteiner_restaurantes {
   display: flex;
+  min-height: 800px;
 }
 .conteiner_restaurantes .containerColum {
   margin-top: 55px;
@@ -1267,7 +1268,7 @@ p {
 }
 
 .conteiner_restaurantes {
-  height: 800px;
+  min-height: 800px;
 }
 .conteiner_restaurantes .containerColum {
   margin-top: 5px;
@@ -1350,7 +1351,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 15.3rem;
+  margin-bottom: 4rem;
   --color-yellow: #ffcc48;
   --color-border: #f4f4f4;
   --color-primary: #393a5d;
@@ -2682,6 +2683,11 @@ span.posted-at {
   }
   .conteiner_restaurantes .containerColum .columnas .conteinerProductos .producto .contenedorTexto h6 {
     font-size: 0.8rem;
+  }
+}
+@media (max-width: 665px) {
+  .wrapperRate {
+    width: 90%;
   }
 }
 @media (max-width: 620px) {

@@ -4,7 +4,7 @@
 <!-- CONTEINER -->
 
 <!-- FOOTER -->
-<div class="row featurette">
+<div class="row featurette footer">
   <footer style="background-color: #1a1e21" class="text-center text-white">
     <!-- Grid container -->
     <div class="container p-4">
