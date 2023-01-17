@@ -1611,6 +1611,10 @@ p {
   cursor: pointer;
 }
 
+.filtroComida {
+  display: none;
+}
+
 .sectionCarrito {
   margin-bottom: 15rem;
 }

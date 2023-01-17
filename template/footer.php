@@ -81,6 +81,7 @@
 <script src="../../Cata-Food/js/rating.js?v=<?php echo time(); ?>"></script>
 <script src="../../Cata-Food/js/modalRestaurante.js?v=<?php echo time(); ?>"></script>
 <script src="../../Cata-Food/js/rate.js?v=<?php echo time(); ?>"></script>
+<script src="../../Cata-Food/js/filtradoComidas.js?v=<?php echo time(); ?>"></script>
 
 
 <!-- JavaScript Bundle with Popper -->

@@ -223,7 +223,7 @@ switch ($accion) {
 
 <div class="conteiner_restaurantes">
 
-    <div class="container-fluid">
+    <div class="container-fluid" id="filtroComidas">
         <div class="row justify-content-center g-2 containerColum">
             <div class="col-12 columnas">
                 <?php foreach($localDelProducto as $local) { ?>
@@ -244,7 +244,7 @@ switch ($accion) {
                         <div class="contenedorBuscadorRes">
                             <form class="d-flex containerMedias">
                                 <input class="form-control me-1 buscador" type="search" placeholder="🔍︎ Buscar "
-                                    aria-label="Search">
+                                    aria-label="Search" id="buscadorComida">
                                 <button class="btn btn-outline-dark botonBusc text-white" type="submit">Buscar</button>
                             </form>
                         </div>

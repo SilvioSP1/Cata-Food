@@ -56,11 +56,11 @@ include("../../Cata-food/admin/config/config.php");
 
   <main>
 
-    <div class="loader-container">
+    <!-- <div class="loader-container">
 
       <img src="../../Cata-Food/img/index/burger-unscreen.gif" alt="">
 
-    </div>
+    </div> -->
 
 
 
