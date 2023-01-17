@@ -15,26 +15,44 @@ $sentenciaSQL = $conexion->prepare("SELECT * FROM tipo_producto");
 $sentenciaSQL->execute();
 $listaTipoProductos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
-if ($_POST) {
+if ($_POST['TL_Tipo'] || !empty($_SESSION["tiposLocal"])) {
+    if (!empty($_POST['TL_Tipo'])) {
+        $_SESSION["tiposLocal"] = $_POST['TL_Tipo'];
+    }
+
     $sentenciaSQL = $conexion->prepare("SELECT * FROM local WHERE Local_Tipo = :Local_Tipo");
-    $sentenciaSQL->bindParam(':Local_Tipo',$_POST['TL_Tipo']);
+    $sentenciaSQL->bindParam(':Local_Tipo',$_SESSION["tiposLocal"]);
     $sentenciaSQL->execute();
     $listaLocalesPorTipo = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
+
+    $articulo_x_pagina = 3;
+    
+    //contar locales de nuestra base de datos
+    
+    $total_locales_bd = Count($listaLocalesPorTipo);
+    //echo $total_locales_bd;
+    $paginas = $total_locales_bd/3;
+    
+    $paginas = ceil($paginas);
+    
+    //echo $paginas;
+}else{
+
+    $articulo_x_pagina = 3;
+    
+    //contar locales de nuestra base de datos
+    
+    $total_locales_bd = Count($listaLocales);
+    //echo $total_locales_bd;
+    $paginas = $total_locales_bd/3;
+    
+    $paginas = ceil($paginas);
+    
+    //echo $paginas;
 }
 
 
 
-$articulo_x_pagina = 3;
-
-//contar locales de nuestra base de datos
-
-$total_locales_bd = Count($listaLocales);
-//echo $total_locales_bd;
-$paginas = $total_locales_bd/3;
-
-$paginas = ceil($paginas);
-
-//echo $paginas;
 
 
 ?>
@@ -55,7 +73,7 @@ $paginas = ceil($paginas);
                                 <div class="contenedorResTipo">
                                     <div class="tiposRes">
                                     <div aria-label="" class="tipo">
-                                        <form class="tipo" action="restaurantes.php" method="POST">
+                                        <form class="tipo" action="restaurantes.php?pagina=1" method="POST">
                                         <input type="hidden" name="TL_Tipo" id="TL_Tipo" value="">
                                             <button name="btnAccion" type="submit" class="buttonTipo">
                                                 <div class="circulo">
@@ -68,7 +86,7 @@ $paginas = ceil($paginas);
                                     </div>
                                     <?php foreach($listaTipoLocales as $tipoLocal) { ?>
                                         <div aria-label="" class="tipo">
-                                        <form class="tipo" action="restaurantes.php" method="POST">
+                                        <form class="tipo" action="restaurantes.php?pagina=1" method="POST">
                                         <input type="hidden" name="TL_Tipo" id="TL_Tipo" value="<?php echo $tipoLocal['TL_Tipo']; ?>">
                                             <button name="btnAccion" type="submit" class="buttonTipo">
                                                 <div class="circulo">
@@ -107,24 +125,39 @@ $paginas = ceil($paginas);
                             
                                         }
 
-                                        $iniciar = ($_GET['pagina']-1)*$articulo_x_pagina;
+                                        if ($_POST['TL_Tipo'] || !empty($_SESSION["tiposLocal"])) {
+                                            if (!empty($_POST['TL_Tipo'])) {
+                                                $_SESSION["tiposLocal"] = $_POST['TL_Tipo'];
+                                            }
 
-                                        $sql_articulos = $conexion->prepare("SELECT * FROM local LIMIT :iniciar,:nlocales");
-                                        
-                                        $sql_articulos->bindParam(':iniciar',$iniciar, PDO::PARAM_INT);
-                                        $sql_articulos->bindParam(':nlocales',$articulo_x_pagina, PDO::PARAM_INT);
+                                            $iniciar = ($_GET['pagina']-1)*$articulo_x_pagina;
 
-                                        $sql_articulos->execute();
+                                            $sql_articulos = $conexion->prepare("SELECT * FROM local WHERE Local_Tipo = :Local_Tipo LIMIT :iniciar,:nlocales");
+                                            $sql_articulos->bindParam(':Local_Tipo',$_SESSION["tiposLocal"]);
+                                            $sql_articulos->bindParam(':iniciar',$iniciar, PDO::PARAM_INT);
+                                            $sql_articulos->bindParam(':nlocales',$articulo_x_pagina, PDO::PARAM_INT);
 
-                                        $resultado_articulos = $sql_articulos->fetchAll(PDO::FETCH_ASSOC);
+                                            $sql_articulos->execute();
 
+                                            $resultado_articulos = $sql_articulos->fetchAll(PDO::FETCH_ASSOC);
+                                        }else{
+                                            $iniciar = ($_GET['pagina']-1)*$articulo_x_pagina;
 
+                                            $sql_articulos = $conexion->prepare("SELECT * FROM local LIMIT :iniciar,:nlocales");
+                                            
+                                            $sql_articulos->bindParam(':iniciar',$iniciar, PDO::PARAM_INT);
+                                            $sql_articulos->bindParam(':nlocales',$articulo_x_pagina, PDO::PARAM_INT);
+
+                                            $sql_articulos->execute();
+
+                                            $resultado_articulos = $sql_articulos->fetchAll(PDO::FETCH_ASSOC);
+                                        }
 
 
                                     ?>
 
                                     <?php if (!empty($listaLocalesPorTipo)) {?>
-                                        <?php foreach($listaLocalesPorTipo as $local) { ?>
+                                        <?php foreach($resultado_articulos as $local) { ?>
                                         <?php if ($local['Local_Status'] == 1) { ?>
                                         <form class="container__CardRest" action="restaurante.php" method="POST">
                                             <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($local['Local_Id'],cod,key); ?>">

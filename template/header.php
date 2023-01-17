@@ -74,7 +74,7 @@ include("../../Cata-food/admin/config/config.php");
         </div>
         <nav>
           <ul>
-            <li><a href="../../Cata-Food/secciones/restaurantes.php" class="item_nav"><i class="fa-solid fa-bowl-food"></i> Restaurantes</a></li>
+            <li><a href="../../Cata-Food/secciones/restaurantes.php?pagina=1" class="item_nav"><i class="fa-solid fa-bowl-food"></i> Restaurantes</a></li>
             <li><a href="../../Cata-Food/secciones/sobre_nosotros.php" class="item_nav"><i class="fa-solid fa-people-arrows"></i> Sobre Nosotros</a></li>
             <?php if($_SESSION['usuario'] != "Sin Loguearse"){ ?>
               <?php if($_SESSION['idRol'] == 2){?>
