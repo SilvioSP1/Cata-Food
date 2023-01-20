@@ -249,11 +249,14 @@
 
     <div class="flexContacto">
 
-        <h1>¿Tienes alguna duda? No olvides en contactarnos</h1>
-
-
         <div class="backgroundForm__Contacto">
+            
             <div class="containerForm__Contacto">
+
+                <div class="textoContacto">
+                    <h1>¿Tienes alguna duda? No olvides en contactarnos</h1>
+                </div>
+
                 <div class="screen">
                     <div class="screen-header">
                         <div class="screen-header-left">
@@ -270,30 +273,34 @@
                     <div class="screen-body">
                         <div class="screen-body-item left">
                             <div class="app-title">
-                                <span>CONTACT</span>
-                                <span>US</span>
+                                <span>CONTACTÉNOS</span>
                             </div>
-                            <div class="app-contact">CONTACT INFO: +62 81 314 928 595</div>
+                            <div class="app-contact">CATA FOOD - CATAMARCA</div>
                         </div>
                         <div class="screen-body-item">
                             <form class="app-form" id="form">
+
                                 <div class="field">
-                                    <label for="from_name">from_name</label>
-                                    <input type="text" name="from_name" id="from_name">
+
+                                    <label for="from_name" class="labels">Nombre</label>
+                                    <input type="text" name="from_name" class="app-form-control" id="from_name" required>
+
                                 </div>
+
                                 <div class="field">
-                                    <label for="to_name">to_name</label>
-                                    <input type="text" name="to_name" id="to_name">
+
+                                    <label for="message" class="labels mensajeLabel">Mensaje</label>
+                                    <input type="text" name="message" class="app-form-control" id="message" required>
+
                                 </div>
-                                <div class="field">
-                                    <label for="message">message</label>
-                                    <input type="text" name="message" id="message">
-                                </div>
+
                                 <div class="app-form-group buttons">
-                                    <button class="app-form-button cancel">CANCEL</button>
-                                    <input class="app-form-button" id="button" type="submit"
-                                        value="Send Email"></input>
+
+                                    <input class="app-form-button" type="submit" id="button" value="Enviar mensaje"></input>
+
                                 </div>
+
+                            </form>
                         </div>
                     </div>
                 </div>

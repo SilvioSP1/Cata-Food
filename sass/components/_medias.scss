@@ -841,4 +841,27 @@
 
 }
 
+//medias queries formulario de contacto index 
+
+@mixin formularioContacto($ancho){
+
+    @media(max-width: #{$ancho}){
+
+        @content;
+
+    }
+
+}
+
+
+.flexContacto{
+
+    @include formularioContacto(1040px){
+
+        flex-direction: column;
+
+    }
+
+
+}
     

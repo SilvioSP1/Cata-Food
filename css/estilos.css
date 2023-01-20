@@ -2390,12 +2390,13 @@ span.posted-at {
 }
 
 .flexContacto {
-  display: grid;
-  grid-template-columns: auto auto;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .flexContacto h1 {
   text-align: center;
+  margin-bottom: 2.5rem;
 }
 
 .backgroundForm__Contacto {
@@ -2403,10 +2404,21 @@ span.posted-at {
   min-height: 100vh;
 }
 
+.field .labels {
+  color: #fff;
+}
+.field .mensajeLabel {
+  margin-top: 1.5rem;
+}
+
 .containerForm__Contacto {
   flex: 0 1 700px;
   margin: auto;
   padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .screen {
@@ -2493,7 +2505,7 @@ span.posted-at {
   display: flex;
   flex-direction: column;
   position: relative;
-  color: #ea1d6f;
+  color: #fff;
   font-size: 26px;
 }
 
@@ -2503,15 +2515,15 @@ span.posted-at {
   position: absolute;
   left: 0;
   bottom: -10px;
-  width: 25px;
+  width: 65px;
   height: 4px;
-  background: #ea1d6f;
+  background: #fff;
 }
 
 .app-contact {
   margin-top: auto;
   font-size: 8px;
-  color: #888;
+  color: #fff;
 }
 
 .app-form-group {
@@ -2530,6 +2542,9 @@ span.posted-at {
 .app-form-group.buttons {
   margin-bottom: 0;
   text-align: right;
+}
+.app-form-group.buttons #button {
+  margin-top: 1rem;
 }
 
 .app-form-control {
@@ -2556,14 +2571,15 @@ span.posted-at {
 .app-form-button {
   background: none;
   border: none;
-  color: #ea1d6f;
+  color: #fff;
   font-size: 14px;
   cursor: pointer;
   outline: none;
+  transition: transform 0.2s;
 }
 
 .app-form-button:hover {
-  color: #b9134f;
+  transform: scale(1.1);
 }
 
 .credits {
@@ -3003,6 +3019,12 @@ span.posted-at {
 @media (min-width: 420px) and (max-width: 480px) {
   #map {
     width: 300px;
+  }
+}
+
+@media (max-width: 1040px) {
+  .flexContacto {
+    flex-direction: column;
   }
 }
 

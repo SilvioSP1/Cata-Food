@@ -1,12 +1,13 @@
 .flexContacto{
 
-    display: grid;
-    grid-template-columns: auto auto;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     h1{
 
         text-align: center;
+        margin-bottom: 2.5rem;
 
     }
 
@@ -17,10 +18,30 @@
     min-height: 100vh;
 }
 
+.field{
+
+    .labels{
+
+        color: #fff;
+
+    }
+
+    .mensajeLabel{
+
+        margin-top: 1.5rem;
+
+    }
+
+}
+
 .containerForm__Contacto {
     flex: 0 1 700px;
     margin: auto;
     padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .screen {
@@ -107,7 +128,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    color: #ea1d6f;
+    color: #fff;
     font-size: 26px;
 }
 
@@ -117,15 +138,15 @@
     position: absolute;
     left: 0;
     bottom: -10px;
-    width: 25px;
+    width: 65px;
     height: 4px;
-    background: #ea1d6f;
+    background: #fff;
 }
 
 .app-contact {
     margin-top: auto;
     font-size: 8px;
-    color: #888;
+    color: #fff;
 }
 
 .app-form-group {
@@ -147,6 +168,13 @@
 .app-form-group.buttons {
     margin-bottom: 0;
     text-align: right;
+
+    #button{
+
+        margin-top: 1rem;
+
+    }
+
 }
 
 .app-form-control {
@@ -173,14 +201,15 @@
 .app-form-button {
     background: none;
     border: none;
-    color: #ea1d6f;
+    color: #fff;
     font-size: 14px;
     cursor: pointer;
     outline: none;
+    transition: transform .2s;
 }
 
 .app-form-button:hover {
-    color: #b9134f;
+    transform: scale(1.1);
 }
 
 .credits {
