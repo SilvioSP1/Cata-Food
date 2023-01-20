@@ -49,6 +49,12 @@ include("../../Cata-food/admin/config/config.php");
 
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <script type="text/javascript">
+    emailjs.init('JKaEpvNGBleWS_JA8')
+</script>
+
 </head>
 
 
