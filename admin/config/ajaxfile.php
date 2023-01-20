@@ -16,9 +16,17 @@ $sentenciaSQL = $conexion->prepare("SELECT * FROM tipo_producto");
 $sentenciaSQL->execute();
 $tipoProducto = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
-$sentenciaSQL = $conexion->prepare("SELECT * FROM stock_producto WHERE Stock_ProdId = :Stock_ProdId AND Stock_LocalId = :Stock_LocalId");
+$abierto = date("Y-m-d",time());
+$sentenciaSQL = $conexion->prepare("SELECT * FROM horario WHERE Horario_LocalId = :Horario_LocalId AND Horario_Fecha = :Horario_Fecha");
+$sentenciaSQL->bindParam(':Horario_LocalId',$_SESSION['idUsuario']);
+$sentenciaSQL->bindParam(':Horario_Fecha',$abierto);
+$sentenciaSQL->execute();
+$tipoProducto = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
+
+$sentenciaSQL = $conexion->prepare("SELECT * FROM stock_producto WHERE Stock_ProdId = :Stock_ProdId AND Stock_LocalId = :Stock_LocalId AND Stock_HorarioId = :Stock_HorarioId");
 $sentenciaSQL->bindParam(':Stock_ProdId',$userid);
 $sentenciaSQL->bindParam(':Stock_LocalId',$_SESSION['idUsuario']);
+$sentenciaSQL->bindParam(':Stock_HorarioId',$tipoProducto['Horario_Id']);
 $sentenciaSQL->execute();
 $stockProducto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
 
@@ -64,12 +72,14 @@ foreach($listaProductos as $producto) {
             <input type="hidden" name="cantidad" id="cantidad" value="<?php echo openssl_encrypt(1,cod,key); ?>">
             <div class="flexBotones">
 
+                
+                <?php if ($producto['Prod_Status'] == 3 && $stockProducto['Stock_Cantidad'] > 0) {?>
                 <input type="number" class="form-control-sm conta" name="conta" id="conta" placeholder="Unidades" value="1">
-                <?php if ($_SESSION['status'] == 3 && $stockProducto['Stock_Cantidad'] > 0) {?>
                 <button class="botonAgregar btn btn-warning" name="btnAccion" value="Agregar" type="submit" id="agregarr">
                     Agregar a carrito
                 </button>
-                <?php } else if ($_SESSION['status'] == 4 || $stockProducto['Stock_Cantidad'] < 0) { ?>
+                <?php } else if ($producto['Prod_Status'] != 3 || $stockProducto['Stock_Cantidad'] < 0 || $stockProducto == null) { ?>
+                <input disabled type="number" class="form-control-sm conta" name="conta" id="conta" placeholder="Unidades" value="1">
                 <button disabled class="botonAgregar btn btn-warning" name="btnAccion" value="Agregar" type="submit" id="agregarr">
                     Agregar a carrito
                 </button>
