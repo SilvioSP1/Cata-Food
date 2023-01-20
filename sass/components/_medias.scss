@@ -418,7 +418,7 @@
 
     .columnas {
 
-        .flexCategorias{
+        .flexCategorias {
 
             .contenedorProductos {
 
@@ -426,21 +426,21 @@
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-    
+
                 .titulo {
                     margin-top: 14px;
                 }
-    
-    
+
+
                 .containerCategorias {
-    
+
                     width: 50px;
-    
+
                 }
-    
-    
-    
-    
+
+
+
+
             }
 
         }
@@ -561,167 +561,174 @@
 
 /* Restaurante Vista */
 
-@media(max-width: 830px){
+@media(max-width: 830px) {
 
-    .conteiner_restaurantes{
-        
-        .containerColum{
-    
-            .producto{
+    .conteiner_restaurantes {
+
+        .containerColum {
+
+            .producto {
                 height: 145px;
+
                 /* .imagenRestaurante{
                     height: 55%;
                 } */
-                .contenedorTexto{
+                .contenedorTexto {
                     .nombreProducto {
                         font-size: 1rem;
                     }
+
                     .ingredientes {
                         font-size: 0.8rem;
                     }
-                    h6{
+
+                    h6 {
                         font-size: 0.9rem;
                     }
                 }
             }
         }
-    } 
+    }
 }
 
-@media(max-width:740px){
+@media(max-width:740px) {
 
-    .conteiner_restaurantes{
+    .conteiner_restaurantes {
 
-        .containerColum{
-    
-            .columnas{
-    
-                .conteinerProductos{
-    
-                    .producto{
-    
+        .containerColum {
+
+            .columnas {
+
+                .conteinerProductos {
+
+                    .producto {
+
                         flex-direction: row;
                         justify-content: center;
                         align-items: center;
-    
-                        img{
-    
+
+                        img {
+
                             height: 100px;
                             object-fit: contain;
-    
-    
+
+
                         }
-    
-                        .contenedorTexto{
-    
-                            .nombreProducto{
-    
-                            font-size: 0.9rem;
-    
+
+                        .contenedorTexto {
+
+                            .nombreProducto {
+
+                                font-size: 0.9rem;
+
                             }
-    
-                            .ingredientes{
-    
-                            font-size: 0.7rem;
-    
+
+                            .ingredientes {
+
+                                font-size: 0.7rem;
+
                             }
-                            h6{
+
+                            h6 {
                                 font-size: 0.8rem;
                             }
                         }
 
                     }
-    
+
                 }
-    
+
             }
-    
+
         }
     }
 
 }
-@media(max-width:665px){
-    .wrapperRate{
+
+@media(max-width:665px) {
+    .wrapperRate {
         width: 90%;
     }
 }
-@media(max-width:620px){
 
-    .conteiner_restaurantes{
+@media(max-width:620px) {
 
-        .containerColum{
-    
-            .columnas{
-    
-                .conteinerProductos{
+    .conteiner_restaurantes {
 
-                    .container__CardProd{
+        .containerColum {
+
+            .columnas {
+
+                .conteinerProductos {
+
+                    .container__CardProd {
                         width: 100%;
-                        .producto{
-        
+
+                        .producto {
+
                             flex-direction: row;
                             justify-content: start;
                             align-items: center;
-        
-                            img{
-        
+
+                            img {
+
                                 height: 90%;
                                 object-fit: cover;
-        
-        
+
+
                             }
-        
-                            .contenedorTexto{
-        
-                                .nombreProducto{
-        
-                                font-size: 1rem;
-        
+
+                            .contenedorTexto {
+
+                                .nombreProducto {
+
+                                    font-size: 1rem;
+
                                 }
-        
-                                .ingredientes{
-        
-                                font-size: 0.8rem;
-        
+
+                                .ingredientes {
+
+                                    font-size: 0.8rem;
+
                                 }
-                                
-                                h6{
+
+                                h6 {
                                     font-size: 0.9rem;
                                 }
                             }
-        
+
                         }
                     }
-    
-    
+
+
                 }
-    
+
             }
-    
+
         }
     }
 
 }
 
-@media (min-width:376px) and (max-width:470px){
-    .conteiner_restaurantes{
+@media (min-width:376px) and (max-width:470px) {
+    .conteiner_restaurantes {
 
-        .containerColum{
-            
-            .columnas{
-                .conteimerLocal{
+        .containerColum {
+
+            .columnas {
+                .conteimerLocal {
                     flex-direction: column;
-                    
-                    .continerTextoBusca{
+
+                    .continerTextoBusca {
                         width: 100%;
-                        
-                        .contenedorBuscadorRes{
+
+                        .contenedorBuscadorRes {
                             margin-top: 15px;
                         }
-    
+
                     }
 
-                    .conteinerLocalImagen{
+                    .conteinerLocalImagen {
                         width: 40%;
                         height: 40%;
                     }
@@ -732,63 +739,63 @@
     }
 }
 
-@media(max-width:376px){
+@media(max-width:376px) {
 
-    .conteiner_restaurantes{
+    .conteiner_restaurantes {
 
-        .containerColum{
-    
-            .columnas{
-                .conteimerLocal{
+        .containerColum {
+
+            .columnas {
+                .conteimerLocal {
                     flex-direction: column;
-                    
-                    .continerTextoBusca{
+
+                    .continerTextoBusca {
                         width: 100%;
-                        
-                        .contenedorBuscadorRes{
+
+                        .contenedorBuscadorRes {
                             margin-top: 15px;
                         }
-    
+
                     }
 
                 }
-            
-                .conteinerProductos{
-            
-                    .producto{
-            
+
+                .conteinerProductos {
+
+                    .producto {
+
                         justify-content: center;
                         align-items: center;
                         width: 100%;
                         height: 125px;
-            
-                        img{
-            
+
+                        img {
+
                             width: 35%;
                             object-fit: contain;
-            
-            
+
+
                         }
-            
-                        .contenedorTexto{
-            
-                            .nombreRestaurante{
-            
-                            font-size: 12px;
-            
+
+                        .contenedorTexto {
+
+                            .nombreRestaurante {
+
+                                font-size: 12px;
+
                             }
-            
-                            .ubiRestaurante{
-            
-                            font-size: 10px;
-            
+
+                            .ubiRestaurante {
+
+                                font-size: 10px;
+
                             }
                         }
-            
+
                     }
-            
+
                 }
-            
+
             }
         }
     }
@@ -798,9 +805,9 @@
 
 //Media querie botones registro/local desde 280px
 
-@mixin botonesMedia($ancho,$ancho2){
+@mixin botonesMedia($ancho, $ancho2) {
 
-    @media (min-width: #{$ancho}) and (max-width: #{$ancho2}){
+    @media (min-width: #{$ancho}) and (max-width: #{$ancho2}) {
 
         @content;
 
@@ -809,9 +816,9 @@
 }
 
 
-.mediaBotones{
+.mediaBotones {
 
-    @include botonesMedia(280px,528px){
+    @include botonesMedia(280px, 528px) {
 
         display: flex;
         justify-content: center;
@@ -824,16 +831,16 @@
 
 //medias queries para mapa
 
-#map{
+#map {
 
-   
-    @media (min-width: 280px) and (max-width: #{$breakpoint}){
+
+    @media (min-width: 280px) and (max-width: #{$breakpoint}) {
 
         width: 220px;
 
     }
 
-    @media(min-width: 420px) and (max-width: 480px){
+    @media(min-width: 420px) and (max-width: 480px) {
 
         width: 300px;
 
@@ -843,9 +850,9 @@
 
 //medias queries formulario de contacto index 
 
-@mixin formularioContacto($ancho){
+@mixin formularioContacto($ancho) {
 
-    @media(max-width: #{$ancho}){
+    @media(max-width: #{$ancho}) {
 
         @content;
 
@@ -854,9 +861,9 @@
 }
 
 
-.flexContacto{
+.flexContacto {
 
-    @include formularioContacto(1040px){
+    @include formularioContacto(1040px) {
 
         flex-direction: column;
 
@@ -864,4 +871,35 @@
 
 
 }
-    
+
+@media screen and (max-width: 520px) {
+    .screen-body {
+        flex-direction: column;
+    }
+
+    .screen-body-item.left {
+        margin-bottom: 30px;
+    }
+
+    .app-title {
+        flex-direction: row;
+    }
+
+    .app-title span {
+        margin-right: 12px;
+    }
+
+    .app-title:after {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .screen-body {
+        padding: 40px;
+    }
+
+    .screen-body-item {
+        padding: 0;
+    }
+}

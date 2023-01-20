@@ -32,6 +32,53 @@
 
     }
 
+    .messageInput{
+
+        resize: none;
+        -webkit-transition: all .2s ease-out;
+        -moz-transition: all .2s ease-out;
+        -ms-transition: all .2s ease-out;
+        -o-transition: all .2s ease-out;
+        transition: all .2s ease-out;
+
+        &:focus{
+
+            height: 120px;
+
+        }
+
+        &::-webkit-scrollbar{
+
+            width: 5px;
+    
+        }
+    
+        &::-webkit-scrollbar-track{
+    
+            border-radius: 10px;
+    
+        }
+    
+        &::-webkit-scrollbar-thumb{
+    
+            visibility: hidden;
+            border-radius: 10px;
+            background-color: #ebebeb;
+    
+        }
+    
+        &:hover{
+    
+            &::-webkit-scrollbar-thumb{
+    
+                visibility: visible;
+    
+            }
+    
+        }
+
+    }
+
 }
 
 .containerForm__Contacto {
@@ -235,36 +282,4 @@
     width: 20px;
     height: 20px;
     margin: 0 5px;
-}
-
-@media screen and (max-width: 520px) {
-    .screen-body {
-        flex-direction: column;
-    }
-
-    .screen-body-item.left {
-        margin-bottom: 30px;
-    }
-
-    .app-title {
-        flex-direction: row;
-    }
-
-    .app-title span {
-        margin-right: 12px;
-    }
-
-    .app-title:after {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .screen-body {
-        padding: 40px;
-    }
-
-    .screen-body-item {
-        padding: 0;
-    }
 }

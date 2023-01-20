@@ -501,7 +501,7 @@ switch ($accion) {
                 <div class="titleRate">Valoraciones</div>
                 <div class="info-review">
                     <div class="left">
-                        <img src="../img/restaurantes/locales/betoslomos.png" alt="">
+                        <img src="../img/restaurantes/locales/<?php echo $local['Local_Imagen']; ?>" alt="">
                         <div class="text-container">
                             <span class="txt"><?php echo $local['Local_Nombre']; ?></span>
                             <span class="author"><?php echo $local['Local_Ubicacion']; ?></span>

@@ -290,7 +290,7 @@
                                 <div class="field">
 
                                     <label for="message" class="labels mensajeLabel">Mensaje</label>
-                                    <input type="text" name="message" class="app-form-control" id="message" required>
+                                    <textarea type="text" name="message" class="app-form-control messageInput" id="message"></textarea>
 
                                 </div>
 
