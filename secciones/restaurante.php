@@ -49,9 +49,15 @@ $sentenciaSQL = $conexion->prepare("SELECT * FROM tipo_producto");
 $sentenciaSQL->execute();
 $tipoProducto = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
-$sentenciaSQL = $conexion->prepare("SELECT * FROM comentario");
+$sentenciaSQL = $conexion->prepare("SELECT * FROM comentario WHERE Com_LocalId = :Com_LocalId");
+$sentenciaSQL->bindParam(':Com_LocalId',$Local_Id);
 $sentenciaSQL->execute();
 $comentarios = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
+
+$sentenciaSQL = $conexion->prepare("SELECT * FROM puntuacion WHERE Pun_LocalId = :Pun_LocalId");
+$sentenciaSQL->bindParam(':Pun_LocalId',$Local_Id);
+$sentenciaSQL->execute();
+$puntuaciones = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
 $sentenciaSQL = $conexion->prepare("SELECT * FROM usuario");
 $sentenciaSQL->execute();
@@ -66,6 +72,8 @@ $txtTipo=(isset($_POST['txtTipo'])) ? $_POST['txtTipo'] : null;
 $accion=(isset($_POST['accion2'])) ? $_POST['accion2'] : "";
 
 $feedback=(isset($_POST['feedback'])) ? $_POST['feedback'] : "";
+$estrellas=(isset($_POST['puntuacion'])) ? $_POST['puntuacion'] : "";
+$estrellas = (int)$estrellas;
 
 switch ($accion) {
     case "Agregar":
@@ -189,6 +197,15 @@ switch ($accion) {
         $sentenciaSQL->bindParam(':Com_Comentario',$feedback);
         $time = date("Y-m-d H:i:s",time());
         $sentenciaSQL->bindParam(':Com_Hora',$time);
+        $sentenciaSQL->execute();
+        $idComentario = $conexion->lastInsertId();
+
+
+        $sentenciaSQL = $conexion->prepare("INSERT INTO puntuacion(Pun_UsuId,Pun_LocalId,Pun_Puntuacion,Pun_ComId) VALUES (:Pun_UsuId,:Pun_LocalId,:Pun_Puntuacion,:Pun_ComId)");
+        $sentenciaSQL->bindParam(':Pun_UsuId',$_SESSION['idUsuario']);
+        $sentenciaSQL->bindParam(':Pun_LocalId',$Local_Id);
+        $sentenciaSQL->bindParam(':Pun_Puntuacion',$estrellas);
+        $sentenciaSQL->bindParam(':Pun_ComId',$idComentario);
         $sentenciaSQL->execute();
         header("Location:restaurante.php");
         break;
@@ -526,26 +543,28 @@ switch ($accion) {
                         $Cinco = 0;
                         $Conta = 0;
                         $Rank = 0; ?>
+                        <?php if ($puntuaciones != null && $comentarios != null){ ?>
                         <?php foreach($puntuaciones as $puntuacion){
-                            if ($puntuacion["Pun_Puntacion"] == 1) {
+                            if ($puntuacion["Pun_Puntuacion"] == 1) {
                                 $Uno++;
                             }
-                            if ($puntuacion["Pun_Puntacion"] == 2) {
+                            if ($puntuacion["Pun_Puntuacion"] == 2) {
                                 $Dos++;
                             }
-                            if ($puntuacion["Pun_Puntacion"] == 3) {
+                            if ($puntuacion["Pun_Puntuacion"] == 3) {
                                 $Tres++;
                             }
-                            if ($puntuacion["Pun_Puntacion"] == 4) {
+                            if ($puntuacion["Pun_Puntuacion"] == 4) {
                                 $Cuatro++;
                             }
-                            if ($puntuacion["Pun_Puntacion"] == 5) {
+                            if ($puntuacion["Pun_Puntuacion"] == 5) {
                                 $Cinco++;
                             }
-                            $Conta = $Conta + $puntuacion["Pun_Puntacion"];
-                            $Rank = $Conta/count($comentarios);
+                            $Conta = $Conta + $puntuacion["Pun_Puntuacion"];
+                            $Rank = $Conta/count($puntuaciones);
                         } ?>
-                        <span class="avg"><?php echo $Conta/count($comentarios); ?></span>DE 5
+                        <?php } ?>
+                        <span class="avg"><?php echo $Rank; ?></span>DE 5
 
                     </div>
 
@@ -578,12 +597,18 @@ switch ($accion) {
                         <div class="star">
                             5 <i class="fas fa-star"></i>
                         </div>
+                        <?php 
+                            if ($puntuaciones != null && $comentarios != null){
+                                $porcentaje5 = $Cinco / count($puntuaciones);
+                                $porcentaje5 = $porcentaje5 * 100; 
+                            }
+                        ?>
 
                         <div class="progress">
-                            <div class="progress-line" style="width: 67%"></div>
+                            <div class="progress-line" style="width: <?php echo $porcentaje5?>%"></div>
                         </div>
 
-                        <div class="percent">67%</div>
+                        <div class="percent"><?php echo $porcentaje5; ?>%</div>
 
                     </div>
 
@@ -594,12 +619,18 @@ switch ($accion) {
                         <div class="star">
                             4 <i class="fas fa-star"></i>
                         </div>
-    
+                        <?php 
+                            if ($puntuaciones != null && $comentarios != null){
+                            $porcentaje4 = $Cuatro / count($puntuaciones);
+                            $porcentaje4 = $porcentaje4 * 100; 
+                            }
+                        ?>
+
                         <div class="progress">
-                            <div class="progress-line" style="width: 13%"></div>
+                            <div class="progress-line" style="width: <?php echo $porcentaje4?>%"></div>
                         </div>
 
-                        <div class="percent">13%</div>
+                        <div class="percent"><?php echo $porcentaje4; ?>%</div>
     
                     </div>
     
@@ -610,12 +641,18 @@ switch ($accion) {
                         <div class="star">
                             3 <i class="fas fa-star"></i>
                         </div>
-    
+                        <?php 
+                            if ($puntuaciones != null && $comentarios != null){
+                            $porcentaje3 = $Tres / count($puntuaciones);
+                            $porcentaje3 = $porcentaje3 * 100; 
+                            }
+                        ?>
+
                         <div class="progress">
-                            <div class="progress-line" style="width: 15%"></div>
+                            <div class="progress-line" style="width: <?php echo $porcentaje3?>%"></div>
                         </div>
 
-                        <div class="percent">15%</div>
+                        <div class="percent"><?php echo $porcentaje3; ?>%</div>
     
                     </div>
     
@@ -626,12 +663,18 @@ switch ($accion) {
                         <div class="star">
                             2 <i class="fas fa-star"></i>
                         </div>
-    
+                        <?php 
+                            if ($puntuaciones != null && $comentarios != null){
+                            $porcentaje2 = $Dos / count($puntuaciones);
+                            $porcentaje2 = $porcentaje2 * 100; 
+                            }
+                        ?>
+
                         <div class="progress">
-                            <div class="progress-line" style="width: 3%"></div>
+                            <div class="progress-line" style="width: <?php echo $porcentaje2?>%"></div>
                         </div>
-    
-                        <div class="percent">3%</div>
+
+                        <div class="percent"><?php echo $porcentaje2; ?>%</div>
 
                     </div>
     
@@ -642,12 +685,18 @@ switch ($accion) {
                         <div class="star">
                             1 <i class="fas fa-star"></i>
                         </div>
-    
+                        <?php 
+                            if ($puntuaciones != null && $comentarios != null){
+                            $porcentaje1 = $Uno / count($puntuaciones);
+                            $porcentaje1 = $porcentaje1 * 100; 
+                            }
+                        ?>
+
                         <div class="progress">
-                            <div class="progress-line" style="width: 2%"></div>
+                            <div class="progress-line" style="width: <?php echo $porcentaje1;?>%"></div>
                         </div>
 
-                        <div class="percent">2%</div>
+                        <div class="percent"><?php echo $porcentaje1; ?>%</div>
     
                     </div>
     
@@ -679,6 +728,7 @@ switch ($accion) {
 
                     <div class="user-review">
     
+                        <?php if ($puntuaciones != null && $comentarios != null){ ?>
                         <!-- end user review -->
                         <?php foreach($comentarios as $comentario){?>
                             <div class="user-review">
@@ -692,7 +742,15 @@ switch ($accion) {
         
                                     <div class="stars">
         
-                                        ${setStars(userRatingStar)}
+                                        <i class="fas fa-star">
+                                            <?php 
+                                                foreach($puntuaciones as $puntua){
+                                                    if($puntua['Pun_ComId'] == $comentario["Com_Id"]){
+                                                        echo $puntua['Pun_Puntuacion'];
+                                                    }
+                                                }
+                                            ?>
+                                        </i>
         
                                     </div>
         
@@ -710,6 +768,7 @@ switch ($accion) {
                             </div>
     
                         <?php }?>
+                        <?php } ?>
                         
                         <!-- <div class="user-rating">
     
@@ -766,13 +825,24 @@ switch ($accion) {
     
                         <div class="stars">
     
-                            <i class="fas fa-star" data-rating="1"></i>
-                            <i class="fas fa-star" data-rating="2"></i>
-                            <i class="fas fa-star" data-rating="3"></i>
-                            <i class="fas fa-star" data-rating="4"></i>
-                            <i class="fas fa-star" data-rating="5"></i>
+                            <!-- <i class="fas fa-star" data-rating="1"></i>
+                            <select name="" id="">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select> -->
     
                         </div>
+                        <i class="fas fa-star" data-rating="1"></i>
+                        <select name="puntuacion" id="puntuacion">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
     
                     </div>
                     
@@ -782,7 +852,7 @@ switch ($accion) {
     
                         <div class="form-input">
     
-                            <label for="name"><?php echo $_SESSION["nombreUsuario"]; ?></label>
+                            <label for="name">Tu nombre: </label>
                             <input disabled type="text" id="name" placeholder="<?php echo $_SESSION['nombreUsuario']; ?>">
     
                         </div>

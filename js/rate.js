@@ -153,7 +153,7 @@ function setDefaultRating(){
     starDiv.innerHTML = "";
 
 
-    Array.from({length:numberStar}, (_,i) => {
+    /* Array.from({length:numberStar}, (_,i) => {
 
         let number = ++i; //1,2,3,4,5
 
@@ -173,11 +173,11 @@ function setDefaultRating(){
 
         starDiv.appendChild(starEle);
 
-    })
+    }) */
 
 }
 
-function handleRating(number){
+/* function handleRating(number){
 
     const stars = feedbackBox.querySelectorAll(".stars i");
 
@@ -201,7 +201,7 @@ function handleRating(number){
 
     })
 
-}
+} */
 
 function setStars(number){
 
@@ -344,7 +344,7 @@ function calcRating(){
 
     const barItems = document.querySelectorAll('.rating-bar .bar-item');
 
-    for(let number = numberStar; number>=1;number--){
+    /* for(let number = numberStar; number>=1;number--){
 
         let percent = 0;
 
@@ -363,7 +363,7 @@ function calcRating(){
         indexProgress++;
 
 
-    }
+    } */
 
     if(ratingStars.numRatings){
 

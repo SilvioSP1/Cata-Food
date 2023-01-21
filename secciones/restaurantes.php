@@ -15,6 +15,10 @@ $sentenciaSQL = $conexion->prepare("SELECT * FROM tipo_producto");
 $sentenciaSQL->execute();
 $listaTipoProductos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
+$sentenciaSQL = $conexion->prepare("SELECT * FROM puntuacion");
+$sentenciaSQL->execute();
+$puntuaciones = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
+
 if ($_POST['TL_Tipo'] || !empty($_SESSION["tiposLocal"])) {
     if (!empty($_POST['TL_Tipo'])) {
         $_SESSION["tiposLocal"] = $_POST['TL_Tipo'];
@@ -169,11 +173,35 @@ if ($_POST['TL_Tipo'] || !empty($_SESSION["tiposLocal"])) {
                                                     <p class="ubiRestaurante"><?php echo $local['Local_Ubicacion']; ?></p>
                                                     <h6>Clasificación</h6>
                                                     <div>
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
+                                                        <?php foreach($puntuaciones as $puntuacion){ ?>
+                                                            <?php if($puntuacion['Pun_LocalId'] == $local['Local_Id']){ ?>
+                                                                <?php if ($puntuacion['Pun_Puntuacion'] == 5) { ?>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                <?php }?>
+                                                                <?php if ($puntuacion['Pun_Puntuacion'] == 4) { ?>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                <?php }?>
+                                                                <?php if ($puntuacion['Pun_Puntuacion'] == 3) { ?>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                <?php }?>
+                                                                <?php if ($puntuacion['Pun_Puntuacion'] == 2) { ?>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                <?php }?>
+                                                                <?php if ($puntuacion['Pun_Puntuacion'] == 1) { ?>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                <?php }?>
+                                                            <?php } ?>
+                                                        <?php } ?>
                                                     </div>
                                                 </div>
                                             </button>
@@ -193,11 +221,35 @@ if ($_POST['TL_Tipo'] || !empty($_SESSION["tiposLocal"])) {
                                                     <p class="ubiRestaurante"><?php echo $local['Local_Ubicacion']; ?></p>
                                                     <h6>Clasificación</h6>
                                                     <div>
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
-                                                        <i class="fa-solid fa-star"></i>
+                                                    <?php foreach($puntuaciones as $puntuacion){ ?>
+                                                            <?php if($puntuacion['Pun_LocalId'] == $local['Local_Id']){ ?>
+                                                                <?php if ($puntuacion['Pun_Puntuacion'] == 5) { ?>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                <?php }?>
+                                                                <?php if ($puntuacion['Pun_Puntuacion'] == 4) { ?>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                <?php }?>
+                                                                <?php if ($puntuacion['Pun_Puntuacion'] == 3) { ?>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                <?php }?>
+                                                                <?php if ($puntuacion['Pun_Puntuacion'] == 2) { ?>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                <?php }?>
+                                                                <?php if ($puntuacion['Pun_Puntuacion'] == 1) { ?>
+                                                                    <i class="fa-solid fa-star"></i>
+                                                                <?php }?>
+                                                            <?php } ?>
+                                                        <?php } ?>
                                                     </div>
                                                 </div>
                                             </button>

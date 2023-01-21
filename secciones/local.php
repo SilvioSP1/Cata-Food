@@ -154,14 +154,14 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
           <div class="card-body text-center">
             <div class="contanedorImagen">
 
-              <img src="../../Cata-Food/img/perfil/editar.png" alt="" class="imagen-editar" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <img src="../../Cata-Food/img/perfil/editar.png" alt="" class="imagen-editar" data-bs-toggle="modal" data-bs-target="#exampleModal1">
               <img src="../img/restaurantes/locales/<?php echo $_SESSION['imagen'] ?>" alt="avatar" style="width: 150px;" class="profilePicture">
 
             </div>
             <h5 class="my-3"><?php echo $_SESSION['nombreUsuario'];?></h5>
             <p class="text-muted mb-1">Vendedor / Local</p>
             <div class="d-flex justify-content-center mb-2">
-              <button type="button" class="btn btn-outline-primary ms-1 botonModal" data-bs-toggle="modal" data-bs-target="#exampleModal">Modificar</button>
+              <button type="button" class="btn btn-outline-primary ms-1 botonModal" data-bs-toggle="modal" data-bs-target="#exampleModal1">Modificar</button>
               <form action="restaurante.php" method="post">
                 <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($txtID,cod,key); ?>">
                 <button class="btn btn-outline-primary ms-1 botonModal" name="btnAccion" type="submit">Ver Productos</button>
@@ -317,7 +317,7 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
       </div>
     </div>
   </div>
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">

@@ -86,7 +86,7 @@ switch ($accion) {
           <div class="card-body text-center">
             <div class="contanedorImagen">
 
-              <img src="../../Cata-Food/img/perfil/editar.png" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="" class="imagen-editar">
+              <img src="../../Cata-Food/img/perfil/editar.png" data-bs-toggle="modal" data-bs-target="#exampleModal1" alt="" class="imagen-editar">
               <img src="../../Cata-Food/img/perfil/<?php echo $_SESSION['imagen']; ?>" alt="avatar" style="width: 150px;" class="profilePicture">
 
             </div>
@@ -109,7 +109,7 @@ switch ($accion) {
                 break;
             } ?></p>
             <div class="d-flex justify-content-center mb-2">
-              <button type="button" class="btn btn-outline-primary ms-1 botonModal" data-bs-toggle="modal" data-bs-target="#exampleModal">Modificar</button>
+              <button type="button" class="btn btn-outline-primary ms-1 botonModal" data-bs-toggle="modal" data-bs-target="#exampleModal1">Modificar</button>
             </div>
           </div>
         </div>
@@ -178,7 +178,7 @@ switch ($accion) {
         </div>
       </div>
     </div>
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
