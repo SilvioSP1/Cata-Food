@@ -598,6 +598,7 @@ switch ($accion) {
                             5 <i class="fas fa-star"></i>
                         </div>
                         <?php 
+                            $porcentaje5 = 0;
                             if ($puntuaciones != null && $comentarios != null){
                                 $porcentaje5 = $Cinco / count($puntuaciones);
                                 $porcentaje5 = $porcentaje5 * 100; 
@@ -620,6 +621,7 @@ switch ($accion) {
                             4 <i class="fas fa-star"></i>
                         </div>
                         <?php 
+                            $porcentaje4 = 0;
                             if ($puntuaciones != null && $comentarios != null){
                             $porcentaje4 = $Cuatro / count($puntuaciones);
                             $porcentaje4 = $porcentaje4 * 100; 
@@ -642,6 +644,7 @@ switch ($accion) {
                             3 <i class="fas fa-star"></i>
                         </div>
                         <?php 
+                            $porcentaje3 = 0;
                             if ($puntuaciones != null && $comentarios != null){
                             $porcentaje3 = $Tres / count($puntuaciones);
                             $porcentaje3 = $porcentaje3 * 100; 
@@ -664,6 +667,7 @@ switch ($accion) {
                             2 <i class="fas fa-star"></i>
                         </div>
                         <?php 
+                            $porcentaje2 = 0;
                             if ($puntuaciones != null && $comentarios != null){
                             $porcentaje2 = $Dos / count($puntuaciones);
                             $porcentaje2 = $porcentaje2 * 100; 
@@ -686,6 +690,7 @@ switch ($accion) {
                             1 <i class="fas fa-star"></i>
                         </div>
                         <?php 
+                            $porcentaje1 = 0;
                             if ($puntuaciones != null && $comentarios != null){
                             $porcentaje1 = $Uno / count($puntuaciones);
                             $porcentaje1 = $porcentaje1 * 100; 
