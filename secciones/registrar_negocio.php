@@ -23,7 +23,8 @@ $localesTipos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
       $txtContrasena = ($_POST['txtContrasena']);
       $txtContrasenaRep = ($_POST['txtContrasenaRep']);
       $txtRolId = 2;
-      $txtImagen = 'user_icon.png';
+      $txtImagen = '1669751061_profile.png';
+      $txtNombreCompleto = $txtApellidoDue.' '.$txtNombreDue;
       
       $prueba = $conexion->prepare("SELECT COUNT(Local_Nombre) AS cantidad FROM local WHERE Local_Nombre=?");
       $prueba->execute([$txtNombre]);
@@ -64,21 +65,21 @@ $localesTipos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
         }
         else{
 
-          $sentenciaSQL = $conexion->prepare("INSERT INTO local (Local_Nombre,Local_Imagen,Local_Status,Local_Telefono,Local_Ubicacion,Local_Dueno,Local_Tipo,Local_UbiRrefe,Local_Contrasena,Local_Email,Local_RolId) VALUES (:Local_Nombre,:Local_Imagen,1,:Local_Telefono,:Local_Ubicacion,:Local_Dueno,:Local_Tipo,:Local_UbiRrefe,:Local_Contrasena,:Local_Email,:Local_RolId);");
+          $sentenciaSQL = $conexion->prepare("INSERT INTO local (Local_Nombre,Local_Imagen,Local_Status,Local_Telefono,Local_Ubicacion,Local_Dueno,Local_Tipo,Local_UbiRefe,Local_Contrasena,Local_Email,Local_RolId) VALUES (:Local_Nombre,:Local_Imagen,1,:Local_Telefono,:Local_Ubicacion,:Local_Dueno,:Local_Tipo,:Local_UbiRefe,:Local_Contrasena,:Local_Email,:Local_RolId);");
           $sentenciaSQL->bindParam(':Local_Nombre',$txtNombre);
           $sentenciaSQL->bindParam(':Local_Imagen',$txtImagen);
           $sentenciaSQL->bindParam(':Local_Telefono',$txtTelefono);
           $sentenciaSQL->bindParam(':Local_Ubicacion',$txtUbicacion);
-          $sentenciaSQL->bindParam(':Local_Dueno',$txtNombreDue." ".$txtApellidoDue);
+          $sentenciaSQL->bindParam(':Local_Dueno',$txtNombreCompleto);
           $sentenciaSQL->bindParam(':Local_Tipo',$txtGenero);
-          $sentenciaSQL->bindParam(':Local_UbiRrefe',$txtUbicacionRef);
+          $sentenciaSQL->bindParam(':Local_UbiRefe',$txtUbicacionRef);
           $sentenciaSQL->bindParam(':Local_Contrasena',$txtContrasena);
           $sentenciaSQL->bindParam(':Local_Email',$txtEmail);
           $sentenciaSQL->bindParam(':Local_RolId',$txtRolId);
           $sentenciaSQL->execute();
   
           $sentenciaSQL = $conexion->prepare("SELECT * FROM local WHERE Local_Email=:Local_Email AND Local_Contrasena=:Local_Contrasena");
-          $sentenciaSQL->bindParam(':Local_Nombre',$txtNombre,PDO::PARAM_STR);
+          $sentenciaSQL->bindParam(':Local_Email',$txtEmail,PDO::PARAM_STR);
           $sentenciaSQL->bindParam(':Local_Contrasena',$txtContrasena,PDO::PARAM_STR);
           $sentenciaSQL->execute();
           $locales = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
