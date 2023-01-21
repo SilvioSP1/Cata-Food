@@ -29,7 +29,7 @@ error_reporting(0);
       $atributos = json_decode($response, TRUE); 
 
 
-      if ($usuarios['Usu_Email'] == $txtEmail && $usuarios['Usu_Contrasena'] == $txtContrasena && $atributos['success']) {
+      if ($usuarios['Usu_Email'] == $txtEmail && $usuarios['Usu_Contrasena'] == $txtContrasena && $atributos['success'] && $usuarios['Usu_Nombre'] != 3) {
         if ($usuarios['Usu_RolId'] == 1) 
         {
           session_start();

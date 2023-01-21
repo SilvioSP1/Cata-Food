@@ -27,7 +27,7 @@ error_reporting(0);
       $atributos = json_decode($response, TRUE); 
 
 
-      if ($locales['Local_Email'] == $txtEmail && $locales['Local_Contrasena'] == $txtContrasena && $atributos['success']) {
+      if ($locales['Local_Email'] == $txtEmail && $locales['Local_Contrasena'] == $txtContrasena && $atributos['success'] && $locales['Local_Status'] != 3) {
           session_start();
           $_SESSION['usuario'] = $locales;
           $_SESSION['nombreUsuario']=$locales['Local_Nombre'];
