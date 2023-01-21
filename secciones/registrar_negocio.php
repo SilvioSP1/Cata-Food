@@ -29,8 +29,8 @@ $localesTipos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
       $prueba->execute([$txtNombre]);
       $prueba = $prueba->fetch(PDO::FETCH_ASSOC);
 
-      $prueba = $conexion->prepare("SELECT COUNT(Local_Email) AS cantidad FROM local WHERE Local_Email=?");
-      $prueba->execute([$txtEmail]);
+      $prueba2 = $conexion->prepare("SELECT COUNT(Local_Email) AS cantidad FROM local WHERE Local_Email=?");
+      $prueba2->execute([$txtEmail]);
       $prueba2 = $prueba2->fetch(PDO::FETCH_ASSOC);
 
       if(($prueba['cantidad'] > 0) && ($prueba2['cantidad'] > 0)) {
