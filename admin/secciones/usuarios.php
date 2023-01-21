@@ -123,7 +123,7 @@ switch ($accion) {
         break;
     
     case "Habilitar":
-        $sentenciaSQL = $conexion->prepare("UPDATE local SET Usu_Status = 1 WHERE Usu_Id = :Usu_Id");
+        $sentenciaSQL = $conexion->prepare("UPDATE usuario SET Usu_Status = 1 WHERE Usu_Id = :Usu_Id");
         $sentenciaSQL->bindParam(':Usu_Id',$txtID);
         $sentenciaSQL->execute();
         /* echo "Presionado boton Borrar"; */
