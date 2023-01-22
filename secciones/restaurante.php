@@ -416,7 +416,7 @@ switch ($accion) {
 
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="finnModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content modalRes">
       <h3 class="modalText__rest">Gracias por visitar <?php echo $localNombre;?></h1>

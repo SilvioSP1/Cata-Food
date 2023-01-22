@@ -1,5 +1,5 @@
 $(document).ready(function(){
 
-    $('#exampleModal').modal('show')
+    $('#finnModal').modal('show')
 
 });
