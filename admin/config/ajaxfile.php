@@ -18,23 +18,24 @@ $tipoProducto = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
 $abierto = date("Y-m-d",time());
 $sentenciaSQL = $conexion->prepare("SELECT * FROM horario WHERE Horario_LocalId = :Horario_LocalId AND Horario_Fecha = :Horario_Fecha");
-$sentenciaSQL->bindParam(':Horario_LocalId',$_SESSION['idUsuario']);
+$sentenciaSQL->bindParam(':Horario_LocalId',$_SESSION['local']);
 $sentenciaSQL->bindParam(':Horario_Fecha',$abierto);
 $sentenciaSQL->execute();
-$tipoProducto = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
+$localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
 
 $sentenciaSQL = $conexion->prepare("SELECT * FROM stock_producto WHERE Stock_ProdId = :Stock_ProdId AND Stock_LocalId = :Stock_LocalId AND Stock_HorarioId = :Stock_HorarioId");
 $sentenciaSQL->bindParam(':Stock_ProdId',$userid);
-$sentenciaSQL->bindParam(':Stock_LocalId',$_SESSION['idUsuario']);
-$sentenciaSQL->bindParam(':Stock_HorarioId',$tipoProducto['Horario_Id']);
+$sentenciaSQL->bindParam(':Stock_LocalId',$_SESSION['local']);
+$sentenciaSQL->bindParam(':Stock_HorarioId',$localAbierto['Horario_Id']);
 $sentenciaSQL->execute();
 $stockProducto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
+$_SESSION['stockPro'] = $stockProducto['Stock_Cantidad'];
 
-$sentenciaSQL = $conexion->prepare("SELECT * FROM horario WHERE Horario_LocalId = :Horario_LocalId AND Horario_Fecha = :Horario_Fecha");
+/* $sentenciaSQL = $conexion->prepare("SELECT * FROM horario WHERE Horario_LocalId = :Horario_LocalId AND Horario_Fecha = :Horario_Fecha");
 $sentenciaSQL->bindParam(':Horario_LocalId',$txtID);
-$sentenciaSQL->bindParam(':Horario_Fecha',$fechaActual);
+$sentenciaSQL->bindParam(':Horario_Fecha',$abierto);
 $sentenciaSQL->execute();
-$localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
+$localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC); */
 
 foreach($listaProductos as $producto) {
 ?>
@@ -79,13 +80,11 @@ foreach($listaProductos as $producto) {
             <div class="flexBotones">
 
                 
-                <?php if ($producto['Prod_Status'] == 3 && $stockProducto['Stock_Cantidad'] > 0 && $localAbierto != null) {?>
-                    <?php if($localAbierto['Horario_Fecha'] == date("Y-m-d",time()) && $localAbierto['Horario_Cierre'] > date("(H:i:s)", time())){ ?>
+                <?php if ($producto['Prod_Status'] == 3 && $stockProducto['Stock_Cantidad'] > 0 && $localAbierto != null && $localAbierto['Horario_Fecha'] == date("Y-m-d",time()) && $localAbierto['Horario_Cierre'] > date("(H:i:s)", time())) {?>
                 <input type="number" class="form-control-sm conta" name="conta" id="conta" placeholder="Unidades" value="1">
                 <button class="botonAgregar btn btn-warning" name="btnAccion" value="Agregar" type="submit" id="agregarr">
                     Agregar a carrito
                 </button>
-                    <?php } ?>
                 <?php } else if ($producto['Prod_Status'] != 3 || $stockProducto['Stock_Cantidad'] < 0 || $stockProducto == null || $localAbierto == null || $localAbierto['Horario_Fecha'] != date("Y-m-d",time()) && $localAbierto['Horario_Cierre'] < date("(H:i:s)", time())) { ?>
                 <input disabled type="number" class="form-control-sm conta" name="conta" id="conta" placeholder="Unidades" value="1">
                 <button disabled class="botonAgregar btn btn-warning" name="btnAccion" value="Agregar" type="submit" id="agregarr">

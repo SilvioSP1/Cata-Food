@@ -1,4 +1,5 @@
 <?php
+session_start();
 error_reporting(0);
 $mensaje="";
 if (is_numeric(openssl_decrypt($_POST["Prod_Id"],cod,key))) {
@@ -65,25 +66,7 @@ if ([$_SESSION['usuario'] != "Sin Loguearse"])
                 }
     
                 if (!isset($_SESSION['carritoCompra'])) {
-                    $productoArr = array( 
-                        'id'=>$Prod_Id,
-                        'imagen'=>$Prod_Imagen,
-                        'nombre'=>$Prod_Nombre,
-                        'precio'=>$Prod_Precio,
-                        'cantidad'=>$cantidad,
-                        'descripcion'=>$Prod_Descripcion,
-                        'local'=>$Local_Nombre
-                    );
-                    $_SESSION['carritoCompra'][0] = $productoArr;
-                    $mensaje= "Producto agregado";
-                }
-                else{
-                    $idProductos = array_column($_SESSION['carritoCompra'],"id");
-                    if (in_array($Prod_Id,$idProductos)) {
-                        $mensaje= "Ya esta agregado este producto";
-                    }
-                    else{
-                        $numeroProductos = count($_SESSION['carritoCompra']);
+                    if ($cantidad <= $_SESSION['stockPro']) {
                         $productoArr = array( 
                             'id'=>$Prod_Id,
                             'imagen'=>$Prod_Imagen,
@@ -93,8 +76,36 @@ if ([$_SESSION['usuario'] != "Sin Loguearse"])
                             'descripcion'=>$Prod_Descripcion,
                             'local'=>$Local_Nombre
                         );
-                        $_SESSION['carritoCompra'][$numeroProductos] = $productoArr;
-                        $mensaje= "Producto agregado";
+                        $_SESSION['carritoCompra'][0] = $productoArr;
+                        $mensaje= $_SESSION['stockPro'];
+                    }else{
+
+                        $mensaje= "Producto sin stock suficiente";
+                    }
+                }
+                else{
+                    $idProductos = array_column($_SESSION['carritoCompra'],"id");
+                    if (in_array($Prod_Id,$idProductos)) {
+                        $mensaje= "Ya esta agregado este producto";
+                    }
+                    else{
+                        if ($cantidad <= $_SESSION['stockPro']) {
+                            $numeroProductos = count($_SESSION['carritoCompra']);
+                            $productoArr = array( 
+                                'id'=>$Prod_Id,
+                                'imagen'=>$Prod_Imagen,
+                                'nombre'=>$Prod_Nombre,
+                                'precio'=>$Prod_Precio,
+                                'cantidad'=>$cantidad,
+                                'descripcion'=>$Prod_Descripcion,
+                                'local'=>$Local_Nombre
+                            );
+                            $_SESSION['carritoCompra'][$numeroProductos] = $productoArr;
+                            $mensaje= "Producto agregado";
+                        }else{
+
+                            $mensaje= "Producto sin stock suficiente";
+                        }
                     }
                 }
                 /* $mensaje= print_r($_SESSION,true); */

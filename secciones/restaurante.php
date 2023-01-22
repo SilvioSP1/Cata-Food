@@ -317,7 +317,7 @@ switch ($accion) {
                 <div class="conteinerProductos">
                     <?php if(!empty($listaProductosPorTipo)){ ?>
                     <?php foreach($listaProductosPorTipo as $producto) { ?>
-                    <?php if ($producto['Prod_Status'] == 1) { ?>
+                    <?php if ($producto['Prod_Status'] == 1 || $producto['Prod_Status'] == 3) { ?>
                     <form class="container__CardProd" action="" method="POST" id="">
                         <button class="userinfo conteinerCardResta producto botonModal" type="button"
                             data-id="<?php echo $producto['Prod_Id']; ?>" onClick="reply_click(this.id)"
@@ -336,7 +336,7 @@ switch ($accion) {
                     <?php } ?>
                     <?php }else { ?>
                     <?php foreach($listaProductos as $producto) { ?>
-                    <?php if ($producto['Prod_Status'] == 1) { ?>
+                    <?php if ($producto['Prod_Status'] == 1 || $producto['Prod_Status'] == 3) { ?>
                     <form class="container__CardProd" action="" method="POST" id="">
                         <button class="userinfo conteinerCardResta producto botonModal" type="button"
                             data-id="<?php echo $producto['Prod_Id']; ?>" onClick="reply_click(this.id)"
