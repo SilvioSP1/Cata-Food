@@ -10,6 +10,7 @@ body {
   font-family: "Nunito", sans-serif;
   background-color: #fb8819;
   overflow-x: hidden;
+  transition: background-color 0.3s, color 0.2s;
 }
 
 .logoCata {
@@ -137,6 +138,14 @@ header .sun {
 body.dark-mode {
   background-color: #27292b;
   color: #f5f5f5;
+}
+
+body.dark-mode .moon {
+  display: none;
+}
+
+body.dark-mode .sun {
+  display: block;
 }
 
 .titulo__Cata {
@@ -307,6 +316,14 @@ model-viewer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+body.dark-mode .card-bodyIndex h4 {
+  color: white;
+}
+
+body.dark-mode .card-bodyIndex {
+  background-color: black;
 }
 
 .contenedorCards {
