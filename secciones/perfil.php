@@ -72,9 +72,9 @@ switch ($accion) {
   <div class="container py-5">
     <div class="row">
       <div class="col">
-        <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
+        <nav aria-label="breadcrumb" class="rounded-3 p-3 mb-4 breadcrumbDark breadcrumbLight">
           <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item active" aria-current="page">Perfil Usuario</li>
+            <li class="breadcrumb-item" aria-current="page">Perfil Usuario</li>
           </ol>
         </nav>
       </div>
@@ -82,12 +82,12 @@ switch ($accion) {
 
     <div class="row">
       <div class="col-lg-4">
-        <div class="card mb-4">
+        <div class="card mb-4 cardProfile__dark">
           <div class="card-body text-center">
             <div class="contanedorImagen">
 
-              <img src="../../Cata-Food/img/perfil/editar.png" data-bs-toggle="modal" data-bs-target="#exampleModal1" alt="" class="imagen-editar">
               <img src="../../Cata-Food/img/perfil/<?php echo $_SESSION['imagen']; ?>" alt="avatar" style="width: 150px;" class="profilePicture">
+              <i class="bi bi-pencil-fill imagen-editar" data-bs-toggle="modal" data-bs-target="#exampleModal1" alt=""></i>
 
             </div>
             <h5 class="my-3"><?php echo $_SESSION['nombreUsuario'];?></h5>
@@ -109,7 +109,7 @@ switch ($accion) {
                 break;
             } ?></p>
             <div class="d-flex justify-content-center mb-2">
-              <button type="button" class="btn btn-outline-primary ms-1 botonModal" data-bs-toggle="modal" data-bs-target="#exampleModal1">Modificar</button>
+              <button type="button" class="btn btn-secondary ms-1 botonModal" data-bs-toggle="modal" data-bs-target="#exampleModal1">Modificar</button>
             </div>
           </div>
         </div>
@@ -138,13 +138,13 @@ switch ($accion) {
       </div>
       <div class="col-lg-8">
         <div class="card mb-4 datos">
-          <div class="card-body">
+          <div class="card-body cuerpoDark">
             <div class="row">
               <div class="col-sm-3">
                 <p class="mb-0">Nombre</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0"><?php echo $_SESSION['nombre'];?></p>
+                <p class="mb-0 parraDark"><?php echo $_SESSION['nombre'];?></p>
               </div>
             </div>
             <hr>
@@ -153,7 +153,7 @@ switch ($accion) {
                 <p class="mb-0">Apellido</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0"><?php echo $_SESSION['apellido'];?></p>
+                <p class="mb-0 parraDark"><?php echo $_SESSION['apellido'];?></p>
               </div>
             </div>
             <hr>
@@ -162,7 +162,7 @@ switch ($accion) {
                 <p class="mb-0">Email</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0"><?php echo $_SESSION['email'];?></p>
+                <p class="mb-0 parraDark"><?php echo $_SESSION['email'];?></p>
               </div>
             </div>
             <hr>
@@ -170,8 +170,8 @@ switch ($accion) {
               <div class="col-sm-3">
                 <p class="mb-0">Telefono</p>
               </div>
-              <div class="col-sm-9">
-                <p class="text-muted mb-0"><?php echo $_SESSION['telefono'];?></p>
+              <div class="col-sm-9 parradark">
+                <p class="mb-0 parraDark"><?php echo $_SESSION['telefono'];?></p>
               </div>
             </div>
           </div>

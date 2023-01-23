@@ -1387,6 +1387,7 @@ p {
   --color-primary: #393a5d;
   --color-secondary: #888999;
   --color-blue: #537ae1;
+  --color-white: #fff;
 }
 .wrapperRate .fa-star, .wrapperRate .fa-star-half {
   color: var(--color-yellow);
@@ -1645,6 +1646,31 @@ p {
   display: none;
 }
 
+body.dark-mode .buttonTipo {
+  background-color: #1a1e21;
+}
+body.dark-mode .rating-box {
+  background-color: #1a1e21;
+}
+body.dark-mode .rating-box .titleRate {
+  color: white;
+}
+body.dark-mode .count-review {
+  color: white;
+}
+body.dark-mode .info-rating .star-count .avg {
+  color: var(--color-white);
+}
+body.dark-mode .info-rating .star-count .deCinco {
+  color: var(--color-white);
+}
+body.dark-mode .wrapperRate .review-content .comment-content {
+  color: var(--color-white);
+}
+body.dark-mode .user-review time {
+  color: var(--color-white);
+}
+
 .sectionCarrito {
   margin-bottom: 15rem;
 }
@@ -1720,6 +1746,7 @@ p {
 
 .backgroundProfile {
   background-color: #fb8819;
+  transition: background-color 0.3s, color 0.2s;
 }
 .backgroundProfile .profilePicture {
   border-radius: 100%;
@@ -1737,6 +1764,31 @@ p {
   position: absolute;
   right: 0;
   cursor: pointer;
+}
+.backgroundProfile .breadcrumbLight {
+  background-color: white;
+}
+
+body.dark-mode .cuerpoDark {
+  background-color: black;
+  border-color: white;
+}
+body.dark-mode .backgroundProfile {
+  background-color: #27292b;
+}
+body.dark-mode .breadcrumbDark {
+  background-color: black;
+  color: white;
+}
+body.dark-mode .parraDark {
+  color: white;
+  transition: background-color 0.3s, color 0.2s;
+}
+body.dark-mode .cardProfile__dark {
+  background-color: black;
+}
+body.dark-mode .botonModal {
+  background-color: black;
 }
 
 .chat-bar-collapsible {

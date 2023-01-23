@@ -1,8 +1,8 @@
-let body = document.querySelector("body");
-let colorMode = document.querySelector(".color-mode");
+let bodyDark = document.querySelector("body");
+let colorMode = document.querySelector(".colorMode__dark");
 
 colorMode.addEventListener("click", () => {
 
-    body.classList.toggle("dark-mode");
+    bodyDark.classList.toggle("dark-mode");
 
 });

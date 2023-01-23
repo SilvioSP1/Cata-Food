@@ -1,6 +1,7 @@
 .backgroundProfile {
 
     background-color: #fb8819;
+    transition: background-color .3s, color .2s;
 
     .profilePicture {
 
@@ -28,5 +29,56 @@
        }
 
    }
+
+   .breadcrumbLight{
+
+    background-color: white;
+
+   }
+
+}
+
+//darkMode
+
+body.dark-mode{
+
+    .cuerpoDark{
+
+        background-color: black;
+        border-color: white;
+
+    }
+
+    .backgroundProfile{
+
+        background-color: #27292b;
+
+    }
+
+    .breadcrumbDark{
+
+        background-color: black;
+        color: white;
+
+    }
+
+    .parraDark{
+
+        color: white;
+        transition: background-color .3s, color .2s;
+
+    }
+
+    .cardProfile__dark{
+
+        background-color: black;
+
+    }
+
+    .botonModal{
+
+        background-color: black;
+
+    }
 
 }
