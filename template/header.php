@@ -56,6 +56,8 @@ include("../../Cata-food/admin/config/config.php");
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
 </head>
 
 
@@ -76,9 +78,18 @@ include("../../Cata-food/admin/config/config.php");
       <!-- NAV -->
       <header class="nav sticky-top">
         <a href="../../Cata-Food/index.php"><img src="../../Cata-Food/img/index/logo_small.png" alt="" class="logoCata"></a>
-        <div class="menu_toggle">
-          <span class="fa fa-list"></span>
+
+        <div class="color-mode">
+            <i class="bi bi-moon-fill moon"></i>
+            <i class="bi bi-sun sun"></i>
         </div>
+
+        <div class="menu_toggle">
+
+          <span class="fa fa-list"></span>
+          
+        </div>
+
         <nav>
           <ul>
             <li><a href="../../Cata-Food/secciones/restaurantes.php?pagina=1" class="item_nav"><i class="fa-solid fa-bowl-food"></i> Restaurantes</a></li>

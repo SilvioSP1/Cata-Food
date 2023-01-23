@@ -126,6 +126,19 @@ body::-webkit-scrollbar-track-piece {
   color: inherit;
 }
 
+header .sun, header .moon {
+  cursor: pointer;
+}
+
+header .sun {
+  display: none;
+}
+
+body.dark-mode {
+  background-color: #27292b;
+  color: #f5f5f5;
+}
+
 .titulo__Cata {
   text-align: center;
   margin-top: 50px;
