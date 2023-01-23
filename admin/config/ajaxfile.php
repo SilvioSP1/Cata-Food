@@ -81,7 +81,7 @@ foreach($listaProductos as $producto) {
 
                 
                 <?php if ($producto['Prod_Status'] == 3 && $stockProducto['Stock_Cantidad'] > 0 && $localAbierto != null && $localAbierto['Horario_Fecha'] == date("Y-m-d",time()) && $localAbierto['Horario_Cierre'] > date("(H:i:s)", time())) {?>
-                <input type="number" class="form-control-sm conta" name="conta" id="conta" placeholder="Unidades" value="1">
+                <input type="number" class="form-control-sm conta" name="conta" id="conta" placeholder="Unidades" value="1"  min="1" max="<?php echo $stockProducto['Stock_Cantidad']; ?>">
                 <button class="botonAgregar btn btn-warning" name="btnAccion" value="Agregar" type="submit" id="agregarr">
                     Agregar a carrito
                 </button>
