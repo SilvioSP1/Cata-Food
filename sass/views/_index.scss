@@ -218,3 +218,18 @@ model-viewer{
     align-items: center;
 
 }
+
+//darkMode
+
+body.dark-mode .card-bodyIndex h4{
+
+    color: white;
+
+}
+
+
+body.dark-mode .card-bodyIndex{
+
+    background-color: black;
+
+}

@@ -564,7 +564,7 @@ switch ($accion) {
                             $Rank = $Conta/count($puntuaciones);
                         } ?>
                         <?php } ?>
-                        <span class="avg"><?php echo $Rank; ?></span>DE 5
+                        <span class="avg"><?php echo $Rank; ?></span><span class="deCinco">DE 5</span>
 
                     </div>
 

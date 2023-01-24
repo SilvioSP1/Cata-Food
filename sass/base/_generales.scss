@@ -10,6 +10,7 @@ body {
     font-family: 'Nunito', sans-serif;
     background-color: #fb8819;
     overflow-x: hidden;
+    transition: background-color .3s, color .2s;
 }
 
 .logoCata {

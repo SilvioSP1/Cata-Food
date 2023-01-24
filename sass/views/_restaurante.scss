@@ -111,6 +111,7 @@
     --color-primary: #393a5d;
     --color-secondary: #888999;
     --color-blue: #537ae1;
+    --color-white: #fff;
 
     .fa-star,.fa-star-half{
 
@@ -558,5 +559,85 @@
 .filtroComida{
 
     display: none;
+
+}
+
+//darkMode
+
+body.dark-mode{
+
+    .buttonTipo{
+
+        background-color: #1a1e21;
+
+    }
+
+    .rating-box{
+
+        background-color: #1a1e21;
+
+        .titleRate{
+
+            color: white;
+
+        }
+
+    }
+
+    .count-review{
+
+        color: white;
+
+    }
+
+    .info-rating{
+
+
+        .star-count{
+
+            .avg{
+    
+                color: var(--color-white);
+    
+            }
+
+            .deCinco{
+
+                color: var(--color-white);
+
+            }
+    
+        }
+
+    }
+
+
+    .wrapperRate{
+
+        .review-content{
+
+            .comment-content{
+
+                color: var(--color-white);
+
+            }
+
+        }
+
+    }
+    
+
+
+    .user-review{
+
+        time {
+
+            color: var(--color-white);
+    
+        }
+
+    }
+
+
 
 }

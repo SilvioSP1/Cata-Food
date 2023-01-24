@@ -61,7 +61,7 @@ include("../../Cata-food/admin/config/config.php");
 </head>
 
 
-<body class="boiler">
+<body class="boiler boiler2">
 
   <main>
 
@@ -79,7 +79,7 @@ include("../../Cata-food/admin/config/config.php");
       <header class="nav sticky-top">
         <a href="../../Cata-Food/index.php"><img src="../../Cata-Food/img/index/logo_small.png" alt="" class="logoCata"></a>
 
-        <div class="color-mode">
+        <div class="colorMode__dark">
             <i class="bi bi-moon-fill moon"></i>
             <i class="bi bi-sun sun"></i>
         </div>
