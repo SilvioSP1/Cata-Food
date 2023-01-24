@@ -27,18 +27,18 @@ include("carrito.php");
                 <p><span class="text-muted">Lugar: </span><?php echo $producto['local']?></p>
               </div>
               <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                <button class="btn btn-link px-2"
+                <!-- <button class="btn btn-link px-2"
                     onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
                   <i class="fas fa-minus iconoMenos"></i>
-                </button>
+                </button> -->
 
                 <input id="form1" min="0" name="quantity" value="<?php echo $producto['cantidad'] ?>" type="number"
                   class="form-control form-control-sm" />
 
-                <button class="btn btn-link px-2"
+                <!-- <button class="btn btn-link px-2"
                   onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                   <i class="fas fa-plus iconoMas"></i>
-                </button>
+                </button> -->
               </div>
               <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
                 <h5 class="mb-0">$<?php echo $producto['precio']?></h5>
@@ -71,7 +71,6 @@ include("carrito.php");
                 <?php }else{ ?>
                   <button class="btn botonCarrito3">Total: $0</button>
                 <?php } ?>
-
             </div>
 
 
