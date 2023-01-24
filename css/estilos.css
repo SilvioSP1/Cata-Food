@@ -2030,6 +2030,10 @@ body.dark-mode .botonModal {
   top: -120%;
 }
 
+body.dark-mode .loader-container {
+  background-color: #27292b;
+}
+
 .animate__animated.animate__backInRight {
   animation-delay: 2s;
 }
