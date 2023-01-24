@@ -84,7 +84,7 @@ if ($_POST['TL_Tipo'] || !empty($_SESSION["tiposLocal"])) {
                                                     <img src="../img/restaurantes/categorias/"
                                                         aria-hidden="true" class="">
                                                 </div>
-                                                <div aria-hidden="true" class="sc-tl2hnw-0 hNbawF">Todos</div>
+                                                <div aria-hidden="true" class="sc-tl2hnw-0 hNbawF darkCirculo">Todos</div>
                                             </button>
                                         </form>
                                     </div>
@@ -97,7 +97,7 @@ if ($_POST['TL_Tipo'] || !empty($_SESSION["tiposLocal"])) {
                                                     <img src="../img/restaurantes/categorias/<?php echo $tipoLocal['TL_Imagen']; ?>"
                                                         aria-hidden="true" class="">
                                                 </div>
-                                                <div aria-hidden="true" class="sc-tl2hnw-0 hNbawF"><?php echo $tipoLocal['TL_Tipo']; ?></div>
+                                                <div aria-hidden="true" class="sc-tl2hnw-0 hNbawF darkCirculo"><?php echo $tipoLocal['TL_Tipo']; ?></div>
                                             </button>
                                         </form>
                                         </div>

@@ -9,7 +9,7 @@ include("carrito.php");
       <div class="col-10">
 
         <div class="d-flex justify-content-between align-items-center mb-4">
-          <h3 class="fw-normal mb-0 text-black">Carrito de compras</h3>
+          <h3 class="fw-normal mb-0">Carrito de compras</h3>
         </div>
         
         <?php $total = 0; ?>
@@ -57,113 +57,6 @@ include("carrito.php");
         <?php $total= $total+($producto['precio']*$producto['cantidad']);
               $_SESSION['total'] = $total; ?>
         <?php } ?>
-
-        <!-- <div class="card rounded-3 mb-4">
-          <div class="card-body p-4">
-            <div class="row d-flex justify-content-between align-items-center">
-              <div class="col-md-2 col-lg-2 col-xl-2">
-                <img
-                  src="../../Cata-Food/img/carrito/betosAmericano.png"
-                  class="img-fluid rounded-3" alt="">
-              </div>
-              <div class="col-md-3 col-lg-3 col-xl-3">
-                <p class="lead fw-normal mb-2">Betos Americano</p>
-                <p><span class="text-muted">Lugar: </span>Betos Lomos</p>
-              </div>
-              <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                <button class="btn btn-link px-2"
-                  onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                  <i class="fas fa-minus iconoMenos"></i>
-                </button>
-
-                <input id="form1" min="0" name="quantity" value="1" type="number"
-                  class="form-control form-control-sm" />
-
-                <button class="btn btn-link px-2"
-                  onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                  <i class="fas fa-plus iconoMas"></i>
-                </button>
-              </div>
-              <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                <h5 class="mb-0">$500.00</h5>
-              </div>
-              <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                <a href="#!" class="text-black"><i class="fas fa-trash fa-lg"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card rounded-3 mb-4">
-          <div class="card-body p-4">
-            <div class="row d-flex justify-content-between align-items-center">
-              <div class="col-md-2 col-lg-2 col-xl-2">
-                <img
-                  src="../../Cata-Food/img/carrito/medialunas-calentitas.jpg"
-                  class="img-fluid rounded-3" alt="">
-              </div>
-              <div class="col-md-3 col-lg-3 col-xl-3">
-                <p class="lead fw-normal mb-2">Medialunas</p>
-                <p><span class="text-muted">Lugar: </span>Medialunas Calentitas</p>
-              </div>
-              <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                <button class="btn btn-link px-2"
-                  onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                  <i class="fas fa-minus iconoMenos"></i>
-                </button>
-
-                <input id="form1" min="0" name="quantity" value="1" type="number"
-                  class="form-control form-control-sm" />
-
-                <button class="btn btn-link px-2"
-                  onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                  <i class="fas fa-plus iconoMas"></i>
-                </button>
-              </div>
-              <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                <h5 class="mb-0">$500.00</h5>
-              </div>
-              <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                <a href="#!" class="text-black"><i class="fas fa-trash fa-lg"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card rounded-3 mb-4">
-          <div class="card-body p-4">
-            <div class="row d-flex justify-content-between align-items-center">
-              <div class="col-md-2 col-lg-2 col-xl-2">
-                <img
-                  src="../../Cata-Food/img/carrito/alfajoresHavana.png"
-                  class="img-fluid rounded-3" alt="">
-              </div>
-              <div class="col-md-3 col-lg-3 col-xl-3">
-                <p class="lead fw-normal mb-2">Alfajores Dulce de Leche</p>
-                <p><span class="text-muted">Lugar: </span>Havana</p>
-              </div>
-              <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                <button class="btn btn-link px-2"
-                  onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                  <i class="fas fa-minus iconoMenos"></i>
-                </button>
-
-                <input id="form1" min="0" name="quantity" value="1" type="number"
-                  class="form-control form-control-sm" />
-
-                <button class="btn btn-link px-2"
-                  onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                  <i class="fas fa-plus iconoMas"></i>
-                </button>
-              </div>
-              <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                <h5 class="mb-0">$500.00</h5>
-              </div>
-              <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                <a href="#!" class="text-black"><i class="fas fa-trash fa-lg"></i></a>
-              </div>
-            </div>
-          </div> -->
         </div>
 
         <div class="container-flex">
@@ -171,12 +64,12 @@ include("carrito.php");
 
             <div class="contenedorCarrito">
 
-                <a href="../../Cata-Food/index.php" class="btn btn-warning botonCarrito1">Seguir comprando</a>
-                <a href="../../Cata-Food/secciones/formulario_pago.php"><button class="btn btn-warning text-bold">Checkout</button></a>
+                <a href="../../Cata-Food/index.php" class="btn botonCarrito1">Seguir comprando</a>
+                <a href="../../Cata-Food/secciones/formulario_pago.php"><button class="btn text-bold botonCarrito3">Checkout</button></a>
                 <?php if($_SESSION['carritoCompra'] != null){ ?>
-                  <button class="btn btn-warning botonCarrito3">Total: $<?php echo $_SESSION["total"]; ?></button>
+                  <button class="btn botonCarrito3">Total: $<?php echo $_SESSION["total"]; ?></button>
                 <?php }else{ ?>
-                  <button class="btn btn-warning botonCarrito3">Total: $0</button>
+                  <button class="btn botonCarrito3">Total: $0</button>
                 <?php } ?>
 
             </div>

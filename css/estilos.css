@@ -127,6 +127,10 @@ body::-webkit-scrollbar-track-piece {
   color: inherit;
 }
 
+.colorMode__dark {
+  font-size: 1.2rem;
+}
+
 header .sun, header .moon {
   cursor: pointer;
 }
@@ -1293,6 +1297,13 @@ p {
   justify-content: center;
 }
 
+body.dark-mode .conteiner_restaurantes .containerColum .contenedorResTipo .tiposRes .tipo .buttonTipo {
+  background-color: #27292b;
+}
+body.dark-mode .darkCirculo {
+  color: white;
+}
+
 .container__CardProd {
   width: 50%;
 }
@@ -1646,14 +1657,14 @@ p {
   display: none;
 }
 
-body.dark-mode .buttonTipo {
-  background-color: #1a1e21;
-}
 body.dark-mode .rating-box {
   background-color: #1a1e21;
 }
 body.dark-mode .rating-box .titleRate {
   color: white;
+}
+body.dark-mode .rating-box .feedback-header {
+  background-color: #1a1e21;
 }
 body.dark-mode .count-review {
   color: white;
@@ -1664,11 +1675,26 @@ body.dark-mode .info-rating .star-count .avg {
 body.dark-mode .info-rating .star-count .deCinco {
   color: var(--color-white);
 }
+body.dark-mode .wrapperRate .feedback-user .feedback-content .submit {
+  background-color: #1a1e21;
+}
 body.dark-mode .wrapperRate .review-content .comment-content {
   color: var(--color-white);
 }
 body.dark-mode .user-review time {
   color: var(--color-white);
+}
+body.dark-mode .feedback-content {
+  background-color: #27292b;
+}
+body.dark-mode .feedback-content .rating .title {
+  color: white;
+}
+body.dark-mode .feedback-content .form .form-input .nombreDark {
+  color: white;
+}
+body.dark-mode .feedback-content .form .form-input .commentDark {
+  color: white;
 }
 
 .sectionCarrito {
@@ -1701,14 +1727,33 @@ body.dark-mode .user-review time {
 .container-flex .contenedorCarrito .botonCarrito1 {
   order: 3;
   font-weight: 600;
+  background-color: orange;
 }
 .container-flex .contenedorCarrito .botonCarrito2 {
   order: 3;
   font-weight: 600;
+  background-color: orange;
 }
 .container-flex .contenedorCarrito .botonCarrito3 {
   order: 2;
   font-weight: 600;
+  background-color: orange;
+}
+
+body.dark-mode .container-flex {
+  background-color: black;
+}
+body.dark-mode .container-flex .contenedorCarrito .botonCarrito3 {
+  background-color: white;
+}
+body.dark-mode .container-flex .contenedorCarrito .botonCarrito3:hover {
+  color: black;
+}
+body.dark-mode .container-flex .contenedorCarrito .botonCarrito1 {
+  background-color: white;
+}
+body.dark-mode .container-flex .contenedorCarrito .botonCarrito1:hover {
+  color: black;
 }
 
 .padreTR .flexTR .tableTR {

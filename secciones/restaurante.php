@@ -281,7 +281,7 @@ switch ($accion) {
                                     <div class="circulo">
                                         <img src="../img/restaurantes/categorias/" aria-hidden="true" class="">
                                     </div>
-                                    <div aria-hidden="true" class="sc-tl2hnw-0 hNbawF">Todos</div>
+                                    <div aria-hidden="true" class="sc-tl2hnw-0 hNbawF darkCirculo">Todos</div>
                                 </button>
                             </form>
                         </div>
@@ -303,7 +303,7 @@ switch ($accion) {
                                         <img src="../img/restaurantes/categorias/<?php echo $tipoProductos['TP_Imagen']; ?>"
                                             aria-hidden="true" class="">
                                     </div>
-                                    <div aria-hidden="true" class="sc-tl2hnw-0 hNbawF">
+                                    <div aria-hidden="true" class="sc-tl2hnw-0 hNbawF darkCirculo">
                                         <?php echo $tipoProductos['TP_Tipo']; ?></div>
                                 </button>
                             </form>
@@ -857,14 +857,14 @@ switch ($accion) {
     
                         <div class="form-input">
     
-                            <label for="name">Tu nombre: </label>
+                            <label for="name" class="nombreDark">Tu nombre: </label>
                             <input disabled type="text" id="name" placeholder="<?php echo $_SESSION['nombreUsuario']; ?>">
     
                         </div>
     
                         <div class="form-input">
     
-                            <label for="feedback">Tu comentario</label>
+                            <label for="feedback" class="commentDark">Tu comentario</label>
                             <textarea name="feedback" id="feedback" cols="30" rows="8" placeholder="Escribe tu comentario...."></textarea>
     
                         </div>

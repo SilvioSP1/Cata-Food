@@ -566,11 +566,6 @@
 
 body.dark-mode{
 
-    .buttonTipo{
-
-        background-color: #1a1e21;
-
-    }
 
     .rating-box{
 
@@ -580,6 +575,12 @@ body.dark-mode{
 
             color: white;
 
+        }
+
+        .feedback-header{
+
+            background-color: #1a1e21;
+    
         }
 
     }
@@ -614,6 +615,21 @@ body.dark-mode{
 
     .wrapperRate{
 
+
+        .feedback-user{
+
+            .feedback-content{
+
+                .submit{
+
+                    background-color: #1a1e21;
+    
+                }
+
+            }
+
+        }
+
         .review-content{
 
             .comment-content{
@@ -638,6 +654,41 @@ body.dark-mode{
 
     }
 
+    .feedback-content{
+
+        background-color: #27292b;
+
+        .rating{
+
+            .title{
+
+                color: white;
+
+            }
+
+        }
+
+        .form{
+
+            .form-input{
+
+                .nombreDark{
+
+                    color: white;
+
+                }
+
+                .commentDark{
+
+                    color: white;
+
+                }
+
+            }
+
+        }
+
+    }
 
 
 }

@@ -42,21 +42,64 @@
 
             order: 3;
             font-weight: 600;
+            background-color: orange;
         }
 
         .botonCarrito2{
 
             order: 3;
             font-weight: 600;
+            background-color: orange;
         }
 
         .botonCarrito3{
 
             order: 2;
             font-weight: 600;
+            background-color: orange;
 
         }
 
+
+    }
+
+}
+
+//darkMode
+
+body.dark-mode{
+
+    .container-flex{
+
+        background-color: black;
+
+        .contenedorCarrito{
+
+            .botonCarrito3{
+
+                background-color: white;
+
+                &:hover{
+
+                    color: black;
+
+                }
+                
+            }
+
+            .botonCarrito1{
+
+                background-color: white;
+
+                &:hover{
+
+                    color: black;
+
+                }
+
+            }
+
+        }
 
     }
 
