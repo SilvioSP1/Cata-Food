@@ -128,6 +128,8 @@ error_reporting(0);
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.9/sweetalert2.min.css">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
 
 </head>
 
@@ -135,6 +137,15 @@ error_reporting(0);
 <body class="boiler">
 
   <main>
+
+        <div class="flexDark">
+
+        <div class="colorMode__dark">
+            <i class="bi bi-moon-fill moon"></i>
+            <i class="bi bi-sun sun"></i>
+        </div>
+
+        </div>
 
     <div id="app">
 
@@ -210,6 +221,8 @@ error_reporting(0);
   <script src="../node_modules/animejs/lib/anime.min.js"></script>
   
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+  <script src="../../Cata-Food/js/darkMode.js?v=<?php echo time(); ?>"></script>
 
 
 </body>

@@ -139,6 +139,8 @@ error_reporting(0);
 
   <link rel="icon" href="../img/index/logo_redondo.png">
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
 
 </head>
 
@@ -146,6 +148,15 @@ error_reporting(0);
 <body class="boiler">
 
   <main>
+
+  <div class="flexDark">
+
+    <div class="colorMode__dark">
+      <i class="bi bi-moon-fill moon"></i>
+      <i class="bi bi-sun sun"></i>
+    </div>
+
+  </div>
 
     <div id="app">
 
@@ -231,6 +242,8 @@ error_reporting(0);
 
   <!-- Anime.js -->
   <script src="../node_modules/animejs/lib/anime.min.js"></script>
+
+  <script src="../../Cata-Food/js/darkMode.js?v=<?php echo time(); ?>"></script>
 
 </body>
 

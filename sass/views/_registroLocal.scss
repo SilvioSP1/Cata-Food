@@ -218,3 +218,76 @@
     }
 
 }
+
+.tipoClass{
+
+    color: black;
+
+}
+
+//darkMode
+
+.darkMover{
+
+    margin-bottom: 2rem;
+
+}
+
+body.dark-mode{
+
+    .containerIR3{
+
+        .containerForm3{
+    
+            background-color: black;
+
+            .mover{
+
+                .containerLetras{
+
+                    h2{
+
+                        color: white;
+
+                    }
+
+                }
+
+                .formulario {
+
+                    .tipoClass {
+
+                        color: white;
+
+                    }
+
+                    .textoRegister{
+
+                        color: white;
+
+                    }
+
+                    button{
+
+                        background-color: white;
+                        color: black;
+
+                    }
+
+                    .boton{
+
+                        background-color: white;
+                        color: black;
+
+                    }
+
+                }
+
+
+            }
+    
+        }
+    
+    }
+
+}

@@ -126,6 +126,7 @@ $localesTipos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
   <link rel="icon" href="../img/index/logo_redondo.png">
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
 </head>
 
@@ -133,6 +134,15 @@ $localesTipos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 <body class="boiler">
 
   <main>
+
+  <div class="flexDark darkMover">
+
+    <div class="colorMode__dark">
+      <i class="bi bi-moon-fill moon"></i>
+      <i class="bi bi-sun sun"></i>
+    </div>
+
+  </div>
 
     <div id="app">
 
@@ -156,7 +166,7 @@ $localesTipos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                         <input type="text" placeholder="  Nombre Local" required name="txtNombre" id="txtNombre">
                         <span class="input-border"></span>
                         <div>
-                            <label for="" style="color:black ;">Tipo</label>
+                            <label for="" class="tipoClass">Tipo</label>
                             <select class="genero" onchange="" requiered name="txtGenero" id="txtGenero">
 
                                 <option selected disabled>-- Select one --</option>
@@ -260,6 +270,7 @@ $localesTipos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
   <!-- Anime.js -->
   <script src="../node_modules/animejs/lib/anime.min.js"></script>
 
+  <script src="../../Cata-Food/js/darkMode.js?v=<?php echo time(); ?>"></script>
 </body>
 
 

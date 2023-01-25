@@ -880,6 +880,32 @@ p {
   transform: scale(0.9);
 }
 
+.flexDark {
+  display: flex;
+  justify-content: center;
+}
+
+body.dark-mode .containerIR1 {
+  background-color: #27292b;
+}
+body.dark-mode .containerIR1 .containerForm1 {
+  background-color: black;
+}
+body.dark-mode .containerIR1 .containerForm1 .mover .containerLetras h2 {
+  color: white;
+}
+body.dark-mode .containerIR1 .containerForm1 .mover .formulario .boton {
+  background-color: white;
+  color: black;
+}
+body.dark-mode .containerIR1 .containerForm1 .mover .formulario button {
+  background-color: white;
+  color: black;
+}
+body.dark-mode .containerIR1 .containerForm1 .mover .formulario .textoRegister {
+  color: white;
+}
+
 .containerIR3 {
   display: flex;
   align-items: center;
@@ -1017,6 +1043,35 @@ p {
 .containerIR3 .containerForm3 .mover .formulario .boton:hover span::after {
   opacity: 1;
   right: 0;
+}
+
+.tipoClass {
+  color: black;
+}
+
+.darkMover {
+  margin-bottom: 2rem;
+}
+
+body.dark-mode .containerIR3 .containerForm3 {
+  background-color: black;
+}
+body.dark-mode .containerIR3 .containerForm3 .mover .containerLetras h2 {
+  color: white;
+}
+body.dark-mode .containerIR3 .containerForm3 .mover .formulario .tipoClass {
+  color: white;
+}
+body.dark-mode .containerIR3 .containerForm3 .mover .formulario .textoRegister {
+  color: white;
+}
+body.dark-mode .containerIR3 .containerForm3 .mover .formulario button {
+  background-color: white;
+  color: black;
+}
+body.dark-mode .containerIR3 .containerForm3 .mover .formulario .boton {
+  background-color: white;
+  color: black;
 }
 
 .containerIR2 {
@@ -1161,6 +1216,24 @@ p {
   display: none;
 }
 .containerIR2 .containerForm2 .mover .formulario .contraseniaMatching {
+  color: black;
+}
+
+body.dark-mode .containerIR2 .containerForm2 {
+  background-color: black;
+}
+body.dark-mode .containerIR2 .containerForm2 .mover .containerLetras h2 {
+  color: white;
+}
+body.dark-mode .containerIR2 .containerForm2 .mover .formulario .textoRegister {
+  color: white;
+}
+body.dark-mode .containerIR2 .containerForm2 .mover .formulario .boton {
+  background-color: white;
+  color: black;
+}
+body.dark-mode .containerIR2 .containerForm2 .mover .formulario button {
+  background-color: white;
   color: black;
 }
 

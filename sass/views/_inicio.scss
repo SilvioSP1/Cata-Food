@@ -254,5 +254,71 @@
 
 }
 
+.flexDark{
+
+    display: flex;
+    justify-content: center;
+}
+
+//darkMode 
+
+body.dark-mode{
+
+    .containerIR1{
+
+        background-color: #27292b;
+
+        .containerForm1{
+
+            background-color: black;
+
+            .mover{
+
+                .containerLetras{
+
+                    h2{
+
+                        color: white;
+
+                    }
+
+                }
+
+                .formulario{
+
+                    .boton{
+
+                        background-color: white;
+                        color: black;
+
+                    }
+
+                    button{
+
+                        background-color: white;
+                        color: black;
+
+                    }
+
+                    .textoRegister{
+
+                        color: white;
+
+                    }
+
+                }
+
+            }
+    
+    
+        }
+
+
+    }
+
+    
+
+}
+
 
 
