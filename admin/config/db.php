@@ -1,9 +1,9 @@
 <?php
 
 $host="localhost";
-$bd="cata-food";
-$usuario="root";
-$contraseña="";
+$bd="u711454834_catafood123";
+$usuario="u711454834_root";
+$contraseña="Silvioportero12";
 
 try {
 
