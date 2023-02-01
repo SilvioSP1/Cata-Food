@@ -171,7 +171,7 @@ error_reporting(0);
                         <div id="toggle" onclick="showHide();"></div>
 
                         <div class="recaptchaFlex">
-                            <div class="g-recaptcha" data-sitekey="6Lf0yf0iAAAAAHpCvY2k0oEIlLpjGCQpqF4qMKhT"></div>
+                            <div class="g-recaptcha" data-sitekey="6LcDv0UkAAAAAEiaqFBQJ7_tHdiaCtpLN2whk7T9"></div>
                         </div>
 
                         <div class="contentForm">
