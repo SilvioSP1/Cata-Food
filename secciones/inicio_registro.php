@@ -220,9 +220,15 @@ error_reporting(0);
   <!-- Anime.js -->
   <script src="../node_modules/animejs/lib/anime.min.js"></script>
   
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 
   <script src="../../Cata-Food/js/darkMode.js?v=<?php echo time(); ?>"></script>
+  
+  <script type="text/javascript">
+  var onloadCallback = function() {
+    alert("grecaptcha is ready!");
+  };
+</script>
 
 
 </body>
