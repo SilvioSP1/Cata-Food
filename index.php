@@ -254,7 +254,7 @@
             <div class="containerForm__Contacto">
 
                 <div class="textoContacto">
-                    <h1>¿Tienes alguna duda? No olvides en contactarnos</h1>
+                    <h1>¿Tienes alguna duda? No olvides en dejarnos la duda que tengas</h1>
                 </div>
 
                 <div class="screen">
