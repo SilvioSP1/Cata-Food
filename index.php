@@ -1,5 +1,6 @@
 <?php include("template/header.php"); ?>
 
+
 <div class="cookie-consent-modal">
 
     <div class="contenido animate__animated animate__slideInUp">
@@ -52,10 +53,10 @@
 <div class="contenedorCards animate__animated animate__fadeIn">
 
 
-    <model-viewer src="../../Cata-food/img/index/Hamburger.glb" camera-controls auto-rotate disable-zoom disable-pan ar
+    <model-viewer src="img/index/Hamburger.glb" camera-controls auto-rotate disable-zoom disable-pan ar
         shadow-intensity="0.5" shadow-softness="0.25"></model-viewer>
 
-    <model-viewer src="../../Cata-food/img/index/Fries.glb" camera-controls auto-rotate disable-zoom disable-pan ar
+    <model-viewer src="img/index/Fries.glb" camera-controls auto-rotate disable-zoom disable-pan ar
         shadow-intensity="0.5" shadow-softness="0.25"></model-viewer>
 
 </div>
@@ -308,5 +309,8 @@
         </div>
     </div>
 </div>
+<script src="js/chat.js?v=<?php echo time();?>"></script>
+<script src="js/response.js?v<?php echo time();?>"></script>
+<script type="module" src="js/mail.js?v=<?php echo time(); ?>"></script>
 
 <?php include("template/footer.php"); ?>
