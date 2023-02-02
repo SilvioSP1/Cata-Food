@@ -1,4 +1,5 @@
 <?php
+include("../admin/config/config.php");
 session_start();
 error_reporting(0);
 $mensaje="";
