@@ -8,7 +8,7 @@
                         <hr class="my-2">
                         <p>More info</p>
                         <p class="lead">
-                            <a class="btn btn-primary btn-lg" href="seccion/productos.php" role="button">Ir a los productos</a>
+                            <a class="btn btn-primary btn-lg" href="secciones/productos.php" role="button">Ir a los productos</a>
                         </p>
                     </div>
                 </div>
