@@ -27,7 +27,7 @@ if ($_SESSION['usuario']!=="Sin Loguearse") {
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
-    <link rel="icon" href="../../img/index/logo_redondo2.png">
+    <link rel="icon" href="../../../Cata-Food/img/index/logo_redondo2.png">
     
   </head>
   <body>
@@ -43,16 +43,16 @@ if ($_SESSION['usuario']!=="Sin Loguearse") {
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="admin/index.php">Home</a>
+                        <a class="nav-link active" href="../../../Cata-Food/admin/index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="admin/secciones/locales.php">Locales</a>
+                      <a class="nav-link" href="../../../Cata-Food/admin/secciones/locales.php">Locales</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="admin/secciones/productos.php">Productos</a>
+                      <a class="nav-link" href="../../../Cata-Food/admin/secciones/productos.php">Productos</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="admin/secciones/usuarios.php">Usuarios</a>
+                      <a class="nav-link" href="../../../Cata-Food/admin/secciones/usuarios.php">Usuarios</a>
                     </li>
                     <li class="nav-item dropdown">
                         <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
