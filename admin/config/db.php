@@ -3,7 +3,7 @@
 $host="localhost";
 $bd="u711454834_catafood123";
 $usuario="u711454834_root";
-$contraseña="Silvioportero12";
+$contraseña="SilvioPortero30";
 
 try {
 
