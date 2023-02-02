@@ -1243,6 +1243,9 @@ body.dark-mode .containerIR2 .containerForm2 .mover .formulario button {
   background-color: white;
   color: black;
 }
+body.dark-mode .containerIR2 .containerForm2 .mover .formulario .contraseniaMatching {
+  color: white;
+}
 
 .formulario input {
   font-weight: 500;
