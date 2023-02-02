@@ -1,6 +1,7 @@
 <?php include("../template/header.php"); ?>
 <?php 
 include("../admin/config/db.php");
+include("../admin/config/config.php");
 include("carrito.php");
 
 if (!empty($_POST["Local_Id"])) {
