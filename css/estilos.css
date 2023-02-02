@@ -639,14 +639,18 @@ p {
   align-items: center;
   flex-direction: column;
   margin-left: 10px;
+  background-color: #1a1e21;
+  border-radius: 1rem;
 }
 .container__cardsN .containerTP .tituloNosotros {
   font-weight: bolder;
+  color: white;
 }
 .container__cardsN .containerTP p {
   font-size: 15px;
   text-align: center;
   font-weight: bold;
+  color: white;
 }
 .container__cardsN .cardNosotros {
   margin: 0 14.3px;
@@ -903,6 +907,9 @@ body.dark-mode .containerIR1 .containerForm1 .mover .formulario button {
   color: black;
 }
 body.dark-mode .containerIR1 .containerForm1 .mover .formulario .textoRegister {
+  color: white;
+}
+body.dark-mode .small {
   color: white;
 }
 

@@ -14,10 +14,13 @@
         align-items: center;
         flex-direction: column;
         margin-left: 10px;
+        background-color: #1a1e21;
+        border-radius: 1rem;
 
         .tituloNosotros{
 
             font-weight: bolder;
+            color: white;
     
         }
 
@@ -26,6 +29,7 @@
             font-size: 15px;
             text-align: center;
             font-weight: bold;
+            color: white;
 
         }
 
