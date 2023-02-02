@@ -66,8 +66,8 @@ include("carrito.php");
             <div class="contenedorCarrito">
 
                 <a href="../../Cata-Food/index.php" class="btn botonCarrito1">Seguir comprando</a>
-                <a href="../../Cata-Food/secciones/formulario_pago.php"><button class="btn text-bold botonCarrito3">Checkout</button></a>
                 <?php if($_SESSION['carritoCompra'] != null){ ?>
+                  <a href="../../Cata-Food/secciones/formulario_pago.php"><button class="btn text-bold botonCarrito3">Checkout</button></a>
                   <button class="btn botonCarrito3">Total: $<?php echo $_SESSION["total"]; ?></button>
                 <?php }else{ ?>
                   <button class="btn botonCarrito3">Total: $0</button>
