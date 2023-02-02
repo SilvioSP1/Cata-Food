@@ -1779,6 +1779,23 @@ body.dark-mode .feedback-content .form .form-input .nombreDark {
 body.dark-mode .feedback-content .form .form-input .commentDark {
   color: white;
 }
+body.dark-mode .modalRes {
+  background-color: #1a1e21;
+  color: white;
+}
+body.dark-mode .modal-body {
+  background-color: #1a1e21;
+  color: white;
+}
+body.dark-mode .backgroundModal .modal-content .modal-header {
+  background-color: #1a1e21;
+}
+body.dark-mode .backgroundModal .modal-content .modal-header .modal-title {
+  color: white;
+}
+body.dark-mode .flexBotones #conta {
+  color: white;
+}
 
 .sectionCarrito {
   margin-bottom: 15rem;
