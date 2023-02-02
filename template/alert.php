@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css?v=<?php echo time(); ?>" />
 
   <!-- icono cata food -->
-  <link rel="icon" href="../../Cata-Food/img/index/logo_redondo.png">
+  <link rel="icon" href="../../Cata-Food/img/index/logo_redondo2.png">
 
   <!-- script sweet alert -->
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
