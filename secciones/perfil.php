@@ -91,7 +91,7 @@ switch ($accion) {
 
             </div>
             <h5 class="my-3"><?php echo $_SESSION['nombreUsuario'];?></h5>
-            <p class="text-muted mb-1"><?php switch ($_SESSION['idRol']) {
+            <p class="mb-1"><?php switch ($_SESSION['idRol']) {
               case 1:
                 echo 'Usuario';
                 break;
