@@ -88,7 +88,7 @@ error_reporting(0);
   <!-- CSS -->
   <link rel="stylesheet" href="../css/estilos.css">
 
-  <!-- animation css S-->
+  <!-- animation css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
   <link rel="icon" href="../img/index/logo_redondo.png">
