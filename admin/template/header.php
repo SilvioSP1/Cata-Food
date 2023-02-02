@@ -82,7 +82,7 @@ if ($_SESSION['usuario']!=="Sin Loguearse") {
                             <?php } ?>
                         </ul>
                     </div>
-                    <!-- <a class="btn btn-light ms-3" href="../index.php">Login/Sing up</a> -->
+                    <a disabled class="btn btn-light ms-3" href="../index.php">Login/Sing up</a>
                 </div>
             </div>
         </div>

@@ -1,5 +1,6 @@
 <?php include("../template/header.php"); 
 include("../admin/config/db.php");
+include("../admin/config/config.php");
 include("carrito.php");
 ?>
 
