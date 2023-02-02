@@ -1783,6 +1783,10 @@ body.dark-mode .modalRes {
   background-color: #1a1e21;
   color: white;
 }
+body.dark-mode .modal-body {
+  background-color: #1a1e21;
+  color: white;
+}
 
 .sectionCarrito {
   margin-bottom: 15rem;
