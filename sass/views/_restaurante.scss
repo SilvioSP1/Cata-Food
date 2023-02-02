@@ -704,14 +704,21 @@ body.dark-mode{
 
     }
 
-    .modal-content{
+    .backgroundModal {
 
-        background-color: #1a1e21;
+        .modal-content {
 
-        h5{
+            .modal-header {
 
-            color: white;
-            
+                background-color: #1a1e21;
+
+                .modal-title {
+
+                    color: white;
+
+                }
+
+            }
 
         }
 

@@ -1787,10 +1787,10 @@ body.dark-mode .modal-body {
   background-color: #1a1e21;
   color: white;
 }
-body.dark-mode .modal-content {
+body.dark-mode .backgroundModal .modal-content .modal-header {
   background-color: #1a1e21;
 }
-body.dark-mode .modal-content h5 {
+body.dark-mode .backgroundModal .modal-content .modal-header .modal-title {
   color: white;
 }
 
