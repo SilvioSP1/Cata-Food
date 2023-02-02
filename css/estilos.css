@@ -1779,6 +1779,9 @@ body.dark-mode .feedback-content .form .form-input .nombreDark {
 body.dark-mode .feedback-content .form .form-input .commentDark {
   color: white;
 }
+body.dark-mode .modalRes {
+  color: black;
+}
 
 .sectionCarrito {
   margin-bottom: 15rem;
