@@ -1793,6 +1793,9 @@ body.dark-mode .backgroundModal .modal-content .modal-header {
 body.dark-mode .backgroundModal .modal-content .modal-header .modal-title {
   color: white;
 }
+body.dark-mode .flexBotones #conta {
+  color: white;
+}
 
 .sectionCarrito {
   margin-bottom: 15rem;
