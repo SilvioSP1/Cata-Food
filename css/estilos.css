@@ -1780,7 +1780,8 @@ body.dark-mode .feedback-content .form .form-input .commentDark {
   color: white;
 }
 body.dark-mode .modalRes {
-  color: black;
+  background-color: #1a1e21;
+  color: white;
 }
 
 .sectionCarrito {
