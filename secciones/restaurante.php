@@ -50,12 +50,12 @@ $sentenciaSQL = $conexion->prepare("SELECT * FROM tipo_producto");
 $sentenciaSQL->execute();
 $tipoProducto = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
-$sentenciaSQL = $conexion->prepare("SELECT * FROM comentario WHERE Com_LocalId = :Com_LocalId");
+$sentenciaSQL = $conexion->prepare("SELECT * FROM comentario WHERE Com_LocalId = :Com_LocalId AND Com_Status = 1");
 $sentenciaSQL->bindParam(':Com_LocalId',$Local_Id);
 $sentenciaSQL->execute();
 $comentarios = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
-$sentenciaSQL = $conexion->prepare("SELECT * FROM puntuacion WHERE Pun_LocalId = :Pun_LocalId");
+$sentenciaSQL = $conexion->prepare("SELECT * FROM puntuacion WHERE Pun_LocalId = :Pun_LocalId AND Pun_Status = 1");
 $sentenciaSQL->bindParam(':Pun_LocalId',$Local_Id);
 $sentenciaSQL->execute();
 $puntuaciones = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
@@ -207,6 +207,18 @@ switch ($accion) {
         $sentenciaSQL->bindParam(':Pun_LocalId',$Local_Id);
         $sentenciaSQL->bindParam(':Pun_Puntuacion',$estrellas);
         $sentenciaSQL->bindParam(':Pun_ComId',$idComentario);
+        $sentenciaSQL->execute();
+        header("Location:restaurante.php");
+        break;
+    case "DesabilitarComentario":
+        $ComId =(isset($_POST['ComId'])) ? $_POST['ComId'] : null;
+        $sentenciaSQL = $conexion->prepare("UPDATE comentario SET Com_Status = 2 WHERE Com_Id = :Com_Id");
+        $sentenciaSQL->bindParam(':Com_Id',$ComId);
+        $sentenciaSQL->execute();
+        
+        $PunId =(isset($_POST['PunId'])) ? $_POST['PunId'] : null;
+        $sentenciaSQL = $conexion->prepare("UPDATE puntuacion SET Pun_Status = 2 WHERE Pun_ComId = :Pun_ComId");
+        $sentenciaSQL->bindParam(':Pun_ComId',$ComId);
         $sentenciaSQL->execute();
         header("Location:restaurante.php");
         break;
@@ -737,6 +749,7 @@ switch ($accion) {
                         <?php if ($puntuaciones != null && $comentarios != null){ ?>
                         <!-- end user review -->
                         <?php foreach($comentarios as $comentario){?>
+                            <?php if($comentario['Com_Status'] == 1){ ?>
                             <div class="user-review">
                                 <div class="user-rating">
                                     
@@ -757,7 +770,13 @@ switch ($accion) {
                                                 }
                                             ?>
                                         </i>
-        
+                                        <?php if($comentario['Com_UsuId'] == $_SESSION['idUsuario'] || $_SESSION['idRol'] == 3){ ?>
+                                        <form action="" method="post">
+                                            <input type="hidden" name="ComId" value="<?php echo openssl_encrypt($comentario['Com_Id'],cod,key) ?>">
+                                            <input type="hidden" name="PunId" value="<?php echo openssl_encrypt($comentario['Pun_Id'],cod,key) ?>">
+                                            <button class="text-black icon" type="submit" name ="accion2" value="DesabilitarComentario"><i class="fas fa-trash fa-lg"></i></button>
+                                        </form>
+                                        <?php } ?>
                                     </div>
         
                                 </div>
@@ -772,6 +791,7 @@ switch ($accion) {
         
                                 <time datetime="${time}" title="${time}"><?php echo $comentario["Com_Hora"]; ?></time>
                             </div>
+                            <?php } ?>
     
                         <?php }?>
                         <?php } ?>

@@ -47,7 +47,7 @@ include("carrito.php");
               <div class="col-md-1 col-lg-1 col-xl-1 text-end">
               <form action="" method="post">
                     <td class="text-center">
-                        <input type="hidden" name="id" value="<?php echo openssl_encrypt($producto['id'],cod,key) ?>;">
+                        <input type="hidden" name="id" value="<?php echo openssl_encrypt($producto['id'],cod,key) ?>">
                         <button class="text-black icon" type="submit" name ="btnAccion" value="Eliminar"><i class="fas fa-trash fa-lg"></i></button>
                     </td>
                 </form>
