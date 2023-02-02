@@ -1,6 +1,7 @@
 <?php include("../template/header.php"); ?>
 <?php 
 include("../admin/config/db.php");
+include("../admin/config/config.php");
 error_reporting(0);
 
 $sentenciaSQL = $conexion->prepare("SELECT * FROM local");
