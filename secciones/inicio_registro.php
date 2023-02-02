@@ -22,7 +22,7 @@ error_reporting(0);
 
       $captcha = $_POST['g-recaptcha-response'];
 
-      $secretkey = "6Lf0yf0iAAAAAOcuDfvUE2GGl98HDOqu9zqKyPIT";
+      $secretkey = "6LcDv0UkAAAAAGDseH3tzcFkaFITjVFJ60duerFg";
 
       $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretkey&response=$captcha&remoteip=$ip");
 
@@ -137,7 +137,7 @@ error_reporting(0);
                         <div id="toggle" onclick="showHide();"></div>
 
                         <div class="recaptchaFlex">
-                            <div class="g-recaptcha" data-sitekey="6Lf0yf0iAAAAAHpCvY2k0oEIlLpjGCQpqF4qMKhT"></div>
+                            <div class="g-recaptcha" data-sitekey="6LcDv0UkAAAAAEiaqFBQJ7_tHdiaCtpLN2whk7T9"></div>
                         </div>
 
                         <div class="contentForm">
