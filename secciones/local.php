@@ -1,5 +1,6 @@
 <?php include("../template/header.php"); ?>
 <?php include("../admin/config/db.php"); ?>
+<?php include("../admin/config/config.php"); ?>
 <?php
 $txtID=(isset($_POST['txtID'])) ? $_POST['txtID'] : $_SESSION['idUsuario'];
 $txtNombre=(isset($_POST['txtNombre'])) ? $_POST['txtNombre'] : $_SESSION['nombreUsuario'];
