@@ -41,6 +41,10 @@
             "license": [
                 "MIT"
             ],
+            "config": {
+
+                "platform-check": false
+            },
             "authors": [
                 {
                     "name": "Guilherme Blanco",
