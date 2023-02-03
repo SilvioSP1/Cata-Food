@@ -1,8 +1,4 @@
 {
-    "config": {
-
-        "platform-check": false
-    },
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -45,6 +41,10 @@
             "license": [
                 "MIT"
             ],
+            "config": {
+
+                "platform-check": false
+            },
             "authors": [
                 {
                     "name": "Guilherme Blanco",
