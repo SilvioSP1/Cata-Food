@@ -4,7 +4,7 @@ include("../admin/config/db.php");
 include("../admin/config/config.php");
 error_reporting(0);
 
-$sentenciaSQL = $conexion->prepare("SELECT * FROM local");
+$sentenciaSQL = $conexion->prepare("SELECT * FROM local WHERE Local_Status = 1");
 $sentenciaSQL->execute();
 $listaLocales = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 

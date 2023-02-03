@@ -65,7 +65,7 @@ $localesTipos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
         }
         else{
 
-          $sentenciaSQL = $conexion->prepare("INSERT INTO local (Local_Nombre,Local_Imagen,Local_Status,Local_Telefono,Local_Ubicacion,Local_Dueno,Local_Tipo,Local_UbiRefe,Local_Contrasena,Local_Email,Local_RolId) VALUES (:Local_Nombre,:Local_Imagen,1,:Local_Telefono,:Local_Ubicacion,:Local_Dueno,:Local_Tipo,:Local_UbiRefe,:Local_Contrasena,:Local_Email,:Local_RolId);");
+          $sentenciaSQL = $conexion->prepare("INSERT INTO local (Local_Nombre,Local_Imagen,Local_Status,Local_Telefono,Local_Ubicacion,Local_Dueno,Local_Tipo,Local_UbiRefe,Local_Contrasena,Local_Email,Local_RolId) VALUES (:Local_Nombre,:Local_Imagen,2,:Local_Telefono,:Local_Ubicacion,:Local_Dueno,:Local_Tipo,:Local_UbiRefe,:Local_Contrasena,:Local_Email,:Local_RolId);");
           $sentenciaSQL->bindParam(':Local_Nombre',$txtNombre);
           $sentenciaSQL->bindParam(':Local_Imagen',$txtImagen);
           $sentenciaSQL->bindParam(':Local_Telefono',$txtTelefono);
