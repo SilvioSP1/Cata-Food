@@ -71,6 +71,8 @@ $txtDescripcion=(isset($_POST['txtDescripcion'])) ? $_POST['txtDescripcion'] : "
 $txtPrecio=(isset($_POST['txtPrecio'])) ? $_POST['txtPrecio'] : null;
 $txtTipo=(isset($_POST['txtTipo'])) ? $_POST['txtTipo'] : null;
 $accion=(isset($_POST['accion2'])) ? $_POST['accion2'] : "";
+$ComId =(isset($_POST['ComId'])) ? $_POST['ComId'] : null;
+$PunId =(isset($_POST['PunId'])) ? $_POST['PunId'] : null;
 
 $feedback=(isset($_POST['feedback'])) ? $_POST['feedback'] : "";
 $estrellas=(isset($_POST['puntuacion'])) ? $_POST['puntuacion'] : "";
@@ -211,12 +213,10 @@ switch ($accion) {
         header("Location:restaurante.php");
         break;
     case "DesabilitarComentario":
-        $ComId =(isset($_POST['ComId'])) ? $_POST['ComId'] : null;
         $sentenciaSQL = $conexion->prepare("UPDATE comentario SET Com_Status = 2 WHERE Com_Id = :Com_Id");
         $sentenciaSQL->bindParam(':Com_Id',$ComId);
         $sentenciaSQL->execute();
         
-        $PunId =(isset($_POST['PunId'])) ? $_POST['PunId'] : null;
         $sentenciaSQL = $conexion->prepare("UPDATE puntuacion SET Pun_Status = 2 WHERE Pun_ComId = :Pun_ComId");
         $sentenciaSQL->bindParam(':Pun_ComId',$ComId);
         $sentenciaSQL->execute();
