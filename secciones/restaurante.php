@@ -774,7 +774,7 @@ switch ($accion) {
                                         <form action="" method="post">
                                             <input type="hidden" name="ComId" value="<?php echo $comentario['Com_Id']; ?>">
                                             <input type="hidden" name="PunId" value="<?php echo openssl_encrypt($comentario['Pun_Id'],cod,key) ?>">
-                                            <button class="text-black icon" type="submit" name ="accion2" value="DesabilitarComentario"><i class="fas fa-trash fa-lg"></i></button>
+                                            <button class="text-black icon bordes" type="submit" name ="accion2" value="DesabilitarComentario"><i class="fas fa-trash fa-lg"></i></button>
                                         </form>
                                         <?php } ?>
                                     </div>
