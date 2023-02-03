@@ -70,6 +70,7 @@ include("carrito.php");
                   <a href="../../Cata-Food/secciones/formulario_pago.php"><button class="btn text-bold botonCarrito3">Checkout</button></a>
                   <button class="btn botonCarrito3">Total: $<?php echo $_SESSION["total"]; ?></button>
                 <?php }else{ ?>
+                  <a href="../../Cata-Food/secciones/formulario_pago.php"><button class="btn text-bold botonCarrito3">Checkout</button></a>
                   <button class="btn botonCarrito3">Total: $0</button>
                 <?php } ?>
             </div>
