@@ -772,7 +772,7 @@ switch ($accion) {
                                         </i>
                                         <?php if($comentario['Com_UsuId'] == $_SESSION['idUsuario'] || $_SESSION['idRol'] == 3){ ?>
                                         <form action="" method="post">
-                                            <input type="hidden" name="ComId" value="<?php echo openssl_encrypt($comentario['Com_Id'],cod,key) ?>">
+                                            <input type="hidden" name="ComId" value="<?php echo $comentario['Com_Id']; ?>">
                                             <input type="hidden" name="PunId" value="<?php echo openssl_encrypt($comentario['Pun_Id'],cod,key) ?>">
                                             <button class="text-black icon" type="submit" name ="accion2" value="DesabilitarComentario"><i class="fas fa-trash fa-lg"></i></button>
                                         </form>
