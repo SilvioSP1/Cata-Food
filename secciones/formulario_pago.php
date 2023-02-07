@@ -251,9 +251,11 @@ $_SESSION['condicion'] = 1;
                         <div class="checkout-boton" id="divPagar"></div>
                         <script>
                             const div = document.getElementById("divPagar");
-                            const nombre = document.getElementById("nombre").addEventListener('click', function(e) {
+                            const nombre = document.getElementById("nombre").value;
+                            
+                            document.getElementById("nombre").addEventListener('click', function(e) {
 
-                                if (nombre.value === "") {
+                                if (nombre === "") {
                                     div.hidden = true;
                                 }else{
                                     div.hidden = false;
