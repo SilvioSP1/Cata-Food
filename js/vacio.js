@@ -1,5 +1,5 @@
 const nombre = document.getElementById("nombre");
-const botonPagar = document.getElementById("botonPagar");
+const botonPagar = document.getElementsByClassName("mercadopago-button");
 
 
 if (nombre.empty()) {
