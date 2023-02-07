@@ -284,7 +284,7 @@ $_SESSION['condicion'] = 1;
                                 todo_correcto = true;
                             }
 
-                            if (document.getElementById('envio').value == "hide") {
+                            if (document.getElementById('envio').value === "hide") {
                                 if(document.getElementById('calle').value.length < 2 ){
                                 todo_correcto = false;
                                 }else{
@@ -304,13 +304,12 @@ $_SESSION['condicion'] = 1;
                                     boton.hidden = false;
                                 }
                                 return todo_correcto;
-                                }
                                 nombre.addEventListener("keyup", validar);
                                 apellido.addEventListener("keyup", validar);
                                 telefono.addEventListener("keyup", validar);
                                 calle.addEventListener("keyup", validar);
                                 altura.addEventListener("keyup", validar);
-                            }else{
+                                }else{
                                 /*Por último, y como aviso para el usuario, si no está todo bién, osea, si la variable
                                 todo_correcto ha devuelto false al menos una vez, generaremos una alerta advirtiendo
                                 al usuario de que algunos datos ingresados no son los que esperamos.*/
@@ -320,10 +319,11 @@ $_SESSION['condicion'] = 1;
                                     boton.hidden = false;
                                 }
                                 return todo_correcto;
-                                }
                                 nombre.addEventListener("keyup", validar);
                                 apellido.addEventListener("keyup", validar);
                                 telefono.addEventListener("keyup", validar);
+                                }
+                                
                             }
 
                         </script>
