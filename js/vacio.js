@@ -1,9 +1,7 @@
 const nombre = document.getElementById("nombre");
-const botonPagar = document.getElementById("botonPagar").getElementsByTagName('*');
+const botonPagar = document.getElementById("botonPagar")
 
 
 if (nombre.empty()) {
-    for(var i of botonPagar){
-        i.hidden = true;
-    }
+    botonPagar.hidden = true;
 }
