@@ -1,7 +1,9 @@
 const nombre = document.getElementById("nombre");
-const botonPagar = document.getElementsByClassName("mercadopago-button");
+const botonPagar = document.getElementById("botonPagar").getElementsByTagName('*');
 
 
 if (nombre.empty()) {
-    botonPagar.disabled = true;
+    for(var i of botonPagar){
+        i.disabled = true;
+    }
 }
