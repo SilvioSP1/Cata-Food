@@ -252,14 +252,20 @@ $_SESSION['condicion'] = 1;
                         <script>
                             const div = document.getElementById("divPagar");
                             const nombre = document.getElementById("nombre");
-                            div.hidden = true;
                             
                             function validar() {
+                                let desa = true;
                                 if (nombre.value === "") {
-                                    div.hidden = true;
+                                    desa = true;
                                 }
                                 if (nombre.value !== "") {
-                                    div.hidden = false;
+                                    desa = false;
+                                }
+
+                                if (desa === true) {
+                                    nombre.hidden = true;
+                                }else{
+                                    nombre.hidden = false;
                                 }
                                 
                             }
