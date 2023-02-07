@@ -253,6 +253,7 @@ $_SESSION['condicion'] = 1;
                         <script>
                             let nombre = document.getElementById('nombre');
                             let boton = document.getElementById('divPagar');
+                            /* boton.hidden = true; */
                             function validar(){
                             /*creo una variable de tipo booleano que en principio tendrá un valor true(verdadero),
                             y que se convertirá en false(falso) cuando la condición no se cumpla*/
@@ -273,8 +274,9 @@ $_SESSION['condicion'] = 1;
                             al usuario de que algunos datos ingresados no son los que esperamos.*/
                             if(!todo_correcto){
                             alert('Algunos campos no están correctos, vuelva a revisarlos');
-                            }else{
                                 boton.hidden = true;
+                            }else{
+                                boton.hidden = false;
                             }
                             return todo_correcto;
                             }
