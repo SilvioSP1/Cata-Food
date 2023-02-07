@@ -251,14 +251,14 @@ $_SESSION['condicion'] = 1;
                         <div class="checkout-boton" id="divPagar"></div>
                         <script>
                             const div = document.getElementById("divPagar");
-                            const nombre = document.getElementById("nombre");
+                            const nombre = document.getElementById("nombre")value;
                             
                             function validar() {
                                 let desa = true;
-                                if (nombre.value === "") {
+                                if (nombre === "") {
                                     desa = true;
                                 }
-                                if (nombre.value !== "") {
+                                if (nombre !== "") {
                                     desa = false;
                                 }
 
