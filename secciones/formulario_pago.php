@@ -295,20 +295,20 @@ $_SESSION['condicion'] = 1;
                                 }else{
                                     todo_correcto = true;
                                 }
-                                /*Por último, y como aviso para el usuario, si no está todo bién, osea, si la variable
-                                todo_correcto ha devuelto false al menos una vez, generaremos una alerta advirtiendo
-                                al usuario de que algunos datos ingresados no son los que esperamos.*/
-                                if(!todo_correcto){
-                                    boton.hidden = true;
-                                }else{
-                                    boton.hidden = false;
-                                }
-                                return todo_correcto;
-                                }
-                                nombre.addEventListener("keyup", validar);
-                                apellido.addEventListener("keyup", validar);
-                                telefono.addEventListener("keyup", validar);
                             }
+                            /*Por último, y como aviso para el usuario, si no está todo bién, osea, si la variable
+                            todo_correcto ha devuelto false al menos una vez, generaremos una alerta advirtiendo
+                            al usuario de que algunos datos ingresados no son los que esperamos.*/
+                            if(!todo_correcto){
+                                boton.hidden = true;
+                            }else{
+                                boton.hidden = false;
+                            }
+                            return todo_correcto;
+                            }
+                            nombre.addEventListener("keyup", validar);
+                            apellido.addEventListener("keyup", validar);
+                            telefono.addEventListener("keyup", validar);
 
                         </script>
 
