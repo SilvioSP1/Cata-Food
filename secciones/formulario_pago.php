@@ -280,6 +280,7 @@ $_SESSION['condicion'] = 1;
                             }
                             return todo_correcto;
                             }
+                            nombre.addEventListener("keyup", validar);
                         </script>
 
 
