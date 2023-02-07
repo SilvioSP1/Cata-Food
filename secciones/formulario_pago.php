@@ -257,7 +257,8 @@ $_SESSION['condicion'] = 1;
 
                                 if (nombre === "") {
                                     div.hidden = true;
-                                }else{
+                                }
+                                if (nombre !== "") {
                                     div.hidden = false;
                                 }
                             });
