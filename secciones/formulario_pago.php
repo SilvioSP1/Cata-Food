@@ -263,9 +263,9 @@ $_SESSION['condicion'] = 1;
                                 }
 
                                 if (desa === true) {
-                                    nombre.hidden = true;
+                                    div.hidden = true;
                                 }else{
-                                    nombre.hidden = false;
+                                    div.hidden = false;
                                 }
                                 
                             }
