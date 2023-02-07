@@ -256,6 +256,7 @@ $_SESSION['condicion'] = 1;
                             let telefono = document.getElementById('telefono');
                             let calle = document.getElementById('calle');
                             let altura = document.getElementById('altura');
+                            let piso = document.getElementById('piso');
                             let boton = document.getElementById('divPagar');
                             boton.hidden = true;
                             function validar(){
@@ -312,6 +313,8 @@ $_SESSION['condicion'] = 1;
                             telefono.addEventListener("keyup", validar);
                             calle.addEventListener("keyup", validar);
                             altura.addEventListener("keyup", validar);
+                            telefono.addEventListener("keyup", validar);
+                            piso.addEventListener("keyup", validar);
                         </script>
 
 
