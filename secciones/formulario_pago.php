@@ -253,7 +253,7 @@ $_SESSION['condicion'] = 1;
                             const div = document.getElementById("divPagar");
                             
                             function validar() {
-                                const nombre = document.getElementById("nombre")value;
+                                const nombre = document.getElementById("nombre").value;
                                 let desa = true;
                                 if (nombre === "") {
                                     desa = true;
