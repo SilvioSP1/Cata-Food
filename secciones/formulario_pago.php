@@ -117,7 +117,7 @@ $_SESSION['condicion'] = 1;
 
                                 <div class="col-md-6">
 
-                                    <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
+                                    <div class="inputbox mt-3 mr-2"> <input type="text" name="name" id="nombre" class="form-control"
                                             required> <span>Nombre</span> </div>
 
 
@@ -248,7 +248,15 @@ $_SESSION['condicion'] = 1;
 
 
                         <a href="../../Cata-Food/secciones/carrito_vista.php" class="text-decoration-none"><span class="text-dark">Paso anterior</span></a>
-                        <div class="checkout-boton"></div>
+                        <div class="checkout-boton" id="divPagar"></div>
+                        <script>
+                            const div = document.getElementById("divPagar");
+                            const nombre = document.getElementById("nombre").value;
+                            if (nombre === "") {
+                                div.hidden = true;
+                            }
+
+                        </script>
 
 
                     </div>
