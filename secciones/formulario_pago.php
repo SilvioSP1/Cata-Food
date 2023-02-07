@@ -249,30 +249,6 @@ $_SESSION['condicion'] = 1;
 
                         <a href="../../Cata-Food/secciones/carrito_vista.php" class="text-decoration-none"><span class="text-dark">Paso anterior</span></a>
                         <div class="checkout-boton" id="divPagar"></div>
-                        <script>
-                            const div = document.getElementById("divPagar");
-                            
-                            function validar() {
-                                const nombre = document.getElementById("nombre").value;
-                                let desa = true;
-                                if (nombre === "") {
-                                    desa = true;
-                                }
-                                if (nombre !== "") {
-                                    desa = false;
-                                }
-
-                                if (desa === true) {
-                                    div.hidden = true;
-                                }else{
-                                    div.hidden = false;
-                                }
-                                
-                            }
-                            div.addEventListener("keyup", validar);
-                            
-
-                        </script>
 
 
                     </div>
