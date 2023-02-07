@@ -254,6 +254,8 @@ $_SESSION['condicion'] = 1;
                             const nombre = document.getElementById("nombre").value;
                             if (nombre === "") {
                                 div.hidden = true;
+                            }else{
+                                div.hidden = false;
                             }
 
                         </script>
