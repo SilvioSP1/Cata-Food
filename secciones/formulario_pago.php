@@ -126,7 +126,7 @@ $_SESSION['condicion'] = 1;
 
                                 <div class="col-md-6">
 
-                                    <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
+                                    <div class="inputbox mt-3 mr-2"> <input type="text" name="name" id="apellido" class="form-control"
                                             required> <span>Apellido</span> </div>
 
 
@@ -142,27 +142,27 @@ $_SESSION['condicion'] = 1;
 
                                 <div class="col-md-6">
 
-                                    <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
+                                    <div class="inputbox mt-3 mr-2"> <input type="text" name="name" id="telefono" class="form-control"
                                             required> <span>Telefono</span> </div>
 
 
                                 </div>
 
 
-                                <div class="col-md-6">
+                                <!-- <div class="col-md-6">
 
                                     <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
                                             required> <span>Provincia</span> </div>
 
 
-                                </div>
+                                </div> -->
 
 
 
 
                             </div>
 
-                            <div class="row mt-2">
+                            <!-- <div class="row mt-2">
 
                                 <div class="col-md-6">
 
@@ -183,7 +183,7 @@ $_SESSION['condicion'] = 1;
 
 
 
-                            </div>
+                            </div> -->
 
                             <div class="row mt-2">
 
@@ -202,9 +202,9 @@ $_SESSION['condicion'] = 1;
                                                 <input type="radio" value="check2" name="input">
                                                 <label for="check2">Sin envio</label> -->
 
-                                                <input type="radio" name="lang" value="hide" onclick="showHideDiv(1)" checked>
+                                                <input type="radio" name="lang" value="hide" id="envio" onclick="showHideDiv(1)" checked>
                                                 Con envio
-                                                <input type="radio" name="lang" value="show" onclick="showHideDiv(2)">
+                                                <input type="radio" name="lang" value="show" id="envio" onclick="showHideDiv(2)">
                                                 Sin envio
 
                                                 <br><br>
@@ -213,13 +213,13 @@ $_SESSION['condicion'] = 1;
 
                                                     <div class="centerEnvio">
 
-                                                        <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
+                                                        <div class="inputbox mt-3 mr-2"> <input type="text" name="name" id="calle" class="form-control"
                                                         required> <span>Calle</span> </div>
 
-                                                        <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
+                                                        <div class="inputbox mt-3 mr-2"> <input type="text" name="name" id="altura" class="form-control"
                                                         required> <span>Altura</span> </div>
 
-                                                        <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
+                                                        <div class="inputbox mt-3 mr-2"> <input type="text" name="name" id="piso" class="form-control"
                                                         required> <span>Piso</span> </div>
 
                                                     </div>
@@ -267,7 +267,21 @@ $_SESSION['condicion'] = 1;
                             if(document.getElementById('nombre').value.length < 2 ){
                                 todo_correcto = false;
                             }
+                            if(document.getElementById('apellido').value.length < 2 ){
+                                todo_correcto = false;
+                            }
+                            if(document.getElementById('telefono').value.length < 2 ){
+                                todo_correcto = false;
+                            }
 
+                            if (document.getElementById('envio').value == "hide") {
+                                if(document.getElementById('calle').value.length < 2 ){
+                                todo_correcto = false;
+                                }
+                                if(document.getElementById('altura').value.length < 2 ){
+                                    todo_correcto = false;
+                                }
+                            }
 
                             /*Por último, y como aviso para el usuario, si no está todo bién, osea, si la variable
                             todo_correcto ha devuelto false al menos una vez, generaremos una alerta advirtiendo
