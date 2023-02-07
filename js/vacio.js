@@ -4,6 +4,6 @@ const botonPagar = document.getElementById("botonPagar").getElementsByTagName('*
 
 if (nombre.empty()) {
     for(var i of botonPagar){
-        i.disabled = true;
+        i.hidden = true;
     }
 }
