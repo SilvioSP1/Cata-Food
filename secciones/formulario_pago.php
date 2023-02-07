@@ -310,6 +310,8 @@ $_SESSION['condicion'] = 1;
                             nombre.addEventListener("keyup", validar);
                             apellido.addEventListener("keyup", validar);
                             telefono.addEventListener("keyup", validar);
+                            calle.addEventListener("keyup", validar);
+                            altura.addEventListener("keyup", validar);
                         </script>
 
 
