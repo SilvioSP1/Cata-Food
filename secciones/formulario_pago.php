@@ -280,7 +280,7 @@ $_SESSION['condicion'] = 1;
                             }
                             return todo_correcto;
                             }
-                            nombre.addEventListener("click", validar);
+                            boton.addEventListener("click", validar);
                         </script>
 
 
