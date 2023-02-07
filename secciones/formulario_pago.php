@@ -249,7 +249,7 @@ $_SESSION['condicion'] = 1;
 
                         <a href="../../Cata-Food/secciones/carrito_vista.php" class="text-decoration-none"><span class="text-dark">Paso anterior</span></a>
                         <div class="checkout-boton">
-                            <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
+                            <button disabled type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
                         </div>
 
 
