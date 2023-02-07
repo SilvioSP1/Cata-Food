@@ -312,6 +312,7 @@ $_SESSION['condicion'] = 1;
         </script>
 
         <script src="../../Cata-Food/js/showhideRadio.js"></script>
+        <script src="../../Cata-Food/js/vacio.js"></script>
 
     </section>
 
