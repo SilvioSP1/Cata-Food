@@ -252,6 +252,8 @@ $_SESSION['condicion'] = 1;
 
                         <script>
                             let nombre = document.getElementById('nombre');
+                            let apellido = document.getElementById('apellido');
+                            let telefono = document.getElementById('telefono');
                             let boton = document.getElementById('divPagar');
                             boton.hidden = true;
                             function validar(){
@@ -280,7 +282,7 @@ $_SESSION['condicion'] = 1;
                                 todo_correcto = true;
                             }
 
-                            if (document.getElementById('envio').value == "hide") {
+                            /* if (document.getElementById('envio').value == "hide") {
                                 if(document.getElementById('calle').value.length < 2 ){
                                 todo_correcto = false;
                                 }else{
@@ -291,7 +293,7 @@ $_SESSION['condicion'] = 1;
                                 }else{
                                     todo_correcto = true;
                                 }
-                            }
+                            } */
 
                             /*Por último, y como aviso para el usuario, si no está todo bién, osea, si la variable
                             todo_correcto ha devuelto false al menos una vez, generaremos una alerta advirtiendo
@@ -304,6 +306,8 @@ $_SESSION['condicion'] = 1;
                             return todo_correcto;
                             }
                             nombre.addEventListener("keyup", validar);
+                            apellido.addEventListener("keyup", validar);
+                            telefono.addEventListener("keyup", validar);
                         </script>
 
 
