@@ -254,6 +254,7 @@ $_SESSION['condicion'] = 1;
                             const nombre = document.getElementById("nombre").value;
                             
                             document.getElementById("nombre").addEventListener('click', function(e) {
+                                const nombre = document.getElementById("nombre").value;
 
                                 if (nombre === "") {
                                     div.hidden = true;
