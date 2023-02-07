@@ -248,7 +248,7 @@ $_SESSION['condicion'] = 1;
 
 
                         <a href="../../Cata-Food/secciones/carrito_vista.php" class="text-decoration-none"><span class="text-dark">Paso anterior</span></a>
-                        <div class="checkout-boton" id="botonPagar"></div>
+                        <div class="checkout-boton"></div>
 
 
                     </div>
@@ -312,7 +312,6 @@ $_SESSION['condicion'] = 1;
         </script>
 
         <script src="../../Cata-Food/js/showhideRadio.js"></script>
-        <script src="../../Cata-Food/js/vacio.js"></script>
 
     </section>
 
