@@ -274,14 +274,14 @@ $_SESSION['condicion'] = 1;
                                 todo_correcto = false;
                             }
 
-                            if (document.getElementById('envio').value == "hide") {
+                            /* if (document.getElementById('envio').value == "hide") {
                                 if(document.getElementById('calle').value.length < 2 ){
                                 todo_correcto = false;
                                 }
                                 if(document.getElementById('altura').value.length < 2 ){
                                     todo_correcto = false;
                                 }
-                            }
+                            } */
 
                             /*Por último, y como aviso para el usuario, si no está todo bién, osea, si la variable
                             todo_correcto ha devuelto false al menos una vez, generaremos una alerta advirtiendo
