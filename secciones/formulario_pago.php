@@ -106,134 +106,131 @@ $_SESSION['condicion'] = 1;
                 <div class="col-md-8">
 
 
-                    <form action="">
-                        <div class="card p-3">
+                    <div class="card p-3">
 
-                            <div class="mt-4 mb-4">
+                        <div class="mt-4 mb-4">
 
-                                <h6 class="text-uppercase">Datos Personales</h6>
-
-
-                                <div class="row mt-3">
-
-                                    <div class="col-md-6">
-
-                                        <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
-                                                required> <span>Nombre</span> </div>
+                            <h6 class="text-uppercase">Datos Personales</h6>
 
 
-                                    </div>
+                            <div class="row mt-3">
 
+                                <div class="col-md-6">
 
-                                    <div class="col-md-6">
-
-                                        <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
-                                                required> <span>Apellido</span> </div>
-
-
-                                    </div>
-
-
+                                    <div class="inputbox mt-3 mr-2"> <input type="text" name="name" id="nombre" class="form-control"
+                                            required> <span>Nombre</span> </div>
 
 
                                 </div>
 
 
-                                <div class="row mt-2">
+                                <div class="col-md-6">
 
-                                    <div class="col-md-6">
-
-                                        <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
-                                                required> <span>Telefono</span> </div>
-
-
-                                    </div>
-
-
-                                    <div class="col-md-6">
-
-                                        <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
-                                                required> <span>Provincia</span> </div>
-
-
-                                    </div>
-
-
+                                    <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
+                                            required> <span>Apellido</span> </div>
 
 
                                 </div>
 
-                                <div class="row mt-2">
-
-                                    <div class="col-md-6">
-
-                                        <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
-                                                required> <span>Ciudad</span> </div>
 
 
-                                    </div>
+
+                            </div>
 
 
-                                    <div class="col-md-6">
+                            <div class="row mt-2">
 
-                                        <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
-                                                required> <span>Código Postal</span> </div>
+                                <div class="col-md-6">
 
-
-                                    </div>
-
+                                    <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
+                                            required> <span>Telefono</span> </div>
 
 
                                 </div>
 
-                                <div class="row mt-2">
 
-                                    <div class="tabs">
+                                <div class="col-md-6">
 
-                                        <div class="tab">
+                                    <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
+                                            required> <span>Provincia</span> </div>
 
-                                            <input type="checkbox" id="chck1" class="inputCheckbox">
-                                            <label class="tab-label" for="chck1">Envios</label>
-                                            <div class="tab-content">
 
-                                                <div class="containerRadios">
+                                </div>
 
-                                                    <!-- <input type="radio" id="check1" name="input">
-                                                    <label for="check1" class="envio">Con envio</label>
-                                                    <input type="radio" value="check2" name="input">
-                                                    <label for="check2">Sin envio</label> -->
 
-                                                    <input type="radio" name="lang" value="hide" onclick="showHideDiv(1)" checked>
-                                                    Con envio
-                                                    <input type="radio" name="lang" value="show" onclick="showHideDiv(2)">
-                                                    Sin envio
 
-                                                    <br><br>
 
-                                                    <div id="div">
+                            </div>
 
-                                                        <div class="centerEnvio">
+                            <div class="row mt-2">
 
-                                                            <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
-                                                            required> <span>Calle</span> </div>
+                                <div class="col-md-6">
 
-                                                            <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
-                                                            required> <span>Altura</span> </div>
+                                    <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
+                                            required> <span>Ciudad</span> </div>
 
-                                                            <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
-                                                            required> <span>Piso</span> </div>
 
-                                                        </div>
+                                </div>
+
+
+                                <div class="col-md-6">
+
+                                    <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
+                                            required> <span>Código Postal</span> </div>
+
+
+                                </div>
+
+
+
+                            </div>
+
+                            <div class="row mt-2">
+
+                                <div class="tabs">
+
+                                    <div class="tab">
+
+                                        <input type="checkbox" id="chck1" class="inputCheckbox">
+                                        <label class="tab-label" for="chck1">Envios</label>
+                                        <div class="tab-content">
+
+                                            <div class="containerRadios">
+
+                                                <!-- <input type="radio" id="check1" name="input">
+                                                <label for="check1" class="envio">Con envio</label>
+                                                <input type="radio" value="check2" name="input">
+                                                <label for="check2">Sin envio</label> -->
+
+                                                <input type="radio" name="lang" value="hide" onclick="showHideDiv(1)" checked>
+                                                Con envio
+                                                <input type="radio" name="lang" value="show" onclick="showHideDiv(2)">
+                                                Sin envio
+
+                                                <br><br>
+
+                                                <div id="div">
+
+                                                    <div class="centerEnvio">
+
+                                                        <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
+                                                        required> <span>Calle</span> </div>
+
+                                                        <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
+                                                        required> <span>Altura</span> </div>
+
+                                                        <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
+                                                        required> <span>Piso</span> </div>
 
                                                     </div>
 
-
-
-
                                                 </div>
-                                            
-                                            </div>
 
+
+
+
+                                            </div>
+                                        
                                         </div>
 
                                     </div>
@@ -244,16 +241,17 @@ $_SESSION['condicion'] = 1;
 
                         </div>
 
-
-                        <div class="mt-4 mb-4 d-flex justify-content-between">
-
-
-                            <a href="../../Cata-Food/secciones/carrito_vista.php" class="text-decoration-none"><span class="text-dark">Paso anterior</span></a>
-                            <div class="checkout-boton"></div>
+                    </div>
 
 
-                        </div>
-                    </form>
+                    <div class="mt-4 mb-4 d-flex justify-content-between">
+
+
+                        <a href="../../Cata-Food/secciones/carrito_vista.php" class="text-decoration-none"><span class="text-dark">Paso anterior</span></a>
+                        <div class="checkout-boton" id="botonPagar"></div>
+
+
+                    </div>
 
                 </div>
 
