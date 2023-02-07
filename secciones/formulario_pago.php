@@ -253,7 +253,7 @@ $_SESSION['condicion'] = 1;
                         <script>
                             let nombre = document.getElementById('nombre');
                             let boton = document.getElementById('divPagar');
-                            /* boton.hidden = true; */
+                            boton.hidden = true;
                             function validar(){
                             /*creo una variable de tipo booleano que en principio tendrá un valor true(verdadero),
                             y que se convertirá en false(falso) cuando la condición no se cumpla*/
@@ -273,14 +273,13 @@ $_SESSION['condicion'] = 1;
                             todo_correcto ha devuelto false al menos una vez, generaremos una alerta advirtiendo
                             al usuario de que algunos datos ingresados no son los que esperamos.*/
                             if(!todo_correcto){
-                            alert('Algunos campos no están correctos, vuelva a revisarlos');
                                 boton.hidden = true;
                             }else{
                                 boton.hidden = false;
                             }
                             return todo_correcto;
                             }
-                            boton.addEventListener("click", validar);
+                            nombre.addEventListener("keyup", validar);
                         </script>
 
 
