@@ -250,6 +250,36 @@ $_SESSION['condicion'] = 1;
                         <a href="../../Cata-Food/secciones/carrito_vista.php" class="text-decoration-none"><span class="text-dark">Paso anterior</span></a>
                         <div class="checkout-boton" id="divPagar"></div>
 
+                        <script>
+                            let nombre = document.getElementById('nombre');
+                            let boton = document.getElementById('divPagar');
+                            function validar(){
+                            /*creo una variable de tipo booleano que en principio tendrá un valor true(verdadero),
+                            y que se convertirá en false(falso) cuando la condición no se cumpla*/
+                            var todo_correcto = true;
+
+                            /*El primer campo a comprobar es el del nombre. Lo traemos por id y verificamos
+                            la condición, en este caso, por ejemplo, le decimos que tiene que tener más de dos dígitos
+                            para que sea un nombre válido. Si no tiene más de dos dígitos, la variable todo_correcto
+                            devolverá false.*/
+
+                            if(document.getElementById('nombre').value.length < 2 ){
+                                todo_correcto = false;
+                            }
+
+
+                            /*Por último, y como aviso para el usuario, si no está todo bién, osea, si la variable
+                            todo_correcto ha devuelto false al menos una vez, generaremos una alerta advirtiendo
+                            al usuario de que algunos datos ingresados no son los que esperamos.*/
+                            if(!todo_correcto){
+                            alert('Algunos campos no están correctos, vuelva a revisarlos');
+                            }else{
+                                boton.hidden = true;
+                            }
+                            return todo_correcto;
+                            }
+                        </script>
+
 
                     </div>
 
