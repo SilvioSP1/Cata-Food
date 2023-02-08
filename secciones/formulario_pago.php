@@ -202,10 +202,10 @@ $_SESSION['condicion'] = 1;
                                                 <input type="radio" value="check2" name="input">
                                                 <label for="check2">Sin envio</label> -->
 
-                                                <input type="radio" name="lang" value="hide" id="hide" onclick="showHideDiv(1)" checked>
+                                                <input type="radio" name="lang" class="envio" value="hide" id="hide" onclick="showHideDiv(1)" checked>
                                                 Con envio
-                                                <!-- <input type="radio" name="lang" value="show" id="show" onclick="showHideDiv(2)">
-                                                Sin envio -->
+                                                <input type="radio" name="lang" class="envio" value="show" id="show" onclick="showHideDiv(2)">
+                                                Sin envio
 
                                                 <br><br>
 
@@ -286,20 +286,29 @@ $_SESSION['condicion'] = 1;
                                 todo_correcto = true;
                             }
 
-                            if (document.querySelector('input[name="lang"]:checked')) {
-                                if(document.getElementById('calle').value.length < 2 ){
-                                todo_correcto = false;
-                                }else{
+                            $(".envio").click(function(evento){
+                                var valor = $(this).val();
+
+                                if (valor == 'hide') {
+                                    if(document.getElementById('calle').value.length < 2 ){
+                                        todo_correcto = false;
+                                    }else{
+                                        todo_correcto = true;
+                                    }
+                                    if(document.getElementById('altura').value.length < 2 ){
+                                        todo_correcto = false;
+                                    }else{
+                                        todo_correcto = true;
+                                    }
+                                }
+
+                                if (valor == 'show'){
                                     todo_correcto = true;
                                 }
-                                if(document.getElementById('altura').value.length < 2 ){
-                                    todo_correcto = false;
-                                }else{
-                                    todo_correcto = true;
-                                }
-                            }else{
-                                todo_correcto = true;
-                            }
+
+                            });
+
+                            
 
                             /*Por último, y como aviso para el usuario, si no está todo bién, osea, si la variable
                             todo_correcto ha devuelto false al menos una vez, generaremos una alerta advirtiendo
