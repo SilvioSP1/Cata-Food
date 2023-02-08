@@ -298,7 +298,16 @@ $_SESSION['condicion'] = 1;
                                     todo_correcto = true;
                                 }
                             }else{
-                                todo_correcto = true;
+                                if(document.getElementById('calle').value.length >= 0 ){
+                                todo_correcto = false;
+                                }else{
+                                    todo_correcto = true;
+                                }
+                                if(document.getElementById('altura').value.length >= 0 ){
+                                    todo_correcto = false;
+                                }else{
+                                    todo_correcto = true;
+                                }
                             }
 
                             /*Por último, y como aviso para el usuario, si no está todo bién, osea, si la variable
