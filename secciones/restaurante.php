@@ -812,7 +812,7 @@ switch ($accion) {
                                                 }
                                             ?>
                                         </i>
-                                        <?php if($comentario['Com_UsuId'] == $_SESSION['idUsuario'] || $_SESSION['idRol'] == 3 && $_SESSION['idRol'] != 2){ ?>
+                                        <?php if($comentario['Com_UsuId'] == $_SESSION['idLocal'] || $_SESSION['idRol'] == 3){ ?>
                                         <form action="" method="post">
                                             <input type="hidden" name="ComId" value="<?php echo $comentario['Com_Id']; ?>">
                                             <input type="hidden" name="PunId" value="<?php echo openssl_encrypt($comentario['Pun_Id'],cod,key) ?>">

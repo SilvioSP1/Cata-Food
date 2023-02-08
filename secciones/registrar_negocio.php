@@ -95,6 +95,7 @@ $localesTipos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
           $_SESSION['contraseña']=$locales['Local_Contrasena'];
           $_SESSION['telefono']=$locales['Local_Telefono'];
           $_SESSION['idUsuario']=$locales['Local_Id'];
+          $_SESSION['idLocal']=$locales['Local_Id'];
           $_SESSION['imagen']= $locales['Local_Imagen'];
           $_SESSION['idRol']= $locales['Local_RolId'];
           $_SESSION['status']= $locales['Local_Status'];
