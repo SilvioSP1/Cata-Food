@@ -407,7 +407,7 @@ switch ($accion) {
                         </button>
                     </div>
                     <?php } ?>
-                    <?php if ($_SESSION['idRol'] == 2 && $_SESSION['idUsuario'] == $Local_Id) { ?>
+                    <?php if ($_SESSION['idRol'] == 2 && $_SESSION['idLocal'] == $Local_Id) { ?>
                     <div class="container__CardProd" action="" method="POST" id="">
                         <button class="conteinerCardResta producto centra" type="button" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">

@@ -2,7 +2,7 @@
 <?php include("../admin/config/db.php"); ?>
 <?php include("../admin/config/config.php"); ?>
 <?php
-$txtID=(isset($_POST['txtID'])) ? $_POST['txtID'] : $_SESSION['idUsuario'];
+$txtID=(isset($_POST['txtID'])) ? $_POST['txtID'] : $_SESSION['idLocal'];
 $txtNombre=(isset($_POST['txtNombre'])) ? $_POST['txtNombre'] : $_SESSION['nombreUsuario'];
 $txtImagen=(isset($_FILES['txtImagen']['name'])) ? $_FILES['txtImagen']['name'] : $_SESSION['imagen'];
 $txtTelefono=(isset($_POST['txtTelefono'])) ? $_POST['txtTelefono'] : $_SESSION['telefono'];
@@ -165,7 +165,7 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
               <button type="button" class="btn btn-outline-primary ms-1 botonModal" data-bs-toggle="modal" data-bs-target="#exampleModal1">Modificar</button>
               <form action="restaurante.php" method="post">
                 <!-- <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($txtID,cod,key); ?>"> -->
-                <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($_SESSION['idUsuario'],cod,key); ?>">
+                <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($_SESSION['idLocal'],cod,key); ?>">
                 <button class="btn btn-outline-primary ms-1 botonModal" name="btnAccion" type="submit">Ver Productos</button>
               </form>
               <?php if ($localAbierto['Horario_Fecha'] == date("Y-m-d",time()) && $localAbierto['Horario_Cierre'] > date("(H:i:s)", time()) || $_SESSION['status'] == 2) { ?>
