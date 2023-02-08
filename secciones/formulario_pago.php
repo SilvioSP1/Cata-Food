@@ -285,7 +285,7 @@ $_SESSION['condicion'] = 1;
                                 todo_correcto = true;
                             }
 
-                            if (document.getElementById('input[name="lang"]:checked')) {
+                            if (document.querySelector('input[name="lang"]:checked').value == "hide") {
                                 if(document.getElementById('calle').value.length < 2 ){
                                 todo_correcto = false;
                                 }else{
@@ -297,7 +297,7 @@ $_SESSION['condicion'] = 1;
                                     todo_correcto = true;
                                 }
                             }else{
-                                todo_correcto = false;
+                                todo_correcto = true;
                             }
 
                             /*Por último, y como aviso para el usuario, si no está todo bién, osea, si la variable
