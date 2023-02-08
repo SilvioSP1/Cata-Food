@@ -422,10 +422,12 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                 <h4>Stock</h4>
                 <br>
                 <?php foreach ($listaProductos as $lista) { ?>
+                  <?php if($lista['Prod_Status'] == 1){?>
                 <div class="form-group">
                   <label for="txtNombre" class="form-label"><?php echo $lista['Prod_Nombre'] ?></label>
                   <input type="number" required class="form-control" value="" name="<?php echo $lista['Prod_Id'] ?>" id="<?php echo $lista['Prod_Id'] ?>" placeholder="Stock para hoy">
                 </div>
+                <?php } ?>
                 <?php } ?>
                 <br>
                 <div class="btn-group" role="group" aria-label="">

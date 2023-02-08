@@ -556,6 +556,7 @@ switch ($accion) {
     <?php } ?>
 
     <div class="wrapperRate">
+    <?php foreach($localDelProducto as $local) { ?>
         <div class="rating-box">
             <div class="rating-header">
                 <div class="titleRate">Valoraciones</div>
@@ -937,6 +938,7 @@ switch ($accion) {
             <!-- end feedback -->
 
         </div>
+        <?php } ?>
     </div>
 
             <?php include("../template/footer.php"); ?>
