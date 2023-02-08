@@ -397,7 +397,17 @@ switch ($accion) {
                     <?php } ?>
                     <?php } ?>
                     <?php } ?>
-                    <?php if ($_SESSION['idRol'] == 2 || $_SESSION['idRol' == 3]) { ?>
+                    <?php if ($_SESSION['idRol'] == 3) { ?>
+                    <div class="container__CardProd" action="" method="POST" id="">
+                        <button class="conteinerCardResta producto centra" type="button" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            <img class="imagenRestaurante" src="../img/index/IconoDeMas.png" alt="">
+                            <!-- <button class="dis" name="accion" type="button" value="Seleccionar" data-bs-toggle="modal" data-bs-target="#exampleModal">Modificar</button> -->
+                            <!-- <input type="submit" name="accion" value="Seleccionar" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> -->
+                        </button>
+                    </div>
+                    <?php } ?>
+                    <?php if ($_SESSION['idRol'] == 2 && $_SESSION['idUsuario'] == $Local_Id) { ?>
                     <div class="container__CardProd" action="" method="POST" id="">
                         <button class="conteinerCardResta producto centra" type="button" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">
