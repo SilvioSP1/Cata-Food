@@ -551,11 +551,12 @@ switch ($accion) {
                         </div> -->
         </div>
     </div>
+</div>
 
 
     <?php } ?>
     
-<p>ssssssssssssssssssssssssssssgagsaga</p>
+
     <div class="wrapperRate">
         <div class="rating-box">
             <div class="rating-header">
