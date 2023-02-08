@@ -290,16 +290,7 @@ $_SESSION['condicion'] = 1;
 
                                 var valor = $(this).val();
                                 if (valor == 'hide') {
-                                    if(document.getElementById('calle').value.length < 2 ){
-                                        todo_correcto = false;
-                                    }else{
-                                        todo_correcto = true;
-                                    }
-                                    if(document.getElementById('altura').value.length < 2 ){
-                                        todo_correcto = false;
-                                    }else{
-                                        todo_correcto = true;
-                                    }
+                                    
                                 }
 
                                 if (valor == 'show'){
