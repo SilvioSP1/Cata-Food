@@ -92,7 +92,7 @@ switch ($accion) {
           
           $tmpImagen=$_FILES["txtImagen"]["tmp_name"];
           if ($tmpImagen!="") {
-              move_uploaded_file($tmpImagen,"../../img/restaurantes/productos/".$nombreArchivo);
+              move_uploaded_file($tmpImagen,"../img/restaurantes/productos/".$nombreArchivo);
           }
             
           $sentenciaSQL->bindParam(':Prod_Imagen',$nombreArchivo);
@@ -120,7 +120,7 @@ switch ($accion) {
             $nombreArchivo=($txtImagen!="")?$fecha->getTimestamp()."_".$_FILES["txtImagen"]["name"]:"imagen.jpg"; 
 
             $tmpImagen=$_FILES["txtImagen"]["tmp_name"];
-            move_uploaded_file($tmpImagen,"../../img/restaurantes/productos/".$nombreArchivo);
+            move_uploaded_file($tmpImagen,"../img/restaurantes/productos/".$nombreArchivo);
 
             $sentenciaSQL = $conexion->prepare("SELECT Prod_Imagen FROM producto WHERE Prod_Id=:Prod_Id");
             $sentenciaSQL->bindParam(':Prod_Id',$txtID);
