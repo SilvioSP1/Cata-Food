@@ -287,8 +287,9 @@ $_SESSION['condicion'] = 1;
                             }
 
                             $(".radio1").click(function(evento){
-                                var valor = $(this).val();
 
+                                var valor = $(this).val();
+                                todo_correcto = false;
                                 if (valor == 'hide') {
                                     if(document.getElementById('calle').value.length < 2 ){
                                         todo_correcto = false;
