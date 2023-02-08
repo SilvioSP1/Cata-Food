@@ -775,7 +775,7 @@ switch ($accion) {
                 <div class="review-header">
 
                     <div class="count-review"><span><?php echo count($comentarios); ?></span>Valoraciones</div>
-                    <?php if ($_SESSION['usuario'] == "Sin Loguearse") {
+                    <?php if ($_SESSION['usuario'] == "Sin Loguearse" || $_SESSION['idRol'] == 2) {
                         ?>
                     <div hidden class="txt btn-write">Escribe un comentario</div>
                     <?php }else{ ?>
