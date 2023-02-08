@@ -286,7 +286,7 @@ $_SESSION['condicion'] = 1;
                                 todo_correcto = true;
                             }
 
-                            if (document.querySelector('input[name="lang"]:checked').value == 'Con envio') {
+                            if (document.querySelector('input[name="lang"]:checked').value == 'hide') {
                                 if(document.getElementById('calle').value.length < 2 ){
                                 todo_correcto = false;
                                 }else{
@@ -318,6 +318,7 @@ $_SESSION['condicion'] = 1;
                             altura.addEventListener("keyup", validar);
                             telefono.addEventListener("keyup", validar);
                             piso.addEventListener("keyup", validar);
+                            radio.addEventListener("click", validar);
                         </script>
 
 
