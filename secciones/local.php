@@ -164,7 +164,8 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
             <div class="d-flex justify-content-center mb-2">
               <button type="button" class="btn btn-outline-primary ms-1 botonModal" data-bs-toggle="modal" data-bs-target="#exampleModal1">Modificar</button>
               <form action="restaurante.php" method="post">
-                <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($txtID,cod,key); ?>">
+                <!-- <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($txtID,cod,key); ?>"> -->
+                <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($_SESSION['idUsuario'],cod,key); ?>">
                 <button class="btn btn-outline-primary ms-1 botonModal" name="btnAccion" type="submit">Ver Productos</button>
               </form>
               <?php if ($localAbierto['Horario_Fecha'] == date("Y-m-d",time()) && $localAbierto['Horario_Cierre'] > date("(H:i:s)", time())) { ?>
