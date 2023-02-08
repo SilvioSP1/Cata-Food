@@ -258,6 +258,7 @@ $_SESSION['condicion'] = 1;
                             let altura = document.getElementById('altura');
                             let piso = document.getElementById('piso');
                             let boton = document.getElementById('divPagar');
+                            let radio = document.querySelector('input[name="lang"]');
                             boton.hidden = true;
                             function validar(){
                             /*creo una variable de tipo booleano que en principio tendrá un valor true(verdadero),
@@ -285,7 +286,7 @@ $_SESSION['condicion'] = 1;
                                 todo_correcto = true;
                             }
 
-                            if (document.querySelector('input[name="lang"]:checked').value = "show") {
+                            if (document.querySelector('input[name="lang"]:checked')) {
                                 if(document.getElementById('calle').value.length < 2 ){
                                 todo_correcto = false;
                                 }else{
@@ -317,6 +318,7 @@ $_SESSION['condicion'] = 1;
                             altura.addEventListener("keyup", validar);
                             telefono.addEventListener("keyup", validar);
                             piso.addEventListener("keyup", validar);
+                            radio.addEventListener("change", validar);
                         </script>
 
 
