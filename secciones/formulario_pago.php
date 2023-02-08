@@ -270,6 +270,22 @@ $_SESSION['condicion'] = 1;
                             para que sea un nombre válido. Si no tiene más de dos dígitos, la variable todo_correcto
                             devolverá false.*/
 
+                            if(document.getElementById('nombre').value.length < 2 ){
+                                todo_correcto = false;
+                            }else{
+                                todo_correcto = true;
+                            }
+                            if(document.getElementById('apellido').value.length < 2 ){
+                                todo_correcto = false;
+                            }else{
+                                todo_correcto = true;
+                            }
+                            if(document.getElementById('telefono').value.length < 2 ){
+                                todo_correcto = false;
+                            }else{
+                                todo_correcto = true;
+                            }
+
                             $(".radio1").click(function(evento){
 
                                 var valor = $(this).val();
@@ -287,27 +303,10 @@ $_SESSION['condicion'] = 1;
                                 }
 
                                 if (valor == 'show'){
-                                    todo_correcto = true;
+                                    
                                 }
 
                             });
-                            
-                            if(document.getElementById('nombre').value.length < 2 ){
-                                todo_correcto = false;
-                            }else{
-                                todo_correcto = true;
-                            }
-                            if(document.getElementById('apellido').value.length < 2 ){
-                                todo_correcto = false;
-                            }else{
-                                todo_correcto = true;
-                            }
-                            if(document.getElementById('telefono').value.length < 2 ){
-                                todo_correcto = false;
-                            }else{
-                                todo_correcto = true;
-                            }
-
 
                             /* if (document.querySelector('input[name="lang"]:checked')) {
                                 if(document.getElementById('calle').value.length < 2 ){
