@@ -202,9 +202,9 @@ $_SESSION['condicion'] = 1;
                                                 <input type="radio" value="check2" name="input">
                                                 <label for="check2">Sin envio</label> -->
 
-                                                <input type="radio" name="lang" value="hide" id="envio" onclick="showHideDiv(1)">
+                                                <input type="radio" name="lang" value="hide" id="hide" onclick="showHideDiv(1)">
                                                 Con envio
-                                                <input type="radio" name="lang" value="show" id="envio" onclick="showHideDiv(2)">
+                                                <input type="radio" name="lang" value="show" id="show" onclick="showHideDiv(2)">
                                                 Sin envio
 
                                                 <br><br>
@@ -285,7 +285,7 @@ $_SESSION['condicion'] = 1;
                                 todo_correcto = true;
                             }
 
-                            if (document.querySelector('input[name="lang"]:checked').value == "hide") {
+                            if (document.querySelector('input[name="lang"]:checked').value = "hide") {
                                 if(document.getElementById('calle').value.length < 2 ){
                                 todo_correcto = false;
                                 }else{
