@@ -554,20 +554,7 @@ switch ($accion) {
 
 
     <?php } ?>
-
-    <div class="info-review">
-                    <div class="left">
-                        <img src="../img/restaurantes/locales/<?php echo $local['Local_Imagen']; ?>" alt="">
-                        <div class="text-container">
-                            <span class="txt"><?php echo $local['Local_Nombre']; ?></span>
-                            <span class="author"><?php echo $local['Local_Ubicacion']; ?></span>
-                        </div>
-                    </div>
-                    <!-- end left -->
-
-                    <!-- end right -->
-
-                </div>
+    
 
     <div class="wrapperRate">
         <div class="rating-box">
