@@ -346,7 +346,7 @@ switch ($accion) {
                         </button>
                     </form>
                     <?php }elseif ($producto['Prod_Status'] == 2 && $_SESSION['idRol'] == 2) { ?>
-                    <!-- <form class="container__CardProd" action="" method="POST" id="">
+                    <form class="container__CardProd" action="" method="POST" id="">
                         <button class="userinfo conteinerCardResta producto botonModal" type="button"
                             data-id="<?php echo $producto['Prod_Id']; ?>" onClick="reply_click(this.id)"
                             data-value="<?php echo $_SESSION['localNombre']?>">
@@ -359,7 +359,7 @@ switch ($accion) {
                                 <h6>$<?php echo $producto['Prod_Precio']; ?></h6>
                             </div>
                         </button>
-                    </form> -->
+                    </form>
                     <?php } ?>
                     <?php } ?>
                     <?php }else { ?>
@@ -380,7 +380,7 @@ switch ($accion) {
                         </button>
                     </form>
                     <?php }elseif ($producto['Prod_Status'] == 2 && $_SESSION['idRol'] == 2) {?>
-                        <!-- <form class="container__CardProd" action="" method="POST" id="">
+                        <form class="container__CardProd" action="" method="POST" id="">
                         <button class="userinfo conteinerCardResta producto botonModal" type="button"
                             data-id="<?php echo $producto['Prod_Id']; ?>" onClick="reply_click(this.id)"
                             data-value="<?php echo $_SESSION['localNombre']?>">
@@ -393,7 +393,7 @@ switch ($accion) {
                                 <h6>$<?php echo $producto['Prod_Precio']; ?></h6>
                             </div>
                         </button>
-                    </form> -->
+                    </form>
                     <?php } ?>
                     <?php } ?>
                     <?php } ?>
@@ -554,6 +554,20 @@ switch ($accion) {
 
 
     <?php } ?>
+
+    <div class="info-review">
+                    <div class="left">
+                        <img src="../img/restaurantes/locales/<?php echo $local['Local_Imagen']; ?>" alt="">
+                        <div class="text-container">
+                            <span class="txt"><?php echo $local['Local_Nombre']; ?></span>
+                            <span class="author"><?php echo $local['Local_Ubicacion']; ?></span>
+                        </div>
+                    </div>
+                    <!-- end left -->
+
+                    <!-- end right -->
+
+                </div>
 
     <div class="wrapperRate">
         <div class="rating-box">
