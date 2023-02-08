@@ -202,9 +202,9 @@ $_SESSION['condicion'] = 1;
                                                 <input type="radio" value="check2" name="input">
                                                 <label for="check2">Sin envio</label> -->
 
-                                                <input type="radio" name="lang" value="hide" id="envio" onclick="showHideDiv(1)" >
+                                                <input type="radio" name="lang" value="hide" id="envio" onclick="showHideDiv(1)">
                                                 Con envio
-                                                <input type="radio" name="lang" value="show" id="envio" onclick="showHideDiv(2)" checked>
+                                                <input type="radio" name="lang" value="show" id="envio" onclick="showHideDiv(2)">
                                                 Sin envio
 
                                                 <br><br>
