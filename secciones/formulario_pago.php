@@ -290,7 +290,7 @@ $_SESSION['condicion'] = 1;
 
                                 var valor = $(this).val();
                                 if (valor == 'hide') {
-                                    
+                                    todo_correcto = false;
                                 }
 
                                 if (valor == 'show'){
