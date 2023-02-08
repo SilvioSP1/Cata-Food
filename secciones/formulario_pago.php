@@ -41,8 +41,8 @@ $preference->items = $productos;
 
 $preference->back_urls = array(
 
-  "success" => "http://localhost/Cata-Food/admin/secciones/captura.php",
-  "fail" => "http://localhost/Cata-Food/admin/secciones/fallo.php"
+  "success" => "https://catafood.shop/Cata-Food/secciones/captura.php",
+  "fail" => "https://catafood.shop/Cata-Food/admin/secciones/fallo.php"
 
 );
 
@@ -296,6 +296,8 @@ $_SESSION['condicion'] = 1;
                                 }else{
                                     todo_correcto = true;
                                 }
+                            }else{
+                                todo_correcto = true;
                             }
 
                             /*Por último, y como aviso para el usuario, si no está todo bién, osea, si la variable
