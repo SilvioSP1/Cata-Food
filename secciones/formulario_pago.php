@@ -204,8 +204,8 @@ $_SESSION['condicion'] = 1;
 
                                                 <input type="radio" name="lang" value="hide" id="hide" onclick="showHideDiv(1)" checked>
                                                 Con envio
-                                                <input type="radio" name="lang" value="show" id="show" onclick="showHideDiv(2)">
-                                                Sin envio
+                                                <!-- <input type="radio" name="lang" value="show" id="show" onclick="showHideDiv(2)">
+                                                Sin envio -->
 
                                                 <br><br>
 
@@ -318,7 +318,6 @@ $_SESSION['condicion'] = 1;
                             altura.addEventListener("keyup", validar);
                             telefono.addEventListener("keyup", validar);
                             piso.addEventListener("keyup", validar);
-                            radio.addEventListener("change", validar);
                         </script>
 
 
