@@ -202,9 +202,9 @@ $_SESSION['condicion'] = 1;
                                                 <input type="radio" value="check2" name="input">
                                                 <label for="check2">Sin envio</label> -->
 
-                                                <input type="radio" name="lang" class="radio1" value="hide" id="hide" onclick="showHideDiv(1)" checked>
+                                                <input type="radio" name="lang" value="hide" id="hide" onclick="showHideDiv(1)" checked>
                                                 Con envio
-                                                <input type="radio" name="lang" class="radio1" value="show" id="show" onclick="showHideDiv(2)">
+                                                <input type="radio" name="lang" value="show" id="show" onclick="showHideDiv(2)">
                                                 Sin envio
 
                                                 <br><br>
@@ -286,20 +286,7 @@ $_SESSION['condicion'] = 1;
                                 todo_correcto = true;
                             }
 
-                            $(".radio1").click(function(evento){
-
-                                var valor = $(this).val();
-                                if (valor == 'hide') {
-                                    todo_correcto = false;
-                                }
-
-                                if (valor == 'show'){
-                                    
-                                }
-
-                            });
-
-                            /* if (document.querySelector('input[name="lang"]:checked')) {
+                            if (document.querySelector('input[name="lang"]:checked')) {
                                 if(document.getElementById('calle').value.length < 2 ){
                                 todo_correcto = false;
                                 }else{
@@ -312,7 +299,7 @@ $_SESSION['condicion'] = 1;
                                 }
                             }else{
                                 todo_correcto = true;
-                            } */
+                            }
 
                             /*Por último, y como aviso para el usuario, si no está todo bién, osea, si la variable
                             todo_correcto ha devuelto false al menos una vez, generaremos una alerta advirtiendo
