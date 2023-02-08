@@ -345,12 +345,42 @@ switch ($accion) {
                             </div>
                         </button>
                     </form>
+                    <?php }elseif ($producto['Prod_Status'] == 2 && $_SESSION['idRol'] == 2) { ?>
+                    <form class="container__CardProd" action="" method="POST" id="">
+                        <button class="userinfo conteinerCardResta producto botonModal" type="button"
+                            data-id="<?php echo $producto['Prod_Id']; ?>" onClick="reply_click(this.id)"
+                            data-value="<?php echo $_SESSION['localNombre']?>">
+                            <img class="imagenRestaurante"
+                                src="../img/restaurantes/productos/<?php echo $producto['Prod_Imagen']; ?>" alt="">
+                            <div class="contenedorTexto">
+                                <p class="nombreRestaurante nombreProducto">
+                                    <strong><?php echo $producto['Prod_Nombre']; ?></strong></p>
+                                <p class="ubiRestaurante ingredientes"><?php echo $producto['Prod_Descripcion']; ?></p>
+                                <h6>$<?php echo $producto['Prod_Precio']; ?></h6>
+                            </div>
+                        </button>
+                    </form>
                     <?php } ?>
                     <?php } ?>
                     <?php }else { ?>
                     <?php foreach($listaProductos as $producto) { ?>
                     <?php if ($producto['Prod_Status'] == 1 || $producto['Prod_Status'] == 3) { ?>
                     <form class="container__CardProd" action="" method="POST" id="">
+                        <button class="userinfo conteinerCardResta producto botonModal" type="button"
+                            data-id="<?php echo $producto['Prod_Id']; ?>" onClick="reply_click(this.id)"
+                            data-value="<?php echo $_SESSION['localNombre']?>">
+                            <img class="imagenRestaurante"
+                                src="../img/restaurantes/productos/<?php echo $producto['Prod_Imagen']; ?>" alt="">
+                            <div class="contenedorTexto">
+                                <p class="nombreRestaurante nombreProducto">
+                                    <strong><?php echo $producto['Prod_Nombre']; ?></strong></p>
+                                <p class="ubiRestaurante ingredientes"><?php echo $producto['Prod_Descripcion']; ?></p>
+                                <h6>$<?php echo $producto['Prod_Precio']; ?></h6>
+                            </div>
+                        </button>
+                    </form>
+                    <?php }elseif ($producto['Prod_Status'] == 2 && $_SESSION['idRol'] == 2) {?>
+                        <form class="container__CardProd" action="" method="POST" id="">
                         <button class="userinfo conteinerCardResta producto botonModal" type="button"
                             data-id="<?php echo $producto['Prod_Id']; ?>" onClick="reply_click(this.id)"
                             data-value="<?php echo $_SESSION['localNombre']?>">
