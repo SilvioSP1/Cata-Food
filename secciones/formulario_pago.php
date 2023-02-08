@@ -285,7 +285,7 @@ $_SESSION['condicion'] = 1;
                                 todo_correcto = true;
                             }
 
-                            if (document.getElementById('envio').value == "hide") {
+                            if (document.getElementById('input[name="lang"]:checked')) {
                                 if(document.getElementById('calle').value.length < 2 ){
                                 todo_correcto = false;
                                 }else{
