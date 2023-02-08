@@ -346,7 +346,7 @@ switch ($accion) {
                         </button>
                     </form>
                     <?php }elseif ($producto['Prod_Status'] == 2 && $_SESSION['idRol'] == 2) { ?>
-                    <form class="container__CardProd" action="" method="POST" id="">
+                    <!-- <form class="container__CardProd" action="" method="POST" id="">
                         <button class="userinfo conteinerCardResta producto botonModal" type="button"
                             data-id="<?php echo $producto['Prod_Id']; ?>" onClick="reply_click(this.id)"
                             data-value="<?php echo $_SESSION['localNombre']?>">
@@ -359,7 +359,7 @@ switch ($accion) {
                                 <h6>$<?php echo $producto['Prod_Precio']; ?></h6>
                             </div>
                         </button>
-                    </form>
+                    </form> -->
                     <?php } ?>
                     <?php } ?>
                     <?php }else { ?>
@@ -380,7 +380,7 @@ switch ($accion) {
                         </button>
                     </form>
                     <?php }elseif ($producto['Prod_Status'] == 2 && $_SESSION['idRol'] == 2) {?>
-                        <form class="container__CardProd" action="" method="POST" id="">
+                        <!-- <form class="container__CardProd" action="" method="POST" id="">
                         <button class="userinfo conteinerCardResta producto botonModal" type="button"
                             data-id="<?php echo $producto['Prod_Id']; ?>" onClick="reply_click(this.id)"
                             data-value="<?php echo $_SESSION['localNombre']?>">
@@ -393,7 +393,7 @@ switch ($accion) {
                                 <h6>$<?php echo $producto['Prod_Precio']; ?></h6>
                             </div>
                         </button>
-                    </form>
+                    </form> -->
                     <?php } ?>
                     <?php } ?>
                     <?php } ?>
@@ -556,7 +556,6 @@ switch ($accion) {
     <?php } ?>
 
     <div class="wrapperRate">
-    <?php foreach($localDelProducto as $local) { ?>
         <div class="rating-box">
             <div class="rating-header">
                 <div class="titleRate">Valoraciones</div>
@@ -938,7 +937,6 @@ switch ($accion) {
             <!-- end feedback -->
 
         </div>
-        <?php } ?>
     </div>
 
             <?php include("../template/footer.php"); ?>
