@@ -286,20 +286,18 @@ $_SESSION['condicion'] = 1;
                             }
 
                             if (document.getElementById('input[name="lang"]:checked')) {
-                                if (document.getElementById('input[name="lang"]:checked').value == "hide") {
-                                    if(document.getElementById('calle').value.length < 2 ){
+                                if(document.getElementById('calle').value.length < 2 ){
+                                todo_correcto = false;
+                                }else{
+                                    todo_correcto = true;
+                                }
+                                if(document.getElementById('altura').value.length < 2 ){
                                     todo_correcto = false;
-                                    }else{
-                                        todo_correcto = true;
-                                    }
-                                    if(document.getElementById('altura').value.length < 2 ){
-                                        todo_correcto = false;
-                                    }else{
-                                        todo_correcto = true;
-                                    }
+                                }else{
+                                    todo_correcto = true;
                                 }
                             }else{
-                                todo_correcto = true;
+                                todo_correcto = false;
                             }
 
                             /*Por último, y como aviso para el usuario, si no está todo bién, osea, si la variable
