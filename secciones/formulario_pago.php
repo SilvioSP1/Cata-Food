@@ -41,7 +41,7 @@ $preference->items = $productos;
 
 $preference->back_urls = array(
 
-  "success" => "https://catafood.shop/Cata-Food/secciones/captura.php",
+  "success" => "https://catafood.shop/Cata-Food/admin/secciones/captura.php",
   "fail" => "https://catafood.shop/Cata-Food/admin/secciones/fallo.php"
 
 );
