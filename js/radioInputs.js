@@ -23,7 +23,9 @@ telefono.oninput = function(){
                 y:'top'
             }
 
-        })
+        });
+
+        alert("superaste el numero")
 
     }
 
