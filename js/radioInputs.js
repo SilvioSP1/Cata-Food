@@ -11,36 +11,6 @@ let input2 = $('.input2').val();
 let input3 = $('.input3').val();
 boton.hidden = true;
 
-if(input1.length < 2){
-
-    todo_correcto = false;
-
-}else{
-
-    todo_correcto = true;
-    
-}
-
-if(input2.length < 2){
-
-    todo_correcto = false;
-
-}else{
-
-    todo_correcto = true;
-    
-}
-
-if(input3.length < 2){
-
-    todo_correcto = false;
-
-}else{
-
-    todo_correcto = true;
-    
-}
-
 //funcion para validacion
 
 function validar() {
@@ -100,6 +70,41 @@ function validar() {
     }
     return todo_correcto;
 }
+
+
+//funcion para los inputs
+
+if(input1.length < 2){
+
+    todo_correcto = false;
+
+}else{
+
+    todo_correcto = true;
+    
+}
+
+if(input2.length < 2){
+
+    todo_correcto = false;
+
+}else{
+
+    todo_correcto = true;
+    
+}
+
+if(input3.length < 2){
+
+    todo_correcto = false;
+
+}else{
+
+    todo_correcto = true;
+    
+}
+
+//keyups
 
 nombre.addEventListener("keyup", validar);
 apellido.addEventListener("keyup", validar);
