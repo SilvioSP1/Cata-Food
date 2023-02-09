@@ -40,7 +40,7 @@ function validar() {
     }
 
 
-    if (document.querySelector('input[name="lang"]:checked').value == 'hide' && aux == 1) {
+    if (document.querySelector('input[name="lang"]:checked').value == 'hide' ) {
         console.log("1");
         aux = 2;
         if (document.getElementById('calle').value.length < 2) {
