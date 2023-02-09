@@ -24,7 +24,7 @@ function validar() {
 
     
 
-    if (document.querySelector('input[name="lang1"]:checked').value == 'hide') {
+    if (document.querySelector('input[name="lang1"]:not(:checked)').value == 'hide') {
         if (document.getElementById('nombre').value.length < 2) {
             todo_correcto = false;
         } else {
