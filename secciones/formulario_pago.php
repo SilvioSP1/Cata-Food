@@ -298,7 +298,7 @@ $_SESSION['condicion'] = 1;
                                 }else{
                                     todo_correcto = true;
                                 }
-                            }else if (document.querySelector('input[name="lang"]')[1].checked){
+                            }else if (document.querySelector('input[name="lang"]:checked').value == 'show'){
                                 todo_correcto = true;
                             }
 
