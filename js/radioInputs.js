@@ -57,7 +57,7 @@ function validar() {
             todo_correcto = true;
         }
     } 
-    if (document.querySelector('input[name="lang"]:checked').value == 'show') {
+    if (document.querySelector('input[class="sinEnvio"]:checked').value == 'show') {
         console.log("2");
         todo_correcto = true;
     }
