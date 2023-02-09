@@ -52,7 +52,6 @@ $preference->auto_return = "approved";
 $preference->binary_mode = true; 
 
 $preference->save();
-echo $preference['binary_mode'];
 
 $_SESSION['condicion'] = 1;
 
@@ -99,7 +98,7 @@ $_SESSION['condicion'] = 1;
 
             <div class="mb-4">
 
-                <h2>Confirma tu orden y paga</h2>
+                <h2>Confirma tu orden y paga <?php echo $preference['binary_mode']; ?></h2>
 
             </div>
 
