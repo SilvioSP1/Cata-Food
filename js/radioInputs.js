@@ -23,7 +23,7 @@ function validar() {
     devolverá false.*/
 
 
-    if (document.querySelector('input[name="sin"]:checked').checked==false) {
+    if (document.querySelector('input[name="sin"]:checked').value == 'hide') {
         if (document.getElementById('nombre').value.length < 2) {
             todo_correcto = false;
         } else {
@@ -60,7 +60,25 @@ function validar() {
         } else {
             todo_correcto = true;
         }
-    } else {
+    }else if(document.querySelector('input[name="sin"]:checked').value == 'hide'){
+
+        if (document.getElementById('nombre').value.length < 2) {
+            todo_correcto = false;
+        } else {
+            todo_correcto = true;
+        }
+        if (document.getElementById('apellido').value.length < 2) {
+            todo_correcto = false;
+        } else {
+            todo_correcto = true;
+        }
+        if (document.getElementById('telefono').value.length < 2) {
+            todo_correcto = false;
+        } else {
+            todo_correcto = true;
+        }
+
+    }else {
         todo_correcto = true;
     }
 
