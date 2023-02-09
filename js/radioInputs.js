@@ -11,7 +11,7 @@ boton.hidden = true;
 
 telefono.oninput = function(){
     
-    if(this.value.length < 10){
+    if(this.value.length > 9){
 
         alert("superaste el numero")
 
