@@ -10,6 +10,7 @@ let radio2 = document.getElementById('show');
 boton.hidden = true;
 let aux = 1;
 
+
 //funcion para validacion
 
 function validar() {
