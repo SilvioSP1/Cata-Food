@@ -23,7 +23,7 @@ function validar() {
     devolverá false.*/
 
 
-    if(radio2 == "show"){
+    if (radio2 == "show") {
 
         if (document.getElementById('nombre').value.length < 2) {
             todo_correcto = false;
@@ -40,11 +40,8 @@ function validar() {
         } else {
             todo_correcto = true;
         }
-
-    }else {
-        todo_correcto = true;
     }
-    
+
 
     if (document.querySelector('input[name="lang"]:checked').value == 'hide') {
         if (document.getElementById('calle').value.length < 2) {
