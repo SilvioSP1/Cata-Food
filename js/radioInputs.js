@@ -55,7 +55,8 @@ function validar() {
         } else {
             todo_correcto = true;
         }
-    } else {
+    }
+    if (document.querySelector('input[name="lang"]:checked').value == 'show') {
         todo_correcto = true;
     }
 
