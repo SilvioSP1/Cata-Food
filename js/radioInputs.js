@@ -41,6 +41,8 @@ function validar() {
             todo_correcto = true;
         }
 
+    }else {
+        todo_correcto = true;
     }
     
 
