@@ -12,7 +12,7 @@ telefono.oninput = function(){
 
     if(this.value.length > 10){
 
-        this.value = this.value.slice(0,4);
+        alert("solo podes poner 10 digitos")
 
     }
 
