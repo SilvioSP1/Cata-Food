@@ -6,7 +6,7 @@ let altura = document.getElementById('altura');
 let piso = document.getElementById('piso');
 let boton = document.getElementById('divPagar');
 let radio = document.querySelector('input[name="lang"]');
-let radio2 = document.getElementById("show");
+let radio2 = document.getElementById('input[name="lang"]');
 boton.hidden = true;
 
 //funcion para validacion
@@ -23,7 +23,7 @@ function validar() {
     devolverá false.*/
 
 
-    if (radio2 == "show") {
+    if (document.querySelector('input[name="lang"]:checked').value == 'hide') {
 
         if (document.getElementById('nombre').value.length < 2) {
             todo_correcto = false;
