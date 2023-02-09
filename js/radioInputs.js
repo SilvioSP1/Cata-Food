@@ -1,3 +1,4 @@
+var notyf = new Notyf();
 let nombre = document.getElementById('nombre');
 let apellido = document.getElementById('apellido');
 let telefono = document.getElementById('telefono');
@@ -13,7 +14,6 @@ telefono.oninput = function(){
     
     if(this.value.length > 10){
         
-        var notyf = new Notyf();
         notyf.error({
 
             message: "Solo podes poner 10 digitos",
