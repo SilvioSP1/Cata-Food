@@ -13,7 +13,7 @@ boton.hidden = true;
 telefono.oninput = function(){
 
     
-    if(this.value.length > 10){
+    if(this.value.length < 10){
         
         notyf.success({
 
