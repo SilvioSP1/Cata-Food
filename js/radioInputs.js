@@ -29,9 +29,8 @@ function validar() {
     } else {
         todo_correcto = true;
     }
-    if (document.getElementById('telefono').value.length > 10) {
+    if (document.getElementById('telefono').value.length < 2) {
         todo_correcto = false;
-        alert("superaste los 10 digitos");
     } else {
         todo_correcto = true;
     }
