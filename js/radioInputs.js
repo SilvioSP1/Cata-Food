@@ -1,4 +1,3 @@
-var notyf = new Notyf();
 let nombre = document.getElementById('nombre');
 let apellido = document.getElementById('apellido');
 let telefono = document.getElementById('telefono');
@@ -94,3 +93,4 @@ altura.addEventListener("keyup", validar);
 telefono.addEventListener("keyup", validar);
 piso.addEventListener("keyup", validar);
 radio.addEventListener("click", validar);
+var notyf = new Notyf();
