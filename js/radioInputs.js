@@ -6,6 +6,7 @@ let altura = document.getElementById('altura');
 let piso = document.getElementById('piso');
 let boton = document.getElementById('divPagar');
 let radio = document.querySelector('input[name="lang"]');
+let radioHide = document.querySelector("show");
 boton.hidden = true;
 
 function validar() {
@@ -19,22 +20,28 @@ function validar() {
     para que sea un nombre válido. Si no tiene más de dos dígitos, la variable todo_correcto
     devolverá false.*/
 
-    if (document.getElementById('nombre').value.length < 2) {
-        todo_correcto = false;
-    } else {
-        todo_correcto = true;
+    if (document.querySelector('show').value == 'hide') {
+
+        if (document.getElementById('nombre').value.length < 2) {
+            todo_correcto = false;
+        } else {
+            todo_correcto = true;
+        }
+        if (document.getElementById('apellido').value.length < 2) {
+            todo_correcto = false;
+        } else {
+            todo_correcto = true;
+        }
+        if (document.getElementById('telefono').value.length > 10) {
+            todo_correcto = false;
+            alert("superaste los 10 digitos");
+        } else {
+            todo_correcto = true;
+        }
+
     }
-    if (document.getElementById('apellido').value.length < 2) {
-        todo_correcto = false;
-    } else {
-        todo_correcto = true;
-    }
-    if (document.getElementById('telefono').value.length > 10) {
-        todo_correcto = false;
-        alert("superaste los 10 digitos");
-    } else {
-        todo_correcto = true;
-    }
+
+
 
     if (document.querySelector('input[name="lang"]:checked').value == 'hide') {
         if (document.getElementById('calle').value.length < 2) {
