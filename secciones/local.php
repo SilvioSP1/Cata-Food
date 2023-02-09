@@ -126,7 +126,8 @@ switch($accion){
     $txtEmail="";
     break;
 }
-$fechaActual = date("Y-m-d",time());
+date_default_timezone_set('America/Argentina/Buenos_Aires');
+$fechaActual = date_default_timezone_get('America/Argentina/Buenos_Aires');
 
 $sentenciaSQL = $conexion->prepare("SELECT * FROM horario WHERE Horario_LocalId = :Horario_LocalId AND Horario_Fecha = :Horario_Fecha");
 $sentenciaSQL->bindParam(':Horario_LocalId',$txtID);
@@ -204,7 +205,7 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
           <div class="card-body">
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Nombre Local - <?php echo date("Y-m-d",time()); ?></p>
+                <p class="mb-0">Nombre Local <?php echo $fechaActual;?></p>
               </div>
               <div class="col-sm-9">
                 <p class="text-muted mb-0"><?php echo $_SESSION['nombreUsuario'];?></p>
