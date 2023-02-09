@@ -118,7 +118,7 @@ $_SESSION['condicion'] = 1;
 
                                 <div class="col-md-6">
 
-                                    <div class="inputbox mt-3 mr-2"> <input type="text" name="name input1" id="nombre" class="form-control"
+                                    <div class="inputbox mt-3 mr-2"> <input type="text" name="name" id="nombre" class="form-control"
                                             required> <span>Nombre</span> </div>
 
 
@@ -127,7 +127,7 @@ $_SESSION['condicion'] = 1;
 
                                 <div class="col-md-6">
 
-                                    <div class="inputbox mt-3 mr-2"> <input type="text" name="name" id="apellido input2" class="form-control"
+                                    <div class="inputbox mt-3 mr-2"> <input type="text" name="name" id="apellido" class="form-control"
                                             required> <span>Apellido</span> </div>
 
 
@@ -143,7 +143,7 @@ $_SESSION['condicion'] = 1;
 
                                 <div class="col-md-6">
 
-                                    <div class="inputbox mt-3 mr-2"> <input type="number" name="name" id="telefono input3" class="form-control"
+                                    <div class="inputbox mt-3 mr-2"> <input type="number" name="name" id="telefono" class="form-control"
                                             required> <span>Telefono</span> </div>
 
 
