@@ -23,7 +23,7 @@ function validar() {
     devolverá false.*/
 
 
-    if (document.querySelector('input[name="sin"]:not(:checked)').value == 'show') {
+    if (document.querySelector('input[name="sin"]:not(:checked)').value == 'hide') {
         if (document.getElementById('nombre').value.length < 2) {
             todo_correcto = false;
         } else {
