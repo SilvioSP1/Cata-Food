@@ -6,7 +6,6 @@ let altura = document.getElementById('altura');
 let piso = document.getElementById('piso');
 let boton = document.getElementById('divPagar');
 let radio = document.querySelector('input[name="lang"]');
-let radio2 = document.getElementsByClassName("sinEnvio");
 boton.hidden = true;
 
 //funcion para validacion
@@ -23,23 +22,20 @@ function validar() {
     devolverá false.*/
 
 
-    if (radio2 == "sinEnvio") {
-
-        if (document.getElementById('nombre').value.length < 2) {
-            todo_correcto = false;
-        } else {
-            todo_correcto = true;
-        }
-        if (document.getElementById('apellido').value.length < 2) {
-            todo_correcto = false;
-        } else {
-            todo_correcto = true;
-        }
-        if (document.getElementById('telefono').value.length < 2) {
-            todo_correcto = false;
-        } else {
-            todo_correcto = true;
-        }
+    if (document.getElementById('nombre').value.length < 2) {
+        todo_correcto = false;
+    } else {
+        todo_correcto = true;
+    }
+    if (document.getElementById('apellido').value.length < 2) {
+        todo_correcto = false;
+    } else {
+        todo_correcto = true;
+    }
+    if (document.getElementById('telefono').value.length < 2) {
+        todo_correcto = false;
+    } else {
+        todo_correcto = true;
     }
 
 
@@ -84,4 +80,3 @@ altura.addEventListener("keyup", validar);
 telefono.addEventListener("keyup", validar);
 piso.addEventListener("keyup", validar);
 radio.addEventListener("click", validar);
-radio2.addEventListener("click", validar);
