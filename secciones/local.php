@@ -168,7 +168,7 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                 <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($_SESSION['idLocal'],cod,key); ?>">
                 <button class="btn btn-outline-primary ms-1 botonModal" name="btnAccion" type="submit">Ver Productos</button>
               </form>
-              <?php if ($localAbierto['Horario_Fecha'] == date("Y-m-d",time())  || $_SESSION['status'] == 2) { ?>
+              <?php if ($localAbierto['Horario_Fecha'] == date("Y-m-d",time()) && $localAbierto['Horario_Cierre'] > date("(H:i:s)", time()) || $_SESSION['status'] == 2) { ?>
               <button disabled class="btn btn-outline-primary ms-1 botonModal" name="btnAccion" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal2">Abrir Local</button>
               <?php }else{ ?>
                 <button class="btn btn-outline-primary ms-1 botonModal" name="btnAccion" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal2">Abrir Local</button>
@@ -204,7 +204,7 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
           <div class="card-body">
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Nombre Local</p>
+                <p class="mb-0">Nombre Local - <?php echo date("Y-m-d",time()); ?></p>
               </div>
               <div class="col-sm-9">
                 <p class="text-muted mb-0"><?php echo $_SESSION['nombreUsuario'];?></p>
