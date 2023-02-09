@@ -1,4 +1,3 @@
-var notyf = new Notyf();
 let nombre = document.getElementById('nombre');
 let apellido = document.getElementById('apellido');
 let telefono = document.getElementById('telefono');
@@ -31,6 +30,7 @@ function validar() {
         todo_correcto = true;
     }
     if (document.getElementById('telefono').value.length > 10) {
+        var notyf = new Notyf();
         todo_correcto = false;
         notyf.success({
 
