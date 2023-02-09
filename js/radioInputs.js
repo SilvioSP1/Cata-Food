@@ -15,7 +15,7 @@ function validar() {
 
     /*creo una variable de tipo booleano que en principio tendrá un valor true(verdadero),
     y que se convertirá en false(falso) cuando la condición no se cumpla*/
-    /* var todo_correcto = true; */
+    var todo_correcto = true;
 
     /*El primer campo a comprobar es el del nombre. Lo traemos por id y verificamos
     la condición, en este caso, por ejemplo, le decimos que tiene que tener más de dos dígitos
@@ -40,7 +40,7 @@ function validar() {
     }
 
 
-    if (document.querySelector('input[name="lang"]:checked').value == 'hide' ) {
+    if (document.querySelector('input[name="lang"]:checked').value == 'hide' && aux == 1) {
         console.log("1");
         aux = 2;
         if (document.getElementById('calle').value.length < 2) {
@@ -58,8 +58,7 @@ function validar() {
         } else {
             todo_correcto = true;
         }
-    }
-    if(aux == 2){
+    }else{
         console.log("2");
         aux = 1;
         todo_correcto = true;
