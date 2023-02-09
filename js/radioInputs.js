@@ -10,6 +10,8 @@ boton.hidden = true;
 
 
 function validar() {
+
+    var notyf = new Notyf();
     /*creo una variable de tipo booleano que en principio tendrá un valor true(verdadero),
     y que se convertirá en false(falso) cuando la condición no se cumpla*/
     var todo_correcto = true;
@@ -18,8 +20,6 @@ function validar() {
     la condición, en este caso, por ejemplo, le decimos que tiene que tener más de dos dígitos
     para que sea un nombre válido. Si no tiene más de dos dígitos, la variable todo_correcto
     devolverá false.*/
-
-    var notyf = new Notyf();
 
     if (document.getElementById('nombre').value.length < 2) {
         todo_correcto = false;
