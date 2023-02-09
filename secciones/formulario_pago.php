@@ -52,7 +52,7 @@ $preference->auto_return = "approved";
 $preference->binary_mode = true; 
 
 $preference->save();
-
+echo $preference['status'];
 
 $_SESSION['condicion'] = 1;
 
