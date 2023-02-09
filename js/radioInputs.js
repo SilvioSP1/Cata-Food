@@ -78,4 +78,3 @@ altura.addEventListener("keyup", validar);
 telefono.addEventListener("keyup", validar);
 piso.addEventListener("keyup", validar);
 radio.addEventListener("click", validar);
-radio2.addEventListener("click", validar);
