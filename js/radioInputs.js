@@ -8,17 +8,6 @@ let boton = document.getElementById('divPagar');
 let radio = document.querySelector('input[name="lang"]');
 boton.hidden = true;
 
-telefono.oninput = function () {
-
-    if (this.value.length > 10) {
-
-        alert("superaste los 10 digitos");
-
-    }
-
-}
-
-
 function validar() {
 
     /*creo una variable de tipo booleano que en principio tendrá un valor true(verdadero),
@@ -42,6 +31,7 @@ function validar() {
     }
     if (document.getElementById('telefono').value.length > 10) {
         todo_correcto = false;
+        alert("superaste los 10 digitos");
     } else {
         todo_correcto = true;
     }
