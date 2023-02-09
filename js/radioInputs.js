@@ -58,10 +58,6 @@ function validar() {
         } else {
             todo_correcto = true;
         }
-    }else{
-        console.log("2");
-        aux = 1;
-        todo_correcto = true;
     }
 
     /*Por último, y como aviso para el usuario, si no está todo bién, osea, si la variable
