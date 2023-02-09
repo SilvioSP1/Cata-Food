@@ -79,7 +79,7 @@ if ([$_SESSION['usuario'] != "Sin Loguearse"])
                             'local'=>$Local_Nombre
                         );
                         $_SESSION['carritoCompra'][0] = $productoArr;
-                        $mensaje= $_SESSION['stockPro'];
+                        $mensaje= "Producto agregado";
                     }else{
 
                         $mensaje= "Producto sin stock suficiente";
