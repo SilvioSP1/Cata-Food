@@ -45,6 +45,11 @@ function validar() {
         } else {
             todo_correcto = true;
         }
+        if (document.getElementById('piso').value.length < 2) {
+            todo_correcto = false;
+        } else {
+            todo_correcto = true;
+        }
     } else {
         todo_correcto = true;
     }
