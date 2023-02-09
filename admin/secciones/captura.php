@@ -57,6 +57,27 @@
             $sentenciaSQL->bindParam(':VD_VentaId',$idVenta);
             $sentenciaSQL->bindParam(':VD_ProdId',$producto['id']);
             $sentenciaSQL->execute();
+
+            $abierto = date("Y-m-d",time());
+            $sentenciaSQL = $conexion->prepare("SELECT * FROM horario WHERE Horario_LocalId = :Horario_LocalId AND Horario_Fecha = :Horario_Fecha");
+            $sentenciaSQL->bindParam(':Horario_LocalId',$producto['localId']);
+            $sentenciaSQL->bindParam(':Horario_Fecha',$abierto);
+            $sentenciaSQL->execute();
+            $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
+
+            $sentenciaSQL = $conexion->prepare("SELECT * FROM stock_producto WHERE Stock_ProdId = :Stock_ProdId AND Stock_LocalId = :Stock_LocalId AND Stock_HorarioId = :Stock_HorarioId");
+            $sentenciaSQL->bindParam(':Stock_ProdId',$producto['id']);
+            $sentenciaSQL->bindParam(':Stock_LocalId',$producto['localId']);
+            $sentenciaSQL->bindParam(':Stock_HorarioId',$localAbierto['Horario_Id']);
+            $sentenciaSQL->execute();
+            $stockProducto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
+
+            $aux = $stockProducto['Stock_Cantidad'] - $producto['cantidad'];
+            $sentenciaSQL = $conexion->prepare("UPDATE stock_producto SET Stock_Cantidad = :Stock_Cantidad WHERE Stock_ProdId = :Stock_ProdId AND Stock_HorarioId = :Stock_HorarioId");
+            $sentenciaSQL->bindParam(':Stock_ProdId',$producto['id']);
+            $sentenciaSQL->bindParam(':Stock_HorarioId',$localAbierto['Horario_Id']);
+            $sentenciaSQL->bindParam(':Stock_Cantidad',$aux);
+            $sentenciaSQL->execute();
         }
         $_SESSION['condicion'] = 2;
     }
