@@ -13,17 +13,7 @@ telefono.oninput = function () {
 
     if (this.value.length > 10) {
 
-        notyf.success({
-
-            message: "Mensaje enviado!",
-            duration: 5000,
-            ripple: true,
-            position: {
-                x: 'right',
-                y: 'top'
-            }
-
-        })
+        alert("superaste los 10 digitos")
 
     }
 
