@@ -9,28 +9,6 @@ let radio = document.querySelector('input[name="lang"]');
 let radio2 = document.querySelector('input[name="show"]')
 boton.hidden = true;
 
-//funcion para los inputs
-
-if (document.querySelector('input[name="show"]:checked').value == 'hide') {
-    if (document.getElementById('nombre').value.length < 2) {
-        todo_correcto = false;
-    } else {
-        todo_correcto = true;
-    }
-    if (document.getElementById('apellido').value.length < 2) {
-        todo_correcto = false;
-    } else {
-        todo_correcto = true;
-    }
-    if (document.getElementById('telefono').value.length < 2) {
-        todo_correcto = false;
-    } else {
-        todo_correcto = true;
-    }
-} else {
-    todo_correcto = true;
-}
-
 //funcion para validacion
 
 function validar() {
@@ -59,6 +37,30 @@ function validar() {
     } else {
         todo_correcto = true;
     }
+
+
+    if (document.querySelector('input[name="show"]:checked').value == 'hide') {
+        if (document.getElementById('nombre').value.length < 2) {
+            todo_correcto = false;
+        } else {
+            todo_correcto = true;
+        }
+        if (document.getElementById('apellido').value.length < 2) {
+            todo_correcto = false;
+        } else {
+            todo_correcto = true;
+        }
+        if (document.getElementById('telefono').value.length < 2) {
+            todo_correcto = false;
+        } else {
+            todo_correcto = true;
+        }
+    } else {
+        todo_correcto = true;
+    }
+    
+
+
 
     if (document.querySelector('input[name="lang"]:checked').value == 'hide') {
         if (document.getElementById('calle').value.length < 2) {
