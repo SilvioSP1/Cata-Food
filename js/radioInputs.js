@@ -10,10 +10,22 @@ boton.hidden = true;
 
 
 telefono.oninput = function(){
-    
-    if(this.value.length > 9){
 
-        alert("superaste el numero")
+    
+    if(this.value.length > 10){
+        
+        var notyf = new Notyf();
+        notyf.success({
+
+            message: "Mensaje enviado!",
+            duration: 5000,
+            ripple: true,
+            position: {
+                x:'right',
+                y:'top'
+            }
+
+        })
 
     }
 
