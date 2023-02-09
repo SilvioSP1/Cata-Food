@@ -8,11 +8,23 @@ let boton = document.getElementById('divPagar');
 let radio = document.querySelector('input[name="lang"]');
 boton.hidden = true;
 
+var notyf = new Notyf();
+
 telefono.oninput = function(){
 
     if(this.value.length > 10){
 
-        alert("solo podes poner 10 digitos")
+        notyf.error({
+
+            message: "Solo podes poner 10 digitos",
+            duration: 5000,
+            ripple: true,
+            position: {
+                x:'right',
+                y:'top'
+            }
+
+        })
 
     }
 
