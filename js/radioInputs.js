@@ -6,41 +6,29 @@ let altura = document.getElementById('altura');
 let piso = document.getElementById('piso');
 let boton = document.getElementById('divPagar');
 let radio = document.querySelector('input[name="lang"]');
-let input1 = $('.input1').val();
-let input2 = $('.input2').val();
-let input3 = $('.input3').val();
+let radio2 = document.querySelector('input[name=".show"]')
 boton.hidden = true;
 
 //funcion para los inputs
 
-if(input1.length < 2){
-
-    todo_correcto = false;
-
-}else{
-
+if (document.querySelector('input[name=".show"]:checked').value == 'hide') {
+    if (document.getElementById('nombre').value.length < 2) {
+        todo_correcto = false;
+    } else {
+        todo_correcto = true;
+    }
+    if (document.getElementById('apellido').value.length < 2) {
+        todo_correcto = false;
+    } else {
+        todo_correcto = true;
+    }
+    if (document.getElementById('telefono').value.length < 2) {
+        todo_correcto = false;
+    } else {
+        todo_correcto = true;
+    }
+} else {
     todo_correcto = true;
-    
-}
-
-if(input2.length < 2){
-
-    todo_correcto = false;
-
-}else{
-
-    todo_correcto = true;
-    
-}
-
-if(input3.length < 2){
-
-    todo_correcto = false;
-
-}else{
-
-    todo_correcto = true;
-    
 }
 
 //funcion para validacion
