@@ -21,27 +21,6 @@ function validar() {
     la condición, en este caso, por ejemplo, le decimos que tiene que tener más de dos dígitos
     para que sea un nombre válido. Si no tiene más de dos dígitos, la variable todo_correcto
     devolverá false.*/
-
-
-    if (document.querySelector('input[name="sin"]:checked').checked==false) {
-        if (document.getElementById('nombre').value.length < 2) {
-            todo_correcto = false;
-        } else {
-            todo_correcto = true;
-        }
-        if (document.getElementById('apellido').value.length < 2) {
-            todo_correcto = false;
-        } else {
-            todo_correcto = true;
-        }
-        if (document.getElementById('telefono').value.length < 2) {
-            todo_correcto = false;
-        } else {
-            todo_correcto = true;
-        }
-    } else {
-        todo_correcto = true;
-    }
     
 
     if (document.querySelector('input[name="lang"]:checked').value == 'hide') {
@@ -56,6 +35,22 @@ function validar() {
             todo_correcto = true;
         }
         if (document.getElementById('piso').value.length < 2) {
+            todo_correcto = false;
+        } else {
+            todo_correcto = true;
+        }
+    }else if (document.querySelector('input[name="sin"]:checked').checked==false) {
+        if (document.getElementById('nombre').value.length < 2) {
+            todo_correcto = false;
+        } else {
+            todo_correcto = true;
+        }
+        if (document.getElementById('apellido').value.length < 2) {
+            todo_correcto = false;
+        } else {
+            todo_correcto = true;
+        }
+        if (document.getElementById('telefono').value.length < 2) {
             todo_correcto = false;
         } else {
             todo_correcto = true;
