@@ -1,4 +1,3 @@
-var notyf = new Notyf();
 let nombre = document.getElementById('nombre');
 let apellido = document.getElementById('apellido');
 let telefono = document.getElementById('telefono');
@@ -32,17 +31,7 @@ function validar() {
     }
     if (document.getElementById('telefono').value.length > 10) {
         todo_correcto = false;
-        notyf.success({
-
-            message: "Mensaje enviado!",
-            duration: 5000,
-            ripple: true,
-            position: {
-                x:'right',
-                y:'top'
-            }
-
-        })
+        alert("superaste los 10 digitos");
     } else {
         todo_correcto = true;
     }
