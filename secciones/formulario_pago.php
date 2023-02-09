@@ -264,7 +264,7 @@ $_SESSION['condicion'] = 1;
                             function validar(){
                             /*creo una variable de tipo booleano que en principio tendrá un valor true(verdadero),
                             y que se convertirá en false(falso) cuando la condición no se cumpla*/
-                            var todo_correcto = false;
+                            var todo_correcto = true;
 
                             /*El primer campo a comprobar es el del nombre. Lo traemos por id y verificamos
                             la condición, en este caso, por ejemplo, le decimos que tiene que tener más de dos dígitos
@@ -287,7 +287,7 @@ $_SESSION['condicion'] = 1;
                                 todo_correcto = true;
                             }
 
-                            if (document.querySelector('input[name="lang"]')[0]:checked) {
+                            if (document.querySelector('input[name="lang"]:checked').value == 'hide') {
                                 if(document.getElementById('calle').value.length < 2 ){
                                 todo_correcto = false;
                                 }else{
@@ -298,7 +298,7 @@ $_SESSION['condicion'] = 1;
                                 }else{
                                     todo_correcto = true;
                                 }
-                            }else{
+                            }else if (document.querySelector('input[name="lang"]')[1].checked){
                                 todo_correcto = true;
                             }
 
