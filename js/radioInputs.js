@@ -8,10 +8,11 @@ let boton = document.getElementById('divPagar');
 let radio = document.querySelector('input[name="lang"]');
 boton.hidden = true;
 
+var notyf = new Notyf();
+
 
 function validar() {
 
-    var notyf = new Notyf();
     /*creo una variable de tipo booleano que en principio tendrá un valor true(verdadero),
     y que se convertirá en false(falso) cuando la condición no se cumpla*/
     var todo_correcto = true;
