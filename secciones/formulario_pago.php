@@ -336,6 +336,7 @@ $_SESSION['condicion'] = 1;
         <script src="../../Cata-Food/js/showhideRadio.js"></script>
         <script src="../../Cata-Food/js/radioInputs.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
 
     </section>
 

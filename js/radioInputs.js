@@ -1,3 +1,4 @@
+var notyf = new Notyf();
 let nombre = document.getElementById('nombre');
 let apellido = document.getElementById('apellido');
 let telefono = document.getElementById('telefono');
@@ -11,22 +12,19 @@ boton.hidden = true;
 telefono.oninput = function () {
 
 
-    if (this.value.length < 10) {
+    if (this.value.length > 10) {
 
-        toast.classList.add("active");
-        progress.classList.add("active")
+        notyf.success({
 
-        setTimeout(() => {
+            message: "Mensaje enviado!",
+            duration: 5000,
+            ripple: true,
+            position: {
+                x: 'right',
+                y: 'top'
+            }
 
-            toast.classList.remove("active")
-
-        }, 5000)
-
-        setTimeout(() => {
-
-            progress.classList.remove("active")
-
-        }, 5300)
+        })
 
     }
 
