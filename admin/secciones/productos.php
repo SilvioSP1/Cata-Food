@@ -1,6 +1,7 @@
 <?php include("../template/header.php") ?>
 
 <?php
+date_default_timezone_set('America/Argentina/Buenos_Aires');
 
 $txtID=(isset($_POST['txtID'])) ? $_POST['txtID'] : "";
 $txtNombre=(isset($_POST['txtNombre'])) ? $_POST['txtNombre'] : "";

@@ -2,6 +2,8 @@
 <?php include("../admin/config/db.php"); ?>
 <?php include("../admin/config/config.php"); ?>
 <?php
+date_default_timezone_set('America/Argentina/Buenos_Aires');
+
 $txtID=(isset($_POST['txtID'])) ? $_POST['txtID'] : $_SESSION['idLocal'];
 $txtNombre=(isset($_POST['txtNombre'])) ? $_POST['txtNombre'] : $_SESSION['nombreUsuario'];
 $txtImagen=(isset($_FILES['txtImagen']['name'])) ? $_FILES['txtImagen']['name'] : $_SESSION['imagen'];
@@ -205,7 +207,7 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
           <div class="card-body">
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Nombre Local <?php echo $fechaActual ?></p>
+                <p class="mb-0">Nombre Local</p>
               </div>
               <div class="col-sm-9">
                 <p class="text-muted mb-0"><?php echo $_SESSION['nombreUsuario'];?></p>

@@ -4,6 +4,8 @@ include("../admin/config/db.php");
 include("../admin/config/config.php");
 include("carrito.php");
 
+date_default_timezone_set('America/Argentina/Buenos_Aires');
+
 if (!empty($_POST["Local_Id"])) {
     
     if (is_numeric(openssl_decrypt($_POST["Local_Id"],cod,key))) {

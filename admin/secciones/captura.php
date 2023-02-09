@@ -1,6 +1,7 @@
 <?php
     session_start();
     error_reporting(0);
+    date_default_timezone_set('America/Argentina/Buenos_Aires');
     include("../config/db.php");
     include("../config/config.php");
     //creamos cada unos de los scripts, nos devuelve lo datos con el metodo get

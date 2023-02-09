@@ -2,6 +2,7 @@
 include("../admin/config/db.php");
 include("../admin/config/config.php");
 include("carrito.php");
+date_default_timezone_set('America/Argentina/Buenos_Aires');
 ?>
 
 <section class="h-100 sectionCarrito" >

@@ -1,6 +1,7 @@
 <?php include("../template/alert.php"); ?>
 <?php 
 session_start();
+date_default_timezone_set('America/Argentina/Buenos_Aires');
 
 include("../admin/config/db.php");
 $sentenciaSQL = $conexion->prepare("SELECT * FROM tipo_local");

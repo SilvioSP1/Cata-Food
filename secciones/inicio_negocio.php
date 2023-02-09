@@ -1,5 +1,6 @@
 <?php include("../template/alert.php"); ?>
 <?php
+date_default_timezone_set('America/Argentina/Buenos_Aires');
 session_start();
 error_reporting(0);
     if ($_POST) 

@@ -3,6 +3,7 @@
 include("../admin/config/db.php");
 include("../admin/config/config.php");
 error_reporting(0);
+date_default_timezone_set('America/Argentina/Buenos_Aires');
 
 $sentenciaSQL = $conexion->prepare("SELECT * FROM local WHERE Local_Status = 1");
 $sentenciaSQL->execute();

@@ -1,6 +1,7 @@
 <?php include("../template/header.php"); ?>
 <?php include("../admin/config/db.php"); ?>
 <?php 
+date_default_timezone_set('America/Argentina/Buenos_Aires');
 
 $txtID=(isset($_POST['txtID'])) ? $_POST['txtID'] : $_SESSION['idUsuario'];
 $txtNombre=(isset($_POST['txtNombre'])) ? $_POST['txtNombre'] : $_SESSION['nombre'];

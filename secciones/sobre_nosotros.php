@@ -1,4 +1,5 @@
 <?php include("../template/header.php"); ?>
+<?php date_default_timezone_set('America/Argentina/Buenos_Aires'); ?>
 
 <div class="container__cardsN">
 

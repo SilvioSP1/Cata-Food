@@ -1,5 +1,6 @@
 <?php
 include("../admin/config/config.php");
+date_default_timezone_set('America/Argentina/Buenos_Aires');
 session_start();
 error_reporting(0);
 $mensaje="";
