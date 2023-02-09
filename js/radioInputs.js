@@ -1,4 +1,3 @@
-var notyf = new Notyf();
 let nombre = document.getElementById('nombre');
 let apellido = document.getElementById('apellido');
 let telefono = document.getElementById('telefono');
