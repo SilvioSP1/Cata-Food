@@ -11,7 +11,7 @@ boton.hidden = true;
 telefono.oninput = function () {
 
 
-    if (this.value.length > 4) {
+    if (this.value.length < 10) {
 
         toast.classList.add("active");
         progress.classList.add("active")
@@ -33,6 +33,18 @@ telefono.oninput = function () {
 
 
 }
+
+closeIcon.addEventListener("click", () => {
+
+    toast.classList.remove("active");
+
+    setTimeout(() => {
+
+        progress.classList.remove("active")
+
+    }, 300)
+
+})
 
 function validar() {
 
@@ -92,18 +104,6 @@ function validar() {
     }
     return todo_correcto;
 }
-
-closeIcon.addEventListener("click", () => {
-
-    toast.classList.remove("active");
-
-    setTimeout(() => {
-
-        progress.classList.remove("active")
-
-    }, 300)
-
-})
 
 nombre.addEventListener("keyup", validar);
 apellido.addEventListener("keyup", validar);
