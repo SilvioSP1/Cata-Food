@@ -8,6 +8,16 @@ let boton = document.getElementById('divPagar');
 let radio = document.querySelector('input[name="lang"]');
 boton.hidden = true;
 
+telefono.oninput = function(){
+
+    if(this.value.length > 10){
+
+        this.value = this.value.slice(0,4);
+
+    }
+
+}
+
 function validar() {
     /*creo una variable de tipo booleano que en principio tendrá un valor true(verdadero),
     y que se convertirá en false(falso) cuando la condición no se cumpla*/

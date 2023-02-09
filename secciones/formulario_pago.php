@@ -144,7 +144,7 @@ $_SESSION['condicion'] = 1;
                                 <div class="col-md-6">
 
                                     <div class="inputbox mt-3 mr-2"> <input type="number" name="name" id="telefono" class="form-control"
-                                            required min="1" max="10"> <span>Telefono</span> </div>
+                                            required> <span>Telefono</span> </div>
 
 
                                 </div>
