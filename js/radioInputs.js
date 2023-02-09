@@ -11,7 +11,6 @@ boton.hidden = true;
 
 telefono.oninput = function () {
 
-
     if (this.value.length > 10) {
 
         notyf.success({
@@ -32,17 +31,6 @@ telefono.oninput = function () {
 
 }
 
-closeIcon.addEventListener("click", () => {
-
-    toast.classList.remove("active");
-
-    setTimeout(() => {
-
-        progress.classList.remove("active")
-
-    }, 300)
-
-})
 
 function validar() {
 
@@ -67,7 +55,6 @@ function validar() {
     }
     if (document.getElementById('telefono').value.length > 10) {
         todo_correcto = false;
-        alert("Solo podes poner 10 digitos")
     } else {
         todo_correcto = true;
     }
