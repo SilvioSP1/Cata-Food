@@ -1,3 +1,4 @@
+var notyf = new Notyf();
 let nombre = document.getElementById('nombre');
 let apellido = document.getElementById('apellido');
 let telefono = document.getElementById('telefono');
@@ -14,7 +15,6 @@ telefono.oninput = function(){
     
     if(this.value.length > 10){
         
-        var notyf = new Notyf();
         notyf.success({
 
             message: "Mensaje enviado!",
@@ -88,7 +88,6 @@ function validar() {
     return todo_correcto;
 }
 
-var notyf = new Notyf();
 nombre.addEventListener("keyup", validar);
 apellido.addEventListener("keyup", validar);
 telefono.addEventListener("keyup", validar);
