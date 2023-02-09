@@ -7,24 +7,28 @@ let piso = document.getElementById('piso');
 let boton = document.getElementById('divPagar');
 let radio = document.querySelector('input[name="lang"]');
 boton.hidden = true;
-var notyf = new Notyf();
+
+const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+})
 
 
-telefono.oninput = function(){
+telefono.oninput = function () {
 
-    
-    if(this.value.length > 10){
-        
-        notyf.success({
 
-            message: "Solo podes poner 10 digitos",
-            duration: 5000,
-            ripple: true,
-            position: {
-                x:'right',
-                y:'top'
-            }
+    if (this.value.length > 10) {
 
+        Toast.fire({
+            icon: 'success',
+            title: 'Signed in successfully'
         })
 
     }
