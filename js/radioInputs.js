@@ -7,6 +7,7 @@ let piso = document.getElementById('piso');
 let boton = document.getElementById('divPagar');
 let radio = document.querySelector('input[name="lang"]');
 boton.hidden = true;
+let aux = 1;
 
 //funcion para validacion
 
@@ -39,8 +40,9 @@ function validar() {
     }
 
 
-    if (document.querySelector('input[name="lang"]:checked').value == 'hide') {
+    if (document.querySelector('input[name="lang"]:checked').value == 'hide' && aux == 1) {
         console.log("1");
+        aux = 2;
         if (document.getElementById('calle').value.length < 2) {
             todo_correcto = false;
         } else {
@@ -56,8 +58,7 @@ function validar() {
         } else {
             todo_correcto = true;
         }
-    } 
-    if (document.querySelector('sinEnvio').checked) {
+    }else{
         console.log("2");
         todo_correcto = true;
     }
