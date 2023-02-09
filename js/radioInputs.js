@@ -6,7 +6,6 @@ let altura = document.getElementById('altura');
 let piso = document.getElementById('piso');
 let boton = document.getElementById('divPagar');
 let radio = document.querySelector('input[name="lang"]');
-let radio2 = document.querySelector('input[name="sin"]')
 boton.hidden = true;
 
 //funcion para validacion
@@ -21,7 +20,22 @@ function validar() {
     la condición, en este caso, por ejemplo, le decimos que tiene que tener más de dos dígitos
     para que sea un nombre válido. Si no tiene más de dos dígitos, la variable todo_correcto
     devolverá false.*/
-    
+
+    if (document.getElementById('nombre').value.length < 2) {
+        todo_correcto = false;
+    } else {
+        todo_correcto = true;
+    }
+    if (document.getElementById('apellido').value.length < 2) {
+        todo_correcto = false;
+    } else {
+        todo_correcto = true;
+    }
+    if (document.getElementById('telefono').value.length < 2) {
+        todo_correcto = false;
+    } else {
+        todo_correcto = true;
+    }
 
     if (document.querySelector('input[name="lang"]:checked').value == 'hide') {
         if (document.getElementById('calle').value.length < 2) {
@@ -35,22 +49,6 @@ function validar() {
             todo_correcto = true;
         }
         if (document.getElementById('piso').value.length < 2) {
-            todo_correcto = false;
-        } else {
-            todo_correcto = true;
-        }
-    }else if (document.querySelector('input[name="sin"]:checked').checked==false) {
-        if (document.getElementById('nombre').value.length < 2) {
-            todo_correcto = false;
-        } else {
-            todo_correcto = true;
-        }
-        if (document.getElementById('apellido').value.length < 2) {
-            todo_correcto = false;
-        } else {
-            todo_correcto = true;
-        }
-        if (document.getElementById('telefono').value.length < 2) {
             todo_correcto = false;
         } else {
             todo_correcto = true;
