@@ -5,7 +5,8 @@ let calle = document.getElementById('calle');
 let altura = document.getElementById('altura');
 let piso = document.getElementById('piso');
 let boton = document.getElementById('divPagar');
-let radio = document.querySelector('input[name="lang"]');
+let radio1 = document.getElementById('hide');
+let radio2 = document.getElementById('show');
 boton.hidden = true;
 let aux = 1;
 
@@ -80,4 +81,5 @@ calle.addEventListener("keyup", validar);
 altura.addEventListener("keyup", validar);
 telefono.addEventListener("keyup", validar);
 piso.addEventListener("keyup", validar);
-radio.addEventListener("click", validar);
+radio1.addEventListener("click", validar);
+radio2.addEventListener("click", validar);
