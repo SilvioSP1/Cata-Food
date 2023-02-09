@@ -6,7 +6,7 @@ let altura = document.getElementById('altura');
 let piso = document.getElementById('piso');
 let boton = document.getElementById('divPagar');
 let radio = document.querySelector('input[name="lang"]');
-let radio2 = document.querySelector('input[name=".show"]')
+let radio2 = document.querySelector('input[name="show"]')
 boton.hidden = true;
 
 //funcion para los inputs
