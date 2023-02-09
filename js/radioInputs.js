@@ -17,8 +17,6 @@ telefono.oninput = function () {
 
     }
 
-
-
 }
 
 

@@ -86,7 +86,6 @@ $_SESSION['condicion'] = 1;
     <!-- MercadoPago SDK -->
     <script src="https://sdk.mercadopago.com/js/v2"></script>
     <link rel="icon" href="../../Cata-Food/img/index/logo_redondo.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
     <title>Checkout</title>
 </head>
 
@@ -158,29 +157,6 @@ $_SESSION['condicion'] = 1;
 
 
                                 </div> -->
-
-                                <div class="toast">
-
-                                    <div class="toast-content">
-
-                                        <i class="fas fa-solid fa-check check"></i>
-
-                                        <div class="message">
-
-                                            <span class="text text-1">Success</span>
-                                            <span class="text text-2">Your changes has been saved</span>
-
-                                        </div>
-
-                                    </div>
-
-                                    <i class="fa-solid fa-xmark close"></i>
-
-                                    <div class="progress"></div>
-
-                                </div>
-
-
 
 
                             </div>
