@@ -10,25 +10,9 @@ boton.hidden = true;
 
 telefono.oninput = function () {
 
-    const Toast = Swal.mixin({
-        toast: true,
-        position: 'top-end',
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-            toast.addEventListener('mouseenter', Swal.stopTimer)
-            toast.addEventListener('mouseleave', Swal.resumeTimer)
-        }
-    })
-
-
     if (this.value.length > 10) {
 
-        Toast.fire({
-            icon: 'success',
-            title: 'Signed in successfully'
-        })
+        alert("Solo podes poner 10 digitos")
 
     }
 
