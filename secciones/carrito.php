@@ -76,7 +76,8 @@ if ([$_SESSION['usuario'] != "Sin Loguearse"])
                             'precio'=>$Prod_Precio,
                             'cantidad'=>$cantidad,
                             'descripcion'=>$Prod_Descripcion,
-                            'local'=>$Local_Nombre
+                            'local'=>$Local_Nombre,
+                            'localId'=>$_SESSION['local']
                         );
                         $_SESSION['carritoCompra'][0] = $productoArr;
                         $mensaje= "Producto agregado";
@@ -100,7 +101,8 @@ if ([$_SESSION['usuario'] != "Sin Loguearse"])
                                 'precio'=>$Prod_Precio,
                                 'cantidad'=>$cantidad,
                                 'descripcion'=>$Prod_Descripcion,
-                                'local'=>$Local_Nombre
+                                'local'=>$Local_Nombre,
+                                'localId'=>$_SESSION['local']
                             );
                             $_SESSION['carritoCompra'][$numeroProductos] = $productoArr;
                             $mensaje= "Producto agregado";
