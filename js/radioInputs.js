@@ -60,6 +60,7 @@ function validar() {
         }
     }else{
         console.log("2");
+        aux = 1;
         todo_correcto = true;
     }
 
