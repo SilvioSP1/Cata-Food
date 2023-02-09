@@ -8,6 +8,7 @@ let boton = document.getElementById('divPagar');
 let radio = document.querySelector('input[name="lang"]');
 boton.hidden = true;
 let aux = 1;
+let cont = 0;
 
 //funcion para validacion
 
@@ -25,18 +26,24 @@ function validar() {
 
     if (document.getElementById('nombre').value.length < 2) {
         todo_correcto = false;
+        cont--;
     } else {
         todo_correcto = true;
+        cont++;
     }
     if (document.getElementById('apellido').value.length < 2) {
         todo_correcto = false;
+        cont--;
     } else {
         todo_correcto = true;
+        cont++
     }
     if (document.getElementById('telefono').value.length < 2) {
         todo_correcto = false;
+        cont--;
     } else {
         todo_correcto = true;
+        cont++;
     }
 
 
@@ -45,29 +52,36 @@ function validar() {
         aux = 2;
         if (document.getElementById('calle').value.length < 2) {
             todo_correcto = false;
+            cont--;
         } else {
             todo_correcto = true;
+            cont++;
         }
         if (document.getElementById('altura').value.length < 2) {
             todo_correcto = false;
+            cont--;
         } else {
             todo_correcto = true;
+            cont++;
         }
         if (document.getElementById('piso').value.length < 2) {
             todo_correcto = false;
+            cont--;
         } else {
             todo_correcto = true;
+            cont++;
         }
     }else{
         console.log("2");
         aux = 1;
         todo_correcto = true;
+        cont++;
     }
 
     /*Por último, y como aviso para el usuario, si no está todo bién, osea, si la variable
     todo_correcto ha devuelto false al menos una vez, generaremos una alerta advirtiendo
     al usuario de que algunos datos ingresados no son los que esperamos.*/
-    if (!todo_correcto) {
+    if (cont === 4 || cont === 5 || cont === 6) {
         boton.hidden = true;
     } else {
         boton.hidden = false;
