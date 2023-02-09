@@ -287,7 +287,7 @@ $_SESSION['condicion'] = 1;
                                 todo_correcto = true;
                             }
 
-                            if (document.querySelector('input[name="lang"]:checked').value == 'hide') {
+                            if (document.querySelector('input[name="lang"]:checked')[0]) {
                                 if(document.getElementById('calle').value.length < 2 ){
                                 todo_correcto = false;
                                 }else{
@@ -298,7 +298,7 @@ $_SESSION['condicion'] = 1;
                                 }else{
                                     todo_correcto = true;
                                 }
-                            }else if (document.querySelector('input[name="lang"]:checked').value == 'show'){
+                            }else if (document.querySelector('input[name="lang"]:checked')[1]){
                                 todo_correcto = true;
                             }
 
