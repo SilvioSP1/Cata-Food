@@ -40,6 +40,7 @@ function validar() {
 
 
     if (document.querySelector('input[name="lang"]:checked').value == 'hide') {
+        console.log("1");
         if (document.getElementById('calle').value.length < 2) {
             todo_correcto = false;
         } else {
@@ -56,6 +57,7 @@ function validar() {
             todo_correcto = true;
         }
     } else {
+        console.log("2");
         todo_correcto = true;
     }
 
