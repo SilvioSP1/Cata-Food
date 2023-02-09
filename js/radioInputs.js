@@ -1,4 +1,3 @@
-var notyf = new Notyf();
 let nombre = document.getElementById('nombre');
 let apellido = document.getElementById('apellido');
 let telefono = document.getElementById('telefono');
@@ -8,16 +7,17 @@ let piso = document.getElementById('piso');
 let boton = document.getElementById('divPagar');
 let radio = document.querySelector('input[name="lang"]');
 boton.hidden = true;
+var notyf = new Notyf();
 
 
 telefono.oninput = function(){
 
     
-    if(this.value.length < 10){
+    if(this.value.length > 10){
         
         notyf.success({
 
-            message: "Mensaje enviado!",
+            message: "Solo podes poner 10 digitos",
             duration: 5000,
             ripple: true,
             position: {
