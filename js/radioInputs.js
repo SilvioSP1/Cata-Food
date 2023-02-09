@@ -8,7 +8,6 @@ let boton = document.getElementById('divPagar');
 let radio = document.querySelector('input[name="lang"]');
 boton.hidden = true;
 
-var notyf = new Notyf();
 
 
 function validar() {
@@ -34,17 +33,7 @@ function validar() {
     }
     if (document.getElementById('telefono').value.length > 10) {
         todo_correcto = false;
-        notyf.success({
-
-            message: "Solo podes poner 10 digitos",
-            duration: 5000,
-            ripple: true,
-            position: {
-                x:'right',
-                y:'top'
-            }
-
-        })
+        alert("Solo podes poner 10 digitos")
     } else {
         todo_correcto = true;
     }
