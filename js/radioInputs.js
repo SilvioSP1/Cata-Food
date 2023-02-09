@@ -10,7 +10,7 @@ boton.hidden = true;
 
 telefono.oninput = function () {
 
-    if (this.value.length > 10) {
+    if (this.value.length > 11) {
 
         alert("Solo podes poner 10 digitos")
 
