@@ -19,6 +19,8 @@ function validar() {
     para que sea un nombre válido. Si no tiene más de dos dígitos, la variable todo_correcto
     devolverá false.*/
 
+    var notyf = new Notyf();
+
     if (document.getElementById('nombre').value.length < 2) {
         todo_correcto = false;
     } else {
@@ -30,7 +32,6 @@ function validar() {
         todo_correcto = true;
     }
     if (document.getElementById('telefono').value.length > 10) {
-        var notyf = new Notyf();
         todo_correcto = false;
         notyf.success({
 
