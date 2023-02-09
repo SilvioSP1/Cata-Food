@@ -57,7 +57,7 @@ function validar() {
             todo_correcto = true;
         }
     } 
-    if (document.querySelector('sinEnvio').value == 'show') {
+    if (document.querySelector('sinEnvio').checked) {
         console.log("2");
         todo_correcto = true;
     }
