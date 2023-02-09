@@ -143,7 +143,7 @@ $_SESSION['condicion'] = 1;
 
                                 <div class="col-md-6">
 
-                                    <div class="inputbox mt-3 mr-2"> <input type="tel" name="name" id="telefono" class="form-control"
+                                    <div class="inputbox mt-3 mr-2"> <input type="number" name="name" id="telefono" class="form-control"
                                             required maxlength="10"> <span>Telefono</span> </div>
 
 

@@ -52,7 +52,6 @@ function validar() {
         }
     } else {
         todo_correcto = true;
-        alert("llena los campos")
     }
 
     /*Por último, y como aviso para el usuario, si no está todo bién, osea, si la variable
