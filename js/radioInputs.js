@@ -85,6 +85,8 @@ function validar() {
     }
     return todo_correcto;
 }
+
+var notyf = new Notyf();
 nombre.addEventListener("keyup", validar);
 apellido.addEventListener("keyup", validar);
 telefono.addEventListener("keyup", validar);
@@ -93,4 +95,3 @@ altura.addEventListener("keyup", validar);
 telefono.addEventListener("keyup", validar);
 piso.addEventListener("keyup", validar);
 radio.addEventListener("click", validar);
-var notyf = new Notyf();
