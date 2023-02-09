@@ -12,7 +12,7 @@ telefono.oninput = function () {
 
     if (this.value.length > 10) {
 
-        alert("superaste los 10 digitos")
+        alert("superaste los 10 digitos");
 
     }
 
