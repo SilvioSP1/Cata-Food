@@ -24,7 +24,7 @@ $localesTipos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
       $txtContrasena = ($_POST['txtContrasena']);
       $txtContrasenaRep = ($_POST['txtContrasenaRep']);
       $txtRolId = 2;
-      $txtImagen = '1669751061_profile.png';
+      $txtImagen = '1669751061_profile2.png';
       $txtNombreCompleto = $txtApellidoDue.' '.$txtNombreDue;
       
       $prueba = $conexion->prepare("SELECT COUNT(Local_Nombre) AS cantidad FROM local WHERE Local_Nombre=?");
