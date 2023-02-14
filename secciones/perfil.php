@@ -3,6 +3,12 @@
 <?php 
 date_default_timezone_set('America/Argentina/Buenos_Aires');
 
+$sentenciaSQL = $conexion->prepare("SELECT TOP 5 FROM venta WHERE Venta_UsuId=:Venta_UsuId ORDER BY Venta_Id DESC");
+$sentenciaSQL->bindParam(':Venta_UsuId',$_SESSION['idUsuario']);
+$sentenciaSQL->execute();
+$listaUltimasVentas = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
+
+
 $txtID=(isset($_POST['txtID'])) ? $_POST['txtID'] : $_SESSION['idUsuario'];
 $txtNombre=(isset($_POST['txtNombre'])) ? $_POST['txtNombre'] : $_SESSION['nombre'];
 $txtApellido=(isset($_POST['txtApellido'])) ? $_POST['txtApellido'] : $_SESSION['apellido'];
@@ -181,11 +187,28 @@ switch ($accion) {
           <div class="col-md-6">
             <div class="card mb-4 mb-md-0">
               <div class="card-body">
-                <p class="mb-4"><span class="text-primary font-italic me-1">Ventas</span>
+                <p class="mb-4"><span class="text-primary font-italic me-1">Ultimas Compras</span>
                 </p>
                 <div id="lista">
                   <ol class="lista2">
-                      <li>Usuario: Silvio</li>
+                    <?php 
+                    foreach ($listaUltimasVentas as $ventas){?>
+                      <?php
+                        $sentenciaSQL = $conexion->prepare("SELECT * FROM venta_detalle WHERE VD_VentaId=:VD_VentaId");
+                        $sentenciaSQL->bindParam(':VD_VentaId',$ventas['Venta_Id']);
+                        $sentenciaSQL->execute();
+                        $listaVentasProductos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
+                      ?>
+                      <?php foreach ($listaVentasProductos as $productos){ ?>
+                      <?php 
+                          $sentenciaSQL = $conexion->prepare("SELECT * FROM producto WHERE Prod_Id=:Prod_Id");
+                          $sentenciaSQL->bindParam(':Prod_Id',$productos['VD_ProdId']);
+                          $sentenciaSQL->execute();
+                          $listaComprados = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC); 
+                      ?>
+                      <li><?php echo $listaComprados['Prod_Nombre']; ?></li>
+                      <?php } ?>
+                    <?php }?>
                       <li>Contraseña: Nose24a_</li>
                       <li>Observaciones: Esta es una observacion dentro de una lista
                         <!-- <ol>
