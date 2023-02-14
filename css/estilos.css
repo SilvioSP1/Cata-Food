@@ -1940,6 +1940,10 @@ body.dark-mode .botonModal {
   background-color: black;
 }
 
+.lista {
+  margin-left: 10px;
+}
+
 .lista2 {
   counter-reset: li;
   list-style: none;
@@ -1985,7 +1989,7 @@ body.dark-mode .botonModal {
   background: #87ceeb;
   height: 2em;
   width: 2em;
-  line-height: 2em;
+  line-height: 1.5em;
   border: 0.3em solid #fff;
   text-align: center;
   font-weight: bold;
