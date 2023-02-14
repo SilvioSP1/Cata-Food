@@ -3,10 +3,7 @@
 <?php 
 date_default_timezone_set('America/Argentina/Buenos_Aires');
 
-$sentenciaSQL = $conexion->prepare("SELECT TOP 5 FROM venta WHERE Venta_UsuId=:Venta_UsuId ORDER BY Venta_Id DESC");
-$sentenciaSQL->bindParam(':Venta_UsuId',$_SESSION['idUsuario']);
-$sentenciaSQL->execute();
-$listaUltimasVentas = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
+
 
 
 $txtID=(isset($_POST['txtID'])) ? $_POST['txtID'] : $_SESSION['idUsuario'];
