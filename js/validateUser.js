@@ -1,4 +1,4 @@
-const user = document.querySelector("#txtNombre");
+const user = document.getElementById("txtNombre");
 
 const patterns = {
 
