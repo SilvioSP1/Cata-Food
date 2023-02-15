@@ -1,4 +1,4 @@
-const userRegex = document.querySelectorAll("input");
+const userRegex = document.querySelectorAll("input[name='txtNombre']");
 
 const arr = Array.from(userRegex);
 
@@ -17,7 +17,6 @@ function validate(field, regex) {
     } else {
 
         field.className = 'invalid';
-        alert("Nombre inapropiado");
 
     }
 
