@@ -1,4 +1,4 @@
-const userRegex = document.querySelector("#txtNombre");
+const userRegex = document.querySelector("input[name='txtNombre']");
 
 const arr = Array.from(userRegex);
 
