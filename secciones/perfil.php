@@ -216,9 +216,11 @@ switch ($accion) {
                       ?>
                       <form action="restaurante.php" method="post">
                         <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($local['Local_Id'],cod,key); ?>">
-                        <button class="listaHisto" type="submit">
-                          <li><span>Producto: </span><?php echo $lista['Prod_Nombre']; ?> - <span>Local: </span> <?php echo $local['Local_Nombre']; ?></li>
-                        </button>
+                        <li>
+                          <button class="listaHisto" type="submit">
+                          <span>Producto: </span><?php echo $lista['Prod_Nombre']; ?> - <span>Local: </span> <?php echo $local['Local_Nombre']; ?>
+                          </button>
+                        </li>
                       </form>
                       <!-- <li><span>Producto: </span><?php echo $lista['Prod_Nombre']; ?> - <span>Local: </span> <?php echo $local['Local_Nombre']; ?></li> -->
                       <?php } ?>
