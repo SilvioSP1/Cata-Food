@@ -283,7 +283,7 @@
 
                                 <div class="field">
 
-                                    <label for="from_name" class="labels">Nombre</label>
+                                    <label for="from_name" class="labels">Email</label>
                                     <input type="text" name="from_name" class="app-form-control" id="from_name" required>
 
                                 </div>
