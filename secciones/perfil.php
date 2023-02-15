@@ -3,7 +3,7 @@
 <?php 
 date_default_timezone_set('America/Argentina/Buenos_Aires');
 
-$sentenciaSQL = $conexion->prepare("SELECT * FROM venta WHERE Venta_UsuId=:Venta_UsuId ORDER BY Venta_Id DESC LIMIT 5");
+$sentenciaSQL = $conexion->prepare("SELECT * FROM venta WHERE Venta_UsuId=:Venta_UsuId ORDER BY Venta_Id DESC");
 $sentenciaSQL->bindParam(':Venta_UsuId',$_SESSION['idUsuario']);
 $sentenciaSQL->execute();
 $listaUltimasVentas = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
@@ -194,7 +194,7 @@ switch ($accion) {
                     <?php 
                     foreach ($listaUltimasVentas as $ventas){?>
                       <?php
-                        $sentenciaSQL = $conexion->prepare("SELECT * FROM venta_detalle WHERE VD_VentaId=:VD_VentaId LIMIT 10");
+                        $sentenciaSQL = $conexion->prepare("SELECT * FROM venta_detalle WHERE VD_VentaId=:VD_VentaId");
                         $sentenciaSQL->bindParam(':VD_VentaId',$ventas['Venta_Id']);
                         $sentenciaSQL->execute();
                         $listaVentasProductos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
