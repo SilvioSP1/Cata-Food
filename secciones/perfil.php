@@ -220,7 +220,7 @@ switch ($accion) {
                           <li><span>Producto: </span><?php echo $lista['Prod_Nombre']; ?> - <span>Local: </span> <?php echo $local['Local_Nombre']; ?></li>
                         </button>
                       </form>
-                      <!-- <li><span>Producto: </span><?php echo $lista['Prod_Nombre']; ?> - <span>Local: </span> <?php echo $local['Local_Nombre']; ?></li> -->
+                      <li><span>Producto: </span><?php echo $lista['Prod_Nombre']; ?> - <span>Local: </span> <?php echo $local['Local_Nombre']; ?></li>
                       <?php } ?>
                       <?php } ?>
                     <?php }?>
