@@ -1,4 +1,4 @@
-const user = document.getElementById("txtNombre");
+const userRegex = document.getElementById("txtNombre");
 
 const patterns = {
 
@@ -21,9 +21,9 @@ function validate(field, regex) {
 
 }
 
-user.forEach((input) => {
+userRegex.forEach((inputReg) => {
 
-    input.addEventListener('keyup',(e) => {
+    inputReg.addEventListener('keyup',(e) => {
 
         validate(e.target,patterns[e.target.attributes.name.value]);
 
