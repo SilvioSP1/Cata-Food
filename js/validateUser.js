@@ -11,11 +11,11 @@ function validate(field, regex) {
     if (regex.test(field.value)) {
 
         field.className = 'valid';
-        console.log("Nombre inapropiado");
 
     } else {
 
         field.className = 'invalid';
+        alert("Nombre inapropiado")
 
     }
 
