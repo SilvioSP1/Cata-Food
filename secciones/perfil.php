@@ -206,7 +206,7 @@ switch ($accion) {
                           $sentenciaSQL->execute();
                           $listaComprados = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC); 
                       ?>
-                      <li><?php echo $listaComprados['Prod_Nombre']; ?></li>
+                      <li>ssss</li>
                       <?php } ?>
                     <?php }?>
                       <li>Contraseña: Nose24a_</li>
