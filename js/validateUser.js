@@ -21,7 +21,7 @@ function validate(field, regex) {
 
 }
 
-user.forEach(input => {
+Object.keys(patterns).forEach(input => {
 
     input.addEventListener('keyup', (e) => {
 
