@@ -4,9 +4,9 @@ const arr = Array.from(userRegex);
 
 const patterns = {
 
-    txtNombre: /^[a-z\d]{5,12}$/i
+    txtNombre: /^[a-z\d]{5,12}$/i,
 
-}
+};
 
 function validate(field, regex) {
 
