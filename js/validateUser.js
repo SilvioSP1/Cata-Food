@@ -1,5 +1,7 @@
 const userRegex = document.getElementById("txtNombre");
 
+const arr = Array.from(userRegex);
+
 const patterns = {
 
     txtNombre: /[A-Z]{2,}\d*/i
@@ -21,7 +23,7 @@ function validate(field, regex) {
 
 }
 
-userRegex.forEach((inputReg) => {
+arr.forEach((inputReg) => {
 
     inputReg.addEventListener('keyup',(e) => {
 
