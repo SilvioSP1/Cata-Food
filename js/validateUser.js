@@ -21,11 +21,11 @@ function validate(field, regex) {
 
 }
 
-user.forEach(input => {
+user.forEach((input) => {
 
-    input.addEventListener('keyup', (e) => {
+    input.addEventListener('keyup',(e) => {
 
-        validate(e.target, patterns[e.target.attributes.name.value]);
+        validate(e.target,patterns[e.target.attributes.name.value]);
 
     });
     
