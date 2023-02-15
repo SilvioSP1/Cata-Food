@@ -204,9 +204,9 @@ switch ($accion) {
                           $sentenciaSQL = $conexion->prepare("SELECT * FROM producto WHERE Prod_Id=:Prod_Id");
                           $sentenciaSQL->bindParam(':Prod_Id',$productos['VD_ProdId']);
                           $sentenciaSQL->execute();
-                          $listaComprados = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC); 
+                          $listaComprados = $sentenciaSQL->fetch(PDO::FETCH_ASSOC); 
                       ?>
-                      <li>ssss</li>
+                      <li><?php echo $listaComprados['Prod_Nombre']; ?></li>
                       <?php } ?>
                     <?php }?>
                       <li>Contraseña: Nose24a_</li>
