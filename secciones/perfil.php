@@ -1,5 +1,6 @@
 <?php include("../template/header.php"); ?>
 <?php include("../admin/config/db.php"); ?>
+<?php include("../admin/config/config.php"); ?>
 <?php 
 date_default_timezone_set('America/Argentina/Buenos_Aires');
 
@@ -213,7 +214,13 @@ switch ($accion) {
                         $sentenciaSQL->execute();
                         $local = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);   
                       ?>
-                      <li><span>Producto: </span><?php echo $lista['Prod_Nombre']; ?> - <span>Local: </span> <?php echo $local['Local_Nombre']; ?></li>
+                      <form action="restaurante.php" method="post">
+                        <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($local['Local_Id'],cod,key); ?>">
+                        <button type="submit">
+                          <li><span>Producto: </span><?php echo $lista['Prod_Nombre']; ?> - <span>Local: </span> <?php echo $local['Local_Nombre']; ?></li>
+                        </button>
+                      </form>
+                      <!-- <li><span>Producto: </span><?php echo $lista['Prod_Nombre']; ?> - <span>Local: </span> <?php echo $local['Local_Nombre']; ?></li> -->
                       <?php } ?>
                       <?php } ?>
                     <?php }?>
