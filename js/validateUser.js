@@ -2,7 +2,7 @@ const user = document.getElementById("txtNombre");
 
 const patterns = {
 
-    txtNombre: /\D{2,0}\d*/
+    txtNombre: /[A-Z]{2,}\d*/i
 
 }
 
