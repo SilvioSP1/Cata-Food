@@ -213,12 +213,7 @@ switch ($accion) {
                         $sentenciaSQL->execute();
                         $local = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);   
                       ?>
-                      <form action="restaurante.php" method="post">
-                        <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($local['Local_Id'],cod,key); ?>">
-                        <button type="submit">
-                          <li><span>Producto: </span><?php echo $lista['Prod_Nombre']; ?> - <span>Local: </span> <?php echo $local['Local_Nombre']; ?></li>
-                        </button>
-                      </form>
+                      <li><span>Producto: </span><?php echo $lista['Prod_Nombre']; ?> - <span>Local: </span> <?php echo $local['Local_Nombre']; ?></li>
                       <?php } ?>
                       <?php } ?>
                     <?php }?>
