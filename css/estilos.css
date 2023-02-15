@@ -1997,6 +1997,11 @@ body.dark-mode .botonModal {
   transition: all 0.3s ease-out;
 }
 
+.listaHisto {
+  border: none;
+  height: 0px;
+}
+
 .chat-bar-collapsible {
   position: fixed;
   bottom: 30px;
