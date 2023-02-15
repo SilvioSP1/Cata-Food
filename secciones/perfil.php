@@ -207,7 +207,13 @@ switch ($accion) {
                           $listaComprados = $sentenciaSQL->fetchall(PDO::FETCH_ASSOC); 
                       ?>
                       <?php foreach ($listaComprados as $lista){ ?>
-                      <li><?php echo $lista['Prod_Nombre']; ?></li>
+                      <?php 
+                        $sentenciaSQL = $conexion->prepare("SELECT * FROM local WHERE Local_Id=:Local_Id");
+                        $sentenciaSQL->bindParam(':Local_Id',$lista['Prod_LocalId']);
+                        $sentenciaSQL->execute();
+                        $local = $sentenciaSQL->fetchall(PDO::FETCH_ASSOC);   
+                      ?>
+                      <li><span>Producto: </span><?php echo $lista['Prod_Nombre']; ?> - <span>Local: </span> <?php echo $local['Local_Nombre']; ?></li>
                       <?php } ?>
                       <?php } ?>
                     <?php }?>
