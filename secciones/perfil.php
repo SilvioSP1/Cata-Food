@@ -191,7 +191,24 @@ switch ($accion) {
                 </p>
                 <div id="lista">
                   <ol class="lista2">
-                    
+                    <?php 
+                    foreach ($listaUltimasVentas as $ventas){?>
+                      <?php
+                        $sentenciaSQL = $conexion->prepare("SELECT * FROM venta_detalle WHERE VD_VentaId=:VD_VentaId");
+                        $sentenciaSQL->bindParam(':VD_VentaId',$ventas['Venta_Id']);
+                        $sentenciaSQL->execute();
+                        $listaVentasProductos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
+                      ?>
+                      <?php foreach ($listaVentasProductos as $productos){ ?>
+                      <?php 
+                          $sentenciaSQL = $conexion->prepare("SELECT * FROM producto WHERE Prod_Id=:Prod_Id");
+                          $sentenciaSQL->bindParam(':Prod_Id',$productos['VD_ProdId']);
+                          $sentenciaSQL->execute();
+                          $listaComprados = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC); 
+                      ?>
+                      <li><?php echo $listaComprados['Prod_Nombre']; ?></li>
+                      <?php } ?>
+                    <?php }?>
                       <li>Contraseña: Nose24a_</li>
                       <li>Observaciones: Esta es una observacion dentro de una lista
                         <!-- <ol>
