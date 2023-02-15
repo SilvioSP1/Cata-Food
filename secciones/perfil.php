@@ -211,7 +211,7 @@ switch ($accion) {
                         $sentenciaSQL = $conexion->prepare("SELECT * FROM local WHERE Local_Id=:Local_Id");
                         $sentenciaSQL->bindParam(':Local_Id',$lista['Prod_LocalId']);
                         $sentenciaSQL->execute();
-                        $local = $sentenciaSQL->fetchall(PDO::FETCH_ASSOC);   
+                        $local = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);   
                       ?>
                       <li><span>Producto: </span><?php echo $lista['Prod_Nombre']; ?> - <span>Local: </span> <?php echo $local['Local_Nombre']; ?></li>
                       <?php } ?>
