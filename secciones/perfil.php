@@ -209,9 +209,9 @@ switch ($accion) {
                       <li><?php echo $listaComprados['Prod_Nombre']; ?></li>
                       <?php } ?>
                     <?php }?>
-                      <li>Contraseña: Nose24a_</li>
+                      <!-- <li>Contraseña: Nose24a_</li>
                       <li>Observaciones: Esta es una observacion dentro de una lista
-                        <!-- <ol>
+                        <ol>
                             <li>Esta es una observacion dentro de una lista</li>
                             <li>List sub item</li>
                             <li>List sub item</li>
