@@ -198,11 +198,11 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
 
   <!-- scripts funcionalidad -->
 
+  <script src="../js/validateUser.js?v=<?php echo time() ?>"></script>
   <script src="../js/boiler.js"></script>
   <script src="../js/loader.js"></script>
   <script src="../js/password.js"></script>
   <script src="../js/password_validate.js?v=<?php echo time() ?>"></script>
-  <script src="../js/validateUser.js?v=<?php echo time() ?>"></script>
 
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
