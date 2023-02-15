@@ -3,7 +3,7 @@
 <?php 
 date_default_timezone_set('America/Argentina/Buenos_Aires');
 
-$sentenciaSQL = $conexion->prepare("SELECT * FROM venta WHERE Venta_UsuId=:Venta_UsuId ORDER BY Venta_Id DESC LIMIT 5");
+$sentenciaSQL = $conexion->prepare("SELECT * FROM venta WHERE Venta_UsuId=:Venta_UsuId ORDER BY Venta_Id DESC");
 $sentenciaSQL->bindParam(':Venta_UsuId',$_SESSION['idUsuario']);
 $sentenciaSQL->execute();
 $listaUltimasVentas = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
@@ -194,7 +194,7 @@ switch ($accion) {
                     <?php 
                     foreach ($listaUltimasVentas as $ventas){?>
                       <?php
-                        $sentenciaSQL = $conexion->prepare("SELECT * FROM venta_detalle WHERE VD_VentaId=:VD_VentaId LIMIT 10");
+                        $sentenciaSQL = $conexion->prepare("SELECT * FROM venta_detalle WHERE VD_VentaId=:VD_VentaId");
                         $sentenciaSQL->bindParam(':VD_VentaId',$ventas['Venta_Id']);
                         $sentenciaSQL->execute();
                         $listaVentasProductos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
@@ -213,12 +213,7 @@ switch ($accion) {
                         $sentenciaSQL->execute();
                         $local = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);   
                       ?>
-                      <form action="restaurante.php" method="post">
-                        <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($local['Local_Id'],cod,key); ?>">
-                        <button type="submit">
-                          <li><span>Producto: </span><?php echo $lista['Prod_Nombre']; ?> - <span>Local: </span> <?php echo $local['Local_Nombre']; ?></li>
-                        </button>
-                      </form>
+                      <li><span>Producto: </span><?php echo $lista['Prod_Nombre']; ?> - <span>Local: </span> <?php echo $local['Local_Nombre']; ?></li>
                       <?php } ?>
                       <?php } ?>
                     <?php }?>
