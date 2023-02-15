@@ -1,7 +1,14 @@
 <?php include("../template/header.php"); ?>
 <?php include("../admin/config/db.php"); ?>
+<?php include("../admin/config/config.php"); ?>
 <?php 
 date_default_timezone_set('America/Argentina/Buenos_Aires');
+
+$sentenciaSQL = $conexion->prepare("SELECT * FROM venta WHERE Venta_UsuId=:Venta_UsuId ORDER BY Venta_Id DESC");
+$sentenciaSQL->bindParam(':Venta_UsuId',$_SESSION['idUsuario']);
+$sentenciaSQL->execute();
+$listaUltimasVentas = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
+
 
 $txtID=(isset($_POST['txtID'])) ? $_POST['txtID'] : $_SESSION['idUsuario'];
 $txtNombre=(isset($_POST['txtNombre'])) ? $_POST['txtNombre'] : $_SESSION['nombre'];
@@ -177,6 +184,61 @@ switch ($accion) {
             </div>
           </div>
         </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card mb-4 mb-md-0">
+              <div class="card-body">
+                <p class="mb-4"><span class="text-primary font-italic me-1">Ultimas Compras</span>
+                </p>
+                <div id="lista">
+                  <ol class="lista2">
+                    <?php 
+                    foreach ($listaUltimasVentas as $ventas){?>
+                      <?php
+                        $sentenciaSQL = $conexion->prepare("SELECT * FROM venta_detalle WHERE VD_VentaId=:VD_VentaId");
+                        $sentenciaSQL->bindParam(':VD_VentaId',$ventas['Venta_Id']);
+                        $sentenciaSQL->execute();
+                        $listaVentasProductos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
+                      ?>
+                      <?php foreach ($listaVentasProductos as $productos){ ?>
+                      <?php 
+                          $sentenciaSQL = $conexion->prepare("SELECT * FROM producto WHERE Prod_Id=:Prod_Id");
+                          $sentenciaSQL->bindParam(':Prod_Id',$productos['VD_ProdId']);
+                          $sentenciaSQL->execute();
+                          $listaComprados = $sentenciaSQL->fetchall(PDO::FETCH_ASSOC); 
+                      ?>
+                      <?php foreach ($listaComprados as $lista){ ?>
+                      <?php 
+                        $sentenciaSQL = $conexion->prepare("SELECT * FROM local WHERE Local_Id=:Local_Id");
+                        $sentenciaSQL->bindParam(':Local_Id',$lista['Prod_LocalId']);
+                        $sentenciaSQL->execute();
+                        $local = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);   
+                      ?>
+                      <form action="restaurante.php" method="post">
+                        <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($local['Local_Id'],cod,key); ?>">
+                        <li>
+                          <button class="listaHisto" type="submit">
+                          <span>Producto: </span><?php echo $lista['Prod_Nombre']; ?> - <span>Local: </span> <?php echo $local['Local_Nombre']; ?>
+                          </button>
+                        </li>
+                      </form>
+                      <!-- <li><span>Producto: </span><?php echo $lista['Prod_Nombre']; ?> - <span>Local: </span> <?php echo $local['Local_Nombre']; ?></li> -->
+                      <?php } ?>
+                      <?php } ?>
+                    <?php }?>
+                      <!-- <li>Contraseña: Nose24a_</li>
+                      <li>Observaciones: Esta es una observacion dentro de una lista
+                        <ol>
+                            <li>Esta es una observacion dentro de una lista</li>
+                            <li>List sub item</li>
+                            <li>List sub item</li>
+                        </ol> -->
+                      </li>
+                  </ol>
+              </div>
+              </div>
+            </div>
+          </div>
       </div>
     </div>
     <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
