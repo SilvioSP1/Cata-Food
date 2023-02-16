@@ -227,6 +227,7 @@ $localesTipos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
   <script src="../js/boiler.js"></script>
   <script src="../js/loader.js"></script>
   <script src="../js/map.js?v=<?php echo time(); ?>"></script>
+  <script src="../js/validateLocal.js?v=<?php echo time(); ?>"></script>
 
   <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
 
