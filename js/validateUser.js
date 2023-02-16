@@ -13,10 +13,12 @@ function validate(field, regex) {
     if (regex.test(field.value)) {
 
         field.className = 'valid';
+        console.log("Nombre valido");
 
     } else {
 
         field.className = 'invalid';
+        console.log("Nombre invalido");
 
     }
 
