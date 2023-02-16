@@ -4,7 +4,7 @@ const arr = Array.from(userRegex);
 
 const patterns = {
 
-    txtNombre: /^[a-z][a-z]+\d*$/i,
+    txtNombre: /^[a-z\d]{5,12}$/i,
 
 };
 
