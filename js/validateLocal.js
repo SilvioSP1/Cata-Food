@@ -1,5 +1,3 @@
-var notyf = new Notyf();
-
 const userLocal = document.querySelectorAll("input[name='txtNombreDue']");
 
 const array = Array.from(userLocal);
@@ -20,17 +18,7 @@ function validate(field, regex) {
     } else {
 
         field.className = 'invalid';
-        notyf.success({
-
-            message: "Mensaje enviado!",
-            duration: 5000,
-            ripple: true,
-            position: {
-                x:'right',
-                y:'top'
-            }
-
-        })
+        console.log("Nombre invalido");
 
     }
 
