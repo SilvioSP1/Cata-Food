@@ -217,6 +217,8 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
 
   <script src="../../Cata-Food/js/darkMode.js?v=<?php echo time(); ?>"></script>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+
 </body>
 
 
