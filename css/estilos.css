@@ -898,6 +898,14 @@ body.dark-mode .containerIR1 .containerForm1 {
 body.dark-mode .containerIR1 .containerForm1 .mover .containerLetras h2 {
   color: white;
 }
+body.dark-mode .containerIR1 .containerForm1 .mover .formulario .boton {
+  background-color: #27292b;
+  color: white;
+}
+body.dark-mode .containerIR1 .containerForm1 .mover .formulario button {
+  background-color: #27292b;
+  color: white;
+}
 body.dark-mode .containerIR1 .containerForm1 .mover .formulario .textoRegister {
   color: white;
 }
