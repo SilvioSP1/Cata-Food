@@ -1966,6 +1966,14 @@ body.dark-mode .modalDark .btn-close {
 body.dark-mode .editarImagen {
   margin-bottom: 1rem;
 }
+body.dark-mode .btn-group .btn-primary {
+  background-color: black;
+  color: white;
+}
+body.dark-mode .btn-group .btn-secondary {
+  background-color: black;
+  color: white;
+}
 
 #lista {
   margin-left: 10px;
