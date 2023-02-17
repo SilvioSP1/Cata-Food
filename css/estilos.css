@@ -1988,6 +1988,9 @@ body.dark-mode .modalPerfil {
   background-color: black;
   color: white;
 }
+body.dark-mode .modalPerfil .btn-close {
+  background-color: white;
+}
 body.dark-mode .imagenPerfil {
   margin-bottom: 1rem;
 }
