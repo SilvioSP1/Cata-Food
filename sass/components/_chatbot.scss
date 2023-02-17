@@ -174,3 +174,10 @@
         border-radius: 0px;
     }
 }
+
+//darkMode chatbot
+
+body.dark-mode .content {
+    background-color: #212121;
+    color: white;
+}

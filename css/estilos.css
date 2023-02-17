@@ -2173,6 +2173,11 @@ body.dark-mode .botonModal {
     border-radius: 0px;
   }
 }
+body.dark-mode .content {
+  background-color: #212121;
+  color: white;
+}
+
 #map {
   height: 200px;
   width: 350px;
