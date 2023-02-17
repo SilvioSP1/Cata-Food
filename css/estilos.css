@@ -1996,7 +1996,7 @@ body.dark-mode .modalPerfil .btn-close {
 body.dark-mode .imagenPerfil {
   margin-bottom: 1rem;
 }
-body.dark-mode .lista2 li {
+body.dark-mode .lista2 li::before {
   background-color: #27292b;
   color: white;
 }
