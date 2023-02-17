@@ -1983,6 +1983,10 @@ body.dark-mode .btn-group .btn-secondary {
   background-color: black;
   color: white;
 }
+body.dark-mode .modalPerfil {
+  background-color: black;
+  color: white;
+}
 
 #lista {
   margin-left: 10px;
