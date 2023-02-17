@@ -1935,6 +1935,11 @@ body.dark-mode .container-flex .contenedorCarrito .botonCarrito1:hover {
   margin-bottom: 1rem;
 }
 
+.flexCompras {
+  display: flex;
+  justify-content: center;
+}
+
 body.dark-mode .cuerpoDark {
   background-color: black;
   border-color: white;
