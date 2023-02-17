@@ -146,7 +146,7 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
       <div class="col">
         <nav aria-label="breadcrumb" class="rounded-3 p-3 mb-4 textoLocal">
           <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item active" aria-current="page">Perfil Local</li>
+            <li class="breadcrumb-item" aria-current="page">Perfil Local</li>
           </ol>
         </nav>
       </div>
