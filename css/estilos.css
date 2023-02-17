@@ -901,10 +901,12 @@ body.dark-mode .containerIR1 .containerForm1 .mover .containerLetras h2 {
 body.dark-mode .containerIR1 .containerForm1 .mover .formulario .boton {
   background-color: #27292b;
   color: white;
+  border: 1px solid black;
 }
 body.dark-mode .containerIR1 .containerForm1 .mover .formulario button {
   background-color: #27292b;
   color: white;
+  border: 1px solid black;
 }
 body.dark-mode .containerIR1 .containerForm1 .mover .formulario .textoRegister {
   color: white;
