@@ -255,7 +255,7 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
           <div class="col-md-6">
             <div class="card mb-4 mb-md-0">
               <div class="card-body">
-                <p class="mb-4"><span class="text-primary font-italic me-1">Ventas</span>
+                <p class="mb-4"><span class="font-italic me-1">Ventas</span>
                 </p>
                 <p class="mb-1" style="font-size: .77rem;">Zona Norte</p>
                 <div class="progress rounded" style="height: 5px;">
@@ -288,7 +288,7 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
           <div class="col-md-6">
             <div class="card mb-4 mb-md-0">
               <div class="card-body">
-                <p class="mb-4"><span class="text-primary font-italic me-1">Productos más vendidos</span>
+                <p class="mb-4"><span class="font-italic me-1">Productos más vendidos</span>
                 </p>
                 <p class="mb-1" style="font-size: .77rem;">Lomitos</p>
                 <div class="progress rounded" style="height: 5px;">
