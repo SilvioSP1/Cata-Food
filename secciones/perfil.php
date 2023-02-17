@@ -188,7 +188,7 @@ switch ($accion) {
           <div class="col-md-6">
             <div class="card mb-4 mb-md-0">
               <div class="card-body">
-                <p class="mb-4"><span class="text-primary font-italic me-1">Ultimas Compras</span>
+                <p class="mb-4"><span class="font-italic me-1">Ultimas Compras</span>
                 </p>
                 <div id="lista">
                   <ol class="lista2">
