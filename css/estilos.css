@@ -1930,7 +1930,7 @@ body.dark-mode .backgroundProfile {
   background-color: #27292b;
 }
 body.dark-mode .backgroundProfile .contanedorImagen .imagen-editar {
-  color: white;
+  background-color: white;
 }
 body.dark-mode .breadcrumbDark {
   background-color: black;
@@ -1955,6 +1955,10 @@ body.dark-mode .textoLocal {
 body.dark-mode .card-body {
   background-color: black;
   color: white;
+}
+body.dark-mode .modalDark {
+  color: white;
+  background-color: #27292b;
 }
 
 #lista {

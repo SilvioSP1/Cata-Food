@@ -62,7 +62,7 @@ body.dark-mode {
         .contanedorImagen{
 
             .imagen-editar{
-                color: white;
+                background-color: white;
             }
 
         }
@@ -107,6 +107,13 @@ body.dark-mode {
 
         background-color: black;
         color: white;
+
+    }
+
+    .modalDark{
+
+        color: white;
+        background-color: #27292b;
 
     }
 
