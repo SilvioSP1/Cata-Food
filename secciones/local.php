@@ -219,7 +219,7 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                 <p class="mb-0">Dueño</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0"><?php echo $_SESSION['nombre'];?></p>
+                <p class="mb-0"><?php echo $_SESSION['nombre'];?></p>
               </div>
             </div>
             <hr>
@@ -228,7 +228,7 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                 <p class="mb-0">Email</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0"><?php echo $_SESSION['email'];?></p>
+                <p class="mb-0"><?php echo $_SESSION['email'];?></p>
               </div>
             </div>
             <hr>
@@ -237,7 +237,7 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                 <p class="mb-0">Telefono</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0"><?php echo $_SESSION['telefono'];?></p>
+                <p class="mb-0"><?php echo $_SESSION['telefono'];?></p>
               </div>
             </div>
             <hr>
@@ -246,7 +246,7 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                 <p class="mb-0">Dirección</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0"><?php echo $_SESSION['ubicacion'];?></p>
+                <p class="mb-0"><?php echo $_SESSION['ubicacion'];?></p>
               </div>
             </div>
           </div>
