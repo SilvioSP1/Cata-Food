@@ -1800,6 +1800,9 @@ body.dark-mode .backgroundModal .modal-content .modal-header .modal-title {
 body.dark-mode .flexBotones #conta {
   color: white;
 }
+body.dark-mode .wrapperRate .info-rating .rating-count {
+  color: white;
+}
 body.dark-mode .wrapperRate .rating-bar .percent {
   color: white;
 }
