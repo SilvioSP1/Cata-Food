@@ -142,9 +142,9 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
 
 <section class="backgroundProfile">
   <div class="container py-5">
-    <div class="row textoLocal">
+    <div class="row">
       <div class="col">
-        <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
+        <nav aria-label="breadcrumb" class="rounded-3 p-3 mb-4 textoLocal">
           <ol class="breadcrumb mb-0">
             <li class="breadcrumb-item active" aria-current="page">Perfil Local</li>
           </ol>
