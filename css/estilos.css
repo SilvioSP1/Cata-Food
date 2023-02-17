@@ -1943,6 +1943,7 @@ body.dark-mode .cardProfile__dark {
 body.dark-mode .botonModal {
   background-color: black;
   color: white;
+  border-color: white;
 }
 body.dark-mode .textoLocal {
   background-color: black;
