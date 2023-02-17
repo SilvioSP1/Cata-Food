@@ -1922,6 +1922,11 @@ body.dark-mode .container-flex .contenedorCarrito .botonCarrito1:hover {
   background-color: white;
 }
 
+.card-body {
+  background-color: #27292b;
+  color: white;
+}
+
 body.dark-mode .cuerpoDark {
   background-color: black;
   border-color: white;
