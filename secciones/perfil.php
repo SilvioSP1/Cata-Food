@@ -258,7 +258,7 @@ switch ($accion) {
                   if ($txtImagen !="") {
                   ?>
                   
-                  <img class="img-thumbnail rounded" src="../img/perfil/<?php echo $txtImagen ?>"width="100" alt="">
+                  <img class="img-thumbnail rounded imagenPerfil" src="../img/perfil/<?php echo $txtImagen ?>"width="100" alt="">
 
                   <?php }?>
                   

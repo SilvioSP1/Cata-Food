@@ -1931,6 +1931,10 @@ body.dark-mode .container-flex .contenedorCarrito .botonCarrito1:hover {
   background-color: white;
 }
 
+.editarImagen {
+  margin-bottom: 1rem;
+}
+
 body.dark-mode .cuerpoDark {
   background-color: black;
   border-color: white;
@@ -1972,9 +1976,6 @@ body.dark-mode .modalDark {
 body.dark-mode .modalDark .btn-close {
   background-color: white;
 }
-body.dark-mode .editarImagen {
-  margin-bottom: 1rem;
-}
 body.dark-mode .btn-group .btn-primary {
   background-color: black;
   color: white;
@@ -1986,6 +1987,9 @@ body.dark-mode .btn-group .btn-secondary {
 body.dark-mode .modalPerfil {
   background-color: black;
   color: white;
+}
+body.dark-mode .imagenPerfil {
+  margin-bottom: 1rem;
 }
 
 #lista {

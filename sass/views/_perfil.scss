@@ -44,6 +44,12 @@
 
 }
 
+.editarImagen{
+
+    margin-bottom: 1rem;
+
+}
+
 //darkMode
 
 body.dark-mode {
@@ -121,12 +127,6 @@ body.dark-mode {
 
     }
 
-    .editarImagen{
-
-        margin-bottom: 1rem;
-
-    }
-
     .btn-group{
 
         .btn-primary{
@@ -145,6 +145,12 @@ body.dark-mode {
 
         background-color: black;
         color: white;
+
+    }
+
+    .imagenPerfil{
+
+        margin-bottom: 1rem;
 
     }
 
