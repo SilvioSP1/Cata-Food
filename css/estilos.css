@@ -1940,6 +1940,10 @@ body.dark-mode .botonModal {
   background-color: black;
   color: white;
 }
+body.dark-mode .textoLocal {
+  background-color: #27292b;
+  color: white;
+}
 
 #lista {
   margin-left: 10px;
