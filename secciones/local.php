@@ -163,7 +163,7 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
 
             </div>
             <h5 class="my-3"><?php echo $_SESSION['nombreUsuario'];?></h5>
-            <p class="text-muted mb-1">Vendedor / Local</p>
+            <p class="mb-1">Vendedor / Local</p>
             <div class="d-flex justify-content-center mb-2">
               <button type="button" class="btn btn-outline-primary ms-1 botonModal" data-bs-toggle="modal" data-bs-target="#exampleModal1">Modificar</button>
               <form action="restaurante.php" method="post">
