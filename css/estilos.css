@@ -1929,6 +1929,9 @@ body.dark-mode .cuerpoDark {
 body.dark-mode .backgroundProfile {
   background-color: #27292b;
 }
+body.dark-mode .backgroundProfile .contenedorImagen .imagen-editar {
+  color: white;
+}
 body.dark-mode .breadcrumbDark {
   background-color: black;
   color: white;
@@ -1951,9 +1954,6 @@ body.dark-mode .textoLocal {
 }
 body.dark-mode .card-body {
   background-color: black;
-  color: white;
-}
-body.dark-mode .backgroundProfile .contenedorImagen .imagen-editar {
   color: white;
 }
 

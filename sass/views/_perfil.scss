@@ -59,6 +59,14 @@ body.dark-mode {
 
         background-color: #27292b;
 
+        .contenedorImagen{
+
+            .imagen-editar{
+                color: white;
+            }
+
+        }
+
     }
 
     .breadcrumbDark {
@@ -99,18 +107,6 @@ body.dark-mode {
 
         background-color: black;
         color: white;
-
-    }
-
-    .backgroundProfile{
-
-        .contenedorImagen{
-
-            .imagen-editar{
-                color: white;
-            }
-
-        }
 
     }
 
