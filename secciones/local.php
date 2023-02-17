@@ -158,7 +158,7 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
           <div class="card-body text-center">
             <div class="contanedorImagen">
 
-              <img src="../../Cata-Food/img/perfil/editar.png" alt="" class="imagen-editar" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+            <i class="bi bi-pencil-fill imagen-editar" data-bs-toggle="modal" data-bs-target="#exampleModal1" alt=""></i>
               <img src="../img/restaurantes/locales/<?php echo $_SESSION['imagen'] ?>" alt="avatar" style="width: 150px;" class="profilePicture">
 
             </div>
