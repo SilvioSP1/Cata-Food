@@ -210,7 +210,7 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                 <p class="mb-0">Nombre Local</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0"><?php echo $_SESSION['nombreUsuario'];?></p>
+                <p class="mb-0"><?php echo $_SESSION['nombreUsuario'];?></p>
               </div>
             </div>
             <hr>
