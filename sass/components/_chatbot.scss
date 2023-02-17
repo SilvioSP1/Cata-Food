@@ -93,7 +93,7 @@
     box-sizing: border-box;
     width: 100%;
     border-radius: 10px;
-    padding: 10px;
+    padding: 5px;
     font-size: 16px;
     color: #000;
     background-color: white;
@@ -177,7 +177,32 @@
 
 //darkMode chatbot
 
-body.dark-mode .content {
-    background-color: #212121;
-    color: white;
+body.dark-mode{
+
+    .full-chat-block{
+        background-color: #212121;
+        color: white;
+    }
+
+    .botText span{
+
+        background-color: #363636;
+        color: white;
+
+    }
+
+    .chat-bar-input-block{
+
+        background-color: #363636;
+
+    }
+
+    .chat-bar-icons{
+        
+        .fa-send{
+            color: white;
+        }
+
+    }
+
 }

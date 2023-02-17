@@ -1938,6 +1938,7 @@ body.dark-mode .cardProfile__dark {
 }
 body.dark-mode .botonModal {
   background-color: black;
+  color: white;
 }
 
 #lista {
@@ -2096,7 +2097,7 @@ body.dark-mode .botonModal {
   box-sizing: border-box;
   width: 100%;
   border-radius: 10px;
-  padding: 10px;
+  padding: 5px;
   font-size: 16px;
   color: #000;
   background-color: white;
@@ -2173,8 +2174,18 @@ body.dark-mode .botonModal {
     border-radius: 0px;
   }
 }
-body.dark-mode .content {
+body.dark-mode .full-chat-block {
   background-color: #212121;
+  color: white;
+}
+body.dark-mode .botText span {
+  background-color: #363636;
+  color: white;
+}
+body.dark-mode .chat-bar-input-block {
+  background-color: #363636;
+}
+body.dark-mode .chat-bar-icons .fa-send {
   color: white;
 }
 

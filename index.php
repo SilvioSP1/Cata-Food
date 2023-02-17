@@ -218,7 +218,7 @@
                                 <div class="chat-bar-icons">
                                     <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-heart"
                                         onclick="heartButton()"></i>
-                                    <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
+                                    <i id="chat-icon" class="fa fa-fw fa-send"
                                         onclick="sendButton()"></i>
                                 </div>
                             </div>
