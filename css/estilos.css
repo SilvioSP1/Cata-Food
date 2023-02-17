@@ -1670,7 +1670,7 @@ body.dark-mode .darkCirculo {
 }
 .wrapperRate .feedback-user .feedback-header {
   color: #fff;
-  background-color: var(--color-blue);
+  background-color: #27292b;
 }
 .wrapperRate .feedback-user .feedback-header .titleRate {
   margin-bottom: 1rem;
