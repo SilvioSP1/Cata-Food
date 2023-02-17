@@ -389,8 +389,8 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
 
                 <br>
                 <div class="btn-group" role="group" aria-label="">
-                    <button type="submit" name="accion" value="Modificar" class="btn btn-primary">Modificar</button>
-                    <button type="submit" name="accion" value="Cancelar" class="btn btn-secondary">Cancelar</button>
+                    <button type="submit" name="accion" value="Modificar" class="btn">Modificar</button>
+                    <button type="submit" name="accion" value="Cancelar" class="btn">Cancelar</button>
                 </div>
         
           </form>

@@ -1961,7 +1961,7 @@ body.dark-mode .modalDark {
   background-color: #27292b;
 }
 body.dark-mode .modalDark .btn-close {
-  color: white;
+  background-color: white;
 }
 body.dark-mode .editarImagen {
   margin-bottom: 1rem;
