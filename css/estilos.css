@@ -1953,6 +1953,9 @@ body.dark-mode .card-body {
   background-color: black;
   color: white;
 }
+body.dark-mode .backgroundProfile .contenedorImagen .imagen-editar {
+  color: white;
+}
 
 #lista {
   margin-left: 10px;
