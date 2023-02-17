@@ -1800,6 +1800,9 @@ body.dark-mode .backgroundModal .modal-content .modal-header .modal-title {
 body.dark-mode .flexBotones #conta {
   color: white;
 }
+body.dark-mode .wrapperRate .rating-bar .star {
+  color: white;
+}
 
 .sectionCarrito {
   margin-bottom: 15rem;
