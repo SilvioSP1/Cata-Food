@@ -339,7 +339,7 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                   <?php
                     if ($_SESSION['imagen'] !="") {?>
                     
-                    <img class="img-thumbnail rounded" src="../img/restaurantes/locales/<?php echo $_SESSION['imagen'] ?>"width="100" alt="">
+                    <img class="img-thumbnail rounded editarImagen" src="../img/restaurantes/locales/<?php echo $_SESSION['imagen'] ?>"width="100" alt="">
 
                   <?php }?>
                   <input type="file" class="form-control" name="txtImagen" id="txtImagen" placeholder="Imagen">

@@ -1960,6 +1960,12 @@ body.dark-mode .modalDark {
   color: white;
   background-color: #27292b;
 }
+body.dark-mode .modalDark .btn-close {
+  color: white;
+}
+body.dark-mode .editarImagen {
+  margin-bottom: 1rem;
+}
 
 #lista {
   margin-left: 10px;
