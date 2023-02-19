@@ -374,7 +374,7 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                   $sentenciaSQL->execute();
                   $listaVentas3 = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                   foreach ($listaVentas3 as $ventas) {
-                    $sentenciaSQL = $conexion->prepare("SELECT Venta_UsuId,COUNT(*) AS Total FROM venta WHERE Venta_Id = :Venta_Id  GROUP BY `Venta_UsuId` ORDER BY Total DESC LIMIT 5");
+                    $sentenciaSQL = $conexion->prepare("SELECT Venta_UsuId,COUNT(*) AS Total FROM venta WHERE Venta_Id = :Venta_Id");
                     $sentenciaSQL->bindParam(':Venta_Id',$ventas['VD_VentaId']);
                     $sentenciaSQL->execute();
                     $personas = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
