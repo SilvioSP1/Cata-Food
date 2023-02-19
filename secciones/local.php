@@ -377,16 +377,14 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                     $sentenciaSQL = $conexion->prepare("SELECT Venta_UsuId,COUNT(*) AS Total FROM venta WHERE Venta_Id = :Venta_Id  GROUP BY `Venta_UsuId` ORDER BY Total DESC LIMIT 5");
                     $sentenciaSQL->bindParam(':Venta_Id',$ventas['VD_VentaId']);
                     $sentenciaSQL->execute();
-                    $personas = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
+                    $personas = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
 
-                    foreach ($personas as $persona) {
-                      $sentenciaSQL = $conexion->prepare("SELECT * FROM usuario WHERE Usu_Id = :Usu_Id GROUP BY Usu_Id");
-                      $sentenciaSQL->bindParam(':Usu_Id',$persona['Venta_UsuId']);
-                      $sentenciaSQL->execute();
-                      $mejores = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
+                    $sentenciaSQL = $conexion->prepare("SELECT * FROM usuario WHERE Usu_Id = :Usu_Id");
+                    $sentenciaSQL->bindParam(':Usu_Id',$persona['Venta_UsuId']);
+                    $sentenciaSQL->execute();
+                    $mejores = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                 ?>
                 <p class="mb-1" style="font-size: .77rem;"><?php echo $mejores['Usu_Nombre']; ?></p>
-                <?php } ?>
                 <?php } ?>
                 <?php } ?>
                 <!-- <div class="progress rounded" style="height: 5px;">
