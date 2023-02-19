@@ -379,19 +379,14 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                     $sentenciaSQL->execute();
                     $personas = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
 
-                    $sentenciaSQL = $conexion->prepare("SELECT Venta_UsuId,COUNT(*) AS Total FROM venta GROUP BY Venta_UsuId = :Venta_UsuId");
-                    $sentenciaSQL->bindParam(':Venta_UsuId',$personas['Venta_UsuId']);
-                    $sentenciaSQL->execute();
-                    $personas2 = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
-
                     $sentenciaSQL = $conexion->prepare("SELECT * FROM usuario WHERE Usu_Id = :Usu_Id");
-                    $sentenciaSQL->bindParam(':Usu_Id',$personas2['Venta_UsuId']);
+                    $sentenciaSQL->bindParam(':Usu_Id',$personas['Venta_UsuId']);
                     $sentenciaSQL->execute();
                     $mejores = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                 ?>
 
-<?php } ?>
-<p class="mb-1" style="font-size: .77rem;"><?php echo $mejores['Usu_Nombre']; ?></p>
+                <p class="mb-1" style="font-size: .77rem;"><?php echo $mejores['Usu_Nombre']; ?></p>
+                <?php } ?>
                 <?php } ?>
                 <!-- <div class="progress rounded" style="height: 5px;">
                   <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
