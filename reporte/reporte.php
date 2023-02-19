@@ -6,6 +6,7 @@ session_start();
 error_reporting(0);
 
 use PhpOffice\PhpSpreadsheet\{Spreadsheet,IOFactory};
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 $sentenciaSQL = $conexion->prepare("SELECT * FROM venta_detalle 
 JOIN venta ON Venta_Id = VD_VentaId 
