@@ -368,11 +368,13 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                 <p class="mb-4"><span class="font-italic me-1">Productos más vendidos</span>
                 </p>
                 <?php 
-                  $sentenciaSQL = $conexion->prepare("SELECT VD_VentaId,COUNT(*) AS Total FROM venta_detalle GROUP BY VD_VentaId ORDER BY Total DESC LIMIT 5");
+                foreach ($listaProductos as $detalles) {
+                  $sentenciaSQL = $conexion->prepare("SELECT VD_VentaId,COUNT(*) AS Total FROM venta_detalle WHERE VD_ProdId = :VD_ProdId GROUP BY VD_VentaId ORDER BY Total DESC");
+                  $sentenciaSQL->bindParam(':VD_ProdId',$detalles['Prod_Id']);
                   $sentenciaSQL->execute();
                   $listaVentas3 = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                   foreach ($listaVentas3 as $ventas) {
-                    $sentenciaSQL = $conexion->prepare("SELECT Venta_UsuId,COUNT(*) AS Total FROM venta WHERE Venta_Id = :Venta_Id  GROUP BY `Venta_UsuId` ORDER BY Total DESC;");
+                    $sentenciaSQL = $conexion->prepare("SELECT Venta_UsuId,COUNT(*) AS Total FROM venta WHERE Venta_Id = :Venta_Id  GROUP BY `Venta_UsuId` ORDER BY Total DESC LIMIT 5");
                     $sentenciaSQL->bindParam(':Venta_Id',$ventas['VD_VentaId']);
                     $sentenciaSQL->execute();
                     $personas = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
@@ -384,6 +386,7 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                       $mejores = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                 ?>
                 <p class="mb-1" style="font-size: .77rem;"><?php echo $mejores['Usu_Nombre']; ?></p>
+                <?php } ?>
                 <?php } ?>
                 <?php } ?>
                 <!-- <div class="progress rounded" style="height: 5px;">
