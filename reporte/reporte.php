@@ -1,7 +1,7 @@
 <?php 
 
-include "../admin/config/db.php";
-include "../admin/config/config.php";
+require "../admin/config/db.php";
+require "../admin/config/config.php";
 require "../vendor/autoload.php";
 
 use PhpOffice\PhpSpreadsheet\{Spreadsheet,IOFactory};
