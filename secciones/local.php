@@ -257,8 +257,23 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
               <div class="card-body">
                 <p class="mb-4"><span class="font-italic me-1">Ventas</span>
                 </p>
-                <p class="mb-1" style="font-size: .77rem;">Zona Norte</p>
-                <div class="progress rounded" style="height: 5px;">
+                <?php 
+                $totalVentas = 0;
+                $cantidadVentas = 0;
+                  foreach ($listaProductos as $ventas) {
+                    $sentenciaSQL = $conexion->prepare("SELECT * FROM venta_detalle WHERE VD_ProdId = :VD_ProdId");
+                    $sentenciaSQL->bindParam(':VD_ProdId',$ventas['Prod_Id']);
+                    $sentenciaSQL->execute();
+                    $listaVentas = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
+                    foreach ($listaVentas as $total) {
+                      $totalVentas = $totalVentas + ($total['VD_Cantidad'] * $total['VD_PrecioUnitario']);
+                      $cantidadVentas++;
+                    }
+                  } 
+                ?>
+                <p class="mb-1" style="font-size: .77rem;">Total de ventas<?php echo $totalVentas; ?></p>
+                <p class="mb-1" style="font-size: .77rem;">Cantidad de ventas<?php echo $cantidadVentas; ?></p>
+                <!-- <div class="progress rounded" style="height: 5px;">
                   <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50"
                     aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
@@ -281,7 +296,7 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                 <div class="progress rounded mb-2" style="height: 5px;">
                   <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66"
                     aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
