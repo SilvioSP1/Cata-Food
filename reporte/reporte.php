@@ -11,7 +11,6 @@ $sentenciaSQL = $conexion->prepare("SELECT * FROM venta_detalle
 JOIN venta ON Venta_Id = VD_VentaId 
 JOIN producto ON Prod_Id = VD_ProdId 
 WHERE Prod_LocalId = 6");
-
 $sentenciaSQL->execute();
 $listaVentas = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
@@ -30,7 +29,7 @@ $hojaActiva->setCellValue('H1','TOTAL VENTA');
 
 $fila = 2;
 
-foreach ($listaVentas as $ventas) {
+/* foreach ($listaVentas as $ventas) {
     $hojaActiva->setCellValue('A'.$fila,$ventas['Venta_Id']);
     $hojaActiva->setCellValue('B'.$fila,$ventas['VD_Id']);
     $hojaActiva->setCellValue('C'.$fila,$ventas['Prod_Nombre']);
@@ -40,7 +39,7 @@ foreach ($listaVentas as $ventas) {
     $hojaActiva->setCellValue('G'.$fila,$ventas['Prod_Tipo']);
     $hojaActiva->setCellValue('H'.$fila,$ventas['Venta_Total']);
     $fila++;
-}
+} */
 
 header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
 header('Content-Disposition: attachment;filename="Reporte.xlsx"');
