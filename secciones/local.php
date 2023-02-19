@@ -275,11 +275,11 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                       $sentenciaSQL->execute();
                       $ventaInfo = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
 
-                      /* $ventaMes = date("m",$ventaInfo['Venta_Fecha']);
+                      $ventaMes = $ventaInfo['Venta_Fecha']-> format('m');
                       if ($ventaMes == $mesActual) {
                         $totalVentasMes = $totalVentasMes + ($total['VD_Cantidad'] * $total['VD_PrecioUnitario']);
                         $cantidadVentasMes++;
-                      } */
+                      }
 
                       $totalVentas = $totalVentas + ($total['VD_Cantidad'] * $total['VD_PrecioUnitario']);
                       $cantidadVentas++;
