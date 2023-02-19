@@ -205,10 +205,10 @@ switch ($accion) {
                     foreach ($ultimasCompras as $lista){?>
                       
                       <form action="restaurante.php" method="post">
-                        <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($local['Local_Id'],cod,key); ?>">
+                        <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($lista['Local_Id'],cod,key); ?>">
                         <li>
                           <button class="listaHisto" type="submit">
-                          <span>Producto: </span><?php echo $lista['Prod_Nombre']; ?> - <span>Local: </span> <?php echo $local['Local_Nombre']; ?>
+                          <span>Producto: </span><?php echo $lista['Prod_Nombre']; ?> - <span>Local: </span> <?php echo $lista['Local_Nombre']; ?>
                           </button>
                         </li>
                       </form>
