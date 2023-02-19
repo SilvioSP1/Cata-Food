@@ -4,12 +4,6 @@
 <?php 
 date_default_timezone_set('America/Argentina/Buenos_Aires');
 
-$sentenciaSQL = $conexion->prepare("SELECT * FROM venta WHERE Venta_UsuId=:Venta_UsuId ORDER BY Venta_Id DESC");
-$sentenciaSQL->bindParam(':Venta_UsuId',$_SESSION['idUsuario']);
-$sentenciaSQL->execute();
-$listaUltimasVentas = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
-
-
 $txtID=(isset($_POST['txtID'])) ? $_POST['txtID'] : $_SESSION['idUsuario'];
 $txtNombre=(isset($_POST['txtNombre'])) ? $_POST['txtNombre'] : $_SESSION['nombre'];
 $txtApellido=(isset($_POST['txtApellido'])) ? $_POST['txtApellido'] : $_SESSION['apellido'];
@@ -198,7 +192,7 @@ switch ($accion) {
                     JOIN producto ON VD_ProdId = Prod_Id
                     JOIN local ON Prod_LocalId = Local_Id
                     WHERE Venta_UsuId = :Venta_UsuId
-                    ORDER BY Venta_Id DESC");
+                    ORDER BY Venta_Id DESC LIMIT 5");
                     $sentenciaSQL->bindParam(':Venta_UsuId',$_SESSION['idUsuario']);
                     $sentenciaSQL->execute();
                     $ultimasCompras = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
