@@ -30,7 +30,7 @@ $hojaActiva->setCellValue('H1','TOTAL VENTA');
 
 $fila = 2;
 
-foreach ($listaVentas as $ventas) {
+/* foreach ($listaVentas as $ventas) {
     $hojaActiva->setCellValue('A'.$fila,$ventas['Venta_Id']);
     $hojaActiva->setCellValue('B'.$fila,$ventas['VD_Id']);
     $hojaActiva->setCellValue('C'.$fila,$ventas['Prod_Nombre']);
@@ -40,7 +40,7 @@ foreach ($listaVentas as $ventas) {
     $hojaActiva->setCellValue('G'.$fila,$ventas['Prod_Tipo']);
     $hojaActiva->setCellValue('H'.$fila,$ventas['Venta_Total']);
     $fila++;
-}
+} */
 
 header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
 header('Content-Disposition: attachment;filename="Reporte.xlsx"');
