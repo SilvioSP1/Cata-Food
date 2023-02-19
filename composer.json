@@ -1,5 +1,6 @@
 {
     "require": {
-        "mercadopago/dx-php": "^2.5"
+        "mercadopago/dx-php": "^2.5",
+        "phpoffice/phpspreadsheet": "^1.27"
     }
 }
