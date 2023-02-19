@@ -374,16 +374,23 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                   $sentenciaSQL->execute();
                   $listaVentas3 = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                   foreach ($listaVentas3 as $ventas) {
-                    $sentenciaSQL = $conexion->prepare("SELECT Venta_UsuId,COUNT(*) AS Total FROM venta WHERE Venta_Id = :Venta_Id");
+                    $sentenciaSQL = $conexion->prepare("SELECT Venta_UsuId,COUNT(Venta_UsuId) AS Total FROM venta WHERE Venta_Id = :Venta_Id");
                     $sentenciaSQL->bindParam(':Venta_Id',$ventas['VD_VentaId']);
                     $sentenciaSQL->execute();
                     $personas = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
 
+
+                    $sentenciaSQL = $conexion->prepare("SELECT Venta_UsuId,COUNT(Venta_UsuId) AS Total FROM venta GROUP BY Venta_UsuId = :Venta_UsuId");
+                    $sentenciaSQL->bindParam(':Venta_UsuId',$personas['Venta_UsuId']);
+                    $sentenciaSQL->execute();
+                    $personas2 = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
+
                     $sentenciaSQL = $conexion->prepare("SELECT * FROM usuario WHERE Usu_Id = :Usu_Id");
-                    $sentenciaSQL->bindParam(':Usu_Id',$personas['Venta_UsuId']);
+                    $sentenciaSQL->bindParam(':Usu_Id',$personas2['Venta_UsuId']);
                     $sentenciaSQL->execute();
                     $mejores = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                 ?>
+
                 <p class="mb-1" style="font-size: .77rem;"><?php echo $mejores['Usu_Nombre']; ?></p>
                 <?php } ?>
                 <?php } ?>
