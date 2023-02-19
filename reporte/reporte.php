@@ -4,7 +4,7 @@ include "../admin/config/db.php";
 require "../vendor/autoload.php";
 session_start();
 
-/* use PhpOffice\PhpSpreadsheet\{Spreadsheet,IOFactory};
+use PhpOffice\PhpSpreadsheet\{Spreadsheet,IOFactory};
 
 $sentenciaSQL = $conexion->prepare("SELECT * FROM venta_detalle 
 JOIN venta ON Venta_Id = VD_VentaId 
@@ -47,19 +47,5 @@ header('Cache-Control: max-age=0');
 
 $writer = IOFactory::createWriter($excel, 'Xlsx');
 $writer->save('php://output');
-exit;  */
-
-
-
-
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
-
-$spreadsheet = new Spreadsheet();
-$sheet = $spreadsheet->getActiveSheet();
-$sheet->setCellValue('A1', 'Hello World !');
-
-$writer = new Xlsx($spreadsheet);
-$writer->save('hello world.xlsx');
-
+exit; 
 ?>
