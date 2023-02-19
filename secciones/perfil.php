@@ -193,29 +193,17 @@ switch ($accion) {
                 <div id="lista">
                   <ol class="lista2">
                     <?php 
-                    foreach ($listaUltimasVentas as $ventas){?>
-                      <?php
-                        $sentenciaSQL = $conexion->prepare("SELECT * FROM venta_detalle WHERE VD_VentaId=:VD_VentaId");
-                        $sentenciaSQL->bindParam(':VD_VentaId',$ventas['Venta_Id']);
-                        $sentenciaSQL->execute();
-                        $listaVentasProductos = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
-                      ?>
-                      <?php foreach ($listaVentasProductos as $productos){ ?>
-                      <?php 
-                          $sentenciaSQL = $conexion->prepare("SELECT * FROM producto WHERE Prod_Id=:Prod_Id");
-                          $sentenciaSQL->bindParam(':Prod_Id',$productos['VD_ProdId']);
-                          $sentenciaSQL->execute();
-                          $listaComprados = $sentenciaSQL->fetchall(PDO::FETCH_ASSOC); 
-                      ?>
-                      <?php foreach ($listaComprados as $lista){ ?>
-                      <?php 
-                        $sentenciaSQL = $conexion->prepare("SELECT * FROM local WHERE Local_Id=:Local_Id");
-                        $sentenciaSQL->bindParam(':Local_Id',$lista['Prod_LocalId']);
-                        $sentenciaSQL->execute();
-                        $local = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);   
-                      ?>
-                      <?php $cont = 0;
-                      if($cont < 5){ ?>
+                    $sentenciaSQL = $conexion->prepare("SELECT * FROM venta
+                    JOIN venta_detalle ON Venta_Id = VD_VentaId
+                    JOIN producto ON VD_ProdId = Prod_Id
+                    JOIN local ON Prod_LocalId = Local_Id
+                    WHERE Venta_UsuId = :Venta_UsuId
+                    ORDER BY Venta_Id DESC");
+                    $sentenciaSQL->bindParam(':Venta_UsuId',$_SESSION['idUsuario']);
+                    $sentenciaSQL->execute();
+                    $ultimasCompras = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
+                    foreach ($ultimasCompras as $lista){?>
+                      
                       <form action="restaurante.php" method="post">
                         <input type="hidden" name="Local_Id" id="Local_Id" value="<?php echo openssl_encrypt($local['Local_Id'],cod,key); ?>">
                         <li>
@@ -224,11 +212,7 @@ switch ($accion) {
                           </button>
                         </li>
                       </form>
-                      <?php $cont++;
-                        } ?>
                       <!-- <li><span>Producto: </span><?php echo $lista['Prod_Nombre']; ?> - <span>Local: </span> <?php echo $local['Local_Nombre']; ?></li> -->
-                      <?php } ?>
-                      <?php } ?>
                     <?php }?>
                       <!-- <li>Contraseña: Nose24a_</li>
                       <li>Observaciones: Esta es una observacion dentro de una lista
