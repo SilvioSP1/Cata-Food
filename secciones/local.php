@@ -329,7 +329,7 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                   $listaVentas2 = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                   foreach ($listaVentas2 as $ventas) {
                     $sentenciaSQL = $conexion->prepare("SELECT * FROM producto WHERE Prod_Id = :Prod_Id");
-                    $sentenciaSQL->bindParam(':Prod_Id',$ventas['Prod_Id']);
+                    $sentenciaSQL->bindParam(':Prod_Id',$ventas['VD_ProdId']);
                     $sentenciaSQL->execute();
                     $producto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                 ?>
