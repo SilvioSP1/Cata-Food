@@ -368,16 +368,23 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                 <p class="mb-4"><span class="font-italic me-1">Productos más vendidos</span>
                 </p>
                 <?php 
-                  $sentenciaSQL = $conexion->prepare("SELECT VD_ProdId,COUNT(*) AS Total FROM venta_detalle GROUP BY VD_ProdId ORDER BY Total DESC LIMIT 5");
+                  $sentenciaSQL = $conexion->prepare("SELECT VD_VentaId,COUNT(*) AS Total FROM venta_detalle GROUP BY VD_VentaId ORDER BY Total DESC LIMIT 5");
                   $sentenciaSQL->execute();
-                  $listaVentas2 = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
-                  foreach ($listaVentas2 as $ventas) {
-                    $sentenciaSQL = $conexion->prepare("SELECT * FROM producto WHERE Prod_Id = :Prod_Id");
-                    $sentenciaSQL->bindParam(':Prod_Id',$ventas['VD_ProdId']);
+                  $listaVentas3 = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
+                  foreach ($listaVentas3 as $ventas) {
+                    $sentenciaSQL = $conexion->prepare("SELECT Venta_UsuId,COUNT(*) AS Total FROM venta WHERE Venta_Id = :Venta_Id  GROUP BY `Venta_UsuId` ORDER BY Total DESC;");
+                    $sentenciaSQL->bindParam(':Venta_Id',$ventas['VD_VentaId']);
                     $sentenciaSQL->execute();
-                    $producto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
+                    $personas = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
+
+                    foreach ($personas as $persona) {
+                      $sentenciaSQL = $conexion->prepare("SELECT * FROM usuario WHERE Usu_Id = :Usu_Id");
+                      $sentenciaSQL->bindParam(':Usu_Id',$persona['Venta_UsuId']);
+                      $sentenciaSQL->execute();
+                      $mejores = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                 ?>
-                <p class="mb-1" style="font-size: .77rem;"><?php echo $producto['Prod_Nombre']; ?></p>
+                <p class="mb-1" style="font-size: .77rem;"><?php echo $mejores['Usu_Nombre']; ?></p>
+                <?php } ?>
                 <?php } ?>
                 <!-- <div class="progress rounded" style="height: 5px;">
                   <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
