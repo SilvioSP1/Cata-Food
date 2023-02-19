@@ -260,19 +260,33 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                 <?php 
                 $totalVentas = 0;
                 $cantidadVentas = 0;
+                $totalVentasMes = 0;
+                $cantidadVentasMes = 0;
+                $time = date("m",time())
                   foreach ($listaProductos as $ventas) {
                     $sentenciaSQL = $conexion->prepare("SELECT * FROM venta_detalle WHERE VD_ProdId = :VD_ProdId");
                     $sentenciaSQL->bindParam(':VD_ProdId',$ventas['Prod_Id']);
                     $sentenciaSQL->execute();
                     $listaVentas = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                     foreach ($listaVentas as $total) {
+                      $sentenciaSQL = $conexion->prepare("SELECT * FROM venta WHERE Venta_Id = :Venta_Id");
+                      $sentenciaSQL->bindParam(':Venta_Id',$total['VD_VentaId']);
+                      $sentenciaSQL->execute();
+                      $ventaInfo = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
+
+                      if (date("m",$$ventaInfo['Venta_Fecha']) == $time) {
+                        $totalVentasMes = $totalVentasMes + ($total['VD_Cantidad'] * $total['VD_PrecioUnitario']);
+                        $cantidadVentasMes++;
+                      }
                       $totalVentas = $totalVentas + ($total['VD_Cantidad'] * $total['VD_PrecioUnitario']);
                       $cantidadVentas++;
                     }
                   } 
                 ?>
-                <p class="mb-1" style="font-size: .77rem;">Total de ventas<?php echo $totalVentas; ?></p>
-                <p class="mb-1" style="font-size: .77rem;">Cantidad de ventas<?php echo $cantidadVentas; ?></p>
+                <p class="mb-1" style="font-size: .77rem;">Total de ventas: <?php echo $totalVentas; ?></p>
+                <p class="mb-1" style="font-size: .77rem;">Cantidad de ventas: <?php echo $cantidadVentas; ?></p>
+                <p class="mb-1" style="font-size: .77rem;">Total de ventas del Mes: <?php echo $totalVentasMes; ?></p>
+                <p class="mb-1" style="font-size: .77rem;">Cantidad de ventas del Mes: <?php echo $cantidadVentasMes; ?></p>
                 <!-- <div class="progress rounded" style="height: 5px;">
                   <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50"
                     aria-valuemin="0" aria-valuemax="100"></div>
