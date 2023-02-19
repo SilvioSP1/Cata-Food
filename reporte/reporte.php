@@ -1,8 +1,8 @@
 <?php 
 
-include "../admin/config/db.php"
-include "../admin/config/config.php"
-include "../vendor/autoload.php"
+include "../admin/config/db.php";
+include "../admin/config/config.php";
+require "../vendor/autoload.php";
 
 use PhpOffice\PhpSpreadsheet\{Spreadsheet,IOFactory};
 
@@ -14,7 +14,7 @@ $sentenciaSQL->bindParam(':Prod_LocalId',$_SESSION['idLocal']);
 $sentenciaSQL->execute();
 $listaVentas = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
-$excel = new Spreadsheets();
+$excel = new Spreadsheet();
 $hojaActiva =  $excel->getActivateSheet();
 $hojaActiva->setTitle("Ventas");
 
