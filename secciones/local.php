@@ -368,7 +368,7 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                 <p class="mb-4"><span class="font-italic me-1">Mejores clientes</span>
                 </p>
                 <?php 
-                  $sentenciaSQL = $conexion->prepare("SELECT Venta_Id,COUNT(*) FROM venta 
+                  $sentenciaSQL = $conexion->prepare("SELECT Venta_Id,Usu_Nombre,COUNT(*) FROM venta 
                   JOIN venta_detalle ON Venta_Id = VD_VentaId 
                   JOIN producto ON VD_ProdId = Prod_Id
                   WHERE Prod_LocalId = :Prod_LocalId
