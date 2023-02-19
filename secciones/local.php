@@ -262,9 +262,8 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                 $cantidadVentas = 0;
                 $totalVentasMes = 0;
                 $cantidadVentasMes = 0;
-                $time = date("Y-m-d H:i:s",time());
-                $fechaSegundos = strtotime($time);
-                $mesActual = date("m",$time);
+                $time = date("m",time());
+                /* $mesActual = date("m",$time); */
                   foreach ($listaProductos as $ventas) {
                     $sentenciaSQL = $conexion->prepare("SELECT * FROM venta_detalle WHERE VD_ProdId = :VD_ProdId");
                     $sentenciaSQL->bindParam(':VD_ProdId',$ventas['Prod_Id']);
@@ -276,8 +275,7 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                       $sentenciaSQL->execute();
                       $ventaInfo = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
 
-                      $fechaSegundos2 = strtotime($ventaInfo['Venta_Fecha']);
-                      $ventaMes = date("m",$fechaSegundos2);
+                      $ventaMes = date("m",$ventaInfo['Venta_Fecha']);
                       if ($ventaMes == $mesActual) {
                         $totalVentasMes = $totalVentasMes + ($total['VD_Cantidad'] * $total['VD_PrecioUnitario']);
                         $cantidadVentasMes++;
