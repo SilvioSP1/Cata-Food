@@ -308,7 +308,6 @@
             </div>
         </div>
     </div>
-    <p>sfafagasg</p>
 </div>
 <script src="js/chat.js?v=<?php echo time();?>"></script>
 <script src="js/response.js?v<?php echo time();?>"></script>
