@@ -265,17 +265,16 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                 $time = date("m",time());
                 /* $mesActual = date("m",$time); */
                   foreach ($listaProductos as $ventas) {
-                    $sentenciaSQL = $conexion->prepare("SELECT * FROM venta_detalle WHERE VD_ProdId = :VD_ProdId");
-                    $sentenciaSQL->bindParam(':VD_ProdId',$ventas['Prod_Id']);
+                    $sentenciaSQL = $conexion->prepare("SELECT VD_ProdId,VD_Cantidad,VD_PrecioUnitario,Venta_Fecha,COUNT(VD_Cantidad) AS Total 
+                    FROM venta_detalle 
+                    JOIN venta ON Venta_Id = VD_VentaId 
+                    JOIN producto ON `Prod_Id` = VD_ProdId 
+                    WHERE Prod_LocalId = :Prod_LocalId GROUP BY VD_ProdId ORDER BY Total DESC");
+                    $sentenciaSQL->bindParam(':Prod_LocalId',$_SESSION['idLocal']);
                     $sentenciaSQL->execute();
                     $listaVentas = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                     foreach ($listaVentas as $total) {
-                      $sentenciaSQL = $conexion->prepare("SELECT * FROM venta WHERE Venta_Id = :Venta_Id");
-                      $sentenciaSQL->bindParam(':Venta_Id',$total['VD_VentaId']);
-                      $sentenciaSQL->execute();
-                      $ventaInfo = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
-
-                      $ventaMes = $ventaInfo['Venta_Fecha'];
+                      $ventaMes = $total['Venta_Fecha'];
                       list(, $mes,) = explode('-', $ventaMes);
                       if ($mes == $time) {
                         $totalVentasMes = $totalVentasMes + ($total['VD_Cantidad'] * $total['VD_PrecioUnitario']);
