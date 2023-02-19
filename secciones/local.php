@@ -289,7 +289,7 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                 <p class="mb-1" style="font-size: .77rem;">Cantidad de ventas: <?php echo $cantidadVentas; ?></p>
                 <p class="mb-1" style="font-size: .77rem;">Total de ventas del Mes: <?php echo $totalVentasMes; ?></p>
                 <p class="mb-1" style="font-size: .77rem;">Cantidad de ventas del Mes: <?php echo $cantidadVentasMes; ?></p>
-                <a href="../reporte/reporte.php"></a>
+                <a href="../reporte/reporte.php">Reporte</a>
                 <!-- <div class="progress rounded" style="height: 5px;">
                   <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50"
                     aria-valuemin="0" aria-valuemax="100"></div>
