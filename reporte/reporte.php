@@ -3,6 +3,7 @@
 include "../admin/config/db.php";
 require "../vendor/autoload.php";
 session_start();
+error_reporting(0);
 
 use PhpOffice\PhpSpreadsheet\{Spreadsheet,IOFactory};
 
