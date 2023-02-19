@@ -371,6 +371,7 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                   $sentenciaSQL = $conexion->prepare("SELECT Venta_Id,Usu_Nombre,COUNT(*) FROM venta 
                   JOIN venta_detalle ON Venta_Id = VD_VentaId 
                   JOIN producto ON VD_ProdId = Prod_Id
+                  JOIN usuario ON Venta_UsuId = Usu_Id
                   WHERE Prod_LocalId = :Prod_LocalId
                   GROUP BY Venta_UsuId");
                   $sentenciaSQL->bindParam(':Prod_LocalId',$_SESSION['idLocal']);
