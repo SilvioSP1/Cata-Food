@@ -362,7 +362,7 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
               </div>
             </div>
           </div>
-          <div class="col-md-6" style="margin: top 10px;">
+          <div class="col-md-6" style="margin-top: 10px;">
             <div class="card mb-4 mb-md-0">
               <div class="card-body">
                 <p class="mb-4"><span class="font-italic me-1">Productos más vendidos</span>
