@@ -1,11 +1,11 @@
 <?php 
 
-require "../admin/config/db.php";
+/* require "../admin/config/db.php";
 require "../vendor/autoload.php";
 session_start();
 error_reporting(0);
 
-/* use PhpOffice\PhpSpreadsheet\{Spreadsheet,IOFactory};
+use PhpOffice\PhpSpreadsheet\{Spreadsheet,IOFactory};
 
 $sentenciaSQL = $conexion->prepare("SELECT * FROM venta_detalle JOIN venta ON Venta_Id = VD_VentaId JOIN producto ON Prod_Id = VD_ProdId WHERE Prod_LocalId = 6");
 
@@ -47,6 +47,8 @@ $writer = IOFactory::createWriter($excel, 'Xlsx');
 $writer->save('php://output');
 exit;  */
 
+require '../vendor/autoload.php';
+
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
@@ -56,4 +58,5 @@ $sheet->setCellValue('A1', 'Hello World !');
 
 $writer = new Xlsx($spreadsheet);
 $writer->save('hello world.xlsx');
+
 ?>
