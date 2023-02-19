@@ -9,8 +9,8 @@ use PhpOffice\PhpSpreadsheet\{Spreadsheet,IOFactory};
 $sentenciaSQL = $conexion->prepare("SELECT * FROM venta_detalle 
 JOIN venta ON Venta_Id = VD_VentaId 
 JOIN producto ON Prod_Id = VD_ProdId 
-WHERE Prod_LocalId = 6");
-/* $sentenciaSQL->bindParam(':Prod_LocalId',$_SESSION['idLocal']); */
+WHERE Prod_LocalId = :Prod_LocalId");
+$sentenciaSQL->bindParam(':Prod_LocalId',$_SESSION['idLocal']);
 $sentenciaSQL->execute();
 $listaVentas = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
@@ -53,3 +53,15 @@ $writer->save('php://output');
 exit;
 
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
