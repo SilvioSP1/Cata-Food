@@ -1,22 +1,22 @@
 <?php 
 
 include "../admin/config/db.php";
-require "../vendor/autoload.php";
+/* require "../vendor/autoload.php"; */
 session_start();
 error_reporting(0);
 
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
+/* use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\IOFactory;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx; */
 
-/* $sentenciaSQL = $conexion->prepare("SELECT * FROM venta_detalle 
+$sentenciaSQL = $conexion->prepare("SELECT * FROM venta_detalle 
 JOIN venta ON Venta_Id = VD_VentaId 
 JOIN producto ON Prod_Id = VD_ProdId 
 WHERE Prod_LocalId = 6");
 $sentenciaSQL->execute();
 $listaVentas = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
-$excel = new Spreadsheet();
+/* $excel = new Spreadsheet();
 $hojaActiva =  $excel->getActiveSheet();
 $hojaActiva->setTitle("Ventas");
 
@@ -27,12 +27,12 @@ $hojaActiva->setCellValue('D1','PRECIO');
 $hojaActiva->setCellValue('E1','CANTIDAD');
 $hojaActiva->setCellValue('F1','FECHA');
 $hojaActiva->setCellValue('G1','TIPO');
-$hojaActiva->setCellValue('H1','TOTAL VENTA');
+$hojaActiva->setCellValue('H1','TOTAL VENTA'); */
 
 $fila = 2;
 
 foreach ($listaVentas as $ventas) {
-    $hojaActiva->setCellValue('A'.$fila,$ventas['Venta_Id']);
+    /* $hojaActiva->setCellValue('A'.$fila,$ventas['Venta_Id']);
     $hojaActiva->setCellValue('B'.$fila,$ventas['VD_Id']);
     $hojaActiva->setCellValue('C'.$fila,$ventas['Prod_Nombre']);
     $hojaActiva->setCellValue('D'.$fila,$ventas['Prod_Precio']);
@@ -40,19 +40,17 @@ foreach ($listaVentas as $ventas) {
     $hojaActiva->setCellValue('F'.$fila,$ventas['Venta_Fecha']);
     $hojaActiva->setCellValue('G'.$fila,$ventas['Prod_Tipo']);
     $hojaActiva->setCellValue('H'.$fila,$ventas['Venta_Total']);
-    $fila++;
-} */
-$spreadsheet = new Spreadsheet();
-$sheet = $spreadsheet->getActiveSheet();
-$sheet->setCellValue('A1', 'Hello World !');
+    $fila++; */
+    echo $ventas['Venta_Id'];
+}
 
-header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+/* header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
 header('Content-Disposition: attachment;filename="Reporte.xlsx"');
 header('Cache-Control: max-age=0');
 
-$writer = IOFactory::createWriter($spreadsheet, 'Xlsx');
+$writer = IOFactory::createWriter($excel, 'Xlsx');
 $writer->save('php://output');
-exit; 
+exit;  */
 
 /* use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
