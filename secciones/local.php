@@ -380,7 +380,7 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                     $personas = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
 
                     $sentenciaSQL = $conexion->prepare("SELECT * FROM usuario WHERE Usu_Id = :Usu_Id");
-                    $sentenciaSQL->bindParam(':Usu_Id',$persona['Venta_UsuId']);
+                    $sentenciaSQL->bindParam(':Usu_Id',$personas['Venta_UsuId']);
                     $sentenciaSQL->execute();
                     $mejores = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                 ?>
