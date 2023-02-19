@@ -264,27 +264,26 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                 $cantidadVentasMes = 0;
                 $time = date("m",time());
                 /* $mesActual = date("m",$time); */
-                  foreach ($listaProductos as $ventas) {
-                    $sentenciaSQL = $conexion->prepare("SELECT VD_ProdId,VD_Cantidad,VD_PrecioUnitario,Venta_Fecha,COUNT(VD_Cantidad) AS Total 
-                    FROM venta_detalle 
-                    JOIN venta ON Venta_Id = VD_VentaId 
-                    JOIN producto ON `Prod_Id` = VD_ProdId 
-                    WHERE Prod_LocalId = :Prod_LocalId GROUP BY VD_ProdId ORDER BY Total DESC");
-                    $sentenciaSQL->bindParam(':Prod_LocalId',$_SESSION['idLocal']);
-                    $sentenciaSQL->execute();
-                    $listaVentas = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
-                    foreach ($listaVentas as $total) {
-                      $ventaMes = $total['Venta_Fecha'];
-                      list(, $mes,) = explode('-', $ventaMes);
-                      if ($mes == $time) {
-                        $totalVentasMes = $totalVentasMes + ($total['VD_Cantidad'] * $total['VD_PrecioUnitario']);
-                        $cantidadVentasMes++;
-                      }
+                $sentenciaSQL = $conexion->prepare("SELECT VD_ProdId,VD_Cantidad,VD_PrecioUnitario,Venta_Fecha,COUNT(VD_Cantidad) AS Total 
+                FROM venta_detalle 
+                JOIN venta ON Venta_Id = VD_VentaId 
+                JOIN producto ON `Prod_Id` = VD_ProdId 
+                WHERE Prod_LocalId = :Prod_LocalId 
+                GROUP BY VD_ProdId ORDER BY Total DESC");
+                $sentenciaSQL->bindParam(':Prod_LocalId',$_SESSION['idLocal']);
+                $sentenciaSQL->execute();
+                $listaVentas = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
+                foreach ($listaVentas as $total) {
+                  $ventaMes = $total['Venta_Fecha'];
+                  list(, $mes,) = explode('-', $ventaMes);
+                  if ($mes == $time) {
+                    $totalVentasMes = $totalVentasMes + ($total['VD_Cantidad'] * $total['VD_PrecioUnitario']);
+                    $cantidadVentasMes++;
+                  }
 
-                      $totalVentas = $totalVentas + ($total['VD_Cantidad'] * $total['VD_PrecioUnitario']);
-                      $cantidadVentas++;
-                    }
-                  } 
+                  $totalVentas = $totalVentas + ($total['VD_Cantidad'] * $total['VD_PrecioUnitario']);
+                  $cantidadVentas++;
+                }
                 ?>
                 <p class="mb-1" style="font-size: .77rem;">Total de ventas: <?php echo $totalVentas; ?></p>
                 <p class="mb-1" style="font-size: .77rem;">Cantidad de ventas: <?php echo $cantidadVentas; ?></p>
