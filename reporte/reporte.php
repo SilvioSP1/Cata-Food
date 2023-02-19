@@ -55,5 +55,5 @@ $sheet = $spreadsheet->getActiveSheet();
 $sheet->setCellValue('A1', 'Hello World !');
 
 $writer = new Xlsx($spreadsheet);
-$writer->save('php://output');
+$writer->save('hello world.xlsx');
 ?>
