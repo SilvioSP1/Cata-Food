@@ -31,7 +31,6 @@ $hojaActiva->setCellValue('H1','TOTAL VENTA');
 
 $fila = 2;
 
-
 foreach ($listaVentas as $ventas) {
     $hojaActiva->setCellValue('A'.$fila,$ventas['Venta_Id']);
     $hojaActiva->setCellValue('B'.$fila,$ventas['VD_Id']);
