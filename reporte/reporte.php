@@ -1,13 +1,13 @@
 <?php 
 
 include "../admin/config/db.php";
-/* require "../vendor/autoload.php"; */
+require "../vendor/autoload.php";
 session_start();
 error_reporting(0);
 
-/* use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\IOFactory;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx; */
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 $sentenciaSQL = $conexion->prepare("SELECT * FROM venta_detalle 
 JOIN venta ON Venta_Id = VD_VentaId 
@@ -16,7 +16,7 @@ WHERE Prod_LocalId = 6");
 $sentenciaSQL->execute();
 $listaVentas = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
-/* $excel = new Spreadsheet();
+$excel = new Spreadsheet();
 $hojaActiva =  $excel->getActiveSheet();
 $hojaActiva->setTitle("Ventas");
 
@@ -49,8 +49,7 @@ header('Cache-Control: max-age=0');
 
 $writer = IOFactory::createWriter($excel, 'Xlsx');
 $writer->save('php://output');
-exit; */
-header('../secciones/local.php') 
+exit; 
 
 /* use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
