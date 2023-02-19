@@ -2,8 +2,8 @@
 
 include "../admin/config/db.php";
 include "../admin/config/config.php";
-require "../vendor/autoload.php";
-session_start();
+/* require "../vendor/autoload.php";
+session_start(); */
 
 /* use PhpOffice\PhpSpreadsheet\{Spreadsheet,IOFactory};
 
