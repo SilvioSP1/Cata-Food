@@ -365,28 +365,20 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
           <div class="col-md-6" style="margin-top: 10px;">
             <div class="card mb-4 mb-md-0">
               <div class="card-body">
-                <p class="mb-4"><span class="font-italic me-1">Productos más vendidos</span>
+                <p class="mb-4"><span class="font-italic me-1">Mejores clientes</span>
                 </p>
                 <?php 
-                foreach ($listaProductos as $detalles) {
-                  $sentenciaSQL = $conexion->prepare("SELECT VD_VentaId,COUNT(*) AS Total FROM venta_detalle WHERE VD_ProdId = :VD_ProdId GROUP BY VD_VentaId ORDER BY Total DESC");
-                  $sentenciaSQL->bindParam(':VD_ProdId',$detalles['Prod_Id']);
+                  $sentenciaSQL = $conexion->prepare("SELECT Venta_Id,COUNT(*) FROM venta 
+                  JOIN venta_detalle ON Venta_Id = VD_VentaId 
+                  JOIN producto ON VD_ProdId = Prod_Id
+                  WHERE Prod_LocalId = :Prod_LocalId
+                  GROUP BY Venta_UsuId");
+                  $sentenciaSQL->bindParam(':Prod_LocalId',$_SESSION['idLocal']);
                   $sentenciaSQL->execute();
-                  $listaVentas3 = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
-                  foreach ($listaVentas3 as $ventas) {
-                    $sentenciaSQL = $conexion->prepare("SELECT Venta_UsuId,COUNT(Venta_UsuId) AS Total FROM venta WHERE Venta_Id = :Venta_Id");
-                    $sentenciaSQL->bindParam(':Venta_Id',$ventas['VD_VentaId']);
-                    $sentenciaSQL->execute();
-                    $personas = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
-
-                    $sentenciaSQL = $conexion->prepare("SELECT * FROM usuario WHERE Usu_Id = :Usu_Id");
-                    $sentenciaSQL->bindParam(':Usu_Id',$personas['Venta_UsuId']);
-                    $sentenciaSQL->execute();
-                    $mejores = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
+                  $listaMejores = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
+                  foreach ($listaMejores as $mejores) {
                 ?>
-
                 <p class="mb-1" style="font-size: .77rem;"><?php echo $mejores['Usu_Nombre']; ?></p>
-                <?php } ?>
                 <?php } ?>
                 <!-- <div class="progress rounded" style="height: 5px;">
                   <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
