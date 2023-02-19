@@ -5,12 +5,12 @@ require "../vendor/autoload.php";
 session_start();
 error_reporting(0);
 
-use PhpOffice\PhpSpreadsheet\{Spreadsheet,IOFactory};
+/* use PhpOffice\PhpSpreadsheet\{Spreadsheet,IOFactory};
 
-/* $sentenciaSQL = $conexion->prepare("SELECT * FROM venta_detalle JOIN venta ON Venta_Id = VD_VentaId JOIN producto ON Prod_Id = VD_ProdId WHERE Prod_LocalId = 6");
+$sentenciaSQL = $conexion->prepare("SELECT * FROM venta_detalle JOIN venta ON Venta_Id = VD_VentaId JOIN producto ON Prod_Id = VD_ProdId WHERE Prod_LocalId = 6");
 
 $sentenciaSQL->execute();
-$listaVentas = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC); */
+$listaVentas = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
 
 $excel = new Spreadsheet();
 $hojaActiva =  $excel->getActiveSheet();
@@ -27,7 +27,7 @@ $hojaActiva->setCellValue('H1','TOTAL VENTA');
 
 $fila = 2;
 
-/* foreach ($listaVentas as $ventas) {
+foreach ($listaVentas as $ventas) {
     $hojaActiva->setCellValue('A'.$fila,$ventas['Venta_Id']);
     $hojaActiva->setCellValue('B'.$fila,$ventas['VD_Id']);
     $hojaActiva->setCellValue('C'.$fila,$ventas['Prod_Nombre']);
@@ -37,7 +37,7 @@ $fila = 2;
     $hojaActiva->setCellValue('G'.$fila,$ventas['Prod_Tipo']);
     $hojaActiva->setCellValue('H'.$fila,$ventas['Venta_Total']);
     $fila++;
-} */
+}
 
 header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
 header('Content-Disposition: attachment;filename="Reporte.xlsx"');
@@ -45,9 +45,9 @@ header('Cache-Control: max-age=0');
 
 $writer = IOFactory::createWriter($excel, 'Xlsx');
 $writer->save('php://output');
-exit; 
+exit;  */
 
-/* use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 $spreadsheet = new Spreadsheet();
@@ -55,5 +55,5 @@ $sheet = $spreadsheet->getActiveSheet();
 $sheet->setCellValue('A1', 'Hello World !');
 
 $writer = new Xlsx($spreadsheet);
-$writer->save('hello world.xlsx'); */
+$writer->save('php://output');
 ?>
