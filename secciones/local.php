@@ -362,6 +362,50 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
               </div>
             </div>
           </div>
+          <div class="col-md-6">
+            <div class="card mb-4 mb-md-0">
+              <div class="card-body">
+                <p class="mb-4"><span class="font-italic me-1">Productos más vendidos</span>
+                </p>
+                <?php 
+                  $sentenciaSQL = $conexion->prepare("SELECT VD_ProdId,COUNT(*) AS Total FROM venta_detalle GROUP BY VD_ProdId ORDER BY Total DESC LIMIT 5");
+                  $sentenciaSQL->execute();
+                  $listaVentas2 = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
+                  foreach ($listaVentas2 as $ventas) {
+                    $sentenciaSQL = $conexion->prepare("SELECT * FROM producto WHERE Prod_Id = :Prod_Id");
+                    $sentenciaSQL->bindParam(':Prod_Id',$ventas['VD_ProdId']);
+                    $sentenciaSQL->execute();
+                    $producto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
+                ?>
+                <p class="mb-1" style="font-size: .77rem;"><?php echo $producto['Prod_Nombre']; ?></p>
+                <?php } ?>
+                <!-- <div class="progress rounded" style="height: 5px;">
+                  <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <p class="mt-4 mb-1" style="font-size: .77rem;">Hamburguesas</p>
+                <div class="progress rounded" style="height: 5px;">
+                  <div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="72"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <p class="mt-4 mb-1" style="font-size: .77rem;">Pizzas</p>
+                <div class="progress rounded" style="height: 5px;">
+                  <div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <p class="mt-4 mb-1" style="font-size: .77rem;">Milanesas</p>
+                <div class="progress rounded" style="height: 5px;">
+                  <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <p class="mt-4 mb-1" style="font-size: .77rem;">Papas Fritas</p>
+                <div class="progress rounded mb-2" style="height: 5px;">
+                  <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                </div> -->
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
