@@ -2081,7 +2081,7 @@ body.dark-mode .buttonReporte {
   padding: 0.6rem;
   width: 100%;
   border-radius: 0.3rem;
-  transition: border 0.3s ease-out;
+  transition: border 0.3s ease;
 }
 .buttonReporte:hover {
   border: 1px solid black;
