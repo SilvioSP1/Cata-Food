@@ -2069,6 +2069,12 @@ body.dark-mode .lista2 li::before {
   height: 0px;
 }
 
+.buttonReporte {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
 .chat-bar-collapsible {
   position: fixed;
   bottom: 30px;
