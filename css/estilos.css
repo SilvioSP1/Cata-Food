@@ -2083,7 +2083,7 @@ body.dark-mode .buttonReporte {
   border-radius: 0.3rem;
   transition: border 0.3s ease-out;
 }
-.buttonReporte:hover::after {
+.buttonReporte:hover {
   border: 1px solid black;
 }
 
