@@ -257,6 +257,8 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
               <div class="card-body">
                 <p class="mb-4"><span class="font-italic me-1">Ventas</span>
                 </p>
+                <div id="lista">
+                  <ol class="lista2">
                 <?php 
                 $totalVentas = 0;
                 $cantidadVentas = 0;
@@ -285,10 +287,28 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                   $cantidadVentas++;
                 }
                 ?>
-                <p class="mb-1" style="font-size: .77rem;">Total de ventas: <?php echo $totalVentas; ?></p>
-                <p class="mb-1" style="font-size: .77rem;">Cantidad de ventas: <?php echo $cantidadVentas; ?></p>
-                <p class="mb-1" style="font-size: .77rem;">Total de ventas del Mes: <?php echo $totalVentasMes; ?></p>
-                <p class="mb-1" style="font-size: .77rem;">Cantidad de ventas del Mes: <?php echo $cantidadVentasMes; ?></p>
+                    <li>
+                        <button class="listaHisto" type="">
+                        <span>Total de ventas: <?php echo $totalVentas; ?>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="listaHisto" type="">
+                        <span>Cantidad de ventas: <?php echo $cantidadVentas; ?>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="listaHisto" type="">
+                        <span>Total de ventas del Mes: <?php echo $totalVentasMes; ?>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="listaHisto" type="">
+                        <span>Cantidad de ventas del Mes: <?php echo $cantidadVentasMes; ?>
+                        </button>
+                    </li>
+                  </ol>
+                </div>
                 <a href="../reporte/reporte.php">Reporte</a>
                 <!-- <div class="progress rounded" style="height: 5px;">
                   <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50"
