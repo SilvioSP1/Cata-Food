@@ -238,7 +238,7 @@ if ($_POST['TL_Tipo'] || !empty($_SESSION["tiposLocal"])) {
                                                                 ?>
                                                             <?php } ?>
                                                         <?php } ?>
-                                                            <?php $punt =($cont/$aux)*5; ?>
+                                                            
                                                                 <?php if ($punt == 5) { ?>
                                                                     <i class="fa-solid fa-star"></i>
                                                                     <i class="fa-solid fa-star"></i>
