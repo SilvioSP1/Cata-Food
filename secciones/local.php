@@ -332,7 +332,6 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                   $listaVentas2 = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                   foreach ($listaVentas2 as $ventas) {
                 ?>
-                <p class="mb-1" style="font-size: .77rem;"><?php echo $ventas['Prod_Nombre']; ?></p>
                 <div id="lista">
                   <ol class="lista2">
                     <li>
