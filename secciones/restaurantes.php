@@ -162,6 +162,9 @@ if ($_POST['TL_Tipo'] || !empty($_SESSION["tiposLocal"])) {
 
                                     ?>
 
+                                    <?php $cont = 0; 
+                                    $aux = 0;
+                                    ?>
                                     <?php if (!empty($listaLocalesPorTipo)) {?>
                                         <?php foreach($resultado_articulos as $local) { ?>
                                         <?php if ($local['Local_Status'] == 1) { ?>
@@ -228,9 +231,6 @@ if ($_POST['TL_Tipo'] || !empty($_SESSION["tiposLocal"])) {
                                                     <p class="ubiRestaurante"><?php echo $local['Local_Ubicacion']; ?></p>
                                                     <h6>Clasificación</h6>
                                                     <div>
-                                                    <?php $cont = 0; 
-                                                    $aux = 0;
-                                                    ?>
                                                         <?php foreach($puntuaciones as $puntuacion){ ?>
                                                             <?php if($puntuacion['Pun_LocalId'] == $local['Local_Id'] && $puntuacion['Pun_Status'] == 1){ ?>
                                                                 <?php $cont = $cont + $puntuacion['Pun_Puntuacion'];
@@ -242,31 +242,35 @@ if ($_POST['TL_Tipo'] || !empty($_SESSION["tiposLocal"])) {
                                                             $aux = $aux*5;
                                                             $punt =($cont/$aux)*5; 
                                                              ?>
-                                                                <?php if ($punt == 5) { ?>
-                                                                    <i class="fa-solid fa-star"></i>
-                                                                    <i class="fa-solid fa-star"></i>
-                                                                    <i class="fa-solid fa-star"></i>
-                                                                    <i class="fa-solid fa-star"></i>
-                                                                    <i class="fa-solid fa-star"></i>
-                                                                <?php }?>
-                                                                <?php if ($punt == 4) { ?>
-                                                                    <i class="fa-solid fa-star"></i>
-                                                                    <i class="fa-solid fa-star"></i>
-                                                                    <i class="fa-solid fa-star"></i>
-                                                                    <i class="fa-solid fa-star"></i>
-                                                                <?php }?>
-                                                                <?php if ($punt == 3) { ?>
-                                                                    <i class="fa-solid fa-star"></i>
-                                                                    <i class="fa-solid fa-star"></i>
-                                                                    <i class="fa-solid fa-star"></i>
-                                                                <?php }?>
-                                                                <?php if ($punt == 2) { ?>
-                                                                    <i class="fa-solid fa-star"></i>
-                                                                    <i class="fa-solid fa-star"></i>
-                                                                <?php }?>
-                                                                <?php if ($punt == 1) { ?>
-                                                                    <i class="fa-solid fa-star"></i>
-                                                                <?php }?>
+                                                        <?php if ($punt == 5) { ?>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                        <?php }?>
+                                                        <?php if ($punt == 4) { ?>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                        <?php }?>
+                                                        <?php if ($punt == 3) { ?>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                        <?php }?>
+                                                        <?php if ($punt == 2) { ?>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                        <?php }?>
+                                                        <?php if ($punt == 1) { ?>
+                                                            <i class="fa-solid fa-star"></i>
+                                                        <?php }?>
+                                                        <?php
+                                                        $cont = 0; 
+                                                        $aux = 0;
+                                                            ?>
                                                     </div>
                                                 </div>
                                             </button>
