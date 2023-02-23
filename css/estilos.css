@@ -2073,7 +2073,7 @@ body.dark-mode .lista2 li::before {
   margin-top: 1rem;
   outline: none;
   border: none;
-  padding: 1.2rem;
+  padding: 1rem;
 }
 
 .chat-bar-collapsible {
