@@ -2073,7 +2073,8 @@ body.dark-mode .lista2 li::before {
   margin-top: 1rem;
   outline: none;
   border: none;
-  padding: 0.8rem;
+  padding: 0.6rem;
+  border-radius: 0.3rem;
 }
 
 .enlaceReporte {
