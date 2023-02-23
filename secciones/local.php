@@ -308,7 +308,7 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                         </button>
                     </li>
                   </ol>
-                  <a href="../reporte/reporte.php">Reporte</a>
+                  <button><a href="../reporte/reporte.php">Reporte</a></button>
                 </div>
                 <!-- <div class="progress rounded" style="height: 5px;">
                   <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50"
