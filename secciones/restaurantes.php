@@ -175,14 +175,24 @@ if ($_POST['TL_Tipo'] || !empty($_SESSION["tiposLocal"])) {
                                                     <p class="ubiRestaurante"><?php echo $local['Local_Ubicacion']; ?></p>
                                                     <h6>Clasificación</h6>
                                                     <div>
-                                                        <?php $cont = 0; 
-                                                        $aux = 0;
-                                                        ?>
+                                                    <?php $cont = 0; 
+                                                    $aux = 0;
+                                                    ?>
                                                         <?php foreach($puntuaciones as $puntuacion){ ?>
-                                                            <?php $cont = $cont + $puntuacion['Pun_Puntuacion'] ;?>
+                                                            <?php if($puntuacion['Pun_LocalId'] == $local['Local_Id'] && $puntuacion['Pun_Status'] == 1){ ?>
+                                                                <?php $cont = $cont + $puntuacion['Pun_Puntuacion'];
+                                                                $aux++;
+                                                                ?>
                                                             <?php } ?>
-                                                            <?php $punt =($cont/Count($puntuaciones))*5; ?>
-                                                            <?php if($puntuacion['Pun_LocalId'] == $local['Local_Id']){ ?>
+                                                        <?php } ?>
+                                                            <?php
+                                                            if ($cont == 0 && $aux == 0) {
+                                                                # code...
+                                                            }else{
+                                                                $aux = $aux*5;
+                                                                $punt =($cont/$aux)*5; 
+                                                            }
+                                                             ?>
                                                                 <?php if ($punt == 5) { ?>
                                                                     <i class="fa-solid fa-star"></i>
                                                                     <i class="fa-solid fa-star"></i>
@@ -208,7 +218,7 @@ if ($_POST['TL_Tipo'] || !empty($_SESSION["tiposLocal"])) {
                                                                 <?php if ($punt == 1) { ?>
                                                                     <i class="fa-solid fa-star"></i>
                                                                 <?php }?>
-                                                        <?php } ?>
+                                                                <?php $punt = 0; ?>
                                                     </div>
                                                 </div>
                                             </button>
