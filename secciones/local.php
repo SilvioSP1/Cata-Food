@@ -339,9 +339,9 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                       <span>Producto: </span><?php echo $ventas['Prod_Nombre']; ?>
                       </button>
                     </li>
+                    <?php } ?>
                   </ol>
                 </div>
-                <?php } ?>
                 <!-- <div class="progress rounded" style="height: 5px;">
                   <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
                     aria-valuemin="0" aria-valuemax="100"></div>
