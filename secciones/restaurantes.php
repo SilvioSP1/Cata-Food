@@ -232,7 +232,7 @@ if ($_POST['TL_Tipo'] || !empty($_SESSION["tiposLocal"])) {
                                                     $aux = 0;
                                                     ?>
                                                         <?php foreach($puntuaciones as $puntuacion){ ?>
-                                                            <?php if($puntuacion['Pun_LocalId'] == $local['Local_Id']){ ?>
+                                                            <?php if($puntuacion['Pun_LocalId'] == $local['Local_Id'] && $puntuacion['Pun_Status'] == 1){ ?>
                                                                 <?php $cont = $cont + $puntuacion['Pun_Puntuacion'];
                                                                 $aux++;
                                                                 ?>
