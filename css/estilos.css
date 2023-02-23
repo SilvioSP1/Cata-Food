@@ -2081,10 +2081,10 @@ body.dark-mode .buttonReporte {
   padding: 0.6rem;
   width: 100%;
   border-radius: 0.3rem;
-  transition: border 3s;
+  transition: box-shadow 3s;
 }
 .buttonReporte:hover {
-  border: 1px solid black;
+  box-shadow: 5px 5px 5px 5px;
 }
 
 .enlaceReporte {
