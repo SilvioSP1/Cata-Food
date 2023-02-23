@@ -2070,9 +2070,10 @@ body.dark-mode .lista2 li::before {
 }
 
 .buttonReporte {
+  content: "🡻";
+  margin-top: 1rem;
   outline: none;
   border: none;
-  background-color: transparent;
 }
 
 .chat-bar-collapsible {
