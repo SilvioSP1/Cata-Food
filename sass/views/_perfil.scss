@@ -272,9 +272,8 @@ body.dark-mode {
     border-radius: .3rem;
     transition: box-shadow .3s;
     
-
     &:hover{
-        box-shadow: 2px 2px 2px 2px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     }
 
 }
