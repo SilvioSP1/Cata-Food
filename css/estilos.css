@@ -2002,6 +2002,10 @@ body.dark-mode .lista2 li::before {
   background-color: #27292b;
   color: white;
 }
+body.dark-mode .buttonReporte {
+  background-color: black;
+  color: white;
+}
 
 #lista {
   margin-left: 10px;
