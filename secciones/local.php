@@ -333,7 +333,11 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                   foreach ($listaVentas2 as $ventas) {
                 ?>
                 <p class="mb-1" style="font-size: .77rem;"><?php echo $ventas['Prod_Nombre']; ?></p>
-                <li><span>Producto: </span><?php echo $ventas['Prod_Nombre']; ?> </li> 
+                <li>
+                  <button class="listaHisto" type="">
+                  <span>Producto: </span><?php echo $ventas['Prod_Nombre']; ?>
+                  </button>
+                </li>
                 <?php } ?>
                 <!-- <div class="progress rounded" style="height: 5px;">
                   <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
