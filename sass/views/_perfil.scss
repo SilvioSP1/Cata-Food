@@ -273,7 +273,7 @@ body.dark-mode {
     transition: border .3s ease-out;
     
 
-    &:hover::before{
+    &:hover::after{
         border: 1px solid black;
     }
 
