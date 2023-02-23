@@ -394,6 +394,8 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
               <div class="card-body">
                 <p class="mb-4"><span class="font-italic me-1">Mejores clientes</span>
                 </p>
+                <div id="lista">
+                  <ol class="lista2 sinEspa">
                 <?php 
                   $sentenciaSQL = $conexion->prepare("SELECT Venta_Id,Usu_Nombre,COUNT(*) FROM venta 
                   JOIN venta_detalle ON Venta_Id = VD_VentaId 
@@ -407,7 +409,14 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                   foreach ($listaMejores as $mejores) {
                 ?>
                 <p class="mb-1" style="font-size: .77rem;"><?php echo $mejores['Usu_Nombre']; ?></p>
+                <li>
+                      <button class="listaHisto" type="">
+                      <?php echo $mejores['Usu_Nombre']; ?>
+                      </button>
+                    </li>
                 <?php } ?>
+                  </ol>
+                </div>
                 <!-- <div class="progress rounded" style="height: 5px;">
                   <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
                     aria-valuemin="0" aria-valuemax="100"></div>
