@@ -232,12 +232,13 @@ if ($_POST['TL_Tipo'] || !empty($_SESSION["tiposLocal"])) {
                                                     $aux = 0;
                                                     ?>
                                                         <?php foreach($puntuaciones as $puntuacion){ ?>
-                                                            <?php $cont = $cont + $puntuacion['Pun_Puntuacion'];
-                                                            $aux++;
-                                                            ?>
-                                                            <?php } ?>
-                                                            <?php $punt =($cont/$aux)*5; ?>
                                                             <?php if($puntuacion['Pun_LocalId'] == $local['Local_Id']){ ?>
+                                                                <?php $cont = $cont + $puntuacion['Pun_Puntuacion'];
+                                                                $aux++;
+                                                                ?>
+                                                            <?php } ?>
+                                                        <?php } ?>
+                                                            <?php $punt =($cont/$aux)*5; ?>
                                                                 <?php if ($punt == 5) { ?>
                                                                     <i class="fa-solid fa-star"></i>
                                                                     <i class="fa-solid fa-star"></i>
@@ -263,7 +264,6 @@ if ($_POST['TL_Tipo'] || !empty($_SESSION["tiposLocal"])) {
                                                                 <?php if ($punt == 1) { ?>
                                                                     <i class="fa-solid fa-star"></i>
                                                                 <?php }?>
-                                                        <?php } ?>
                                                     </div>
                                                 </div>
                                             </button>
