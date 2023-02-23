@@ -2017,6 +2017,10 @@ body.dark-mode .lista2 li::before {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
+.sinEspa {
+  margin-bottom: 0rem;
+}
+
 .lista2 ol {
   margin: 0 0 0 2em;
 }

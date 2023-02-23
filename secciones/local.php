@@ -258,7 +258,7 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                 <p class="mb-4"><span class="font-italic me-1">Ventas</span>
                 </p>
                 <div id="lista">
-                  <ol class="lista2" style="margin-botton: 0rem;">
+                  <ol class="lista2 sinEspa">
                 <?php 
                 $totalVentas = 0;
                 $cantidadVentas = 0;
@@ -343,7 +343,7 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                 <p class="mb-4"><span class="font-italic me-1">Productos más vendidos</span>
                 </p>
                 <div id="lista">
-                  <ol class="lista2" style="margin-botton: 0rem;">
+                  <ol class="lista2 sinEspa">
                 <?php 
                   $sentenciaSQL = $conexion->prepare("SELECT VD_ProdId,Prod_Nombre,COUNT(*) AS Total FROM venta_detalle 
                   JOIN producto ON Prod_Id = VD_ProdId
