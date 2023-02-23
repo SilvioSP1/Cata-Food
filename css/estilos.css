@@ -2005,6 +2005,7 @@ body.dark-mode .lista2 li::before {
 body.dark-mode .buttonReporte {
   background-color: black;
   color: white;
+  border: 1px solid white;
 }
 
 #lista {
