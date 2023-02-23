@@ -322,6 +322,8 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
               <div class="card-body">
                 <p class="mb-4"><span class="font-italic me-1">Productos más vendidos</span>
                 </p>
+                <div id="lista">
+                  <ol class="lista2">
                 <?php 
                   $sentenciaSQL = $conexion->prepare("SELECT VD_ProdId,Prod_Nombre,COUNT(*) AS Total FROM venta_detalle 
                   JOIN producto ON Prod_Id = VD_ProdId
@@ -332,8 +334,6 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                   $listaVentas2 = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                   foreach ($listaVentas2 as $ventas) {
                 ?>
-                <div id="lista">
-                  <ol class="lista2">
                     <li>
                       <button class="listaHisto" type="">
                       <span>Producto: </span><?php echo $ventas['Prod_Nombre']; ?>
