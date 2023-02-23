@@ -271,6 +271,7 @@ if ($_POST['TL_Tipo'] || !empty($_SESSION["tiposLocal"])) {
                                                                 <?php if ($punt == 1) { ?>
                                                                     <i class="fa-solid fa-star"></i>
                                                                 <?php }?>
+                                                                <?php $punt = 0; ?>
                                                     </div>
                                                 </div>
                                             </button>
