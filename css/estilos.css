@@ -2080,6 +2080,10 @@ body.dark-mode .buttonReporte {
   border: none;
   padding: 0.6rem;
   border-radius: 0.3rem;
+  transition: outline 0.3s;
+}
+.buttonReporte:focus {
+  outline: none;
 }
 
 .enlaceReporte {
