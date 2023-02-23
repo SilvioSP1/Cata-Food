@@ -269,11 +269,10 @@ body.dark-mode {
     border: none;
     padding: .6rem;
     border-radius: .3rem;
-    transition: outline .3s;
+    transition: border .3s;
 
     &:hover{
         border: 1px solid black;
-        content: '🡳';
     }
 
 }
