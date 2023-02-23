@@ -2019,6 +2019,7 @@ body.dark-mode .lista2 li::before {
 
 .sinEspa {
   margin-bottom: 0rem;
+  counter-reset: unset;
 }
 
 .lista2 ol {
