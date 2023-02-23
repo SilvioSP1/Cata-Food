@@ -242,7 +242,7 @@ if ($_POST['TL_Tipo'] || !empty($_SESSION["tiposLocal"])) {
                                                             if ($cont == 0 && $aux == 0) {
                                                                 # code...
                                                             }else{
-
+                                                                $aux = $aux*5;
                                                                 $punt =($cont/$aux)*5; 
                                                             }
                                                              ?>
