@@ -2075,7 +2075,8 @@ body.dark-mode .lista2 li::before {
   border: none;
   padding: 1rem;
 }
-.buttonReporte a {
+
+.enlaceReporte {
   text-decoration: none;
 }
 
