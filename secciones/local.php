@@ -408,7 +408,6 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                   $listaMejores = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
                   foreach ($listaMejores as $mejores) {
                 ?>
-                <p class="mb-1" style="font-size: .77rem;"><?php echo $mejores['Usu_Nombre']; ?></p>
                 <li>
                       <button class="listaHisto" type="">
                       <?php echo $mejores['Usu_Nombre']; ?>
