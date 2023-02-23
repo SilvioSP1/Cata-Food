@@ -271,8 +271,9 @@ body.dark-mode {
     border-radius: .3rem;
     transition: outline .3s;
 
-    &:focus{
-        outline: none;
+    &:hover{
+        border: 1px solid black;
+        content: '🡳';
     }
 
 }
