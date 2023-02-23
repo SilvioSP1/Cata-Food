@@ -2079,8 +2079,9 @@ body.dark-mode .buttonReporte {
   outline: none;
   border: none;
   padding: 0.6rem;
+  width: 1rem;
   border-radius: 0.3rem;
-  transition: border 0.3s;
+  transition: border 3s;
 }
 .buttonReporte:hover {
   border: 1px solid black;
