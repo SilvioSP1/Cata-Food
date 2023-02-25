@@ -19,7 +19,7 @@ function getBotResponse(input) {
     
     }else if(input == "El sitio no carga correctamente" || input == "el sitio no carga correctamente" || input == "5"){
 
-        return "En ese caso te recomendamos que actualices la pagina <br>, que cambies de navegador o que elimines las cookies del sitio.";
+        return "En ese caso te recomendamos que actualices la pagina , que cambies de navegador o que elimines las cookies del sitio.";
     
     }
     else {
