@@ -902,6 +902,10 @@
     .screen-body-item {
         padding: 0;
     }
+
+    .screen{
+        width: 25rem;
+    }
 }
 
 //media formulario contacto index 
@@ -910,14 +914,6 @@
 
     .screen{
         width: 19rem;
-    }
-
-}
-
-@media(max-width: 700px){
-
-    .screen{
-        width: 35rem;
     }
 
 }
