@@ -278,8 +278,8 @@
                             </div>
                             <div class="app-contact">CATA FOOD - CATAMARCA</div>
                         </div>
-                        <div class="screen-body-item">
-                            <form class="app-form" id="form">
+
+                        <form class="app-form" id="form">
 
                                 <div class="field">
 
@@ -302,7 +302,7 @@
                                 </div>
 
                             </form>
-                        </div>
+
                     </div>
                 </div>
             </div>
