@@ -1378,6 +1378,10 @@ body.dark-mode .containerIR2 .containerForm2 .mover .formulario .contraseniaMatc
   justify-content: center;
 }
 
+.colorPage {
+  background-color: #fb8819;
+}
+
 body.dark-mode .conteiner_restaurantes .containerColum .contenedorResTipo .tiposRes .tipo .buttonTipo {
   background-color: #27292b;
 }

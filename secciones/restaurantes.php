@@ -304,7 +304,7 @@ if ($_POST['TL_Tipo'] || !empty($_SESSION["tiposLocal"])) {
                                                 <?php for($i=0;$i<$paginas;$i++): ?>
 
                                                 <li class="page-item <?php echo $_GET['pagina']==$i+1 ? 'active' : '' ?>">
-                                                    <a class="page-link" href="../../Cata-Food/secciones/restaurantes.php?pagina=<?php echo $i+1 ?>"><?php echo $i+1 ?></a>
+                                                    <a class="page-link colorPage" href="../../Cata-Food/secciones/restaurantes.php?pagina=<?php echo $i+1 ?>"><?php echo $i+1 ?></a>
                                                 </li>
 
                                                 <?php endfor ?>
