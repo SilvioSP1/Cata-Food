@@ -3454,5 +3454,10 @@ span.posted-at {
     padding: 0;
   }
 }
+@media (min-width: 320px) and (max-width: 700px) {
+  .screen {
+    width: 35rem;
+  }
+}
 
 /*# sourceMappingURL=estilos.css.map */
