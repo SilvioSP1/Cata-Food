@@ -15,7 +15,7 @@ function getBotResponse(input) {
     
     }else if(input == "¿Que hago si tengo una duda?" || input == "que hago si tengo una duda" || input == "4"){
 
-        return "Dirigite al formulario de contacto introduciendo tu email y la duda que tengas al respecto, te responderemos al instante!";
+        return "Dirigite al formulario de <br> contacto introduciendo tu email y la duda que tengas al respecto, te responderemos al instante!";
     
     }else {
         return "Intenta preguntando otra cosa!";
