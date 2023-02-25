@@ -17,7 +17,12 @@ function getBotResponse(input) {
 
         return "Dirigite al formulario de <br> contacto introduciendo tu email y la duda que tengas al respecto, te responderemos al instante!";
     
-    }else {
+    }else if(input == "El sitio no carga correctamente" || input == "el sitio no carga correctamente" || input == "5"){
+
+        return "En ese caso te recomendamos que <br> actualices la pagina, que <br> cambies de navegador o que elimines las cookies del sitio.";
+    
+    }
+    else {
         return "Intenta preguntando otra cosa!";
     }
 }
