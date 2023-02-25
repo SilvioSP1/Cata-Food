@@ -910,7 +910,7 @@
 
 //media formulario contacto index 
 
-@media(max-width: 320px){
+@media(min-width: 320px) and (max-width:480px){
 
     .screen{
         width: 19rem;
