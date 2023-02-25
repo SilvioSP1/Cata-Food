@@ -1311,9 +1311,8 @@ body.dark-mode .containerIR2 .containerForm2 .mover .formulario .contraseniaMatc
   margin: 0px 0px 0px 5px;
 }
 .conteiner_restaurantes .containerColum .conteinerCardResta .contenedorTexto {
-  /* text-align: center; */
   padding: 12px;
-  font-weight: 400;
+  font-weight: bold;
   line-height: 1;
   text-align: initial;
 }
