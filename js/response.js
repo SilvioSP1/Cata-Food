@@ -13,12 +13,11 @@ function getBotResponse(input) {
 
         return "Necesitas 📄: <br> Nombre del local <br> El tipo de local <br> Email <br> Nombre <br> Apellido <br> Telefono <br> Contraseña <br> Cantidad de locales <br> Ubicación del local o <br> locales <br> Referencia de la ubicación";
     
-    }else if(input == "¿Que hago si tengo una duda?" || input == "que necesito para registrar un local" || input == "3"){
+    }else if(input == "¿Que hago si tengo una duda?" || input == "que hago si tengo una duda" || input == "4"){
 
         return "Dirigite al formulario de contacto introduciendo tu email y la duda que tengas al respecto, te responderemos al instante!";
     
-    }
-    else {
+    }else {
         return "Intenta preguntando otra cosa!";
     }
 }
