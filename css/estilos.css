@@ -2261,6 +2261,21 @@ body.dark-mode .buttonReporte {
     border-radius: 0px;
   }
 }
+#chatbox::-webkit-scrollbar {
+  width: 5px;
+}
+#chatbox::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+#chatbox::-webkit-scrollbar-thumb {
+  visibility: hidden;
+  border-radius: 10px;
+  background-color: #ebebeb;
+}
+#chatbox:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+
 body.dark-mode .full-chat-block {
   background-color: #212121;
   color: white;
