@@ -52,11 +52,7 @@
             margin-bottom: 20px;
             display: flex;
             align-items: center;
-            /* justify-content: center; */
-            /* background-color: #fff; */
-            box-shadow: 0 3px 13px 1px
-                /* rgb(0 0 0 / 9%) */
-                #00000085;
+            box-shadow: 0 3px 13px 1px #00000085;
             flex-wrap: nowrap;
             background-color: #1a1e21;
             color: whitesmoke;
@@ -75,7 +71,6 @@
             .contenedorTexto {
                 /* text-align: center; */
                 padding: 12px;
-                font-family: Lato, sans-serif;
                 font-weight: 400;
                 line-height: 1;
                 text-align: initial;

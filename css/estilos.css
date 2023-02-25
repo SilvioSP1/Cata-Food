@@ -1296,8 +1296,6 @@ body.dark-mode .containerIR2 .containerForm2 .mover .formulario .contraseniaMatc
   margin-bottom: 20px;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
-  /* background-color: #fff; */
   box-shadow: 0 3px 13px 1px rgba(0, 0, 0, 0.5215686275);
   flex-wrap: nowrap;
   background-color: #1a1e21;
@@ -1315,7 +1313,6 @@ body.dark-mode .containerIR2 .containerForm2 .mover .formulario .contraseniaMatc
 .conteiner_restaurantes .containerColum .conteinerCardResta .contenedorTexto {
   /* text-align: center; */
   padding: 12px;
-  font-family: Lato, sans-serif;
   font-weight: 400;
   line-height: 1;
   text-align: initial;
