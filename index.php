@@ -277,9 +277,8 @@
                                 <span>CONTACTÉNOS</span>
                             </div>
                             <div class="app-contact">CATA FOOD - CATAMARCA</div>
-                        </div>
 
-                        <form class="app-form" id="form">
+                            <form class="app-form" id="form">
 
                                 <div class="field">
 
@@ -303,6 +302,7 @@
 
                             </form>
 
+                        </div>
                     </div>
                 </div>
             </div>
