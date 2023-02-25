@@ -1326,6 +1326,7 @@ body.dark-mode .containerIR2 .containerForm2 .mover .formulario .contraseniaMatc
   margin-top: 15px;
   padding-bottom: 5px;
   text-align: inherit;
+  font-weight: 300;
 }
 .conteiner_restaurantes .containerColum .conteinerCardResta .contenedorTexto .puntuacionRestaurante {
   font-size: 0.99rem;
