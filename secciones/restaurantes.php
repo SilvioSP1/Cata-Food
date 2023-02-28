@@ -83,7 +83,7 @@ if ($_POST['TL_Tipo'] || !empty($_SESSION["tiposLocal"])) {
                                         <input type="hidden" name="TL_Tipo" id="TL_Tipo" value="">
                                             <button name="btnAccion" type="submit" class="buttonTipo">
                                                 <div class="circulo">
-                                                    <img src="../img/restaurantes/categorias/"
+                                                    <img src="../img/restaurantes/categorias/todos.webp"
                                                         aria-hidden="true" class="">
                                                 </div>
                                                 <div aria-hidden="true" class="sc-tl2hnw-0 hNbawF darkCirculo">Todos</div>
