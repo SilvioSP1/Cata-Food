@@ -1,5 +1,5 @@
 </section>
-<?php session_start(); ?>
+
 <!-- CONTEINER -->
 
 <!-- FOOTER -->
@@ -10,13 +10,13 @@
       <!-- Section: Social media -->
       <section class="mb-4 logoFooter">
       
-      <?php if(isset($_SESSION['proba'])){?>
+      <?php if($_SESSION['proba'] == null){?>
       <div class="divFooter">
-          <img src="img/index/logo_small.png" alt="logo cata food" class="logoFooter">
+          <img src="../img/index/logo_small.png" alt="logo cata food" class="logoFooter">
       </div>
       <?php }else{?>
         <div class="divFooter">
-          <img src="../img/index/logo_small.png" alt="logo cata food" class="logoFooter">
+          <img src="img/index/logo_small.png" alt="logo cata food" class="logoFooter">
       </div>
       <?php } ?>
 
