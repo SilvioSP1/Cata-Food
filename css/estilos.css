@@ -1751,6 +1751,10 @@ body.dark-mode .darkCirculo {
   display: none;
 }
 
+.img-thumbnail {
+  margin-bottom: 1rem;
+}
+
 body.dark-mode .rating-box {
   background-color: #1a1e21;
 }
@@ -1819,9 +1823,6 @@ body.dark-mode .wrapperRate .rating-bar .star {
 body.dark-mode .modalProducto__agregar {
   background-color: black;
   color: white;
-}
-body.dark-mode .img-thumbnail {
-  margin-bottom: 1rem;
 }
 
 .sectionCarrito {
