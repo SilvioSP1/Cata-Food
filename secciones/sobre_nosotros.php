@@ -6,7 +6,7 @@
     <div class="containerTP">
 
         <h1 class="tituloNosotros">¿Quienes somos nosotros?</h1>
-        <p style="text-align: justify">
+        <p>
             Somos Cata Food, un sitio web exlucisivamente dedicado a la gastronomia de la ciudad de San Fernando del Valle de Catamarca y
             sus alrededores, formado por dos amantes de la informatica que buscan expandir sus conocimientos y ser reconocidos por toda 
             la provincia.
