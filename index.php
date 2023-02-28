@@ -323,7 +323,7 @@
       <section class="mb-4 logoFooter">
         
       <div class="divFooter">
-          <img src="../img/index/logo_small.png" alt="logo cata food" class="logoFooter">
+          <img src="img/index/logo_small.png" alt="logo cata food" class="logoFooter">
         </div>
 
       </section>
