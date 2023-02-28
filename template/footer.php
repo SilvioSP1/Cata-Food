@@ -8,7 +8,7 @@
     <!-- Grid container -->
     <div class="container p-4">
       <!-- Section: Social media -->
-      <section class="logoFooter">
+      <section class="mb-4 logoFooter">
         
       <div class="divFooter">
           <img src="../img/index/logo_small.png" alt="logo cata food" class="logoFooter">
