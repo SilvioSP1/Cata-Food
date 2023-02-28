@@ -6,15 +6,10 @@
     <div class="containerTP">
 
         <h1 class="tituloNosotros">¿Quienes somos nosotros?</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus amet expedita itaque
-            facere quae non, rerum hic incidunt fuga! At consequuntur consequatur aperiam harum suscipit
-            exercitationem eum ducimus quo corrupti?
-            Nam praesentium consectetur, delectus libero, unde nobis, dolorem accusamus illum
-            voluptatibus suscipit ipsum. Et delectus dolorem quibusdam, magnam voluptatum quas libero
-            perferendis excepturi dignissimos harum sequi odit, consectetur est quo!
-            Ratione sunt mollitia fugiat dicta accusamus delectus sapiente, nihil distinctio facilis
-            voluptas eum fuga illum at perferendis suscipit quibusdam libero corporis dolor nemo. Quis
-            ipsum magni nisi? Maiores, error ab!</p>
+        <p>Somos dos personas de la ciudad de San Fernando del Valle de Catamarca amantes de la informatica que juntos formamos
+            Cata Food, un sitio web exlucisivamente dedicado a la gastronomia de la ciudad de San Fernando del Valle de Catamarca y
+            sus alrededores.
+        </p>
 
     </div>
 
