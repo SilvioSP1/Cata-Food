@@ -112,7 +112,9 @@
                <p>Tu código de referencia es: <?php echo $order_id;?></p>
                <p>Este código te servira para presentarlo en el local o al delivery para poder verificar la compra.</p>
                <p>Tu total es: <?php echo $_SESSION["total"]; ?></p>
-               <a href="../../index.php"><button class="botonInicio">Volver al inicio</button></a>
+               <form action="https://formsubmit.co/porteroexequiel@gmail.com" method="POST">
+                    <a href="../../index.php"><button class="botonInicio">Volver al inicio</button></a>
+               </form>
            </div>
        </div>
    </div>
