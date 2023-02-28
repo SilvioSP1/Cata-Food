@@ -1816,6 +1816,10 @@ body.dark-mode .wrapperRate .rating-bar .percent {
 body.dark-mode .wrapperRate .rating-bar .star {
   color: white;
 }
+body.dark-mode .modalProducto__agregar {
+  background-color: black;
+  color: white;
+}
 
 .sectionCarrito {
   margin-bottom: 15rem;
