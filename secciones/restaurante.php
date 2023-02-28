@@ -486,85 +486,86 @@ switch ($accion) {
 </div>
 
 <?php if ($_SESSION['idRol'] == 2 || $_SESSION['idRol'] == 3) { ?>
-<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Producto</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form method="POST" enctype="multipart/form-data" action="">
+<div class="backgroundModal">
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Producto</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form method="POST" enctype="multipart/form-data" action="">
 
-                    <div class="form-group">
-                        <label for="txtNombre" class="form-label">Imagen:</label>
-                        <?php echo $txtImagen; ?>
-                        <br>
-                        <!-- <?php
-                                        if ($txtImagen !="") {?>
-                                        
-                                        <img class="img-thumbnail rounded" src="../img/restaurantes/productos/<?php echo $txtImagen;?>"width="100" alt="">
+                        <div class="form-group">
+                            <label for="txtNombre" class="form-label">Imagen:</label>
+                            <?php echo $txtImagen; ?>
+                            <br>
+                            <!-- <?php
+                                            if ($txtImagen !="") {?>
+                                            
+                                            <img class="img-thumbnail rounded" src="../img/restaurantes/productos/<?php echo $txtImagen;?>"width="100" alt="">
 
-                                    <?php }?> -->
-                        <input type="file" class="form-control" name="txtImagen" id="txtImagen" placeholder="Imagen">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="txtNombre" class="form-label">Nombre:</label>
-                        <input type="text" required class="form-control" value="<?php echo $txtNombre; ?>"
-                            name="txtNombre" id="txtNombre" placeholder="Nombre">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="txtNombre" class="form-label">Descripciom:</label>
-                        <input type="text" required class="form-control" value="<?php echo $txtDescripcion; ?>"
-                            name="txtDescripcion" id="txtDescripcion" placeholder="Descripcion">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="txtNombre" class="form-label">Precio:</label>
-                        <input type="number" step="any" required class="form-control" value="<?php echo $txtPrecio; ?>"
-                            name="txtPrecio" id="txtPrecio" placeholder="Precio">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="txtNombre" class="form-label">Tipo:</label>
-                        <div>
-                            <select name="txtTipo" class="txtTipo" id="txtTipo">
-
-                                <?php if(empty($txtTip)) {?>
-                                <option selected disabled>Seleccione uno</option>
-                                <?php }else { ?>
-                                <option selected><?php echo $txtTipo; ?></option>
-                                <?php } ?>
-
-                                <?php foreach($tipoProducto as $tipo){ ?>
-                                <option><?php echo $tipo["TP_Tipo"] ?></option>
-
-                                <?php } ?>
-
-                            </select>
+                                        <?php }?> -->
+                            <input type="file" class="form-control" name="txtImagen" id="txtImagen" placeholder="Imagen">
                         </div>
-                        <!-- <input type="text"  required class="form-control" value="<?php echo $txtTipo; ?>" name="txtTipo" id="txtTipo" placeholder="Tipo Local"> -->
-                    </div>
 
-                    <br>
-                    <div class="btn-group" role="group" aria-label="">
-                        <button type="submit" name="accion2" value="Agregar" class="btn btn-success">Agregar</button>
-                        <!-- <button type="submit" name="accion" <?php echo ($accion!="Seleccionar")?"disabled":""; ?> value="Modificar" class="btn btn-warning">Modificar</button> -->
-                        <button type="submit" name="accion2" value="Cancelar" class="btn btn-danger">Cancelar</button>
-                    </div>
+                        <div class="form-group">
+                            <label for="txtNombre" class="form-label">Nombre:</label>
+                            <input type="text" required class="form-control" value="<?php echo $txtNombre; ?>"
+                                name="txtNombre" id="txtNombre" placeholder="Nombre">
+                        </div>
 
-                </form>
+                        <div class="form-group">
+                            <label for="txtNombre" class="form-label">Descripciom:</label>
+                            <input type="text" required class="form-control" value="<?php echo $txtDescripcion; ?>"
+                                name="txtDescripcion" id="txtDescripcion" placeholder="Descripcion">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="txtNombre" class="form-label">Precio:</label>
+                            <input type="number" step="any" required class="form-control" value="<?php echo $txtPrecio; ?>"
+                                name="txtPrecio" id="txtPrecio" placeholder="Precio">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="txtNombre" class="form-label">Tipo:</label>
+                            <div>
+                                <select name="txtTipo" class="txtTipo" id="txtTipo">
+
+                                    <?php if(empty($txtTip)) {?>
+                                    <option selected disabled>Seleccione uno</option>
+                                    <?php }else { ?>
+                                    <option selected><?php echo $txtTipo; ?></option>
+                                    <?php } ?>
+
+                                    <?php foreach($tipoProducto as $tipo){ ?>
+                                    <option><?php echo $tipo["TP_Tipo"] ?></option>
+
+                                    <?php } ?>
+
+                                </select>
+                            </div>
+                            <!-- <input type="text"  required class="form-control" value="<?php echo $txtTipo; ?>" name="txtTipo" id="txtTipo" placeholder="Tipo Local"> -->
+                        </div>
+
+                        <br>
+                        <div class="btn-group" role="group" aria-label="">
+                            <button type="submit" name="accion2" value="Agregar" class="btn btn-success">Agregar</button>
+                            <!-- <button type="submit" name="accion" <?php echo ($accion!="Seleccionar")?"disabled":""; ?> value="Modificar" class="btn btn-warning">Modificar</button> -->
+                            <button type="submit" name="accion2" value="Cancelar" class="btn btn-danger">Cancelar</button>
+                        </div>
+
+                    </form>
+                </div>
+                <!-- <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div> -->
             </div>
-            <!-- <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div> -->
         </div>
     </div>
 </div>
-
 
     <?php } ?>
     
