@@ -26,7 +26,7 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
               </div>
               <div class="col-md-3 col-lg-3 col-xl-3">
                 <p class="lead fw-normal mb-2"><?php echo $producto['nombre']?></p>
-                <p><span class="text-muted">Lugar: </span><?php echo $producto['local']?></p>
+                <p><span>Lugar: </span><?php echo $producto['local']?></p>
               </div>
               <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
                 <!-- <button class="btn btn-link px-2"
