@@ -308,7 +308,7 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
                         </button>
                     </li>
                   </ol>
-                  <a href="../reporte/reporte.php">Reporte</a>
+                  <a href="../reporte/reporte.php" class="enlaceReporte"><button class="buttonReporte">Reporte</button></a>
                 </div>
                 <!-- <div class="progress rounded" style="height: 5px;">
                   <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50"
@@ -531,7 +531,7 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
 <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header modalLocal">
         <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Local</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>

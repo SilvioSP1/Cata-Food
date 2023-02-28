@@ -8,26 +8,11 @@
     <!-- Grid container -->
     <div class="container p-4">
       <!-- Section: Social media -->
-      <section class="mb-4">
-        <!-- Facebook -->
-        <a class="btn btn-outline-light btn-circle btn-floating m-1" href="#!" role="button"><i
-            class="fa-brands fa-facebook"></i>
-        </a>
-
-        <!-- Twitter -->
-        <a class="btn btn-outline-light btn-circle btn-floating m-1" href="#!" role="button"><i
-            class="fa-brands fa-twitter"></i>
-        </a>
-
-        <!-- Google -->
-        <a class="btn btn-outline-light btn-circle btn-floating m-1" href="#!" role="button"><i
-            class="fa-brands fa-google"></i>
-        </a>
-
-        <!-- Instagram -->
-        <a class="btn btn-outline-light btn-circle btn-floating m-1" href="#!" role="button"><i
-            class="fa-brands fa-instagram"></i>
-        </a>
+      <section class="mb-4 logoFooter">
+        
+        <div class="divFooter">
+          <img src="../img/index/logo_small.png" alt="" class="logoFooter">
+        </div>
 
       </section>
       <!-- Section: Social media -->
@@ -72,7 +57,7 @@
 <script src="../../Cata-Food/js/boiler.js"></script>
 <script src="../../Cata-Food/js/loader.js?v=<?php echo time(); ?>"></script>
 <script src="../../Cata-Food/js/toast.js"></script>
-<!-- <script src="../../Cata-Food/js/mouse.js"></script> -->
+<script src="../../Cata-Food/js/mouse.js"></script>
 <script src="../../Cata-Food/js/cookies.js"></script>
 <script src="../../Cata-Food/js/filtrado.js?v=<?php echo time(); ?>"></script>
 <script src="../../Cata-Food/js/suggestions.js?v=<?php echo time(); ?>"></script>

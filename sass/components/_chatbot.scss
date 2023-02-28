@@ -175,6 +175,40 @@
     }
 }
 
+#chatbox{
+
+    &::-webkit-scrollbar{
+
+        width: 5px;
+
+    }
+
+    &::-webkit-scrollbar-track{
+
+        border-radius: 10px;
+
+    }
+
+    &::-webkit-scrollbar-thumb{
+
+        visibility: hidden;
+        border-radius: 10px;
+        background-color: #ebebeb;
+
+    }
+
+    &:hover{
+
+        &::-webkit-scrollbar-thumb{
+
+            visibility: visible;
+
+        }
+
+    }
+
+}
+
 //darkMode chatbot
 
 body.dark-mode{

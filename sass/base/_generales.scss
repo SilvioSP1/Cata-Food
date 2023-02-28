@@ -26,6 +26,19 @@ body {
 
 }
 
+.divFooter{
+
+    display: flex;
+    justify-content: center;
+
+    .logoFooter{
+
+        width: 10rem;
+    
+    }
+
+}
+
 .carritoCompras {
 
     span {

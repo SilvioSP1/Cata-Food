@@ -21,6 +21,14 @@ body {
   transform: scale(1.04);
 }
 
+.divFooter {
+  display: flex;
+  justify-content: center;
+}
+.divFooter .logoFooter {
+  width: 10rem;
+}
+
 .carritoCompras span {
   margin: 0 5px;
   font-size: 12px;
@@ -1296,15 +1304,13 @@ body.dark-mode .containerIR2 .containerForm2 .mover .formulario .contraseniaMatc
   margin-bottom: 20px;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
-  /* background-color: #fff; */
   box-shadow: 0 3px 13px 1px rgba(0, 0, 0, 0.5215686275);
   flex-wrap: nowrap;
   background-color: #1a1e21;
   color: whitesmoke;
   text-decoration: none;
-  border-radius: 20px;
-  border: #fff solid 1px;
+  border-radius: 8px;
+  border: 1px solid #1E1E24;
 }
 .conteiner_restaurantes .containerColum .conteinerCardResta .imagenRestaurante {
   height: 85%;
@@ -1314,15 +1320,13 @@ body.dark-mode .containerIR2 .containerForm2 .mover .formulario .contraseniaMatc
   margin: 0px 0px 0px 5px;
 }
 .conteiner_restaurantes .containerColum .conteinerCardResta .contenedorTexto {
-  /* text-align: center; */
   padding: 12px;
-  font-family: Lato, sans-serif;
-  font-weight: 400;
+  font-weight: bold;
   line-height: 1;
   text-align: initial;
 }
 .conteiner_restaurantes .containerColum .conteinerCardResta .contenedorTexto .nombreRestaurante {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   text-align: initial;
 }
 .conteiner_restaurantes .containerColum .conteinerCardResta .contenedorTexto .ubiRestaurante {
@@ -1330,6 +1334,7 @@ body.dark-mode .containerIR2 .containerForm2 .mover .formulario .contraseniaMatc
   margin-top: 15px;
   padding-bottom: 5px;
   text-align: inherit;
+  font-weight: 300;
 }
 .conteiner_restaurantes .containerColum .conteinerCardResta .contenedorTexto .puntuacionRestaurante {
   font-size: 0.99rem;
@@ -2002,6 +2007,15 @@ body.dark-mode .lista2 li::before {
   background-color: #27292b;
   color: white;
 }
+body.dark-mode .buttonReporte {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+}
+body.dark-mode .modalLocal {
+  background-color: black;
+  color: white;
+}
 
 #lista {
   margin-left: 10px;
@@ -2067,6 +2081,25 @@ body.dark-mode .lista2 li::before {
 .listaHisto {
   border: none;
   height: 0px;
+}
+
+.buttonReporte {
+  margin-top: 1rem;
+  outline: none;
+  border: none;
+  padding: 0.6rem;
+  width: 100%;
+  border-radius: 0.3rem;
+  transition: box-shadow 0.3s;
+}
+.buttonReporte:hover {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.enlaceReporte {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .chat-bar-collapsible {
@@ -2240,6 +2273,21 @@ body.dark-mode .lista2 li::before {
     border-radius: 0px;
   }
 }
+#chatbox::-webkit-scrollbar {
+  width: 5px;
+}
+#chatbox::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+#chatbox::-webkit-scrollbar-thumb {
+  visibility: hidden;
+  border-radius: 10px;
+  background-color: #ebebeb;
+}
+#chatbox:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+
 body.dark-mode .full-chat-block {
   background-color: #212121;
   color: white;
@@ -2918,7 +2966,7 @@ span.posted-at {
   display: block;
   position: absolute;
   left: 0;
-  bottom: -10px;
+  bottom: -19px;
   width: 65px;
   height: 4px;
   background: #fff;
@@ -2928,6 +2976,7 @@ span.posted-at {
   margin-top: auto;
   font-size: 8px;
   color: #fff;
+  margin-bottom: 2rem;
 }
 
 .app-form-group {
@@ -3430,6 +3479,14 @@ span.posted-at {
   }
   .screen-body-item {
     padding: 0;
+  }
+  .screen {
+    width: 25rem;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .screen {
+    width: 19rem;
   }
 }
 
