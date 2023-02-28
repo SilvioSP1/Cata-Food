@@ -1820,8 +1820,8 @@ body.dark-mode .modalProducto__agregar {
   background-color: black;
   color: white;
 }
-body.dark-mode #txtImagen {
-  margin-top: 1rem;
+body.dark-mode .img-thumbnail {
+  margin-bottom: 1rem;
 }
 
 .sectionCarrito {
