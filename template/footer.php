@@ -10,11 +10,13 @@
       <!-- Section: Social media -->
       <section class="logoFooter">
         
-        <div class="divFooter">
-          <img src="../img/index/logo_small.png" alt="logo cata food" class="logoFooter">
-        </div>
+        
 
       </section>
+
+      <div class="divFooter">
+          <img src="../img/index/logo_small.png" alt="logo cata food" class="logoFooter">
+        </div>
       <!-- Section: Social media -->
 
       <!-- Section: Form -->
