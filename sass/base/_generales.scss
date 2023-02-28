@@ -26,9 +26,16 @@ body {
 
 }
 
-.logoFooter{
+.divFooter{
 
-    width: 10rem;
+    display: flex;
+    justify-content: center;
+
+    .logoFooter{
+
+        width: 10rem;
+    
+    }
 
 }
 

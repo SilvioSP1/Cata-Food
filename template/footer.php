@@ -10,7 +10,9 @@
       <!-- Section: Social media -->
       <section class="mb-4 logoFooter">
         
-        <img src="../img/index/logo_small.png" alt="" class="logoFooter">
+        <div class="divFooter">
+          <img src="../img/index/logo_small.png" alt="" class="logoFooter">
+        </div>
 
       </section>
       <!-- Section: Social media -->

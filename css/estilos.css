@@ -21,7 +21,11 @@ body {
   transform: scale(1.04);
 }
 
-.logoFooter {
+.divFooter {
+  display: flex;
+  justify-content: center;
+}
+.divFooter .logoFooter {
   width: 10rem;
 }
 
