@@ -9,25 +9,8 @@
     <div class="container p-4">
       <!-- Section: Social media -->
       <section class="mb-4">
-        <!-- Facebook -->
-        <a class="btn btn-outline-light btn-circle btn-floating m-1" href="#!" role="button"><i
-            class="fa-brands fa-facebook"></i>
-        </a>
-
-        <!-- Twitter -->
-        <a class="btn btn-outline-light btn-circle btn-floating m-1" href="#!" role="button"><i
-            class="fa-brands fa-twitter"></i>
-        </a>
-
-        <!-- Google -->
-        <a class="btn btn-outline-light btn-circle btn-floating m-1" href="#!" role="button"><i
-            class="fa-brands fa-google"></i>
-        </a>
-
-        <!-- Instagram -->
-        <a class="btn btn-outline-light btn-circle btn-floating m-1" href="#!" role="button"><i
-            class="fa-brands fa-instagram"></i>
-        </a>
+        
+        <img src="../img/index/logo_small.png" alt="">
 
       </section>
       <!-- Section: Social media -->
