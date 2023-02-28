@@ -1,5 +1,5 @@
 <?php include("template/header.php"); ?>
-
+<?php $_SESSION['proba'] = 1; ?>
 
 <div class="cookie-consent-modal">
 
