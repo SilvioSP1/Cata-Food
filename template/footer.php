@@ -8,7 +8,7 @@
     <!-- Grid container -->
     <div class="container p-4">
       <!-- Section: Social media -->
-      <section class="mb-4">
+      <section class="mb-4 logoFooter">
         
         <img src="../img/index/logo_small.png" alt="" class="logoFooter">
 
