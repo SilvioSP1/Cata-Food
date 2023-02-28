@@ -10,7 +10,7 @@
       <!-- Section: Social media -->
       <section class="mb-4 logoFooter">
       
-      <?php if($_SESSION['proba'] == null){?>
+      <?php if(isset($_SESSION['proba'])){?>
       <div class="divFooter">
           <img src="../img/index/logo_small.png" alt="logo cata food" class="logoFooter">
       </div>
