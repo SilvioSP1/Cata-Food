@@ -66,7 +66,7 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
 
             <div class="contenedorCarrito">
 
-                <a href="./restaurantes.php" class="btn botonCarrito1">Seguir comprando</a>
+                <a href="../Cata-Food/secciones/restaurante.php" class="btn botonCarrito1">Seguir comprando</a>
                 <?php if($_SESSION['carritoCompra'] != null){ ?>
                   <a href="../../Cata-Food/secciones/formulario_pago.php"><button class="btn text-bold botonCarrito3">Checkout</button></a>
                   <button class="btn botonCarrito3">Total: $<?php echo $_SESSION["total"]; ?></button>
