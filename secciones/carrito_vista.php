@@ -34,7 +34,7 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
                   <i class="fas fa-minus iconoMenos"></i>
                 </button> -->
 
-                <input id="form1" min="0" name="quantity" value="<?php echo $producto['cantidad'] ?>" type="number"
+                <input disabled id="form1" min="0" name="quantity" value="<?php echo $producto['cantidad'] ?>" type="number"
                   class="form-control form-control-sm" />
 
                 <!-- <button class="btn btn-link px-2"
