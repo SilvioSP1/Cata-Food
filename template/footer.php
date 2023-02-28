@@ -1,5 +1,5 @@
 </section>
-
+<?php session_start(); ?>
 <!-- CONTEINER -->
 
 <!-- FOOTER -->
