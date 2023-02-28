@@ -2388,6 +2388,10 @@ body.dark-mode .loader-container {
   background-color: rgb(253, 245, 245);
 }
 
+body.dark-mode .flexGracias {
+  background-color: #27292b;
+}
+
 .card {
   border: none;
 }
