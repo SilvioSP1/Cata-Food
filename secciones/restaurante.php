@@ -517,7 +517,7 @@ switch ($accion) {
                         </div>
 
                         <div class="form-group">
-                            <label for="txtNombre" class="form-label">Descripciom:</label>
+                            <label for="txtNombre" class="form-label">Descripcion:</label>
                             <input type="text" required class="form-control" value="<?php echo $txtDescripcion; ?>"
                                 name="txtDescripcion" id="txtDescripcion" placeholder="Descripcion">
                         </div>
