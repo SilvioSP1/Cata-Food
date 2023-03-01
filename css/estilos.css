@@ -1827,6 +1827,9 @@ body.dark-mode .modalProducto__agregar {
 body.dark-mode .colorInput {
   background-color: #1a1e21;
 }
+body.dark-mode .conta {
+  background-color: #27292b;
+}
 
 .sectionCarrito {
   margin-bottom: 15rem;
