@@ -1747,10 +1747,6 @@ body.dark-mode .darkCirculo {
   cursor: pointer;
 }
 
-.colorInput {
-  accent-color: black;
-}
-
 .filtroComida {
   display: none;
 }
@@ -1827,6 +1823,9 @@ body.dark-mode .wrapperRate .rating-bar .star {
 body.dark-mode .modalProducto__agregar {
   background-color: black;
   color: white;
+}
+body.dark-mode .colorInput {
+  background-color: #1a1e21;
 }
 
 .sectionCarrito {

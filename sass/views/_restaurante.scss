@@ -560,12 +560,6 @@
 
 }
 
-.colorInput{
-
-    accent-color: black;
-
-}
-
 .filtroComida{
 
     display: none;
@@ -788,6 +782,12 @@ body.dark-mode{
         color: white;
 
 
+    }
+
+    .colorInput{
+
+        background-color: #1a1e21;
+    
     }
 
 }
