@@ -524,7 +524,7 @@ switch ($accion) {
 
                         <div class="form-group">
                             <label for="txtNombre" class="form-label">Precio:</label>
-                            <input type="number" step="any" required class="form-control" value="<?php echo $txtPrecio; ?>"
+                            <input type="number" step="any" required class="form-control colorInput" value="<?php echo $txtPrecio; ?>"
                                 name="txtPrecio" id="txtPrecio" placeholder="Precio">
                         </div>
 
