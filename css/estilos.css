@@ -1747,6 +1747,10 @@ body.dark-mode .darkCirculo {
   cursor: pointer;
 }
 
+.colorInput {
+  accent-color: black;
+}
+
 .filtroComida {
   display: none;
 }
