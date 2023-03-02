@@ -1985,6 +1985,21 @@ body.dark-mode .container-flex .contenedorCarrito .botonCarrito1:hover {
   font-weight: bolder;
 }
 
+.apellidoPerfil {
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+
+.emailPerfil {
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+
+.telefonoPerfil {
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+
 body.dark-mode .cuerpoDark {
   background-color: black;
   border-color: white;
