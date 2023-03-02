@@ -1980,6 +1980,11 @@ body.dark-mode .container-flex .contenedorCarrito .botonCarrito1:hover {
   justify-content: center;
 }
 
+.nombrePerfil {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 body.dark-mode .cuerpoDark {
   background-color: black;
   border-color: white;

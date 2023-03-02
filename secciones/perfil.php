@@ -143,7 +143,7 @@ switch ($accion) {
           <div class="card-body cuerpoDark">
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Nombre</p>
+                <p class="mb-0" class="nombrePerfil">Nombre</p>
               </div>
               <div class="col-sm-9">
                 <p class="mb-0 parraDark"><?php echo $_SESSION['nombre'];?></p>
@@ -152,7 +152,7 @@ switch ($accion) {
             <hr>
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Apellido</p>
+                <p class="mb-0" class="apellidoPerfil">Apellido</p>
               </div>
               <div class="col-sm-9">
                 <p class="mb-0 parraDark"><?php echo $_SESSION['apellido'];?></p>
@@ -161,7 +161,7 @@ switch ($accion) {
             <hr>
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Email</p>
+                <p class="mb-0" class="emailPerfil">Email</p>
               </div>
               <div class="col-sm-9">
                 <p class="mb-0 parraDark"><?php echo $_SESSION['email'];?></p>
@@ -170,7 +170,7 @@ switch ($accion) {
             <hr>
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Telefono</p>
+                <p class="mb-0" class="telefonoPerfil">Telefono</p>
               </div>
               <div class="col-sm-9 parradark">
                 <p class="mb-0 parraDark"><?php echo $_SESSION['telefono'];?></p>
