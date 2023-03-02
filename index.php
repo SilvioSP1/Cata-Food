@@ -347,7 +347,7 @@
       <section>
 
         <div class="divFooter">
-          <a download="Politicas" href="../doc/Políticas Cata Food.docx" class="politicasSitio">Politicas Cata Food</a>
+          <a download="Politicas" href="doc/Políticas Cata Food.docx" class="politicasSitio">Politicas Cata Food</a>
         </div> 
 
       </section>
