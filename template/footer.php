@@ -31,11 +31,15 @@
           Ven a ver todos los locales que tenemos
         </p>
       </section>
-      <!-- Section: Text -->
+      
+      <section>
 
-      <!-- Section: Links -->
+        <div class="divFooter">
+          <a download="Politicas" href="../doc/Políticas Cata Food.docx">Politicas Cata Food</a>
+        </div> 
 
-      <!-- Section: Links -->
+      </section>
+
     </div>
     <!-- Grid container -->
 
