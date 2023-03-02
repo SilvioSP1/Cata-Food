@@ -1905,6 +1905,7 @@ body.dark-mode .container-flex .contenedorCarrito .botonCarrito1:hover {
 }
 .padreTR .flexTR .tableTR .containerTR .contenedorImagen .imageProducto {
   width: 80%;
+  object-fit: scale-down;
 }
 .padreTR .flexTR .tableTR .containerTR .descripcionProductos {
   margin-top: 1.5rem;
