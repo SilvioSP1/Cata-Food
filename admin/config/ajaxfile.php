@@ -56,7 +56,7 @@ foreach($listaProductos as $producto) {
                                 src="../img/restaurantes/productos/<?php echo $producto['Prod_Imagen']; ?>">
                         <td class="descripcionProductos">
                             <p class="nombreProducto"><?php echo $producto['Prod_Nombre']; ?></p>
-                            <p>Descripción: <?php echo $producto['Prod_Descripcion']; ?></p>
+                            <p class="descripcionProducto">Descripción: <?php echo $producto['Prod_Descripcion']; ?></p>
                             <p>Precio: $<?php echo $producto['Prod_Precio']; ?></p>
                         </td>
                     </tr>
