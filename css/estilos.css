@@ -1924,6 +1924,11 @@ body.dark-mode .container-flex .contenedorCarrito .botonCarrito1:hover {
   border-radius: 6px;
 }
 
+.nombreProducto {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
 .backgroundProfile {
   background-color: #fb8819;
   transition: background-color 0.3s, color 0.2s;
