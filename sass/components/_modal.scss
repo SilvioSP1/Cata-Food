@@ -31,6 +31,26 @@
                 .descripcionProductos{
         
                     margin-top: 1.5rem;
+
+                    .nombreProducto{
+
+                        font-size: 1.6rem;
+                        font-weight: bold;
+                    
+                    }
+                    
+                    .descripcionProducto{
+                    
+                        font-size: .9rem;
+                    
+                    }
+
+                    .precioProducto{
+
+                        font-size: 1.1rem;
+                        font-weight: 200;
+
+                    }
         
                 }
             
@@ -68,15 +88,3 @@
 
 }
 
-.nombreProducto{
-
-    font-size: 1.6rem;
-    font-weight: bold;
-
-}
-
-.descripcionProducto{
-
-    font-size: .9rem;
-
-}

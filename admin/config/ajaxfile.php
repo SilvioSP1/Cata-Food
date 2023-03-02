@@ -57,7 +57,7 @@ foreach($listaProductos as $producto) {
                         <td class="descripcionProductos">
                             <p class="nombreProducto"><?php echo $producto['Prod_Nombre']; ?></p>
                             <p class="descripcionProducto">Descripción: <?php echo $producto['Prod_Descripcion']; ?></p>
-                            <p>Precio: $<?php echo $producto['Prod_Precio']; ?></p>
+                            <p class="precioProducto">Precio: $<?php echo $producto['Prod_Precio']; ?></p>
                         </td>
                     </tr>
                 </table>

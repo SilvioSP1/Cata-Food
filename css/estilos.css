@@ -1910,6 +1910,17 @@ body.dark-mode .container-flex .contenedorCarrito .botonCarrito1:hover {
 .padreTR .flexTR .tableTR .containerTR .descripcionProductos {
   margin-top: 1.5rem;
 }
+.padreTR .flexTR .tableTR .containerTR .descripcionProductos .nombreProducto {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.padreTR .flexTR .tableTR .containerTR .descripcionProductos .descripcionProducto {
+  font-size: 0.9rem;
+}
+.padreTR .flexTR .tableTR .containerTR .descripcionProductos .precioProducto {
+  font-size: 1.1rem;
+  font-weight: 200;
+}
 
 .modal-footer {
   display: flex;
@@ -1922,15 +1933,6 @@ body.dark-mode .container-flex .contenedorCarrito .botonCarrito1:hover {
 .modal-footer .flexBotones #conta {
   width: 8rem;
   border-radius: 6px;
-}
-
-.nombreProducto {
-  font-size: 1.6rem;
-  font-weight: bold;
-}
-
-.descripcionProducto {
-  font-size: 0.9rem;
 }
 
 .backgroundProfile {
