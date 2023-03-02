@@ -237,7 +237,7 @@ switch ($accion) {
 <script>
     Swal.fire({
         icon: "success",
-        title: "Se agrego correctamente",
+        title: "Se agrego correctamente al carrito",
         text: "<?php echo $mensaje?>",
     });
     //echo $mensaje; //
