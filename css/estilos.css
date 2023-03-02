@@ -1926,7 +1926,7 @@ body.dark-mode .container-flex .contenedorCarrito .botonCarrito1:hover {
 
 .nombreProducto {
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: bold;
 }
 
 .descripcionProducto {
