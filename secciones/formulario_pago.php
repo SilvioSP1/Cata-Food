@@ -89,10 +89,10 @@ $_SESSION['condicion'] = 1;
     <title>Checkout</title>
 </head>
 
-<body>
+<body class="fondoFormulario">
 
 
-    <section class="fondoFormulario">
+    <section>
 
         <div class="container mt-5 px-5">
 
