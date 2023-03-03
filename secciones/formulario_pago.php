@@ -98,6 +98,7 @@ $_SESSION['condicion'] = 1;
 
             <div class="mb-4">
 
+                <img src="../img/formulario-pago/version-horizontal-large-logo-mercado-pago.jpg" alt="">
                 <h2 class="textoPagar">Confirma tu orden y paga</h2>
 
             </div>
