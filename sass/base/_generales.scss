@@ -38,24 +38,24 @@ body {
     
     }
 
-}
+    .politicasSitio{
 
-.politicasSitio{
-
-    color: white;
-
-    &:hover{
         color: white;
-    }
-
-}
-
-.defensaConsumidor{
-
-    color: white;
     
-    &:focus{
+        &:hover{
+            color: white;
+        }
+    
+    }
+    
+    .defensaConsumidor{
+    
         color: white;
+        
+        &:focus{
+            color: white;
+        }
+    
     }
 
 }
