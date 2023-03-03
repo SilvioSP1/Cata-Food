@@ -133,6 +133,30 @@ $_SESSION['condicion'] = 1;
 
                                 </div>
 
+                                <div class="col-md-6">
+
+                                    <div class="inputbox mt-3 mr-2"> <input type="text" name="name" id="calle" class="form-control"
+                                            required> <span>Calle</span> </div>
+
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <div class="inputbox mt-3 mr-2"> <input type="text" name="name" id="altura" class="form-control"
+                                            required> <span>Altura</span> </div>
+
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <div class="inputbox mt-3 mr-2"> <input type="text" name="name" id="piso" class="form-control"
+                                            required> <span>Piso</span> </div>
+
+
+                                </div>
+
 
 
 
@@ -183,60 +207,6 @@ $_SESSION['condicion'] = 1;
 
 
                             </div> -->
-
-                            <div class="row mt-2">
-
-                                <div class="tabs">
-
-                                    <div class="tab">
-
-                                        <input type="checkbox" id="chck1" class="inputCheckbox">
-                                        <label class="tab-label" for="chck1">Envios</label>
-                                        <div class="tab-content">
-
-                                            <div class="containerRadios">
-
-                                                <!-- <input type="radio" id="check1" name="input">
-                                                <label for="check1" class="envio">Con envio</label>
-                                                <input type="radio" value="check2" name="input">
-                                                <label for="check2">Sin envio</label> -->
-
-                                                <input type="radio" name="lang" value="hide" id="hide" onclick="showHideDiv(1)" checked>
-                                                Con envio
-                                                <input type="radio" name="lang" value="show" id="show" onclick="showHideDiv(2)" class="sinEnvio">
-                                                Sin envio
-
-                                                <br><br>
-
-                                                <div id="div">
-
-                                                    <div class="centerEnvio">
-
-                                                        <div class="inputbox mt-3 mr-2"> <input type="text" name="name" id="calle" class="form-control"
-                                                        required> <span>Calle</span> </div>
-
-                                                        <div class="inputbox mt-3 mr-2"> <input type="text" name="name" id="altura" class="form-control"
-                                                        required> <span>Altura</span> </div>
-
-                                                        <div class="inputbox mt-3 mr-2"> <input type="text" name="name" id="piso" class="form-control"
-                                                        required> <span>Piso</span> </div>
-
-                                                    </div>
-
-                                                </div>
-
-
-
-
-                                            </div>
-                                        
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
 
                         </div>
 

@@ -35,31 +35,25 @@ function validar() {
     } else {
         todo_correcto = true;
     }
-    if (document.getElementById('telefono').value.length < 2) {
+    if (document.getElementById('calle').value.length < 2) {
         todo_correcto = false;
     } else {
         todo_correcto = true;
     }
-
-
-    if (document.querySelector('input[name="lang"]:checked').value == 'hide' ) {
-        console.log("1");
-        aux = 2;
-        if (document.getElementById('calle').value.length < 2) {
-            todo_correcto = false;
-        } else {
-            todo_correcto = true;
-        }
-        if (document.getElementById('altura').value.length < 2) {
-            todo_correcto = false;
-        } else {
-            todo_correcto = true;
-        }
-        if (document.getElementById('piso').value.length < 2) {
-            todo_correcto = false;
-        } else {
-            todo_correcto = true;
-        }
+    if (document.getElementById('altura').value.length < 2) {
+        todo_correcto = false;
+    } else {
+        todo_correcto = true;
+    }
+    if (document.getElementById('piso').value.length < 2) {
+        todo_correcto = false;
+    } else {
+        todo_correcto = true;
+    }
+    if (document.getElementById('telefono').value.length < 2) {
+        todo_correcto = false;
+    } else {
+        todo_correcto = true;
     }
 
     /*Por último, y como aviso para el usuario, si no está todo bién, osea, si la variable
@@ -82,5 +76,3 @@ calle.addEventListener("keyup", validar);
 altura.addEventListener("keyup", validar);
 telefono.addEventListener("keyup", validar);
 piso.addEventListener("keyup", validar);
-radio1.addEventListener("click", validar);
-radio2.addEventListener("click", validar);
