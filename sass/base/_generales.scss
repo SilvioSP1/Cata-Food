@@ -41,7 +41,7 @@ body {
 }
 
 .politicasSitio{
-    
+
     color: white;
 
     &:hover{
@@ -55,7 +55,8 @@ body {
     color: white;
 
     &:hover{
-        color: white;
+        color: red;
+        padding: 1rem;
     }
 }
 
