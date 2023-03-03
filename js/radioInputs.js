@@ -35,6 +35,11 @@ function validar() {
     } else {
         todo_correcto = true;
     }
+    if (document.getElementById('telefono').value.length < 2) {
+        todo_correcto = false;
+    } else {
+        todo_correcto = true;
+    }
     if (document.getElementById('calle').value.length < 2) {
         todo_correcto = false;
     } else {
@@ -46,11 +51,6 @@ function validar() {
         todo_correcto = true;
     }
     if (document.getElementById('piso').value.length < 2) {
-        todo_correcto = false;
-    } else {
-        todo_correcto = true;
-    }
-    if (document.getElementById('telefono').value.length < 2) {
         todo_correcto = false;
     } else {
         todo_correcto = true;
@@ -74,5 +74,4 @@ apellido.addEventListener("keyup", validar);
 telefono.addEventListener("keyup", validar);
 calle.addEventListener("keyup", validar);
 altura.addEventListener("keyup", validar);
-telefono.addEventListener("keyup", validar);
 piso.addEventListener("keyup", validar);
