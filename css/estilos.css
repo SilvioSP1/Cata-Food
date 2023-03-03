@@ -2606,8 +2606,12 @@ input::-webkit-inner-spin-button {
 .fondoFormulario .textoPagar {
   color: white;
 }
+.fondoFormulario .mercadoPago__div {
+  display: flex;
+  justify-content: center;
+}
 .fondoFormulario .mercadoPago__div .mercadoPago {
-  width: 2rem;
+  width: 12rem;
 }
 
 .contenedorComentarios {

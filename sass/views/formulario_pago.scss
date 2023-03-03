@@ -231,9 +231,12 @@ input::-webkit-inner-spin-button {
 
     .mercadoPago__div{
 
+        display: flex;
+        justify-content: center;
+
         .mercadoPago{
 
-            width: 2rem;
+            width: 12rem;
             
         }
 
