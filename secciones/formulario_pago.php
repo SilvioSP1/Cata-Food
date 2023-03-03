@@ -135,6 +135,14 @@ $_SESSION['condicion'] = 1;
 
                                 <div class="col-md-6">
 
+                                    <div class="inputbox mt-3 mr-2"> <input type="number" name="name" id="telefono"
+                                            class="form-control" required> <span>Telefono</span> </div>
+
+
+                                </div>
+
+                                <div class="col-md-6">
+
                                     <div class="inputbox mt-3 mr-2"> <input type="text" name="name" id="calle" class="form-control"
                                             required> <span>Calle</span> </div>
 
@@ -162,51 +170,6 @@ $_SESSION['condicion'] = 1;
 
                             </div>
 
-
-                            <div class="row mt-2">
-
-                                <div class="col-md-6">
-
-                                    <div class="inputbox mt-3 mr-2"> <input type="number" name="name" id="telefono" class="form-control"
-                                            required> <span>Telefono</span> </div>
-
-
-                                </div>
-
-
-                                <!-- <div class="col-md-6">
-
-                                    <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
-                                            required> <span>Provincia</span> </div>
-
-
-                                </div> -->
-
-
-                            </div>
-
-                            <!-- <div class="row mt-2">
-
-                                <div class="col-md-6">
-
-                                    <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
-                                            required> <span>Ciudad</span> </div>
-
-
-                                </div>
-
-
-                                <div class="col-md-6">
-
-                                    <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
-                                            required> <span>Código Postal</span> </div>
-
-
-                                </div>
-
-
-
-                            </div> -->
 
                         </div>
 
