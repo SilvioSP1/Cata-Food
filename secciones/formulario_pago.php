@@ -92,7 +92,7 @@ $_SESSION['condicion'] = 1;
 <body>
 
 
-    <section>
+    <section class="fondoFormulario">
 
         <div class="container mt-5 px-5">
 

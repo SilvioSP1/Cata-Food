@@ -2600,6 +2600,10 @@ input::-webkit-inner-spin-button {
   gap: 0.75rem;
 }
 
+.fondoFormuario {
+  background-color: #009ee3;
+}
+
 .contenedorComentarios {
   display: flex;
   justify-content: center;
