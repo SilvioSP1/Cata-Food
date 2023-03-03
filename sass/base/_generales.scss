@@ -53,7 +53,11 @@ body {
 .defensaConsumidor{
 
     color: white;
-    --bs-link-hover-color: white;
+    
+    &:hover{
+        color: white;
+    }
+
 }
 
 .carritoCompras {
