@@ -2606,7 +2606,7 @@ input::-webkit-inner-spin-button {
 .fondoFormulario .textoPagar {
   color: white;
 }
-.fondoFormulario .mercadoPago {
+.fondoFormulario .mercadoPago__div .mercadoPago {
   width: 2rem;
 }
 
