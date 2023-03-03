@@ -24,6 +24,7 @@ body {
 .divFooter {
   display: flex;
   justify-content: center;
+  gap: 1rem;
 }
 .divFooter .logoFooter {
   width: 10rem;
@@ -33,6 +34,10 @@ body {
   color: white;
 }
 .politicasSitio:hover {
+  color: white;
+}
+
+.defensaConsumidor {
   color: white;
 }
 
