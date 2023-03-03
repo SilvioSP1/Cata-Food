@@ -98,7 +98,6 @@ $_SESSION['condicion'] = 1;
 
             <div class="mb-4">
 
-                <img src="../img/formulario-pago/mercado-pago.png" alt="" class="mercadoPago">
                 <h2 class="textoPagar">Confirma tu orden y paga</h2>
 
             </div>
@@ -206,6 +205,10 @@ $_SESSION['condicion'] = 1;
                             </ul>
                             <?php } ?>
 
+                        </div>
+
+                        <div class="mercadoPago__div">
+                            <img src="../img/formulario-pago/mercado-pago.png" alt="" class="mercadoPago">
                         </div>
 
                     </div>
