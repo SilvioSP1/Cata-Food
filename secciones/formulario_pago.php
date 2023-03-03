@@ -207,10 +207,12 @@ $_SESSION['condicion'] = 1;
 
                         </div>
 
-                        <div class="mercadoPago__div">
-                            <img src="../img/formulario-pago/mercado-pago.png" alt="" class="mercadoPago">
-                        </div>
+                    </div>
 
+                    <div class="mercadoPago__div">
+
+                        <img src="../img/formulario-pago/mercado-pago.png" alt="" class="mercadoPago">
+                        
                     </div>
 
                 </div>
