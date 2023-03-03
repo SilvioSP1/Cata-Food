@@ -2603,6 +2603,9 @@ input::-webkit-inner-spin-button {
 .fondoFormulario {
   background-color: #009ee3;
 }
+.fondoFormulario .textoPagar {
+  color: white;
+}
 
 .contenedorComentarios {
   display: flex;

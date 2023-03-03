@@ -98,7 +98,7 @@ $_SESSION['condicion'] = 1;
 
             <div class="mb-4">
 
-                <h2>Confirma tu orden y paga</h2>
+                <h2 class="textoPagar">Confirma tu orden y paga</h2>
 
             </div>
 
@@ -179,7 +179,7 @@ $_SESSION['condicion'] = 1;
                     <div class="mt-4 mb-4 d-flex justify-content-between">
 
 
-                        <a href="../../Cata-Food/secciones/carrito_vista.php" class="text-decoration-none"><span class="text-dark">Paso anterior</span></a>
+                        <a href="../../Cata-Food/secciones/carrito_vista.php" class="text-decoration-none"><span class="text-white">Paso anterior</span></a>
                         <div class="checkout-boton" id="divPagar"></div>
 
 
