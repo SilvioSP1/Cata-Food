@@ -1,7 +1,7 @@
 <?php
 
 $host="localhost";
-$bd="catafood";
+$bd="u400786869_catafood";
 $usuario="SilvioPortero";
 $contraseña="SilvioPortero123";
 
