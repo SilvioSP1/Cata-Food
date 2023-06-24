@@ -532,7 +532,7 @@ $localAbierto = $sentenciaSQL->fetch(PDO::FETCH_ASSOC);
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header modalLocal">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Local</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Abrir Local</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
