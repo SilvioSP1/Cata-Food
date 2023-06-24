@@ -233,7 +233,7 @@
                 </div>
             </div>
 
-        </div>
+        </div> 
 
         <script type="text/javascript" src="../../Cata-Food/js/vanilla-tilt.js">
             VanillaTilt.init(document.querySelector(".card"), {
