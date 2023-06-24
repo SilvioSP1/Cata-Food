@@ -3,11 +3,11 @@ function getBotResponse(input) {
     if(input == "Quiero comprar" || input == "quiero comprar" || input == "1"){
 
 
-        return "Dirigete a la seccion de restaurantes y <br> selecciona el restaurante que desees!.";
+        return "1) Dirigete a la seccion de restaurantes de nuestro sitio web. <br> 2) Selecciona el restaurante que desees. <br> 3) Una vez dentro del restaurante, navega por su menú y elige los productos que te gusten. <br> 4) Agrega los productos al carrito de compras. <br> 5) Revisa los productos de tu carrito para verificar que sean los correctos. <br> 6) Completa el proceso de pago proporcionando la información necesaria, como la dirección de entrega y los detalles de pago. <br> 7) Confirma tu pedido y ¡listo! Nuestro equipo se encargará de procesarlo y enviarlo a la dirección especificada. ";
 
-    }else if(input == "¿Como me registro?" || input == "como me registro" || input == "2"){
+    }else if(input == "¿Como me registro como usuario?" || input == "como me registro como usuario" || input == "2"){
 
-        return "Vas al apartado de inicio/registro y te puedes registrar sin ningún problema.";
+        return "1) Haz clic en la opción de Inicio/Registro en la barra de navegación. <br> 2) Completa el formulario de registro con los datos con tu nombre, apellido, dirección de correo electrónico y contraseña. <br> 3) Haz clic en el botón de registrar. <br> 4) Listo! Ahora puedes acceder a todas las funcionalidades de nuestro sitio web.";
     
     }else if(input == "¿Que necesito para registrar un local?" || input == "que necesito para registrar un local" || input == "3"){
 
