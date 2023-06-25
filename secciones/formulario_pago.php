@@ -141,32 +141,6 @@ $_SESSION['condicion'] = 1;
 
                                 </div>
 
-                                <div class="col-md-6">
-
-                                    <div class="inputbox mt-3 mr-2"> <input type="text" name="name" id="calle" class="form-control"
-                                            required> <span>Calle</span> </div>
-
-
-                                </div>
-
-                                <div class="col-md-6">
-
-                                    <div class="inputbox mt-3 mr-2"> <input type="text" name="name" id="altura" class="form-control"
-                                            required> <span>Altura</span> </div>
-
-
-                                </div>
-
-                                <div class="col-md-6">
-
-                                    <div class="inputbox mt-3 mr-2"> <input type="text" name="name" id="piso" class="form-control"
-                                            required> <span>Piso</span> </div>
-
-
-                                </div>
-
-
-
 
                             </div>
 
