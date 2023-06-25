@@ -1,6 +1,6 @@
 <?php
 
-require ('extensions/vendor/autoload.php'); 
+require ('../extensions/vendor/autoload.php'); 
 date_default_timezone_set('America/Argentina/Buenos_Aires');
 session_start();
 error_reporting(0);
@@ -89,7 +89,7 @@ $_SESSION['condicion'] = 1;
     <title>Checkout</title>
 </head>
 
-<body class="fondoFormulario">
+<body>
 
 
     <section>
@@ -98,7 +98,7 @@ $_SESSION['condicion'] = 1;
 
             <div class="mb-4">
 
-                <h2 class="textoPagar">Confirma tu orden y paga</h2>
+                <h2>Confirma tu orden y paga</h2>
 
             </div>
 
@@ -133,17 +133,110 @@ $_SESSION['condicion'] = 1;
 
                                 </div>
 
+
+
+
+                            </div>
+
+
+                            <div class="row mt-2">
+
                                 <div class="col-md-6">
 
-                                    <div class="inputbox mt-3 mr-2"> <input type="number" name="name" id="telefono"
-                                            class="form-control" required> <span>Telefono</span> </div>
+                                    <div class="inputbox mt-3 mr-2"> <input type="number" name="name" id="telefono" class="form-control"
+                                            required> <span>Telefono</span> </div>
 
 
                                 </div>
 
 
+                                <!-- <div class="col-md-6">
+
+                                    <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
+                                            required> <span>Provincia</span> </div>
+
+
+                                </div> -->
+
+
                             </div>
 
+                            <!-- <div class="row mt-2">
+
+                                <div class="col-md-6">
+
+                                    <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
+                                            required> <span>Ciudad</span> </div>
+
+
+                                </div>
+
+
+                                <div class="col-md-6">
+
+                                    <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control"
+                                            required> <span>Código Postal</span> </div>
+
+
+                                </div>
+
+
+
+                            </div> -->
+
+                            <div class="row mt-2">
+
+                                <div class="tabs">
+
+                                    <div class="tab">
+
+                                        <input type="checkbox" id="chck1" class="inputCheckbox">
+                                        <label class="tab-label" for="chck1">Envios</label>
+                                        <div class="tab-content">
+
+                                            <div class="containerRadios">
+
+                                                <!-- <input type="radio" id="check1" name="input">
+                                                <label for="check1" class="envio">Con envio</label>
+                                                <input type="radio" value="check2" name="input">
+                                                <label for="check2">Sin envio</label> -->
+
+                                                <input type="radio" name="lang" value="hide" id="hide" onclick="showHideDiv(1)" checked>
+                                                Con envio
+                                                <input type="radio" name="lang" value="show" id="show" onclick="showHideDiv(2)" class="sinEnvio">
+                                                Sin envio
+
+                                                <br><br>
+
+                                                <div id="div">
+
+                                                    <div class="centerEnvio">
+
+                                                        <div class="inputbox mt-3 mr-2"> <input type="text" name="name" id="calle" class="form-control"
+                                                        required> <span>Calle</span> </div>
+
+                                                        <div class="inputbox mt-3 mr-2"> <input type="text" name="name" id="altura" class="form-control"
+                                                        required> <span>Altura</span> </div>
+
+                                                        <div class="inputbox mt-3 mr-2"> <input type="text" name="name" id="piso" class="form-control"
+                                                        required> <span>Piso</span> </div>
+
+                                                    </div>
+
+                                                </div>
+
+
+
+
+                                            </div>
+                                        
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
 
                         </div>
 
@@ -153,7 +246,7 @@ $_SESSION['condicion'] = 1;
                     <div class="mt-4 mb-4 d-flex justify-content-between">
 
 
-                        <a href="../../Cata-Food/secciones/carrito_vista.php" class="text-decoration-none"><span class="text-white">Paso anterior</span></a>
+                        <a href="../../Cata-Food/secciones/carrito_vista.php" class="text-decoration-none"><span class="text-dark">Paso anterior</span></a>
                         <div class="checkout-boton" id="divPagar"></div>
 
 
@@ -181,12 +274,6 @@ $_SESSION['condicion'] = 1;
 
                         </div>
 
-                    </div>
-
-                    <div class="mercadoPago__div">
-
-                        <img src="../img/formulario-pago/mercado-pago.png" alt="" class="mercadoPago">
-                        
                     </div>
 
                 </div>
