@@ -26,7 +26,7 @@ if ($_POST['TL_Tipo'] || !empty($_SESSION["tiposLocal"])) {
         $_SESSION["tiposLocal"] = $_POST['TL_Tipo'];
     }
 
-    $sentenciaSQL = $conexion->prepare("SELECT * FROM local WHERE Local_Tipo = :Local_Tipo");
+    $sentenciaSQL = $conexion->prepare("SELECT * FROM local WHERE Local_Tipo = :Local_Tipo AND Local_Status = 1");
     $sentenciaSQL->bindParam(':Local_Tipo',$_SESSION["tiposLocal"]);
     $sentenciaSQL->execute();
     $listaLocalesPorTipo = $sentenciaSQL->fetchAll(PDO::FETCH_ASSOC);
