@@ -1,9 +1,6 @@
 let nombre = document.getElementById('nombre');
 let apellido = document.getElementById('apellido');
 let telefono = document.getElementById('telefono');
-let calle = document.getElementById('calle');
-let altura = document.getElementById('altura');
-let piso = document.getElementById('piso');
 let boton = document.getElementById('divPagar');
 let radio1 = document.getElementById('hide');
 let radio2 = document.getElementById('show');
@@ -40,21 +37,6 @@ function validar() {
     } else {
         todo_correcto = true;
     }
-    if (document.getElementById('calle').value.length < 2) {
-        todo_correcto = false;
-    } else {
-        todo_correcto = true;
-    }
-    if (document.getElementById('altura').value.length < 2) {
-        todo_correcto = false;
-    } else {
-        todo_correcto = true;
-    }
-    if (document.getElementById('piso').value.length < 2) {
-        todo_correcto = false;
-    } else {
-        todo_correcto = true;
-    }
 
     /*Por último, y como aviso para el usuario, si no está todo bién, osea, si la variable
     todo_correcto ha devuelto false al menos una vez, generaremos una alerta advirtiendo
@@ -72,6 +54,3 @@ function validar() {
 nombre.addEventListener("keyup", validar);
 apellido.addEventListener("keyup", validar);
 telefono.addEventListener("keyup", validar);
-calle.addEventListener("keyup", validar);
-altura.addEventListener("keyup", validar);
-piso.addEventListener("keyup", validar);
