@@ -5,7 +5,7 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
 session_start();
 error_reporting(0);
 
-MercadoPago\SDK::setAccessToken('APP_USR-5461755461441479-110915-43fbd085c24709d01764eb3373337efb-340183645'); 
+MercadoPago\SDK::setAccessToken('TEST-5461755461441479-110915-7d4e337baad35a4cd77fa4cede687237-340183645'); 
 
 $preference = new MercadoPago\Preference(); 
 
@@ -198,7 +198,7 @@ $_SESSION['condicion'] = 1;
 
         <script>
 
-            const mp = new MercadoPago('APP_USR-8002e71e-7de8-4801-9db3-7fbf448dbf57', { //public key
+            const mp = new MercadoPago('TEST-8d66829a-0271-48f7-aea7-62854459802d', { //public key
 
                 locale: 'es-AR' //idioma local
 
