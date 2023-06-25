@@ -1,6 +1,6 @@
 <?php
 
-require ('../extensions/vendor/autoload.php'); 
+require ('extensions/vendor/autoload.php'); 
 date_default_timezone_set('America/Argentina/Buenos_Aires');
 session_start();
 error_reporting(0);
