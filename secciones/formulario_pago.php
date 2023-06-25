@@ -1,75 +1,50 @@
 <?php
 
-require ('../extensions/vendor/autoload.php'); 
+require ('../extensions/vendor/autoload.php'); //llamamos al autoload para usar mercadopago
 date_default_timezone_set('America/Argentina/Buenos_Aires');
 session_start();
 error_reporting(0);
+MercadoPago\SDK::setAccessToken('APP_USR-4458268088218747-062418-22e275f0d30cfef4521a397d137fd49f-340183645'); //usamos el token
 
-MercadoPago\SDK::setAccessToken('APP_USR-4458268088218747-062418-22e275f0d30cfef4521a397d137fd49f-340183645'); 
-
-$preference = new MercadoPago\Preference(); 
-
-// Hay que crear mas items para poder guardar la infromacion de cada producto y que se muestre a la hora de comprar
 
 foreach ($_SESSION['carritoCompra'] as $indice => $producto) {
 
-    $item = new MercadoPago\Item(); 
+    $preference = new MercadoPago\Preference(); //creamos una variable que se llame preference que va a ser un objeto
 
-    /* $item->id = "00001";  */
-    
-    $item->title = $producto['nombre']; 
+    $item = new MercadoPago\Item(); //con esta opción cargamos el producto que vamos a cobrar
 
-    $item->quantity = $producto['cantidad']; 
+    $item->title = 'Producto Lomito'; //titulo de nuestro producto
 
-    $item->unit_price = 2; 
+    $item->quantity = '1'; //cantidad de nuestro producto
 
-    $item->currency_id = "ARS"; 
+    $item->unit_price = 150.00; //precio de nuestro producto
 
-    $productos[] = $item;
+    $item->currency_id = "ARS"; //la moneda
+
+
 }
 
-/* $item->id = "00001"; 
-    
-$item->title = "Productos"; 
+$preference->items = array($item); //es igual al array en el que agregamos item
 
-$item->quantity = 1; 
+$preference->save(); //guardamos las preferencias
 
-$item->unit_price = 2; 
-
-$item->currency_id = "ARS";  */
-
-$preference->items = $productos;
+//capturar la información que nos llega
 
 $preference->back_urls = array(
 
-  "success" => "https://catafood.shop/Cata-Food/admin/secciones/captura.php",
-  "fail" => "https://catafood.shop/Cata-Food/admin/secciones/fallo.php"
+    "success" => "http://localhost/api-mercadopago/captura.php", //esto es donde se va a redireccionar cuando sea correcto el pago
+    "fail" => "http://localhost/api-mercadopago/fallo.php", //si sale mal
 
-);
+); //aca ponemos urls para que nos redireccione cuando se haya terminado el pago
 
-$preference->auto_return = "approved"; 
+$preference->auto_return = "approved"; //para que nos retorne cuando sea aprobado
 
-$preference->binary_mode = true; 
-
-$preference->save();
+$preference->binary_mode = true; //nos ayuda a que solo pueda tener trasacciones aprobadas o rechazadas, hay un tercer status que es pendiente
 
 $_SESSION['condicion'] = 1;
 
-/* if ($_POST) {
-    $productoArr = array( 
-        'id'=>$Prod_Id,
-        'imagen'=>$Prod_Imagen,
-        'nombre'=>$Prod_Nombre,
-        'precio'=>$Prod_Precio,
-        'cantidad'=>$cantidad,
-        'descripcion'=>$Prod_Descripcion,
-        'local'=>$Local_Nombre
-    );
-    $_SESSION['info'];
-} */
-
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -86,15 +61,14 @@ $_SESSION['condicion'] = 1;
     <!-- MercadoPago SDK -->
     <script src="https://sdk.mercadopago.com/js/v2"></script>
     <link rel="icon" href="../../Cata-Food/img/index/logo_redondo.png">
-    <title>Checkout</title>
+    <title>Finalizar compra</title>
 </head>
 
 <body class="fondoFormulario">
 
-
     <section>
 
-        <div class="container mt-5 px-5">
+       <div class="container mt-5 px-5">
 
             <div class="mb-4">
 
@@ -198,11 +172,11 @@ $_SESSION['condicion'] = 1;
 
         <script>
 
-            const mp = new MercadoPago('APP_USR-e9e54e28-c2d9-4483-9593-819ec4230a74', { //public key
+        const mp = new MercadoPago('APP_USR-e9e54e28-c2d9-4483-9593-819ec4230a74',{ //public key
 
-                locale: 'es-AR' //idioma local
+            locale: 'es-AR' //idioma local
 
-            })
+        })
 
         mp.checkout({
                 preference: {
