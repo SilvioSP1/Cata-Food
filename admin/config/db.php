@@ -2,7 +2,7 @@
 
 $host="localhost";
 $bd="u400786869_catafood";
-$usuario="SilvioPortero";
+$usuario="u400786869_SilvioPortero";
 $contraseña="SilvioPortero123";
 
 try {
