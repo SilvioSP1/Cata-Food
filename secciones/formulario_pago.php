@@ -17,7 +17,7 @@ foreach ($_SESSION['carritoCompra'] as $indice => $producto) {
 
     $item->quantity = '1'; //cantidad de nuestro producto
 
-    $item->unit_price = 150.00; //precio de nuestro producto
+    $item->unit_price = 1.00; //precio de nuestro producto
 
     $item->currency_id = "ARS"; //la moneda
 
