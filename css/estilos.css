@@ -3129,6 +3129,7 @@ span.posted-at {
 
 .footer__cata .footer__cata-parrafo {
   white-space: pre-line;
+  background-color: red;
 }
 
 @media (max-width: 753px) {
