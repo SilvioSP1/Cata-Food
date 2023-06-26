@@ -336,11 +336,11 @@
       <!-- Section: Form -->
 
       <!-- Section: Text -->
-      <section class="mb-4">
-        <p>
-          Cata Food el mejor sitio que puedes encontrar para conocer nuevos locales gastronomicos de la
-          Ciudad de San Fernando del Valle de Catamarca. <br>
-          Ven a ver todos los locales que tenemos
+      <section class="mb-4" class='footer__cata'>
+        <p class='footer__cata-parrafo'>
+          Explora lo mejor de la gastronomía en San Fernando del Valle de Catamarca con Cata Food.
+          Descubre nuevos locales y sabores únicos en nuestra guia culinaria.
+          !Ven y déjate sorprender por nuestras recomendaciones!
         </p>
       </section>
       
