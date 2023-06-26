@@ -12,7 +12,7 @@ document.getElementById('form').addEventListener('submit', function (event) {
 
     emailjs.sendForm(serviceID, templateID, this)
         .then(() => {
-            btn.value = 'Send Email';
+            btn.value = 'Enviar';
             notyf.success({
 
                 message: "Mensaje enviado!",
@@ -25,7 +25,7 @@ document.getElementById('form').addEventListener('submit', function (event) {
 
             })
         }, (err) => {
-            btn.value = 'Enviar mensaje';
+            btn.value = 'Enviar';
             alert(JSON.stringify(err));
     });
 });
