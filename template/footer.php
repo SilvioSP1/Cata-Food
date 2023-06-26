@@ -38,7 +38,7 @@
 
         <div class="divFooter">
           <a download="Politicas" href="../doc/Políticas Cata Food.docx" class="politicasSitio">Politicas Cata Food</a>
-          <a href="https://autogestion.produccion.gob.ar/consumidores" style="color: white"  target='blank'>Defensa al consumidor</a>
+          <a href="https://portal.catamarca.gob.ar/ui/tramites/defensa-del-consumidor-recepcion-de-denuncias" style="color: white"  target='blank'>Defensa al consumidor</a>
         </div> 
 
       </section>
