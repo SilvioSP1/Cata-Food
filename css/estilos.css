@@ -29,15 +29,10 @@ body {
 .divFooter .logoFooter {
   width: 10rem;
 }
-
-.politicasSitio {
+.divFooter .politicasSitio {
   color: white;
 }
-.politicasSitio:hover {
-  color: white;
-}
-
-.defensaConsumidor {
+.divFooter .politicasSitio:hover {
   color: white;
 }
 
@@ -366,7 +361,7 @@ body.dark-mode .card-bodyIndex {
 }
 .contenedorCards .card:hover {
   height: 254px;
-  background: linear-gradient(360deg, rgba(237, 237, 237, 0.7725490196) 60%, hsl(0deg, 0%, 13%) 70%);
+  background: linear-gradient(360deg, rgba(237, 237, 237, 0.7725490196) 60%, hsl(0, 0%, 13%) 70%);
 }
 .contenedorCards .card .header {
   padding: 20px;
@@ -3132,6 +3127,10 @@ span.posted-at {
   margin: 0 5px;
 }
 
+.footer_cata .footer_cata-parrafo {
+  white-space: pre-line;
+}
+
 @media (max-width: 753px) {
   .containerMedias {
     flex-direction: column;
@@ -3178,7 +3177,7 @@ span.posted-at {
     width: 20rem;
   }
   .cardNosotros .profile,
-.cardNosotros .profile2 {
+  .cardNosotros .profile2 {
     max-width: 220px;
   }
   .cardNosotros .containerSocial .social-icons {
