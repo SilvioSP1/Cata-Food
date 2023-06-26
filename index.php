@@ -296,7 +296,7 @@
 
                                 <div class="app-form-group buttons">
 
-                                    <input class="app-form-button" type="submit" id="button" value="Enviar mensaje"></input>
+                                    <input class="app-form-button" type="submit" id="button" value="Enviar"></input>
 
                                 </div>
 
