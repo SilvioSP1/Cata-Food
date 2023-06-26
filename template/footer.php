@@ -74,6 +74,7 @@
 <script src="../../Cata-Food/js/rate.js?v=<?php echo time(); ?>"></script>
 <script src="../../Cata-Food/js/filtradoComidas.js?v=<?php echo time(); ?>"></script>
 <script src="../../Cata-Food/js/darkMode.js?v=<?php echo time(); ?>"></script>
+<script src="../../Cata-Food/js/copyright.js?v=<?php echo time(); ?>"></script>
 
 
 
