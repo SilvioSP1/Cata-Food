@@ -358,7 +358,7 @@
 
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      Copyright © 2022 Cata Food, Todos los derechos reservados.
+      Copyright © <p id='año-actual'></p> Cata Food, Todos los derechos reservados.
     </div>
     <!-- Copyright -->
   </footer>
@@ -388,6 +388,7 @@
 <script src="../../Cata-Food/js/rate.js?v=<?php echo time(); ?>"></script>
 <script src="../../Cata-Food/js/filtradoComidas.js?v=<?php echo time(); ?>"></script>
 <script src="../../Cata-Food/js/darkMode.js?v=<?php echo time(); ?>"></script>
+<script src="../../Cata-Food/js/copyright.js?v=<?php echo time(); ?>"></script>
 
 
 
