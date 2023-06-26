@@ -46,7 +46,7 @@
 
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      Copyright © <p id='año-actual'></p> Cata Food, Todos los derechos reservados.
+      Copyright © <span id='año-actual'></p> Cata Food, Todos los derechos reservados.
     </div>
     <!-- Copyright -->
   </footer>
