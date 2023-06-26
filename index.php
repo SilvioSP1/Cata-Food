@@ -144,7 +144,7 @@
                         <img src="./img/index/noticiasComunes.ico" alt="user" class="imagenCards" />
                         <div class="user-infoIndex">
                             <h5>Noticias Comunes</h5>
-                            <small>2h ago</small>
+                            <small>Publicado hace dos días</small>
                         </div>
                     </div>
                 </div>
@@ -164,7 +164,7 @@
                         <img src="./img/index/redaccionVos.webp" alt="user" class="imagenCards" />
                         <div class="user-infoIndex">
                             <h5>Redacción Vos</h5>
-                            <small>Yesterday</small>
+                            <small>Publicado ayer</small>
                         </div>
                     </div>
                 </div>
@@ -183,7 +183,7 @@
                         <img src="./img/index/javierLedesma.webp" alt="user" class="imagenCards" />
                         <div class="user-infoIndex">
                             <h5>Javier Ledesma</h5>
-                            <small class="small">1w ago</small>
+                            <small class="small">Publicado hoy</small>
                         </div>
                     </div>
                 </div>
