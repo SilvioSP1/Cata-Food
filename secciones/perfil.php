@@ -8,7 +8,7 @@ $txtID=(isset($_POST['txtID'])) ? $_POST['txtID'] : $_SESSION['idUsuario'];
 $txtNombre=(isset($_POST['txtNombre'])) ? $_POST['txtNombre'] : $_SESSION['nombre'];
 $txtApellido=(isset($_POST['txtApellido'])) ? $_POST['txtApellido'] : $_SESSION['apellido'];
 $txtTelefono=(isset($_POST['txtTelefono'])) ? $_POST['txtTelefono'] : $_SESSION['telefono'];
-$txtImagen = isset($_FILES['txtImagen']['name']) ? $_FILES['txtImagen']['name'] : $_SESSION['imagen'];
+$txtImagen = isset($_FILES['txtImagen']['name']) ? $_FILES['txtImagen']['name'] : (isset($_SESSION['imagen']) ? $_SESSION['imagen'] : 'username-photo.png');
 $accion=(isset($_POST['accion'])) ? $_POST['accion'] : "";
 
 
