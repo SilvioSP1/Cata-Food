@@ -88,7 +88,7 @@ switch ($accion) {
           <div class="card-body text-center">
             <div class="contanedorImagen">
 
-              <img src="../../Cata-Food/img/perfil/<?php echo $_SESSION['imagen']; ?>" alt="avatar" style="width: 150px;" class="profilePicture">
+              <img src="../../Cata-Food/img/perfil/<?php echo $_SESSION['imagen'] || 'username-photo.png'; ?>" alt="avatar" style="width: 150px;" class="profilePicture">
               <i class="bi bi-pencil-fill imagen-editar" data-bs-toggle="modal" data-bs-target="#exampleModal1" alt=""></i>
 
             </div>
