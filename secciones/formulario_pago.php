@@ -13,11 +13,11 @@ foreach ($_SESSION['carritoCompra'] as $indice => $producto) {
 
     $item = new MercadoPago\Item(); //con esta opción cargamos el producto que vamos a cobrar
 
-    $item->title = 'Producto Lomito'; //titulo de nuestro producto
+    $item->title = $producto['nombre']; //titulo de nuestro producto
 
-    $item->quantity = '1'; //cantidad de nuestro producto
+    $item->quantity = $producto['cantidad']; //cantidad de nuestro producto
 
-    $item->unit_price = 150.00; //precio de nuestro producto
+    $item->unit_price = $producto['precio']; //precio de nuestro producto
 
     $item->currency_id = "ARS"; //la moneda
 
