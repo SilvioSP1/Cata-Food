@@ -32,8 +32,8 @@ $preference->save(); //guardamos las preferencias
 
 $preference->back_urls = array(
 
-    "success" => "http://catafood.shop/api-mercadopago/captura.php", //esto es donde se va a redireccionar cuando sea correcto el pago
-    "fail" => "http://catafood.shop/api-mercadopago/fallo.php", //si sale mal
+    "success" => "http://catafood.shop/admin/secciones/captura.php", //esto es donde se va a redireccionar cuando sea correcto el pago
+    "fail" => "http://catafood.shop/admin/secciones/fallo.php", //si sale mal
 
 ); //aca ponemos urls para que nos redireccione cuando se haya terminado el pago
 
