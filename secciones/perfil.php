@@ -8,7 +8,7 @@ $txtID=(isset($_POST['txtID'])) ? $_POST['txtID'] : $_SESSION['idUsuario'];
 $txtNombre=(isset($_POST['txtNombre'])) ? $_POST['txtNombre'] : $_SESSION['nombre'];
 $txtApellido=(isset($_POST['txtApellido'])) ? $_POST['txtApellido'] : $_SESSION['apellido'];
 $txtTelefono=(isset($_POST['txtTelefono'])) ? $_POST['txtTelefono'] : $_SESSION['telefono'];
-$txtImagen=(isset($_FILES['txtImagen']['name'])) ? $_FILES['txtImagen']['name'] : $_SESSION['imagen'];
+$txtImagen = isset($_FILES['txtImagen']['name']) ? $_FILES['txtImagen']['name'] : $_SESSION['imagen'];
 $accion=(isset($_POST['accion'])) ? $_POST['accion'] : "";
 
 
@@ -88,7 +88,7 @@ switch ($accion) {
           <div class="card-body text-center">
             <div class="contanedorImagen">
 
-              <img src="../../Cata-Food/img/perfil/<?php echo $_SESSION['imagen'] || 'username-photo.png'; ?>" alt="avatar" style="width: 150px;" class="profilePicture">
+            <img src="../../Cata-Food/img/perfil/<?php echo $imagen; ?>" alt="avatar" style="width: 150px;" class="profilePicture">
               <i class="bi bi-pencil-fill imagen-editar" data-bs-toggle="modal" data-bs-target="#exampleModal1" alt=""></i>
 
             </div>
