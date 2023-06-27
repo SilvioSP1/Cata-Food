@@ -294,7 +294,7 @@ switch ($accion) {
                                 <input type="hidden" name="TP_Tipo" id="TP_Tipo" value="">
                                 <button name="btnAccion" type="submit" class="buttonTipo">
                                     <div class="circulo">
-                                        <img src="../img/restaurantes/categorias/Dieta.png" aria-hidden="true" class="">
+                                        <img src="../img/restaurantes/categorias/comida-rapida.png" aria-hidden="true" class="">
                                     </div>
                                     <div aria-hidden="true" class="sc-tl2hnw-0 hNbawF darkCirculo">Todos</div>
                                 </button>
