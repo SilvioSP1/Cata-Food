@@ -277,7 +277,6 @@ switch ($accion) {
                             <form class="d-flex containerMedias">
                                 <input class="form-control me-1 buscador" type="search" placeholder="🔍︎ Buscar "
                                     aria-label="Search" id="buscadorComida">
-                                <button class="btn btn-outline-dark botonBusc text-white" type="submit">Buscar</button>
                             </form>
                         </div>
                     </div>
